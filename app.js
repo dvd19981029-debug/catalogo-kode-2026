@@ -415,10 +415,11 @@ function setupEventListeners() {
 }
 
 // Barra de búsqueda deslizante: desaparece al bajar y aparece al subir
+// Los botones de género (Hombre, Mujer, Unisex) permanecen siempre visibles
 function setupScrollAwareFilterBar() {
-  const filterBar = document.querySelector('.sticky-filter-bar');
+  const searchWrap = document.querySelector('.search-input-wrap');
   const searchInput = document.getElementById('search-input');
-  if (!filterBar) return;
+  if (!searchWrap) return;
 
   let lastScrollY = window.scrollY;
   let ticking = false;
@@ -432,7 +433,7 @@ function setupScrollAwareFilterBar() {
 
         // Cerca del inicio de la página o con el buscador enfocado: siempre visible
         if (currentScrollY <= 100 || isInputFocused) {
-          filterBar.classList.remove('is-hidden');
+          searchWrap.classList.remove('is-hidden');
           lastScrollY = currentScrollY;
           ticking = false;
           return;
@@ -442,11 +443,11 @@ function setupScrollAwareFilterBar() {
 
         if (Math.abs(delta) >= SCROLL_DELTA_THRESHOLD) {
           if (delta > 0 && currentScrollY > 160) {
-            // Scroll hacia abajo -> deslizar hacia arriba y ocultar
-            filterBar.classList.add('is-hidden');
+            // Scroll hacia abajo -> deslizar y ocultar sólo la barra de búsqueda
+            searchWrap.classList.add('is-hidden');
           } else if (delta < 0) {
-            // Scroll hacia arriba -> deslizar hacia abajo y mostrar
-            filterBar.classList.remove('is-hidden');
+            // Scroll hacia arriba -> deslizar y mostrar la barra de búsqueda
+            searchWrap.classList.remove('is-hidden');
           }
           lastScrollY = currentScrollY;
         }
@@ -459,7 +460,7 @@ function setupScrollAwareFilterBar() {
 
   if (searchInput) {
     searchInput.addEventListener('focus', () => {
-      filterBar.classList.remove('is-hidden');
+      searchWrap.classList.remove('is-hidden');
     });
   }
 }
