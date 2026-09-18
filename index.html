@@ -33,7 +33,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260918_search_thresh">
+  <link rel="stylesheet" href="styles.css?v=20260918_que_es_macerar_v1">
   <style>
     .ticker-bar {
       background-color: #000000;
@@ -225,7 +225,7 @@
         <button type="button" class="gender-tab active" data-gender="hombre" role="tab" aria-selected="true">Hombre</button>
         <button type="button" class="gender-tab" data-gender="mujer" role="tab" aria-selected="false">Mujer</button>
         <button type="button" class="gender-tab" data-gender="unisex" role="tab" aria-selected="false">Unisex</button>
-        <button type="button" class="gender-tab" data-gender="maceracion" role="tab" aria-selected="false">Qué es la maceración</button>
+        <button type="button" class="gender-tab" data-gender="maceracion" role="tab" aria-selected="false">¿Qué es macerar?</button>
       </div>
 
       <div class="search-input-wrap">
@@ -266,50 +266,40 @@
     <article id="maceracion-blog" class="maceracion-blog" style="display: none;">
       <header class="maceracion-header">
         <span class="maceracion-eyebrow">Ciencia y Alta Perfumería</span>
-        <h2 class="maceracion-title">¿Qué es la maceración y por qué hace que tu perfume huela extraordinario?</h2>
+        <h2 class="maceracion-title">¿Qué es macerar y por qué hace que tu perfume huela extraordinario?</h2>
         <p class="maceracion-lead">
           Descubre el secreto de maduración molecular que convierte una fragancia recién formulada en una experiencia rica, profunda y duradera, y la razón exacta por la que en KöDE disfrutas de alta concentración a un precio sumamente accesible.
         </p>
       </header>
 
-      <div class="maceracion-grid">
-        <!-- Tarjeta 1: Recién Salidos del Laboratorio -->
-        <div class="maceracion-card">
-          <div class="maceracion-card-icon">🧪</div>
-          <h3 class="maceracion-card-title">Recién salidos del laboratorio, sin envejecer en bodegas</h3>
-          <p class="maceracion-card-text">
+      <!-- Banner Hero del Blog: Laboratorio KöDE -->
+      <div class="maceracion-hero-card">
+        <div class="maceracion-hero-media">
+          <picture>
+            <source srcset="images/blog/maceracion_lab.webp" type="image/webp">
+            <img src="images/blog/maceracion_lab.jpg" alt="Laboratorio de formulación KöDE" class="maceracion-img" loading="lazy">
+          </picture>
+        </div>
+        <div class="maceracion-hero-info">
+          <span class="maceracion-badge">Formulación Fresca</span>
+          <h3 class="maceracion-hero-title">Recién salidos del laboratorio, sin envejecer en bodegas</h3>
+          <p class="maceracion-hero-desc">
             A diferencia de la perfumería comercial masiva —cuyas botellas pasan meses o años acumulando polvo y sufriendo variaciones térmicas en bodegas industriales antes de llegar a una tienda—, en <strong>KöDE cada perfume se formula y mezcla fresco en nuestro laboratorio</strong> justo antes de llegar a tus manos. Recibes una fragancia viva, en su punto máximo de vitalidad molecular y con sus esencias puras intactas.
           </p>
         </div>
+      </div>
 
-        <!-- Tarjeta 2: Por qué podemos darlos tan baratos -->
+      <div class="maceracion-grid">
+        <!-- Tarjeta: Por qué tan accesibles -->
         <div class="maceracion-card">
           <div class="maceracion-card-icon">🏷️</div>
-          <h3 class="maceracion-card-title">Por qué podemos darlos tan baratos ($20 y $15 adicionales)</h3>
+          <h3 class="maceracion-card-title">Por qué podemos darlos tan accesibles ($20 y $15 adicionales)</h3>
           <p class="maceracion-card-text">
             Un perfume de diseñador tradicional de $120 a $200 no cuesta eso por su líquido; la gran mayoría del precio cubre meses de almacenamiento en bodegas gigantescas, distribución masiva e intermediarios. Al enviarte las fórmulas <strong>directamente del laboratorio sin costes de almacenaje prolongado</strong>, trasladamos todo ese ahorro a tu favor: 30% a 45% de concentración real por solo $20 tu primer perfume y $15 cada adicional.
           </p>
         </div>
 
-        <!-- Tarjeta 3: Qué es la maceración e integración molecular -->
-        <div class="maceracion-card">
-          <div class="maceracion-card-icon">✨</div>
-          <h3 class="maceracion-card-title">Qué ocurre dentro del frasco: Integración molecular</h3>
-          <p class="maceracion-card-text">
-            Al mezclarse los aceites esenciales con el alcohol perfumista, las moléculas aromáticas se encuentran libres y activas. La maceración es el proceso natural en el que estos componentes reposan en un ambiente oscuro para <strong>entrelazarse a nivel microscópico</strong>. Con el paso de los días, los enlaces se vuelven estables y homogéneos, redondeando la fragancia y permitiendo que cada nota encaje en perfecta armonía.
-          </p>
-        </div>
-
-        <!-- Tarjeta 4: Importancia y Beneficios -->
-        <div class="maceracion-card">
-          <div class="maceracion-card-icon">📈</div>
-          <h3 class="maceracion-card-title">Beneficios: Notas más complejas y mucha mayor duración</h3>
-          <p class="maceracion-card-text">
-            Conforme la maceración avanza, <strong>las notas olfativas se revelan en toda su complejidad</strong>: las salidas se vuelven más cristalinas, las notas medias florecen con cuerpo y las notas de fondo (maderas, vainilla, ámbar) despliegan matices ricos que antes estaban tímidos. Además, al fijarse las moléculas pesadas, la tasa de evaporación disminuye, <strong>aumentando drásticamente la duración en piel, ropa y la proyección</strong>.
-          </p>
-        </div>
-
-        <!-- Tarjeta 5: Úsalo desde el primer día -->
+        <!-- Tarjeta: Úsalo desde el primer día -->
         <div class="maceracion-card">
           <div class="maceracion-card-icon">⚡</div>
           <h3 class="maceracion-card-title">Puedes usarlo desde el primer día</h3>
@@ -317,16 +307,50 @@
             ¡No tienes que esperar para disfrutarlo! Puedes aplicarte tu perfume KöDE desde el primer minuto en que lo recibes. De hecho, realizar las primeras atomizaciones permite la entrada de una pequeña cantidad de oxígeno al frasco, lo cual <strong>activa y estimula naturalmente el proceso de maceración</strong> mientras tú sigues usándolo a diario para tus salidas o trabajo.
           </p>
         </div>
+      </div>
 
-        <!-- Tarjeta 6: Cuidados esenciales durante el reposo -->
-        <div class="maceracion-card">
-          <div class="maceracion-card-icon">🛡️</div>
-          <h3 class="maceracion-card-title">Cuidados clave mientras se macera</h3>
-          <ul class="maceracion-list">
-            <li><strong>Ambiente oscuro:</strong> Guárdalo en un cajón, clóset o en su caja. La luz y los rayos UV degradan las moléculas de los aceites esenciales.</li>
-            <li><strong>Temperatura fresca y estable:</strong> Evita el baño (el vapor y la humedad de la regadera alteran la fórmula) y nunca lo dejes en el automóvil bajo el sol.</li>
-            <li><strong>Reposo tranquilo:</strong> Mantenlo en posición vertical sin agitar el frasco con fuerza; las moléculas se integran solas armónicamente.</li>
-          </ul>
+      <!-- Sección Visual 2: Reposo en Oscuridad (con imagen) -->
+      <div class="maceracion-feature-card">
+        <div class="maceracion-feature-media">
+          <picture>
+            <source srcset="images/blog/maceracion_reposo.webp" type="image/webp">
+            <img src="images/blog/maceracion_reposo.jpg" alt="Maduración en oscuridad y reposo de perfumes KöDE" class="maceracion-img" loading="lazy">
+          </picture>
+        </div>
+        <div class="maceracion-feature-info">
+          <span class="maceracion-badge">Integración Molecular</span>
+          <h3 class="maceracion-card-title">Qué ocurre dentro del frasco durante el reposo</h3>
+          <p class="maceracion-card-text">
+            Al mezclarse los aceites esenciales con el alcohol perfumista, las moléculas aromáticas se encuentran libres y activas. La maceración es el proceso natural en el que estos componentes reposan en un ambiente oscuro para <strong>entrelazarse a nivel microscópico</strong>. Con el paso de los días, los enlaces se vuelven estables y homogéneos, redondeando la fragancia y permitiendo que cada nota encaje en perfecta armonía.
+          </p>
+          <div class="maceracion-tips-box">
+            <h4 class="maceracion-tips-title">Cuidados clave durante el reposo:</h4>
+            <ul class="maceracion-list">
+              <li><strong>Ambiente oscuro:</strong> Guárdalo en un cajón, clóset o en su caja. La luz y los rayos UV degradan las moléculas de los aceites esenciales.</li>
+              <li><strong>Temperatura fresca y estable:</strong> Evita el baño (el vapor y la humedad alteran la fórmula) y nunca lo dejes en el automóvil bajo el sol.</li>
+              <li><strong>Reposo tranquilo:</strong> Mantenlo en posición vertical sin agitar con fuerza; las moléculas se integran solas armónicamente.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sección Visual 3: Revelación de Notas y Mayor Duración (con imagen) -->
+      <div class="maceracion-feature-card reverse">
+        <div class="maceracion-feature-media">
+          <picture>
+            <source srcset="images/blog/maceracion_notas.webp" type="image/webp">
+            <img src="images/blog/maceracion_notas.jpg" alt="Notas olfativas y fijación duradera KöDE" class="maceracion-img" loading="lazy">
+          </picture>
+        </div>
+        <div class="maceracion-feature-info">
+          <span class="maceracion-badge">Fijación y Proyección</span>
+          <h3 class="maceracion-card-title">Notas más complejas y duración que aumenta semana a semana</h3>
+          <p class="maceracion-card-text">
+            Conforme la maceración avanza, <strong>las notas olfativas se revelan en toda su riqueza y complejidad</strong>: las notas de salida se vuelven más cristalinas, las notas de corazón florecen con mayor cuerpo y los fondos profundos (cedro, vainilla de bourbon, ámbar) despliegan matices opulentos.
+          </p>
+          <p class="maceracion-card-text" style="margin-top: 10px;">
+            Además, al asentarse las moléculas pesadas, la tasa de evaporación disminuye, <strong>prolongando notablemente la duración en tu piel y en tu ropa</strong>, así como la estela aromática que proyectas al caminar.
+          </p>
         </div>
       </div>
     </article>
@@ -459,6 +483,6 @@
   </dialog>
 
   <script src="catalog-data.js?v=20260918_v3"></script>
-  <script src="app.js?v=20260918_search_anim_thresh"></script>
+  <script src="app.js?v=20260918_que_es_macerar_v1"></script>
 </body>
 </html>
