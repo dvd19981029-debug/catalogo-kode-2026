@@ -322,7 +322,7 @@ async function loadAndRenderProduct() {
     const items = notes.map(n => `
       <div class="note-item">
         <div class="note-img-wrap">
-          <img src="${n.image}" alt="${n.name}" class="note-img" loading="lazy" onerror="this.src='notes/maderas.jpg'">
+          <img src="${n.image}" alt="${n.name}" class="note-img" loading="lazy" onerror="if(!this.dataset.fallback){this.dataset.fallback='1';this.src='https://raw.githubusercontent.com/dvd19981029-debug/catalogo-kode-2026/main/'+this.getAttribute('src');}">
         </div>
         <span class="note-name">${n.name}</span>
       </div>
