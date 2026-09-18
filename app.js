@@ -771,6 +771,18 @@ window.addToCart = function(productId) {
 
   saveCart();
 
+  // Rastreo seguro de adición a la bolsa
+  try {
+    if (window.KodeTracker && typeof window.KodeTracker.trackEvent === 'function') {
+      window.KodeTracker.trackEvent('add_to_cart', {
+        code: item.code,
+        name: item.name,
+        brand: item.brand || '',
+        extraShot: isExtraShot
+      });
+    }
+  } catch (e) {}
+
   // Microinteracción háptica en el botón
   const btn = document.querySelector(`.product-card[data-id="${productId}"] .apple-buy-btn`);
   if (btn) {
@@ -1174,6 +1186,20 @@ function sendOrderViaWhatsApp() {
 
   const encodedMessage = encodeURIComponent(message);
   const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
+
+  // Rastreo de conversión clave: Carrito enviado a WhatsApp
+  try {
+    if (window.KodeTracker && typeof window.KodeTracker.trackEvent === 'function') {
+      window.KodeTracker.trackEvent('whatsapp_checkout', {
+        total: pricing.total,
+        itemsCount: cart.reduce((acc, i) => acc + (i.quantity || 1), 0),
+        items: cart.map(i => ({ code: i.code, name: i.name, extraShot: !!i.extraShot, qty: i.quantity || 1 })),
+        municipality: municipality || '',
+        department: department || '',
+        paymentMethod: selectedPaymentMethod || ''
+      });
+    }
+  } catch (e) {}
 
   window.open(whatsappUrl, '_blank');
 }

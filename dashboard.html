@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>KöDE - Dashboard Privado de Analítica</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-main: #0c0d0e;
+      --bg-card: #151619;
+      --bg-card-hover: #1c1d22;
+      --border-color: rgba(255, 255, 255, 0.08);
+      --border-accent: rgba(217, 119, 6, 0.35);
+      --text-main: #f4f4f5;
+      --text-sub: #a1a1aa;
+      --text-dim: #71717a;
+      --gold: #d97706;
+      --gold-light: #fbbf24;
+      --green: #10b981;
+      --blue: #3b82f6;
+      --purple: #8b5cf6;
+      --radius: 16px;
+      --radius-sm: 10px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-main);
+      color: var(--text-main);
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ================= LOGIN CON PIN ================= */
+    #pin-screen {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 24px;
+      background: radial-gradient(circle at 50% 20%, #1e1b18 0%, #0c0d0e 80%);
+    }
+
+    .pin-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 24px;
+      padding: 40px 32px;
+      width: 100%;
+      max-width: 380px;
+      text-align: center;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+    }
+
+    .pin-logo {
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      margin-bottom: 6px;
+      color: #fff;
+    }
+
+    .pin-subtitle {
+      font-size: 0.85rem;
+      color: var(--text-dim);
+      margin-bottom: 28px;
+    }
+
+    .pin-input {
+      width: 100%;
+      padding: 16px;
+      background: #090a0b;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      color: #fff;
+      font-size: 1.5rem;
+      text-align: center;
+      letter-spacing: 10px;
+      margin-bottom: 20px;
+      outline: none;
+      transition: border-color 0.2s ease;
+    }
+
+    .pin-input:focus {
+      border-color: var(--gold);
+    }
+
+    .pin-btn {
+      width: 100%;
+      padding: 15px;
+      background: linear-gradient(135deg, var(--gold) 0%, #b45309 100%);
+      color: #fff;
+      border: none;
+      border-radius: var(--radius-sm);
+      font-size: 0.95rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform 0.15s ease, opacity 0.15s ease;
+    }
+
+    .pin-btn:hover {
+      opacity: 0.95;
+      transform: scale(1.01);
+    }
+
+    .pin-error {
+      color: #ef4444;
+      font-size: 0.82rem;
+      margin-top: 14px;
+      display: none;
+    }
+
+    /* ================= MAIN DASHBOARD ================= */
+    #dashboard-view {
+      display: none;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 24px 20px 60px 20px;
+    }
+
+    /* Navbar del Dashboard */
+    .dash-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+      padding-bottom: 20px;
+      margin-bottom: 24px;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .dash-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .dash-title {
+      font-size: 1.4rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .dash-live-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--green);
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.25);
+      padding: 4px 10px;
+      border-radius: 20px;
+      text-transform: uppercase;
+    }
+
+    .live-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--green);
+      box-shadow: 0 0 8px var(--green);
+      animation: pulseLive 2s infinite;
+    }
+
+    @keyframes pulseLive {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.85); }
+    }
+
+    .dash-controls {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .time-filter {
+      display: flex;
+      background: #090a0b;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      padding: 3px;
+      gap: 2px;
+    }
+
+    .time-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-dim);
+      padding: 6px 12px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .time-btn.active {
+      background: var(--bg-card);
+      color: #fff;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+    }
+
+    .action-btn {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      color: var(--text-sub);
+      padding: 8px 14px;
+      border-radius: var(--radius-sm);
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.15s ease;
+    }
+
+    .action-btn:hover {
+      background: var(--bg-card-hover);
+      color: #fff;
+    }
+
+    /* Tarjetas de Métricas KPI */
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .kpi-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      padding: 20px;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .kpi-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    .kpi-card.highlight {
+      border-color: var(--border-accent);
+      background: linear-gradient(145deg, #181512 0%, #151619 100%);
+    }
+
+    .kpi-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+    }
+
+    .kpi-label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--text-dim);
+    }
+
+    .kpi-icon {
+      font-size: 1.25rem;
+    }
+
+    .kpi-value {
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+
+    .kpi-card.highlight .kpi-value {
+      color: var(--gold-light);
+    }
+
+    .kpi-sub {
+      font-size: 0.8rem;
+      color: var(--text-sub);
+    }
+
+    /* Grilla de Paneles de Análisis */
+    .panels-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-bottom: 24px;
+    }
+
+    @media (max-width: 900px) {
+      .panels-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .panel-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      padding: 22px;
+    }
+
+    .panel-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 18px;
+    }
+
+    .panel-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* Barras de distribución */
+    .metric-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .metric-row {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .metric-row-header {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.84rem;
+    }
+
+    .metric-row-name {
+      color: var(--text-main);
+      font-weight: 500;
+    }
+
+    .metric-row-val {
+      color: var(--text-sub);
+      font-weight: 600;
+    }
+
+    .progress-track {
+      height: 8px;
+      background: #090a0b;
+      border-radius: 10px;
+      overflow: hidden;
+      display: flex;
+    }
+
+    .progress-fill {
+      height: 100%;
+      border-radius: 10px;
+      transition: width 0.5s ease;
+    }
+
+    .fill-gold { background: linear-gradient(90deg, var(--gold) 0%, var(--gold-light) 100%); }
+    .fill-green { background: linear-gradient(90deg, #059669 0%, var(--green) 100%); }
+    .fill-blue { background: linear-gradient(90deg, #2563eb 0%, var(--blue) 100%); }
+    .fill-purple { background: linear-gradient(90deg, #7c3aed 0%, var(--purple) 100%); }
+
+    /* Feed de Pedidos a WhatsApp */
+    .orders-section {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      padding: 24px;
+      margin-bottom: 24px;
+    }
+
+    .orders-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .orders-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .orders-table-wrap {
+      overflow-x: auto;
+    }
+
+    .orders-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.85rem;
+    }
+
+    .orders-table th {
+      padding: 12px 14px;
+      color: var(--text-dim);
+      font-weight: 700;
+      font-size: 0.74rem;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .orders-table td {
+      padding: 14px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+      color: var(--text-sub);
+      vertical-align: top;
+    }
+
+    .orders-table tr:hover td {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 6px;
+      font-size: 0.72rem;
+      font-weight: 700;
+    }
+
+    .badge-device {
+      background: #27272a;
+      color: #e4e4e7;
+    }
+
+    .badge-gold {
+      background: rgba(217, 119, 6, 0.15);
+      color: var(--gold-light);
+      border: 1px solid rgba(217, 119, 6, 0.3);
+    }
+
+    .order-total-price {
+      font-weight: 800;
+      color: var(--green);
+      font-size: 0.95rem;
+    }
+
+    .empty-msg {
+      text-align: center;
+      padding: 36px 16px;
+      color: var(--text-dim);
+      font-size: 0.9rem;
+    }
+
+    /* Estado de carga */
+    .loading-spinner {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      border-top-color: #fff;
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ================= 1. PANTALLA DE BLOQUEO CON PIN ================= -->
+  <div id="pin-screen">
+    <div class="pin-box">
+      <div class="pin-logo">KöDE</div>
+      <p class="pin-subtitle">Panel Privado de Analítica y Pedidos</p>
+      
+      <form id="pin-form" onsubmit="handlePinSubmit(event)">
+        <input 
+          type="password" 
+          id="pin-input" 
+          class="pin-input" 
+          placeholder="••••" 
+          maxlength="6" 
+          pattern="[0-9]*" 
+          inputmode="numeric" 
+          autocomplete="off" 
+          autofocus 
+          required
+        >
+        <button type="submit" class="pin-btn">Acceder al Panel</button>
+      </form>
+      <div id="pin-error" class="pin-error">PIN incorrecto. Intenta de nuevo.</div>
+    </div>
+  </div>
+
+  <!-- ================= 2. DASHBOARD PRINCIPAL ================= -->
+  <main id="dashboard-view">
+    <!-- Barra Superior -->
+    <header class="dash-nav">
+      <div class="dash-brand">
+        <h1 class="dash-title">KöDE Analytics</h1>
+        <div class="dash-live-badge">
+          <span class="live-dot"></span> En Vivo
+        </div>
+      </div>
+
+      <div class="dash-controls">
+        <div class="time-filter">
+          <button type="button" class="time-btn active" data-filter="today" onclick="setTimeFilter('today')">Hoy</button>
+          <button type="button" class="time-btn" data-filter="7d" onclick="setTimeFilter('7d')">7 Días</button>
+          <button type="button" class="time-btn" data-filter="30d" onclick="setTimeFilter('30d')">30 Días</button>
+          <button type="button" class="time-btn" data-filter="all" onclick="setTimeFilter('all')">Todo</button>
+        </div>
+
+        <button type="button" class="action-btn" onclick="fetchAnalyticsData(true)" id="refresh-btn">
+          <span id="refresh-icon">🔄</span> Actualizar
+        </button>
+
+        <button type="button" class="action-btn" onclick="logoutDashboard()" title="Cerrar sesión">
+          🔒 Salir
+        </button>
+      </div>
+    </header>
+
+    <!-- Tarjetas KPI -->
+    <section class="kpi-grid">
+      <div class="kpi-card highlight">
+        <div class="kpi-header">
+          <span class="kpi-label">Pedidos a WhatsApp</span>
+          <span class="kpi-icon">💬</span>
+        </div>
+        <div class="kpi-value" id="kpi-whatsapp-count">0</div>
+        <div class="kpi-sub" id="kpi-whatsapp-sub">Carritos enviados a WhatsApp</div>
+      </div>
+
+      <div class="kpi-card highlight">
+        <div class="kpi-header">
+          <span class="kpi-label">Ventas Estimadas</span>
+          <span class="kpi-icon">💰</span>
+        </div>
+        <div class="kpi-value" id="kpi-whatsapp-sales">$0.00</div>
+        <div class="kpi-sub" id="kpi-whatsapp-avg">Promedio por orden: $0.00</div>
+      </div>
+
+      <div class="kpi-card">
+        <div class="kpi-header">
+          <span class="kpi-label">Visitantes / Sesiones</span>
+          <span class="kpi-icon">👥</span>
+        </div>
+        <div class="kpi-value" id="kpi-visitors">0</div>
+        <div class="kpi-sub" id="kpi-pageviews">0 páginas vistas</div>
+      </div>
+
+      <div class="kpi-card">
+        <div class="kpi-header">
+          <span class="kpi-label">Tasa de Conversión</span>
+          <span class="kpi-icon">🎯</span>
+        </div>
+        <div class="kpi-value" id="kpi-conversion">0.0%</div>
+        <div class="kpi-sub">De visitas a WhatsApp</div>
+      </div>
+
+      <div class="kpi-card">
+        <div class="kpi-header">
+          <span class="kpi-label">Clics e Interacciones</span>
+          <span class="kpi-icon">⚡</span>
+        </div>
+        <div class="kpi-value" id="kpi-interactions">0</div>
+        <div class="kpi-sub" id="kpi-interactions-sub">Búsquedas, tabs y bolsas</div>
+      </div>
+    </section>
+
+    <!-- Grilla de Paneles -->
+    <section class="panels-grid">
+      <!-- Panel 1: Dispositivos -->
+      <div class="panel-card">
+        <div class="panel-header">
+          <h2 class="panel-title">📱 Dispositivos (iPhone vs Android vs PC)</h2>
+        </div>
+        <div class="metric-list" id="devices-list">
+          <div class="empty-msg">Cargando dispositivos...</div>
+        </div>
+      </div>
+
+      <!-- Panel 2: Fuentes de Tráfico -->
+      <div class="panel-card">
+        <div class="panel-header">
+          <h2 class="panel-title">🚀 De Dónde Entran (Fuentes y Redes)</h2>
+        </div>
+        <div class="metric-list" id="sources-list">
+          <div class="empty-msg">Cargando fuentes de tráfico...</div>
+        </div>
+      </div>
+
+      <!-- Panel 3: Ubicación Geográfica -->
+      <div class="panel-card">
+        <div class="panel-header">
+          <h2 class="panel-title">🌍 Países y Ciudades</h2>
+        </div>
+        <div class="metric-list" id="geo-list">
+          <div class="empty-msg">Cargando ubicaciones...</div>
+        </div>
+      </div>
+
+      <!-- Panel 4: Búsquedas e Interacciones -->
+      <div class="panel-card">
+        <div class="panel-header">
+          <h2 class="panel-title">🔍 Qué Están Buscando y Explorando</h2>
+        </div>
+        <div class="metric-list" id="searches-list">
+          <div class="empty-msg">Cargando búsquedas...</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feed en Vivo de Pedidos a WhatsApp -->
+    <section class="orders-section">
+      <div class="orders-header">
+        <h2 class="orders-title">
+          <span>🛒 Pedidos Enviados a WhatsApp</span>
+          <span class="badge badge-gold" id="orders-count-badge">0 pedidos</span>
+        </h2>
+      </div>
+
+      <div class="orders-table-wrap">
+        <table class="orders-table">
+          <thead>
+            <tr>
+              <th>Fecha y Hora</th>
+              <th>Dispositivo / Origen</th>
+              <th>Ubicación</th>
+              <th>Productos Solicitados</th>
+              <th>Total ($)</th>
+            </tr>
+          </thead>
+          <tbody id="orders-tbody">
+            <tr>
+              <td colspan="5" class="empty-msg">No hay pedidos registrados en este período.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // PIN de Administrador (por defecto: 2026)
+    const ADMIN_PIN = '2026';
+    const FIRESTORE_QUERY_URL = 'https://firestore.googleapis.com/v1/projects/kode-scents/databases/(default)/documents:runQuery?key=AIzaSyARNtXYuz9SiCUBjpfe-Z-vIXe7_aHpmyE';
+
+    let rawEvents = [];
+    let currentTimeFilter = 'today';
+    let autoRefreshTimer = null;
+
+    // 1. Manejo de Autenticación por PIN
+    function checkAuth() {
+      if (sessionStorage.getItem('kode_admin_logged') === 'true') {
+        document.getElementById('pin-screen').style.display = 'none';
+        document.getElementById('dashboard-view').style.display = 'block';
+        fetchAnalyticsData();
+        startAutoRefresh();
+      } else {
+        document.getElementById('pin-screen').style.display = 'flex';
+        document.getElementById('dashboard-view').style.display = 'none';
+      }
+    }
+
+    function handlePinSubmit(e) {
+      e.preventDefault();
+      const input = document.getElementById('pin-input');
+      const err = document.getElementById('pin-error');
+      if (input.value.trim() === ADMIN_PIN) {
+        sessionStorage.setItem('kode_admin_logged', 'true');
+        err.style.display = 'none';
+        checkAuth();
+      } else {
+        err.style.display = 'block';
+        input.value = '';
+        input.focus();
+      }
+    }
+
+    function logoutDashboard() {
+      sessionStorage.removeItem('kode_admin_logged');
+      clearInterval(autoRefreshTimer);
+      checkAuth();
+    }
+
+    // 2. Consulta de Datos en Firestore
+    async function fetchAnalyticsData(isManual = false) {
+      const refreshIcon = document.getElementById('refresh-icon');
+      if (isManual && refreshIcon) {
+        refreshIcon.innerHTML = '<span class="loading-spinner"></span>';
+      }
+
+      try {
+        const queryPayload = {
+          structuredQuery: {
+            from: [{ collectionId: 'analytics_events' }],
+            orderBy: [{ field: { fieldPath: 'timestamp' }, direction: 'DESCENDING' }],
+            limit: 500
+          }
+        };
+
+        const res = await fetch(FIRESTORE_QUERY_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(queryPayload)
+        });
+
+        const data = await res.json();
+        rawEvents = [];
+
+        if (Array.isArray(data)) {
+          data.forEach(item => {
+            if (item.document && item.document.fields) {
+              const f = item.document.fields;
+              let details = {};
+              try {
+                if (f.details && f.details.stringValue) {
+                  details = JSON.parse(f.details.stringValue);
+                }
+              } catch (e) {}
+
+              rawEvents.push({
+                type: f.type ? f.type.stringValue : 'unknown',
+                sessionId: f.sessionId ? f.sessionId.stringValue : '',
+                device: f.device ? f.device.stringValue : 'PC / Desktop',
+                browser: f.browser ? f.browser.stringValue : 'Web',
+                country: f.country ? f.country.stringValue : 'El Salvador',
+                city: f.city ? f.city.stringValue : 'San Salvador',
+                referrer: f.referrer ? f.referrer.stringValue : 'Directo',
+                utmSource: f.utmSource ? f.utmSource.stringValue : '',
+                timestamp: f.timestamp && f.timestamp.timestampValue ? new Date(f.timestamp.timestampValue) : new Date(),
+                details: details
+              });
+            }
+          });
+        }
+
+        renderDashboard();
+      } catch (err) {
+        console.error('Error cargando analíticas:', err);
+      } finally {
+        if (refreshIcon) refreshIcon.textContent = '🔄';
+      }
+    }
+
+    // 3. Filtro por Tiempo
+    function setTimeFilter(filter) {
+      currentTimeFilter = filter;
+      document.querySelectorAll('.time-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.filter === filter);
+      });
+      renderDashboard();
+    }
+
+    function getFilteredEvents() {
+      const now = new Date();
+      return rawEvents.filter(ev => {
+        if (currentTimeFilter === 'all') return true;
+        const diffMs = now - ev.timestamp;
+        if (currentTimeFilter === 'today') {
+          return ev.timestamp.toDateString() === now.toDateString();
+        }
+        if (currentTimeFilter === '7d') {
+          return diffMs <= 7 * 24 * 60 * 60 * 1000;
+        }
+        if (currentTimeFilter === '30d') {
+          return diffMs <= 30 * 24 * 60 * 60 * 1000;
+        }
+        return true;
+      });
+    }
+
+    // 4. Renderizado del Dashboard
+    function renderDashboard() {
+      const events = getFilteredEvents();
+
+      // Métricas KPI
+      const sessionsSet = new Set();
+      let pageviews = 0;
+      let whatsappOrders = [];
+      let totalInteractions = 0;
+      const deviceCounts = {};
+      const sourceCounts = {};
+      const geoCounts = {};
+      const searchCounts = {};
+
+      events.forEach(ev => {
+        if (ev.sessionId) sessionsSet.add(ev.sessionId);
+
+        // Dispositivos
+        const devKey = ev.device || 'PC / Desktop';
+        deviceCounts[devKey] = (deviceCounts[devKey] || 0) + 1;
+
+        // Fuentes
+        const srcKey = ev.referrer || 'Directo';
+        sourceCounts[srcKey] = (sourceCounts[srcKey] || 0) + 1;
+
+        // Ubicaciones
+        const geoKey = (ev.city && ev.city !== 'Desconocido' ? `${ev.city}, ` : '') + (ev.country || 'El Salvador');
+        geoCounts[geoKey] = (geoCounts[geoKey] || 0) + 1;
+
+        if (ev.type === 'page_view') pageviews++;
+        if (['tab_click', 'search', 'add_to_cart', 'open_cart', 'product_view'].includes(ev.type)) totalInteractions++;
+
+        if (ev.type === 'search' && ev.details.query) {
+          const q = ev.details.query.toLowerCase().trim();
+          searchCounts[q] = (searchCounts[q] || 0) + 1;
+        }
+
+        if (ev.type === 'whatsapp_checkout') {
+          whatsappOrders.push(ev);
+        }
+      });
+
+      const totalSessions = sessionsSet.size || (pageviews > 0 ? pageviews : 0);
+      const totalOrders = whatsappOrders.length;
+      const totalSales = whatsappOrders.reduce((sum, o) => sum + (parseFloat(o.details.total) || 0), 0);
+      const avgOrder = totalOrders > 0 ? totalSales / totalOrders : 0;
+      const convRate = totalSessions > 0 ? ((totalOrders / totalSessions) * 100).toFixed(1) : '0.0';
+
+      // Actualizar KPIs
+      document.getElementById('kpi-whatsapp-count').textContent = totalOrders;
+      document.getElementById('kpi-whatsapp-sales').textContent = `$${totalSales.toFixed(2)}`;
+      document.getElementById('kpi-whatsapp-avg').textContent = `Promedio por orden: $${avgOrder.toFixed(2)}`;
+      document.getElementById('kpi-visitors').textContent = totalSessions;
+      document.getElementById('kpi-pageviews').textContent = `${pageviews} vistas de catálogo`;
+      document.getElementById('kpi-conversion').textContent = `${convRate}%`;
+      document.getElementById('kpi-interactions').textContent = totalInteractions;
+      document.getElementById('orders-count-badge').textContent = `${totalOrders} pedidos`;
+
+      // Renderizar Paneles
+      renderBarsList('devices-list', deviceCounts, 'fill-blue');
+      renderBarsList('sources-list', sourceCounts, 'fill-purple');
+      renderBarsList('geo-list', geoCounts, 'fill-green');
+      renderSearchesList('searches-list', searchCounts);
+
+      // Renderizar Tabla de Pedidos
+      renderOrdersTable(whatsappOrders);
+    }
+
+    // Helper para barras porcentuales
+    function renderBarsList(containerId, countMap, colorClass) {
+      const container = document.getElementById(containerId);
+      const entries = Object.entries(countMap).sort((a, b) => b[1] - a[1]);
+      if (entries.length === 0) {
+        container.innerHTML = '<div class="empty-msg">No hay registros aún.</div>';
+        return;
+      }
+
+      const total = entries.reduce((acc, curr) => acc + curr[1], 0) || 1;
+      container.innerHTML = entries.slice(0, 6).map(([name, count]) => {
+        const pct = Math.round((count / total) * 100);
+        return `
+          <div class="metric-row">
+            <div class="metric-row-header">
+              <span class="metric-row-name">${escapeHtml(name)}</span>
+              <span class="metric-row-val">${count} (${pct}%)</span>
+            </div>
+            <div class="progress-track">
+              <div class="progress-fill ${colorClass}" style="width: ${pct}%"></div>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    // Helper para búsquedas
+    function renderSearchesList(containerId, countMap) {
+      const container = document.getElementById(containerId);
+      const entries = Object.entries(countMap).sort((a, b) => b[1] - a[1]);
+      if (entries.length === 0) {
+        container.innerHTML = '<div class="empty-msg">Sin búsquedas registradas en este período.</div>';
+        return;
+      }
+
+      container.innerHTML = entries.slice(0, 7).map(([query, count]) => {
+        return `
+          <div class="metric-row-header" style="padding: 6px 0; border-bottom: 1px solid rgba(255,255,255,0.04);">
+            <span class="metric-row-name">🔍 "${escapeHtml(query)}"</span>
+            <span class="badge badge-gold">${count} búsquedas</span>
+          </div>
+        `;
+      }).join('');
+    }
+
+    // Helper para tabla de pedidos
+    function renderOrdersTable(orders) {
+      const tbody = document.getElementById('orders-tbody');
+      if (orders.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="5" class="empty-msg">No hay pedidos a WhatsApp en este período.</td></tr>';
+        return;
+      }
+
+      tbody.innerHTML = orders.map(ord => {
+        const d = ord.timestamp;
+        const timeStr = d.toLocaleDateString('es-SV', { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' });
+        const items = ord.details.items || [];
+        const itemsList = items.map(i => `• ${escapeHtml(i.code)} - ${escapeHtml(i.name)} [${i.extraShot ? 'Extra Shot' : 'Normal'}] x${i.qty}`).join('<br>');
+        const locationStr = ord.details.municipality || ord.city || ord.country || 'No especificada';
+        const total = parseFloat(ord.details.total || 0).toFixed(2);
+
+        return `
+          <tr>
+            <td><strong>${timeStr}</strong></td>
+            <td>
+              <span class="badge badge-device">${escapeHtml(ord.device)}</span><br>
+              <span style="font-size: 0.74rem; color: var(--text-dim);">${escapeHtml(ord.referrer)}</span>
+            </td>
+            <td>${escapeHtml(locationStr)}</td>
+            <td style="font-size: 0.8rem; line-height: 1.4;">${itemsList || 'Productos varios'}</td>
+            <td class="order-total-price">$${total}</td>
+          </tr>
+        `;
+      }).join('');
+    }
+
+    function escapeHtml(str) {
+      if (!str) return '';
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
+
+    function startAutoRefresh() {
+      clearInterval(autoRefreshTimer);
+      autoRefreshTimer = setInterval(() => {
+        fetchAnalyticsData(false);
+      }, 30000);
+    }
+
+    // Inicializar al cargar
+    document.addEventListener('DOMContentLoaded', checkAuth);
+  </script>
+</body>
+</html>
