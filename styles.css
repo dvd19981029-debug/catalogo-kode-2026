@@ -49,6 +49,7 @@ html, body {
   color-scheme: only light !important;
   -webkit-color-scheme: only light !important;
   forced-color-adjust: none !important;
+  overflow-anchor: none;
 }
 
 body {
@@ -648,6 +649,7 @@ body {
   background: #ffffff;
   border-bottom: 1px solid var(--border-subtle);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  overflow-anchor: none;
 }
 
 .filter-bar-container {

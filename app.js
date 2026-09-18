@@ -423,31 +423,50 @@ function setupScrollAwareFilterBar() {
 
   let lastScrollY = window.scrollY;
   let ticking = false;
-  const SCROLL_DELTA_THRESHOLD = 8; // Mínimo de desplazamiento para evitar parpadeos
+  let lastToggleTime = 0;
+  const SCROLL_DELTA_THRESHOLD = 12; // Mínimo de desplazamiento para evitar parpadeos
+  const TOGGLE_COOLDOWN_MS = 250; // Evita rebotes durante la animación de colapso/expansión
+
+  function getScrollThreshold() {
+    const hero = document.getElementById('hero-keynote');
+    if (hero) {
+      // La barra sólo debe comenzar a ocultarse después de haber bajado y deslizado
+      // toda la parte de la animación y el hero (cuando la barra llega a la posición sticky)
+      return Math.max(hero.offsetTop + hero.offsetHeight - 70, 500);
+    }
+    return 650;
+  }
 
   window.addEventListener('scroll', () => {
     if (!ticking) {
       window.requestAnimationFrame(() => {
         const currentScrollY = window.scrollY;
         const isInputFocused = searchInput && document.activeElement === searchInput;
+        const threshold = getScrollThreshold();
 
-        // Cerca del inicio de la página o con el buscador enfocado: siempre visible
-        if (currentScrollY <= 100 || isInputFocused) {
-          searchWrap.classList.remove('is-hidden');
+        // Antes de haber bajado y deslizado la animación (o con buscador en foco): siempre visible
+        if (currentScrollY <= threshold || isInputFocused) {
+          if (searchWrap.classList.contains('is-hidden')) {
+            searchWrap.classList.remove('is-hidden');
+            lastToggleTime = performance.now();
+          }
           lastScrollY = currentScrollY;
           ticking = false;
           return;
         }
 
         const delta = currentScrollY - lastScrollY;
+        const now = performance.now();
 
-        if (Math.abs(delta) >= SCROLL_DELTA_THRESHOLD) {
-          if (delta > 0 && currentScrollY > 160) {
-            // Scroll hacia abajo -> deslizar y ocultar sólo la barra de búsqueda
+        if (Math.abs(delta) >= SCROLL_DELTA_THRESHOLD && (now - lastToggleTime) >= TOGGLE_COOLDOWN_MS) {
+          if (delta > 0 && !searchWrap.classList.contains('is-hidden')) {
+            // Scroll hacia abajo después de la animación -> deslizar y ocultar sólo la barra de búsqueda
             searchWrap.classList.add('is-hidden');
-          } else if (delta < 0) {
+            lastToggleTime = now;
+          } else if (delta < 0 && searchWrap.classList.contains('is-hidden')) {
             // Scroll hacia arriba -> deslizar y mostrar la barra de búsqueda
             searchWrap.classList.remove('is-hidden');
+            lastToggleTime = now;
           }
           lastScrollY = currentScrollY;
         }
@@ -461,6 +480,7 @@ function setupScrollAwareFilterBar() {
   if (searchInput) {
     searchInput.addEventListener('focus', () => {
       searchWrap.classList.remove('is-hidden');
+      lastToggleTime = performance.now();
     });
   }
 }
