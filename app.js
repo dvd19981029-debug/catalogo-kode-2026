@@ -106,6 +106,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   renderCatalog();
   restoreCatalogScroll();
   setupDialogDismiss();
+  setupScrollAwareFilterBar();
   initHero3DShowcase();
 });
 
@@ -387,6 +388,56 @@ function setupEventListeners() {
       } catch (err) {}
     }
   });
+}
+
+// Barra de búsqueda deslizante: desaparece al bajar y aparece al subir
+function setupScrollAwareFilterBar() {
+  const filterBar = document.querySelector('.sticky-filter-bar');
+  const searchInput = document.getElementById('search-input');
+  if (!filterBar) return;
+
+  let lastScrollY = window.scrollY;
+  let ticking = false;
+  const SCROLL_DELTA_THRESHOLD = 8; // Mínimo de desplazamiento para evitar parpadeos
+
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        const currentScrollY = window.scrollY;
+        const isInputFocused = searchInput && document.activeElement === searchInput;
+
+        // Cerca del inicio de la página o con el buscador enfocado: siempre visible
+        if (currentScrollY <= 100 || isInputFocused) {
+          filterBar.classList.remove('is-hidden');
+          lastScrollY = currentScrollY;
+          ticking = false;
+          return;
+        }
+
+        const delta = currentScrollY - lastScrollY;
+
+        if (Math.abs(delta) >= SCROLL_DELTA_THRESHOLD) {
+          if (delta > 0 && currentScrollY > 160) {
+            // Scroll hacia abajo -> deslizar hacia arriba y ocultar
+            filterBar.classList.add('is-hidden');
+          } else if (delta < 0) {
+            // Scroll hacia arriba -> deslizar hacia abajo y mostrar
+            filterBar.classList.remove('is-hidden');
+          }
+          lastScrollY = currentScrollY;
+        }
+
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }, { passive: true });
+
+  if (searchInput) {
+    searchInput.addEventListener('focus', () => {
+      filterBar.classList.remove('is-hidden');
+    });
+  }
 }
 
 // Fallback de cierre de diálogo al tocar fuera (backdrop)

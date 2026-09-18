@@ -644,11 +644,18 @@ body {
   position: sticky;
   top: 61px;
   z-index: 90;
-  padding: 16px 24px;
-  background: rgba(255, 255, 255, 0.88);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  padding: 14px 24px;
+  background: #ffffff;
   border-bottom: 1px solid var(--border-subtle);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
+  will-change: transform, opacity;
+}
+
+.sticky-filter-bar.is-hidden {
+  transform: translateY(-135%);
+  opacity: 0;
+  pointer-events: none;
 }
 
 .filter-bar-container {
@@ -1053,13 +1060,14 @@ body {
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  background: #ebebf0;
+  background: #f2f2f7;
   padding: 3px;
-  border-radius: var(--radius-md);
-  border: 1px solid #dcdce2;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
   gap: 0;
   isolation: isolate;
   user-select: none;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.03);
 }
 
 .segment-slider {
@@ -1069,10 +1077,10 @@ body {
   left: 3px;
   width: calc(50% - 3px);
   background: #ffffff;
-  border: 1.5px solid #1d1d1f;
-  border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
-  transition: transform 0.28s cubic-bezier(0.2, 0.9, 0.3, 1.05);
+  border-radius: 9px;
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.09), 0 0.5px 2px rgba(0, 0, 0, 0.04);
+  border: 0.5px solid rgba(0, 0, 0, 0.05);
+  transition: transform 0.26s cubic-bezier(0.2, 0.9, 0.3, 1.05);
   pointer-events: none;
   z-index: 1;
 }
@@ -1087,22 +1095,22 @@ body {
   background: transparent !important;
   border: none !important;
   box-shadow: none !important;
-  color: #6e6e73;
-  padding: 7px 4px;
+  color: #636366;
+  padding: 6px 4px;
   font-size: 0.78rem;
   font-weight: 600;
   font-family: inherit;
-  border-radius: 10px;
+  border-radius: 9px;
   cursor: pointer;
   transition: color 0.2s cubic-bezier(0.2, 0.9, 0.3, 1), transform 0.15s cubic-bezier(0.2, 0.9, 0.3, 1), opacity 0.2s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 3px;
+  gap: 2px;
   text-align: center;
-  min-height: 48px;
-  opacity: 0.72;
+  min-height: 42px;
+  opacity: 0.78;
 }
 
 .segment-btn:hover {
@@ -1111,7 +1119,7 @@ body {
 }
 
 .segment-btn:active {
-  transform: scale(0.96);
+  transform: scale(0.97);
 }
 
 .segment-btn.active {
@@ -1132,22 +1140,30 @@ body {
   font-size: 0.76rem;
   font-weight: 600;
   line-height: 1.2;
+  letter-spacing: -0.01em;
 }
 
 .segment-badge-green {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: #15803d;
-  color: #ffffff;
+  background-color: #e8f5e9;
+  color: #15803d;
+  border: 1px solid rgba(21, 128, 61, 0.22);
   font-size: 0.58rem;
   font-weight: 800;
   letter-spacing: 0.02em;
-  padding: 2px 6px;
+  padding: 1.5px 6px;
   border-radius: 999px;
   line-height: 1.1;
   white-space: nowrap;
   text-transform: uppercase;
+}
+
+.promo-card-gold .segment-badge-green {
+  background-color: #fef3c7;
+  color: #92400e;
+  border-color: rgba(146, 64, 14, 0.25);
 }
 
 /* Fila de Acción y Precio */
