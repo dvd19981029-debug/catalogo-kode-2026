@@ -1022,6 +1022,13 @@ function renderCart() {
       `;
     }
 
+    rowsHtml += `
+      <div class="breakdown-line">
+        <span>Envío:</span>
+        <strong style="color: #15803d;">Gratis desde 24-48h</strong>
+      </div>
+    `;
+
     breakdownContainer.innerHTML = rowsHtml;
   }
 
@@ -1149,6 +1156,7 @@ function sendOrderViaWhatsApp() {
   if (pricing.additionalNormalCount > 0) {
     breakdownText += `• ${pricing.additionalNormalCount} adicional(es) Normal: $${(pricing.additionalNormalCount * 15).toFixed(2)} ($15 c/u)\n`;
   }
+  breakdownText += `• *Envío:* Gratis desde 24-48h\n`;
 
   message += `*Resumen de la orden:*\n${breakdownText}`;
   message += `*Total a pagar:* $${pricing.total.toFixed(2)}\n\n`;
