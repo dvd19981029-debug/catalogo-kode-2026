@@ -1,0 +1,19116 @@
+window.CATALOG_DATA = [
+  {
+    "id": "kode-343",
+    "code": "343",
+    "name": "Sauvage Elixir",
+    "reference": "Sauvage Elixir",
+    "brand": "Dior",
+    "description": "Una concentración nocturna desbordante y adictiva. Canela cálida y cardamomo salvaje colisionan con un corazón noble de lavanda de Nyons, envueltos en un fondo suntuoso de maderas ricas, regaliz y ámbar licoroso.",
+    "image": "images/kode/kode_343.jpg",
+    "olfactoryFamily": "Aromática Especiada",
+    "gender": "hombre",
+    "sales": 626,
+    "accords": [
+      {
+        "name": "cálido especiado",
+        "percentage": 100,
+        "bg": "#701a75",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 84,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "fresco especiado",
+        "percentage": 70,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      },
+      {
+        "name": "lavanda",
+        "percentage": 58,
+        "bg": "#7e22ce",
+        "text": "#ffffff"
+      },
+      {
+        "name": "aromático",
+        "percentage": 48,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Canela",
+          "image": "notes/canela.jpg"
+        },
+        {
+          "name": "Nuez moscada",
+          "image": "notes/nuez-moscada.jpg"
+        },
+        {
+          "name": "Cardamomo",
+          "image": "notes/cardamomo.jpg"
+        },
+        {
+          "name": "Pomelo",
+          "image": "notes/pomelo.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Lavanda",
+          "image": "notes/lavanda.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Regaliz",
+          "image": "notes/anis.jpg"
+        },
+        {
+          "name": "Sándalo",
+          "image": "notes/sandalo.jpg"
+        },
+        {
+          "name": "Ámbar",
+          "image": "notes/ambar.jpg"
+        },
+        {
+          "name": "Pachulí",
+          "image": "notes/pachuli.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-161",
+    "code": "161",
+    "name": "Bleu De Chanel",
+    "reference": "Bleu De Chanel",
+    "brand": "Chanel",
+    "description": "Una creación aromática amaderada intemporal y sofisticada. Destaca por su salida vibrante de cítricos frescos y menta que da paso a un corazón especiado con jengibre y un fondo profundo de incienso, cedro y sándalo.",
+    "image": "images/kode/kode_161.jpg",
+    "olfactoryFamily": "Amaderada Aromática",
+    "gender": "hombre",
+    "sales": 450,
+    "accords": [
+      {
+        "name": "cítrico",
+        "percentage": 100,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      },
+      {
+        "name": "ámbar",
+        "percentage": 84,
+        "bg": "#86198f",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 70,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cálido especiado",
+        "percentage": 58,
+        "bg": "#701a75",
+        "text": "#ffffff"
+      },
+      {
+        "name": "aromático",
+        "percentage": 48,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Pomelo",
+          "image": "notes/pomelo.jpg"
+        },
+        {
+          "name": "Limón",
+          "image": "notes/limon.jpg"
+        },
+        {
+          "name": "Menta",
+          "image": "notes/menta.jpg"
+        },
+        {
+          "name": "Pimienta rosa",
+          "image": "notes/pimienta-rosa.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Jengibre",
+          "image": "notes/jengibre.jpg"
+        },
+        {
+          "name": "Nuez moscada",
+          "image": "notes/nuez-moscada.jpg"
+        },
+        {
+          "name": "Jazmín",
+          "image": "notes/jazmin.jpg"
+        },
+        {
+          "name": "Iso E Super",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Incienso",
+          "image": "notes/incienso.jpg"
+        },
+        {
+          "name": "Vetiver",
+          "image": "notes/vetiver.jpg"
+        },
+        {
+          "name": "Cedro",
+          "image": "notes/cedro.jpg"
+        },
+        {
+          "name": "Sándalo",
+          "image": "notes/sandalo.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-344",
+    "code": "344",
+    "name": "Sauvage",
+    "reference": "Sauvage",
+    "brand": "Dior",
+    "description": "Inspirada en Sauvage de Dior. Pertenece a la prestigiosa familia olfativa FRESCO ESPECIADO ámbar. Abre con un despliegue radiante de pimienta, bergamota de calabria, revela un corazón fascinante de geranio, lavanda, pimienta de sichuan, elemí, y perdura sobre un fondo suntuoso de cedro, ládano, ambroxan. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_344.jpg",
+    "olfactoryFamily": "FRESCO ESPECIADO ámbar",
+    "gender": "hombre",
+    "sales": 426,
+    "accords": [
+      {
+        "name": "fresco especiado",
+        "percentage": 100,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      },
+      {
+        "name": "ámbar",
+        "percentage": 84,
+        "bg": "#86198f",
+        "text": "#ffffff"
+      },
+      {
+        "name": "aromático",
+        "percentage": 70,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cítrico",
+        "percentage": 58,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cálido especiado",
+        "percentage": 48,
+        "bg": "#701a75",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Pimienta",
+          "image": "notes/pimienta-negra.jpg"
+        },
+        {
+          "name": "Bergamota de Calabria",
+          "image": "notes/bergamota.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Geranio",
+          "image": "notes/geranio.jpg"
+        },
+        {
+          "name": "Lavanda",
+          "image": "notes/lavanda.jpg"
+        },
+        {
+          "name": "Pimienta de Sichuan",
+          "image": "notes/pimienta-negra.jpg"
+        },
+        {
+          "name": "Elemí",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Cedro",
+          "image": "notes/cedro.jpg"
+        },
+        {
+          "name": "Ládano",
+          "image": "notes/ladano.jpg"
+        },
+        {
+          "name": "Ambroxan",
+          "image": "notes/ambroxan.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-165",
+    "code": "165",
+    "name": "Born in Roma",
+    "reference": "Born in Roma",
+    "brand": "Valentino",
+    "description": "Inspirada en Born in Roma de Valentino. Pertenece a la prestigiosa familia olfativa Ámbar Amaderada. Abre con un despliegue radiante de notas minerales, hojas de violeta, sal, revela un corazón fascinante de jengibre, salvia, y perdura sobre un fondo suntuoso de notas amaderadas, vetiver. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_165.jpg",
+    "olfactoryFamily": "Ámbar Amaderada",
+    "gender": "hombre",
+    "sales": 257,
+    "accords": [
+      {
+        "name": "amaderado",
+        "percentage": 100,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "aromático",
+        "percentage": 84,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      },
+      {
+        "name": "mineral",
+        "percentage": 70,
+        "bg": "#334155",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cálido especiado",
+        "percentage": 58,
+        "bg": "#701a75",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Notas minerales",
+          "image": "notes/notas-minerales.jpg"
+        },
+        {
+          "name": "Hojas de violeta",
+          "image": "notes/violeta.jpg"
+        },
+        {
+          "name": "Sal",
+          "image": "notes/notas-marinas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Jengibre",
+          "image": "notes/jengibre.jpg"
+        },
+        {
+          "name": "Salvia",
+          "image": "notes/salvia.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Notas amaderadas",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Vetiver",
+          "image": "notes/vetiver.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-141",
+    "code": "141",
+    "name": "Aqua Di Gio Profondo",
+    "reference": "Aqua Di Gio Profondo",
+    "brand": "Giorgio Armani",
+    "description": "Una inmersión profunda en la inmensidad del océano azul. Una explosión electrizante de notas marinas y cítricos vigorizantes combinados con la masculinidad aromática del romero y un fondo mineral envolvente.",
+    "image": "images/kode/kode_141.jpg",
+    "olfactoryFamily": "Aromática Acuática",
+    "gender": "hombre",
+    "sales": 213,
+    "accords": [
+      {
+        "name": "marino",
+        "percentage": 100,
+        "bg": "#0284c7",
+        "text": "#ffffff"
+      },
+      {
+        "name": "aromático",
+        "percentage": 84,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cítrico",
+        "percentage": 70,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      },
+      {
+        "name": "fresco especiado",
+        "percentage": 58,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      },
+      {
+        "name": "mineral",
+        "percentage": 48,
+        "bg": "#334155",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Notas marinas",
+          "image": "notes/notas-marinas.jpg"
+        },
+        {
+          "name": "Aquozone",
+          "image": "notes/notas-marinas.jpg"
+        },
+        {
+          "name": "Bergamota",
+          "image": "notes/bergamota.jpg"
+        },
+        {
+          "name": "Mandarina verde",
+          "image": "notes/mandarina.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Romero",
+          "image": "notes/romero.jpg"
+        },
+        {
+          "name": "Lavanda",
+          "image": "notes/lavanda.jpg"
+        },
+        {
+          "name": "Ciprés",
+          "image": "notes/cipres.jpg"
+        },
+        {
+          "name": "Lentisco",
+          "image": "notes/notas-verdes.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Notas minerales",
+          "image": "notes/notas-minerales.jpg"
+        },
+        {
+          "name": "Almizcle",
+          "image": "notes/almizcle.jpg"
+        },
+        {
+          "name": "Pachulí",
+          "image": "notes/pachuli.jpg"
+        },
+        {
+          "name": "Ámbar",
+          "image": "notes/ambar.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-192",
+    "code": "192",
+    "name": "Club De Nuit Intense",
+    "reference": "Club De Nuit Intense",
+    "brand": "Armaf",
+    "description": "El icono definitivo del magnetismo y la presencia ejecutiva. Abre con un golpe crujiente de piña ahumada, grosellas y cítricos que evoluciona hacia un corazón ahumado de abedul y un lecho duradero de ámbar gris y almizcle.",
+    "image": "images/kode/kode_192.jpg",
+    "olfactoryFamily": "Amaderada Especiada",
+    "gender": "hombre",
+    "sales": 198,
+    "accords": [
+      {
+        "name": "cítrico",
+        "percentage": 100,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      },
+      {
+        "name": "afrutado",
+        "percentage": 84,
+        "bg": "#db2777",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 70,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "ahumado",
+        "percentage": 58,
+        "bg": "#334155",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cuero",
+        "percentage": 48,
+        "bg": "#3b0764",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Limón",
+          "image": "notes/limon.jpg"
+        },
+        {
+          "name": "Piña",
+          "image": "notes/pina.jpg"
+        },
+        {
+          "name": "Bergamota",
+          "image": "notes/bergamota.jpg"
+        },
+        {
+          "name": "Grosellas negras",
+          "image": "notes/grosella.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Abedul",
+          "image": "notes/abedul.jpg"
+        },
+        {
+          "name": "Jazmín",
+          "image": "notes/jazmin.jpg"
+        },
+        {
+          "name": "Rosa",
+          "image": "notes/rosa.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Almizcle",
+          "image": "notes/almizcle.jpg"
+        },
+        {
+          "name": "Ámbar gris",
+          "image": "notes/ambar.jpg"
+        },
+        {
+          "name": "Pachulí",
+          "image": "notes/pachuli.jpg"
+        },
+        {
+          "name": "Vainilla",
+          "image": "notes/vainilla.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-140",
+    "code": "140",
+    "name": "Aqua Di Gio",
+    "reference": "Aqua Di Gio",
+    "brand": "Giorgio Armani",
+    "description": "Inspirada en Aqua Di Gio de Giorgio Armani. Pertenece a la prestigiosa familia olfativa Cítrica Acuática. Abre con un despliegue radiante de lima, limón, bergamota, jazmín, revela un corazón fascinante de notas marinas, jazmín, calone, melocotón, y perdura sobre un fondo suntuoso de almizcle blanco, cedro, musgo de roble, pachulí. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_140.jpg",
+    "olfactoryFamily": "Cítrica Acuática",
+    "gender": "hombre",
+    "sales": 193,
+    "accords": [
+      {
+        "name": "cítrico",
+        "percentage": 100,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      },
+      {
+        "name": "aromático",
+        "percentage": 84,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      },
+      {
+        "name": "marino",
+        "percentage": 70,
+        "bg": "#0284c7",
+        "text": "#ffffff"
+      },
+      {
+        "name": "fresco especiado",
+        "percentage": 58,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Lima",
+          "image": "notes/lima.jpg"
+        },
+        {
+          "name": "Limón",
+          "image": "notes/limon.jpg"
+        },
+        {
+          "name": "Bergamota",
+          "image": "notes/bergamota.jpg"
+        },
+        {
+          "name": "Jazmín",
+          "image": "notes/jazmin.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Notas marinas",
+          "image": "notes/notas-marinas.jpg"
+        },
+        {
+          "name": "Jazmín",
+          "image": "notes/jazmin.jpg"
+        },
+        {
+          "name": "Calone",
+          "image": "notes/notas-marinas.jpg"
+        },
+        {
+          "name": "Melocotón",
+          "image": "notes/melocoton.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Almizcle blanco",
+          "image": "notes/almizcle.jpg"
+        },
+        {
+          "name": "Cedro",
+          "image": "notes/cedro.jpg"
+        },
+        {
+          "name": "Musgo de roble",
+          "image": "notes/musgo-roble.jpg"
+        },
+        {
+          "name": "Pachulí",
+          "image": "notes/pachuli.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-149",
+    "code": "149",
+    "name": "Aventus",
+    "reference": "Aventus",
+    "brand": "Creed",
+    "description": "Inspirada en Aventus de Creed. Pertenece a la prestigiosa familia olfativa AFRUTADO dulce. Abre con un despliegue radiante de bergamota, grosella negra, piña, manzana, revela un corazón fascinante de abedul, pachulí, rosa, jazmín, y perdura sobre un fondo suntuoso de almizcle, musgo, vanille, ámbar gris. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_149.jpg",
+    "olfactoryFamily": "AFRUTADO dulce",
+    "gender": "hombre",
+    "sales": 118,
+    "accords": [
+      {
+        "name": "afrutado",
+        "percentage": 100,
+        "bg": "#db2777",
+        "text": "#ffffff"
+      },
+      {
+        "name": "dulce",
+        "percentage": 84,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cuero",
+        "percentage": 70,
+        "bg": "#3b0764",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 58,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "ahumado",
+        "percentage": 48,
+        "bg": "#334155",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Bergamota",
+          "image": "notes/bergamota.jpg"
+        },
+        {
+          "name": "Grosella negra",
+          "image": "notes/grosella.jpg"
+        },
+        {
+          "name": "Piña",
+          "image": "notes/pina.jpg"
+        },
+        {
+          "name": "Manzana",
+          "image": "notes/manzana.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Abedul",
+          "image": "notes/abedul.jpg"
+        },
+        {
+          "name": "Pachulí",
+          "image": "notes/pachuli.jpg"
+        },
+        {
+          "name": "Rosa",
+          "image": "notes/rosa.jpg"
+        },
+        {
+          "name": "Jazmín",
+          "image": "notes/jazmin.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Almizcle",
+          "image": "notes/almizcle.jpg"
+        },
+        {
+          "name": "Musgo",
+          "image": "notes/musgo-roble.jpg"
+        },
+        {
+          "name": "Vanille",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Ámbar gris",
+          "image": "notes/ambar.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-658",
+    "code": "658",
+    "name": "Baccarat Rouge",
+    "reference": "Baccarat Rouge",
+    "brand": "Maison Francis Kurkdjian",
+    "description": "Inspirada en Baccarat Rouge de Maison Francis Kurkdjian. Pertenece a la prestigiosa familia olfativa AMADERADO fresco especiado. Abre con un despliegue radiante de jazmín, azafrán, revela un corazón fascinante de amberwood, y perdura sobre un fondo suntuoso de fir resin, cedro. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_658.jpg",
+    "olfactoryFamily": "AMADERADO fresco especiado",
+    "gender": "unisex",
+    "sales": 115,
+    "accords": [
+      {
+        "name": "amaderado",
+        "percentage": 100,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "fresco especiado",
+        "percentage": 84,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cálido especiado",
+        "percentage": 70,
+        "bg": "#701a75",
+        "text": "#ffffff"
+      },
+      {
+        "name": "aromático",
+        "percentage": 58,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      },
+      {
+        "name": "floral blanco",
+        "percentage": 48,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Jazmín",
+          "image": "notes/jazmin.jpg"
+        },
+        {
+          "name": "Azafrán",
+          "image": "notes/azafran.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Amberwood",
+          "image": "notes/ambar.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Fir Resin",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Cedro",
+          "image": "notes/cedro.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-677",
+    "code": "677",
+    "name": "Oud Wood",
+    "reference": "Oud Wood",
+    "brand": "Tom Ford",
+    "description": "Una de las composiciones más exclusivas y opulentas de la alta perfumería. Maderas raras de oud y sándalo se funden con la calidez del cardamomo y la dulzura envolvente del haba tonka y el ámbar.",
+    "image": "images/kode/kode_677.jpg",
+    "olfactoryFamily": "Ámbar Amaderada",
+    "gender": "unisex",
+    "sales": 112,
+    "accords": [
+      {
+        "name": "oud",
+        "percentage": 100,
+        "bg": "#1e1b4b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 84,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cálido especiado",
+        "percentage": 70,
+        "bg": "#701a75",
+        "text": "#ffffff"
+      },
+      {
+        "name": "balsámico",
+        "percentage": 58,
+        "bg": "#6b21a8",
+        "text": "#ffffff"
+      },
+      {
+        "name": "aromático",
+        "percentage": 48,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Palo de rosa",
+          "image": "notes/rosa.jpg"
+        },
+        {
+          "name": "Cardamomo",
+          "image": "notes/cardamomo.jpg"
+        },
+        {
+          "name": "Pimienta de Sichuan",
+          "image": "notes/pimienta-negra.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Oud",
+          "image": "notes/oud.jpg"
+        },
+        {
+          "name": "Sándalo",
+          "image": "notes/sandalo.jpg"
+        },
+        {
+          "name": "Vetiver",
+          "image": "notes/vetiver.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Haba tonka",
+          "image": "notes/haba-tonka.jpg"
+        },
+        {
+          "name": "Vainilla",
+          "image": "notes/vainilla.jpg"
+        },
+        {
+          "name": "Ámbar",
+          "image": "notes/ambar.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-286",
+    "code": "286",
+    "name": "Le Male Elixir",
+    "reference": "Le Male Elixir",
+    "brand": "Jean Paul Gaultier",
+    "description": "Inspirada en Le Male Elixir de Jean Paul Gaultier. Pertenece a la prestigiosa familia olfativa DULCE. Abre con un despliegue radiante de gourmand, revela un corazón fascinante de creamy, y perdura sobre un fondo suntuoso de spicy. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_286.jpg",
+    "olfactoryFamily": "DULCE",
+    "gender": "hombre",
+    "sales": 111,
+    "accords": [
+      {
+        "name": "dulce",
+        "percentage": 100,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Gourmand",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Creamy",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Spicy",
+          "image": "notes/maderas.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-679",
+    "code": "679",
+    "name": "Santal 33",
+    "reference": "Santal 33",
+    "brand": "Le Labo",
+    "description": "Una leyenda indiscutible de la perfumería contemporánea. Con un magnetismo ahumado y coriáceo, despliega sándalo australiano, cardamomo y papiro con sutiles acordes florales de iris y violeta.",
+    "image": "images/kode/kode_679.jpg",
+    "olfactoryFamily": "Amaderada Aromática",
+    "gender": "unisex",
+    "sales": 101,
+    "accords": [
+      {
+        "name": "amaderado",
+        "percentage": 100,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cuero",
+        "percentage": 84,
+        "bg": "#3b0764",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cálido especiado",
+        "percentage": 70,
+        "bg": "#701a75",
+        "text": "#ffffff"
+      },
+      {
+        "name": "atalcado",
+        "percentage": 58,
+        "bg": "#a855f7",
+        "text": "#ffffff"
+      },
+      {
+        "name": "floral",
+        "percentage": 48,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Cardamomo",
+          "image": "notes/cardamomo.jpg"
+        },
+        {
+          "name": "Iris",
+          "image": "notes/iris.jpg"
+        },
+        {
+          "name": "Violeta",
+          "image": "notes/violeta.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Papiro",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Cedro",
+          "image": "notes/cedro.jpg"
+        },
+        {
+          "name": "Cuero",
+          "image": "notes/cuero.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Sándalo",
+          "image": "notes/sandalo.jpg"
+        },
+        {
+          "name": "Ámbar",
+          "image": "notes/ambar.jpg"
+        },
+        {
+          "name": "Notas amaderadas",
+          "image": "notes/maderas.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-350",
+    "code": "350",
+    "name": "Stronger With You",
+    "reference": "Stronger With You",
+    "brand": "Giorgio Armani",
+    "description": "Inspirada en Stronger With You de Giorgio Armani. Pertenece a la prestigiosa familia olfativa DULCE. Abre con un despliegue radiante de gourmand, revela un corazón fascinante de spicy, y perdura sobre un fondo suntuoso de woody. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_350.jpg",
+    "olfactoryFamily": "DULCE",
+    "gender": "hombre",
+    "sales": 95,
+    "accords": [
+      {
+        "name": "dulce",
+        "percentage": 100,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Gourmand",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Spicy",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Woody",
+          "image": "notes/maderas.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-534",
+    "code": "534",
+    "name": "La Vida Es Bella",
+    "reference": "La Vida Es Bella",
+    "brand": "Lancôme",
+    "description": "Inspirada en La Vida Es Bella de Lancôme. Pertenece a la prestigiosa familia olfativa Floral Frutal Gourmand. Abre con un despliegue radiante de grosellas negras, pera, revela un corazón fascinante de iris, jazmín, flor de azahar, y perdura sobre un fondo suntuoso de praliné, vainilla, pachulí, haba tonka. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_534.jpg",
+    "olfactoryFamily": "Floral Frutal Gourmand",
+    "gender": "mujer",
+    "sales": 93,
+    "accords": [
+      {
+        "name": "dulce",
+        "percentage": 100,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      },
+      {
+        "name": "avainillado",
+        "percentage": 84,
+        "bg": "#9333ea",
+        "text": "#ffffff"
+      },
+      {
+        "name": "afrutado",
+        "percentage": 70,
+        "bg": "#db2777",
+        "text": "#ffffff"
+      },
+      {
+        "name": "pachulí",
+        "percentage": 58,
+        "bg": "#581c87",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 48,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Grosellas negras",
+          "image": "notes/grosella.jpg"
+        },
+        {
+          "name": "Pera",
+          "image": "notes/pera.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Iris",
+          "image": "notes/iris.jpg"
+        },
+        {
+          "name": "Jazmín",
+          "image": "notes/jazmin.jpg"
+        },
+        {
+          "name": "Flor de azahar",
+          "image": "notes/flor-azahar.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Praliné",
+          "image": "notes/avellana.jpg"
+        },
+        {
+          "name": "Vainilla",
+          "image": "notes/vainilla.jpg"
+        },
+        {
+          "name": "Pachulí",
+          "image": "notes/pachuli.jpg"
+        },
+        {
+          "name": "Haba tonka",
+          "image": "notes/haba-tonka.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-109",
+    "code": "109",
+    "name": "212 Men",
+    "reference": "212 Men",
+    "brand": "Carolina Herrera",
+    "description": "Inspirada en 212 Men de Carolina Herrera. Pertenece a la prestigiosa familia olfativa Amaderada Aromática. Abre con un despliegue radiante de pomelo, romero, cardamomo, revela un corazón fascinante de ylang-ylang, tuberosa, y perdura sobre un fondo suntuoso de gamuza, cedro de virginia, cuero, vetiver. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_109.jpg",
+    "olfactoryFamily": "Amaderada Aromática",
+    "gender": "hombre",
+    "sales": 90,
+    "accords": [
+      {
+        "name": "floral blanco",
+        "percentage": 100,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cítrico",
+        "percentage": 84,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 70,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "aromático",
+        "percentage": 58,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cuero",
+        "percentage": 48,
+        "bg": "#3b0764",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Pomelo",
+          "image": "notes/pomelo.jpg"
+        },
+        {
+          "name": "Romero",
+          "image": "notes/romero.jpg"
+        },
+        {
+          "name": "Cardamomo",
+          "image": "notes/cardamomo.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Ylang-Ylang",
+          "image": "notes/ylang-ylang.jpg"
+        },
+        {
+          "name": "Tuberosa",
+          "image": "notes/rosa.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Gamuza",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Cedro de Virginia",
+          "image": "notes/cedro.jpg"
+        },
+        {
+          "name": "Cuero",
+          "image": "notes/cuero.jpg"
+        },
+        {
+          "name": "Vetiver",
+          "image": "notes/vetiver.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-285",
+    "code": "285",
+    "name": "Le Beau",
+    "reference": "Le Beau",
+    "brand": "Jean Paul Gaultier",
+    "description": "Inspirada en Le Beau de Jean Paul Gaultier. Pertenece a la prestigiosa familia olfativa DULCE. Abre con un despliegue radiante de fresh, revela un corazón fascinante de synthetic, y perdura sobre un fondo suntuoso de fruity. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_285.jpg",
+    "olfactoryFamily": "DULCE",
+    "gender": "hombre",
+    "sales": 90,
+    "accords": [
+      {
+        "name": "dulce",
+        "percentage": 100,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Fresh",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Synthetic",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Fruity",
+          "image": "notes/maderas.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-690",
+    "code": "690",
+    "name": "Mandarin Sky",
+    "reference": "Mandarin Sky",
+    "brand": "Armaf",
+    "description": "Inspirada en Mandarin Sky de Armaf. Pertenece a la prestigiosa familia olfativa DULCE. Abre con un despliegue radiante de creamy, revela un corazón fascinante de synthetic, y perdura sobre un fondo suntuoso de citrus. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_690.jpg",
+    "olfactoryFamily": "DULCE",
+    "gender": "hombre",
+    "sales": 89,
+    "accords": [
+      {
+        "name": "dulce",
+        "percentage": 100,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Creamy",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Synthetic",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Citrus",
+          "image": "notes/maderas.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-142",
+    "code": "142",
+    "name": "Aqua Di Gio Profumo",
+    "reference": "Aqua Di Gio Profumo",
+    "brand": "Giorgio Armani",
+    "description": "Inspirada en Aqua Di Gio Profumo de Giorgio Armani. Pertenece a la prestigiosa familia olfativa Cítrica Acuática. Abre con un despliegue radiante de lima, limón, bergamota, jazmín, revela un corazón fascinante de notas marinas, jazmín, calone, melocotón, y perdura sobre un fondo suntuoso de almizcle blanco, cedro, musgo de roble, pachulí. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_142.jpg",
+    "olfactoryFamily": "Cítrica Acuática",
+    "gender": "hombre",
+    "sales": 86,
+    "accords": [
+      {
+        "name": "cítrico",
+        "percentage": 100,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      },
+      {
+        "name": "aromático",
+        "percentage": 84,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      },
+      {
+        "name": "marino",
+        "percentage": 70,
+        "bg": "#0284c7",
+        "text": "#ffffff"
+      },
+      {
+        "name": "fresco especiado",
+        "percentage": 58,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Lima",
+          "image": "notes/lima.jpg"
+        },
+        {
+          "name": "Limón",
+          "image": "notes/limon.jpg"
+        },
+        {
+          "name": "Bergamota",
+          "image": "notes/bergamota.jpg"
+        },
+        {
+          "name": "Jazmín",
+          "image": "notes/jazmin.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Notas marinas",
+          "image": "notes/notas-marinas.jpg"
+        },
+        {
+          "name": "Jazmín",
+          "image": "notes/jazmin.jpg"
+        },
+        {
+          "name": "Calone",
+          "image": "notes/notas-marinas.jpg"
+        },
+        {
+          "name": "Melocotón",
+          "image": "notes/melocoton.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Almizcle blanco",
+          "image": "notes/almizcle.jpg"
+        },
+        {
+          "name": "Cedro",
+          "image": "notes/cedro.jpg"
+        },
+        {
+          "name": "Musgo de roble",
+          "image": "notes/musgo-roble.jpg"
+        },
+        {
+          "name": "Pachulí",
+          "image": "notes/pachuli.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-217",
+    "code": "217",
+    "name": "Eros",
+    "reference": "Eros",
+    "brand": "Versace",
+    "description": "Inspirada en Eros de Versace. Pertenece a la prestigiosa familia olfativa AROMÁTICO verde. Abre con un despliegue radiante de menta, manzana verde, limón, revela un corazón fascinante de haba tonka, geranio, ambroxan, y perdura sobre un fondo suntuoso de vainilla de madagascar, vetiver, musgo de roble, cedro de virginia. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_217.jpg",
+    "olfactoryFamily": "AROMÁTICO verde",
+    "gender": "hombre",
+    "sales": 83,
+    "accords": [
+      {
+        "name": "aromático",
+        "percentage": 100,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      },
+      {
+        "name": "verde",
+        "percentage": 84,
+        "bg": "#059669",
+        "text": "#ffffff"
+      },
+      {
+        "name": "avainillado",
+        "percentage": 70,
+        "bg": "#9333ea",
+        "text": "#ffffff"
+      },
+      {
+        "name": "fresco especiado",
+        "percentage": 58,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 48,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Menta",
+          "image": "notes/menta.jpg"
+        },
+        {
+          "name": "Manzana verde",
+          "image": "notes/manzana-verde.jpg"
+        },
+        {
+          "name": "Limón",
+          "image": "notes/limon.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Haba tonka",
+          "image": "notes/haba-tonka.jpg"
+        },
+        {
+          "name": "Geranio",
+          "image": "notes/geranio.jpg"
+        },
+        {
+          "name": "Ambroxan",
+          "image": "notes/ambroxan.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Vainilla de Madagascar",
+          "image": "notes/vainilla.jpg"
+        },
+        {
+          "name": "Vetiver",
+          "image": "notes/vetiver.jpg"
+        },
+        {
+          "name": "Musgo de roble",
+          "image": "notes/musgo-roble.jpg"
+        },
+        {
+          "name": "Cedro de Virginia",
+          "image": "notes/cedro.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-179",
+    "code": "179",
+    "name": "Bulgari Man In Black",
+    "reference": "Bulgari Man In Black",
+    "brand": "Bvlgari",
+    "description": "Inspirada en Bulgari Man In Black de Bvlgari. Pertenece a la prestigiosa familia olfativa Amaderada Floral. Abre con un despliegue radiante de té, aldehídos, bergamota, lavanda, revela un corazón fascinante de pimienta, iris, madera de gaiac, palo de rosa, y perdura sobre un fondo suntuoso de almizcle, cedro, musgo de roble, vetiver. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_179.jpg",
+    "olfactoryFamily": "Amaderada Floral",
+    "gender": "hombre",
+    "sales": 81,
+    "accords": [
+      {
+        "name": "amaderado",
+        "percentage": 100,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "fresco especiado",
+        "percentage": 84,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      },
+      {
+        "name": "aromático",
+        "percentage": 70,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cítrico",
+        "percentage": 58,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      },
+      {
+        "name": "verde",
+        "percentage": 48,
+        "bg": "#059669",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Té",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Aldehídos",
+          "image": "notes/aldehidos.jpg"
+        },
+        {
+          "name": "Bergamota",
+          "image": "notes/bergamota.jpg"
+        },
+        {
+          "name": "Lavanda",
+          "image": "notes/lavanda.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Pimienta",
+          "image": "notes/pimienta-negra.jpg"
+        },
+        {
+          "name": "Iris",
+          "image": "notes/iris.jpg"
+        },
+        {
+          "name": "Madera de gaiac",
+          "image": "notes/guayaco.jpg"
+        },
+        {
+          "name": "Palo de rosa",
+          "image": "notes/rosa.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Almizcle",
+          "image": "notes/almizcle.jpg"
+        },
+        {
+          "name": "Cedro",
+          "image": "notes/cedro.jpg"
+        },
+        {
+          "name": "Musgo de roble",
+          "image": "notes/musgo-roble.jpg"
+        },
+        {
+          "name": "Vetiver",
+          "image": "notes/vetiver.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-2",
+    "code": "2",
+    "name": "Born in Roma Intense",
+    "reference": "Born in Roma Intense",
+    "brand": "Valentino",
+    "description": "Inspirada en Born in Roma Intense de Valentino. Pertenece a la prestigiosa familia olfativa Ámbar Amaderada. Abre con un despliegue radiante de notas minerales, hojas de violeta, sal, revela un corazón fascinante de jengibre, salvia, y perdura sobre un fondo suntuoso de notas amaderadas, vetiver. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_2.jpg",
+    "olfactoryFamily": "Ámbar Amaderada",
+    "gender": "hombre",
+    "sales": 81,
+    "accords": [
+      {
+        "name": "amaderado",
+        "percentage": 100,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "aromático",
+        "percentage": 84,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      },
+      {
+        "name": "mineral",
+        "percentage": 70,
+        "bg": "#334155",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cálido especiado",
+        "percentage": 58,
+        "bg": "#701a75",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Notas minerales",
+          "image": "notes/notas-minerales.jpg"
+        },
+        {
+          "name": "Hojas de violeta",
+          "image": "notes/violeta.jpg"
+        },
+        {
+          "name": "Sal",
+          "image": "notes/notas-marinas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Jengibre",
+          "image": "notes/jengibre.jpg"
+        },
+        {
+          "name": "Salvia",
+          "image": "notes/salvia.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Notas amaderadas",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Vetiver",
+          "image": "notes/vetiver.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-256",
+    "code": "256",
+    "name": "Issey Miyake L'eau D'Issey",
+    "reference": "Issey Miyake L'eau D'Issey",
+    "brand": "Issey Miyake",
+    "description": "La quintaesencia de la frescura serena y cristalina. Una cascada vigorizante de yuzu japonés y cítricos nobles que fluye hacia un corazón especiado acuático y una base atemporal de cedro y vetiver.",
+    "image": "images/kode/kode_256.jpg",
+    "olfactoryFamily": "Amaderada Acuática",
+    "gender": "hombre",
+    "sales": 80,
+    "accords": [
+      {
+        "name": "cítrico",
+        "percentage": 100,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      },
+      {
+        "name": "aromático",
+        "percentage": 84,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      },
+      {
+        "name": "fresco especiado",
+        "percentage": 70,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      },
+      {
+        "name": "acuático",
+        "percentage": 58,
+        "bg": "#0284c7",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 48,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Yuzu",
+          "image": "notes/yuzu.jpg"
+        },
+        {
+          "name": "Limón",
+          "image": "notes/limon.jpg"
+        },
+        {
+          "name": "Bergamota",
+          "image": "notes/bergamota.jpg"
+        },
+        {
+          "name": "Mandarina",
+          "image": "notes/mandarina.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Lirio de los valles",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Nuez moscada",
+          "image": "notes/nuez-moscada.jpg"
+        },
+        {
+          "name": "Loto azul",
+          "image": "notes/flor-loto.jpg"
+        },
+        {
+          "name": "Canela",
+          "image": "notes/canela.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Vetiver de Tahití",
+          "image": "notes/vetiver.jpg"
+        },
+        {
+          "name": "Almizcle",
+          "image": "notes/almizcle.jpg"
+        },
+        {
+          "name": "Cedro",
+          "image": "notes/cedro.jpg"
+        },
+        {
+          "name": "Sándalo",
+          "image": "notes/sandalo.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-697",
+    "code": "697",
+    "name": "Y Eau de Parfum",
+    "reference": "Y Eau de Parfum",
+    "brand": "Yves Saint Laurent",
+    "description": "Inspirada en Y Eau de Parfum de Yves Saint Laurent. Pertenece a la prestigiosa familia olfativa VERDE amaderado. Abre con un despliegue radiante de aldehídos, miel, gardenia, notas verdes, revela un corazón fascinante de tuberosa, lirio, jazmín, hiacynth, y perdura sobre un fondo suntuoso de sándalo, ámbar, pachulí, benjuí. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_697.jpg",
+    "olfactoryFamily": "VERDE amaderado",
+    "gender": "hombre",
+    "sales": 79,
+    "accords": [
+      {
+        "name": "verde",
+        "percentage": 100,
+        "bg": "#059669",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 84,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "floral blanco",
+        "percentage": 70,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "terroso",
+        "percentage": 58,
+        "bg": "#2e1065",
+        "text": "#ffffff"
+      },
+      {
+        "name": "floral",
+        "percentage": 48,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "aldehídico",
+        "percentage": 40,
+        "bg": "#a5b4fc",
+        "text": "#1e1b4b"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Aldehídos",
+          "image": "notes/aldehidos.jpg"
+        },
+        {
+          "name": "Miel",
+          "image": "notes/miel.jpg"
+        },
+        {
+          "name": "Gardenia",
+          "image": "notes/gardenia.jpg"
+        },
+        {
+          "name": "Notas verdes",
+          "image": "notes/notas-verdes.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Tuberosa",
+          "image": "notes/rosa.jpg"
+        },
+        {
+          "name": "Lirio",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Jazmín",
+          "image": "notes/jazmin.jpg"
+        },
+        {
+          "name": "Hiacynth",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Sándalo",
+          "image": "notes/sandalo.jpg"
+        },
+        {
+          "name": "Ámbar",
+          "image": "notes/ambar.jpg"
+        },
+        {
+          "name": "Pachulí",
+          "image": "notes/pachuli.jpg"
+        },
+        {
+          "name": "Benjuí",
+          "image": "notes/benjui.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-689",
+    "code": "689",
+    "name": "Erba pura",
+    "reference": "Erba pura",
+    "brand": "Xerjoff",
+    "description": "Inspirada en Erba pura de Xerjoff. Pertenece a la prestigiosa familia olfativa CÍTRICO floral blanco. Abre con un despliegue radiante de bergamota de calabria, naranja, limón siciliano, piña, revela un corazón fascinante de flor de loto, jazmín, heliotropo, flor de azahar, y perdura sobre un fondo suntuoso de almizcle blanco, ámbar gris, vainilla. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_689.jpg",
+    "olfactoryFamily": "CÍTRICO floral blanco",
+    "gender": "unisex",
+    "sales": 76,
+    "accords": [
+      {
+        "name": "cítrico",
+        "percentage": 100,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      },
+      {
+        "name": "floral blanco",
+        "percentage": 84,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "floral",
+        "percentage": 70,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "dulce",
+        "percentage": 58,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      },
+      {
+        "name": "avainillado",
+        "percentage": 48,
+        "bg": "#9333ea",
+        "text": "#ffffff"
+      },
+      {
+        "name": "afrutado",
+        "percentage": 40,
+        "bg": "#db2777",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Bergamota de Calabria",
+          "image": "notes/bergamota.jpg"
+        },
+        {
+          "name": "Naranja",
+          "image": "notes/naranja.jpg"
+        },
+        {
+          "name": "Limón siciliano",
+          "image": "notes/limon.jpg"
+        },
+        {
+          "name": "Piña",
+          "image": "notes/pina.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Flor de loto",
+          "image": "notes/flor-loto.jpg"
+        },
+        {
+          "name": "Jazmín",
+          "image": "notes/jazmin.jpg"
+        },
+        {
+          "name": "Heliotropo",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Flor de azahar",
+          "image": "notes/flor-azahar.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Almizcle blanco",
+          "image": "notes/almizcle.jpg"
+        },
+        {
+          "name": "Ámbar gris",
+          "image": "notes/ambar.jpg"
+        },
+        {
+          "name": "Vainilla",
+          "image": "notes/vainilla.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-287",
+    "code": "287",
+    "name": "Le Male Le Parfum",
+    "reference": "Le Male Le Parfum",
+    "brand": "Jean Paul Gaultier",
+    "description": "Inspirada en Le Male Le Parfum de Jean Paul Gaultier. Pertenece a la prestigiosa familia olfativa DULCE. Abre con un despliegue radiante de spicy, revela un corazón fascinante de oriental, y perdura sobre un fondo suntuoso de powdery. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_287.jpg",
+    "olfactoryFamily": "DULCE",
+    "gender": "hombre",
+    "sales": 72,
+    "accords": [
+      {
+        "name": "dulce",
+        "percentage": 100,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Spicy",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Oriental",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Powdery",
+          "image": "notes/maderas.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-453",
+    "code": "453",
+    "name": "Coco Mademoiselle",
+    "reference": "Coco Mademoiselle",
+    "brand": "Chanel",
+    "description": "Inspirada en Coco Mademoiselle de Chanel. Pertenece a la prestigiosa familia olfativa CÍTRICO floral blanco. Abre con un despliegue radiante de naranja, mandarina, flor de azahar, bergamota, revela un corazón fascinante de mimosa, jazmín, rosa turca, ylang-ylang, y perdura sobre un fondo suntuoso de haba tonka, pachulí, opoponax, vainilla. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_453.jpg",
+    "olfactoryFamily": "CÍTRICO floral blanco",
+    "gender": "mujer",
+    "sales": 71,
+    "accords": [
+      {
+        "name": "cítrico",
+        "percentage": 100,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      },
+      {
+        "name": "floral blanco",
+        "percentage": 84,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "pachulí",
+        "percentage": 70,
+        "bg": "#581c87",
+        "text": "#ffffff"
+      },
+      {
+        "name": "dulce",
+        "percentage": 58,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      },
+      {
+        "name": "balsámico",
+        "percentage": 48,
+        "bg": "#6b21a8",
+        "text": "#ffffff"
+      },
+      {
+        "name": "rosas",
+        "percentage": 40,
+        "bg": "#be123c",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Naranja",
+          "image": "notes/naranja.jpg"
+        },
+        {
+          "name": "Mandarina",
+          "image": "notes/mandarina.jpg"
+        },
+        {
+          "name": "Flor de azahar",
+          "image": "notes/flor-azahar.jpg"
+        },
+        {
+          "name": "Bergamota",
+          "image": "notes/bergamota.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Mimosa",
+          "image": "notes/jazmin.jpg"
+        },
+        {
+          "name": "Jazmín",
+          "image": "notes/jazmin.jpg"
+        },
+        {
+          "name": "Rosa turca",
+          "image": "notes/rosa.jpg"
+        },
+        {
+          "name": "Ylang-Ylang",
+          "image": "notes/ylang-ylang.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Haba tonka",
+          "image": "notes/haba-tonka.jpg"
+        },
+        {
+          "name": "Pachulí",
+          "image": "notes/pachuli.jpg"
+        },
+        {
+          "name": "Opoponax",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Vainilla",
+          "image": "notes/vainilla.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-292",
+    "code": "292",
+    "name": "Light Blue",
+    "reference": "Light Blue",
+    "brand": "Dolce & Gabbana",
+    "description": "Inspirada en Light Blue de Dolce & Gabbana. Pertenece a la prestigiosa familia olfativa CÍTRICO amaderado. Abre con un despliegue radiante de bergamota, citron, revela un corazón fascinante de petitgrain, y perdura sobre un fondo suntuoso de cedro, vetiver. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_292.jpg",
+    "olfactoryFamily": "CÍTRICO amaderado",
+    "gender": "hombre",
+    "sales": 67,
+    "accords": [
+      {
+        "name": "cítrico",
+        "percentage": 100,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 84,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "aromático",
+        "percentage": 70,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      },
+      {
+        "name": "verde",
+        "percentage": 58,
+        "bg": "#059669",
+        "text": "#ffffff"
+      },
+      {
+        "name": "fresco especiado",
+        "percentage": 48,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Bergamota",
+          "image": "notes/bergamota.jpg"
+        },
+        {
+          "name": "Citron",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Petitgrain",
+          "image": "notes/petitgrain.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Cedro",
+          "image": "notes/cedro.jpg"
+        },
+        {
+          "name": "Vetiver",
+          "image": "notes/vetiver.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-100",
+    "code": "100",
+    "name": "1 Million Elixir",
+    "reference": "1 Million Elixir",
+    "brand": "Paco Rabanne",
+    "description": "Inspirada en 1 Million Elixir de Paco Rabanne. Pertenece a la prestigiosa familia olfativa CÁLIDO ESPECIADO canela. Abre con un despliegue radiante de pomelo, menta, mandarina, revela un corazón fascinante de rosa, canela, spicy notes, y perdura sobre un fondo suntuoso de cuero, maderas nobles, ámbar, pachulí. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_100.jpg",
+    "olfactoryFamily": "CÁLIDO ESPECIADO canela",
+    "gender": "hombre",
+    "sales": 65,
+    "accords": [
+      {
+        "name": "cálido especiado",
+        "percentage": 100,
+        "bg": "#701a75",
+        "text": "#ffffff"
+      },
+      {
+        "name": "canela",
+        "percentage": 84,
+        "bg": "#831843",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cítrico",
+        "percentage": 70,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cuero",
+        "percentage": 58,
+        "bg": "#3b0764",
+        "text": "#ffffff"
+      },
+      {
+        "name": "ámbar",
+        "percentage": 48,
+        "bg": "#86198f",
+        "text": "#ffffff"
+      },
+      {
+        "name": "rosas",
+        "percentage": 40,
+        "bg": "#be123c",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Pomelo",
+          "image": "notes/pomelo.jpg"
+        },
+        {
+          "name": "Menta",
+          "image": "notes/menta.jpg"
+        },
+        {
+          "name": "Mandarina",
+          "image": "notes/mandarina.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Rosa",
+          "image": "notes/rosa.jpg"
+        },
+        {
+          "name": "Canela",
+          "image": "notes/canela.jpg"
+        },
+        {
+          "name": "Spicy Notes",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Cuero",
+          "image": "notes/cuero.jpg"
+        },
+        {
+          "name": "Maderas nobles",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Ámbar",
+          "image": "notes/ambar.jpg"
+        },
+        {
+          "name": "Pachulí",
+          "image": "notes/pachuli.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-223",
+    "code": "223",
+    "name": "Fahrenheit",
+    "reference": "Fahrenheit",
+    "brand": "Dior",
+    "description": "Inspirada en Fahrenheit de Dior. Pertenece a la prestigiosa familia olfativa CUERO aromático. Abre con un despliegue radiante de lavanda, mandarina, hawthorn, nuez moscada, revela un corazón fascinante de nuez moscada, miel, clavel, sándalo, y perdura sobre un fondo suntuoso de cuero, haba tonka, ámbar, pachulí. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_223.jpg",
+    "olfactoryFamily": "CUERO aromático",
+    "gender": "hombre",
+    "sales": 54,
+    "accords": [
+      {
+        "name": "cuero",
+        "percentage": 100,
+        "bg": "#3b0764",
+        "text": "#ffffff"
+      },
+      {
+        "name": "aromático",
+        "percentage": 84,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 70,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "fresco especiado",
+        "percentage": 58,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      },
+      {
+        "name": "ozónico",
+        "percentage": 48,
+        "bg": "#38bdf8",
+        "text": "#0f172a"
+      },
+      {
+        "name": "floral",
+        "percentage": 40,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Lavanda",
+          "image": "notes/lavanda.jpg"
+        },
+        {
+          "name": "Mandarina",
+          "image": "notes/mandarina.jpg"
+        },
+        {
+          "name": "Hawthorn",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Nuez moscada",
+          "image": "notes/nuez-moscada.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Nuez moscada",
+          "image": "notes/nuez-moscada.jpg"
+        },
+        {
+          "name": "Miel",
+          "image": "notes/miel.jpg"
+        },
+        {
+          "name": "Clavel",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Sándalo",
+          "image": "notes/sandalo.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Cuero",
+          "image": "notes/cuero.jpg"
+        },
+        {
+          "name": "Haba tonka",
+          "image": "notes/haba-tonka.jpg"
+        },
+        {
+          "name": "Ámbar",
+          "image": "notes/ambar.jpg"
+        },
+        {
+          "name": "Pachulí",
+          "image": "notes/pachuli.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-251",
+    "code": "251",
+    "name": "Invictus",
+    "reference": "Invictus",
+    "brand": "Paco Rabanne",
+    "description": "El aroma de la victoria heroica y el dinamismo indestructible. Una colisión fascinante entre la frescura salina del laurel y notas marinas con la sensualidad masculina de la madera de guayaco y el ámbar gris.",
+    "image": "images/kode/kode_251.jpg",
+    "olfactoryFamily": "Amaderada Acuática",
+    "gender": "hombre",
+    "sales": 53,
+    "accords": [
+      {
+        "name": "marino",
+        "percentage": 100,
+        "bg": "#0284c7",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cítrico",
+        "percentage": 84,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      },
+      {
+        "name": "aromático",
+        "percentage": 70,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 58,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "ámbar",
+        "percentage": 48,
+        "bg": "#86198f",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Notas marinas",
+          "image": "notes/notas-marinas.jpg"
+        },
+        {
+          "name": "Pomelo",
+          "image": "notes/pomelo.jpg"
+        },
+        {
+          "name": "Mandarina",
+          "image": "notes/mandarina.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Hojas de laurel",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Jazmín",
+          "image": "notes/jazmin.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Ámbar gris",
+          "image": "notes/ambar.jpg"
+        },
+        {
+          "name": "Madera de gaiac",
+          "image": "notes/guayaco.jpg"
+        },
+        {
+          "name": "Musgo de roble",
+          "image": "notes/musgo-roble.jpg"
+        },
+        {
+          "name": "Pachulí",
+          "image": "notes/pachuli.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-431",
+    "code": "431",
+    "name": "Burberry Her",
+    "reference": "Burberry Her",
+    "brand": "Burberry",
+    "description": "Inspirada en Burberry Her de Burberry. Pertenece a la prestigiosa familia olfativa FLORAL. Abre con un despliegue radiante de woody, revela un corazón fascinante de powdery, y perdura sobre un fondo suntuoso de fresh. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_431.jpg",
+    "olfactoryFamily": "FLORAL",
+    "gender": "mujer",
+    "sales": 53,
+    "accords": [
+      {
+        "name": "floral",
+        "percentage": 100,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Woody",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Powdery",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Fresh",
+          "image": "notes/maderas.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-166",
+    "code": "166",
+    "name": "Boss Bottled 98",
+    "reference": "Boss Bottled 98",
+    "brand": "Hugo Boss",
+    "description": "Inspirada en Boss Bottled 98 de Hugo Boss. Pertenece a la prestigiosa familia olfativa AMADERADO avainillado. Abre con un despliegue radiante de ciruela, musgo de roble, manzana, limón, revela un corazón fascinante de mahogany, clavel, canela, y perdura sobre un fondo suntuoso de sándalo, olive tree, vainilla, vetiver. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_166.jpg",
+    "olfactoryFamily": "AMADERADO avainillado",
+    "gender": "hombre",
+    "sales": 51,
+    "accords": [
+      {
+        "name": "amaderado",
+        "percentage": 100,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "avainillado",
+        "percentage": 84,
+        "bg": "#9333ea",
+        "text": "#ffffff"
+      },
+      {
+        "name": "afrutado",
+        "percentage": 70,
+        "bg": "#db2777",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cálido especiado",
+        "percentage": 58,
+        "bg": "#701a75",
+        "text": "#ffffff"
+      },
+      {
+        "name": "canela",
+        "percentage": 48,
+        "bg": "#831843",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Ciruela",
+          "image": "notes/ciruela.jpg"
+        },
+        {
+          "name": "Musgo de roble",
+          "image": "notes/musgo-roble.jpg"
+        },
+        {
+          "name": "Manzana",
+          "image": "notes/manzana.jpg"
+        },
+        {
+          "name": "Limón",
+          "image": "notes/limon.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Mahogany",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Clavel",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Canela",
+          "image": "notes/canela.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Sándalo",
+          "image": "notes/sandalo.jpg"
+        },
+        {
+          "name": "Olive Tree",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Vainilla",
+          "image": "notes/vainilla.jpg"
+        },
+        {
+          "name": "Vetiver",
+          "image": "notes/vetiver.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-495",
+    "code": "495",
+    "name": "Good Girl",
+    "reference": "Good Girl",
+    "brand": "Carolina Herrera",
+    "description": "Inspirada en Good Girl de Carolina Herrera. Pertenece a la prestigiosa familia olfativa FLORAL BLANCO cálido especiado. Abre con un despliegue radiante de almendra, café, revela un corazón fascinante de jazmín sambac, tuberosa, y perdura sobre un fondo suntuoso de haba tonka, cacao. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_495.jpg",
+    "olfactoryFamily": "FLORAL BLANCO cálido especiado",
+    "gender": "mujer",
+    "sales": 51,
+    "accords": [
+      {
+        "name": "floral blanco",
+        "percentage": 100,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cálido especiado",
+        "percentage": 84,
+        "bg": "#701a75",
+        "text": "#ffffff"
+      },
+      {
+        "name": "rosas",
+        "percentage": 70,
+        "bg": "#be123c",
+        "text": "#ffffff"
+      },
+      {
+        "name": "dulce",
+        "percentage": 58,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cacao",
+        "percentage": 48,
+        "bg": "#3b0764",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Almendra",
+          "image": "notes/almendra.jpg"
+        },
+        {
+          "name": "Café",
+          "image": "notes/cafe.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Jazmín Sambac",
+          "image": "notes/jazmin.jpg"
+        },
+        {
+          "name": "Tuberosa",
+          "image": "notes/rosa.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Haba tonka",
+          "image": "notes/haba-tonka.jpg"
+        },
+        {
+          "name": "Cacao",
+          "image": "notes/cacao.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-136",
+    "code": "136",
+    "name": "Allure Sport",
+    "reference": "Allure Sport",
+    "brand": "Chanel",
+    "description": "Inspirada en Allure Sport de Chanel. Pertenece a la prestigiosa familia olfativa FLORAL BLANCO cítrico. Abre con un despliegue radiante de limón, bergamota, mandarina, melocotón, revela un corazón fascinante de jazmín, lirio, miel, fresia, y perdura sobre un fondo suntuoso de sándalo, vetiver, vainilla, pachulí. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_136.jpg",
+    "olfactoryFamily": "FLORAL BLANCO cítrico",
+    "gender": "hombre",
+    "sales": 44,
+    "accords": [
+      {
+        "name": "floral blanco",
+        "percentage": 100,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cítrico",
+        "percentage": 84,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      },
+      {
+        "name": "floral",
+        "percentage": 70,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "afrutado",
+        "percentage": 58,
+        "bg": "#db2777",
+        "text": "#ffffff"
+      },
+      {
+        "name": "avainillado",
+        "percentage": 48,
+        "bg": "#9333ea",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Limón",
+          "image": "notes/limon.jpg"
+        },
+        {
+          "name": "Bergamota",
+          "image": "notes/bergamota.jpg"
+        },
+        {
+          "name": "Mandarina",
+          "image": "notes/mandarina.jpg"
+        },
+        {
+          "name": "Melocotón",
+          "image": "notes/melocoton.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Jazmín",
+          "image": "notes/jazmin.jpg"
+        },
+        {
+          "name": "Lirio",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Miel",
+          "image": "notes/miel.jpg"
+        },
+        {
+          "name": "Fresia",
+          "image": "notes/jazmin.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Sándalo",
+          "image": "notes/sandalo.jpg"
+        },
+        {
+          "name": "Vetiver",
+          "image": "notes/vetiver.jpg"
+        },
+        {
+          "name": "Vainilla",
+          "image": "notes/vainilla.jpg"
+        },
+        {
+          "name": "Pachulí",
+          "image": "notes/pachuli.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-389",
+    "code": "389",
+    "name": "212 Vip Rose",
+    "reference": "212 Vip Rose",
+    "brand": "Carolina Herrera",
+    "description": "Inspirada en 212 Vip Rose de Carolina Herrera. Pertenece a la prestigiosa familia olfativa AFRUTADO amaderado. Abre con un despliegue radiante de champaña, fruity notes, revela un corazón fascinante de melocotón, y perdura sobre un fondo suntuoso de woodsy notes, ámbar, almizcle blanco. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_389.jpg",
+    "olfactoryFamily": "AFRUTADO amaderado",
+    "gender": "mujer",
+    "sales": 44,
+    "accords": [
+      {
+        "name": "afrutado",
+        "percentage": 100,
+        "bg": "#db2777",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 84,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "almizclado",
+        "percentage": 70,
+        "bg": "#64748b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "aldehídico",
+        "percentage": 58,
+        "bg": "#a5b4fc",
+        "text": "#1e1b4b"
+      },
+      {
+        "name": "floral",
+        "percentage": 48,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "dulce",
+        "percentage": 40,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Champaña",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Fruity Notes",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Melocotón",
+          "image": "notes/melocoton.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Woodsy Notes",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Ámbar",
+          "image": "notes/ambar.jpg"
+        },
+        {
+          "name": "Almizcle blanco",
+          "image": "notes/almizcle.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-681",
+    "code": "681",
+    "name": "Tobacco Vainilla",
+    "reference": "Tobacco Vainilla",
+    "brand": "Tom Ford",
+    "description": "Inspirada en Tobacco Vainilla de Tom Ford. Pertenece a la prestigiosa familia olfativa Ámbar Especiada. Abre con un despliegue radiante de hojas de tabaco, notas especiadas, revela un corazón fascinante de vainilla, cacao, haba tonka, flor del tabaco, y perdura sobre un fondo suntuoso de frutos secos, maderas nobles. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_681.jpg",
+    "olfactoryFamily": "Ámbar Especiada",
+    "gender": "unisex",
+    "sales": 43,
+    "accords": [
+      {
+        "name": "avainillado",
+        "percentage": 100,
+        "bg": "#9333ea",
+        "text": "#ffffff"
+      },
+      {
+        "name": "tabaco",
+        "percentage": 84,
+        "bg": "#4c0519",
+        "text": "#ffffff"
+      },
+      {
+        "name": "dulce",
+        "percentage": 70,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cálido especiado",
+        "percentage": 58,
+        "bg": "#701a75",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Hojas de tabaco",
+          "image": "notes/tabaco.jpg"
+        },
+        {
+          "name": "Notas especiadas",
+          "image": "notes/canela.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Vainilla",
+          "image": "notes/vainilla.jpg"
+        },
+        {
+          "name": "Cacao",
+          "image": "notes/cacao.jpg"
+        },
+        {
+          "name": "Haba tonka",
+          "image": "notes/haba-tonka.jpg"
+        },
+        {
+          "name": "Flor del tabaco",
+          "image": "notes/tabaco.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Frutos secos",
+          "image": "notes/frambuesa.jpg"
+        },
+        {
+          "name": "Maderas nobles",
+          "image": "notes/maderas.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-216",
+    "code": "216",
+    "name": "Eros Flame",
+    "reference": "Eros Flame",
+    "brand": "Versace",
+    "description": "Inspirada en Eros Flame de Versace. Pertenece a la prestigiosa familia olfativa DULCE. Abre con un despliegue radiante de spicy, revela un corazón fascinante de citrus, y perdura sobre un fondo suntuoso de fruity. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_216.jpg",
+    "olfactoryFamily": "DULCE",
+    "gender": "hombre",
+    "sales": 41,
+    "accords": [
+      {
+        "name": "dulce",
+        "percentage": 100,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Spicy",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Citrus",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Fruity",
+          "image": "notes/maderas.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-324",
+    "code": "324",
+    "name": "Polo Blue",
+    "reference": "Polo Blue",
+    "brand": "Ralph Lauren",
+    "description": "Inspirada en Polo Blue de Ralph Lauren. Pertenece a la prestigiosa familia olfativa OZÓNICO acuático. Abre con un despliegue radiante de melón, mandarina, cucumber, revela un corazón fascinante de albahaca, salvia, geranio, y perdura sobre un fondo suntuoso de almizcle, woodsy notes, gamuza. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_324.jpg",
+    "olfactoryFamily": "OZÓNICO acuático",
+    "gender": "hombre",
+    "sales": 40,
+    "accords": [
+      {
+        "name": "ozónico",
+        "percentage": 100,
+        "bg": "#38bdf8",
+        "text": "#0f172a"
+      },
+      {
+        "name": "acuático",
+        "percentage": 84,
+        "bg": "#0284c7",
+        "text": "#ffffff"
+      },
+      {
+        "name": "verde",
+        "percentage": 70,
+        "bg": "#059669",
+        "text": "#ffffff"
+      },
+      {
+        "name": "fresco especiado",
+        "percentage": 58,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      },
+      {
+        "name": "almizclado",
+        "percentage": 48,
+        "bg": "#64748b",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Melón",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Mandarina",
+          "image": "notes/mandarina.jpg"
+        },
+        {
+          "name": "Cucumber",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Albahaca",
+          "image": "notes/albahaca.jpg"
+        },
+        {
+          "name": "Salvia",
+          "image": "notes/salvia.jpg"
+        },
+        {
+          "name": "Geranio",
+          "image": "notes/geranio.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Almizcle",
+          "image": "notes/almizcle.jpg"
+        },
+        {
+          "name": "Woodsy Notes",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Gamuza",
+          "image": "notes/maderas.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-666",
+    "code": "666",
+    "name": "Fucking Fabulous",
+    "reference": "Fucking Fabulous",
+    "brand": "Tom Ford",
+    "description": "Inspirada en Fucking Fabulous de Tom Ford. Pertenece a la prestigiosa familia olfativa Cuero. Abre con un despliegue radiante de salvia esclarea, lavanda, revela un corazón fascinante de almendra amarga, cuero, vainilla, lirio, y perdura sobre un fondo suntuoso de cuero, haba tonka, cashmeran, maderas blancas. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_666.jpg",
+    "olfactoryFamily": "Cuero",
+    "gender": "hombre",
+    "sales": 38,
+    "accords": [
+      {
+        "name": "cuero",
+        "percentage": 100,
+        "bg": "#3b0764",
+        "text": "#ffffff"
+      },
+      {
+        "name": "aromático",
+        "percentage": 84,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      },
+      {
+        "name": "avainillado",
+        "percentage": 70,
+        "bg": "#9333ea",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 58,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Salvia esclarea",
+          "image": "notes/salvia.jpg"
+        },
+        {
+          "name": "Lavanda",
+          "image": "notes/lavanda.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Almendra amarga",
+          "image": "notes/almendra.jpg"
+        },
+        {
+          "name": "Cuero",
+          "image": "notes/cuero.jpg"
+        },
+        {
+          "name": "Vainilla",
+          "image": "notes/vainilla.jpg"
+        },
+        {
+          "name": "Lirio",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Cuero",
+          "image": "notes/cuero.jpg"
+        },
+        {
+          "name": "Haba tonka",
+          "image": "notes/haba-tonka.jpg"
+        },
+        {
+          "name": "Cashmeran",
+          "image": "notes/cachemira.jpg"
+        },
+        {
+          "name": "Maderas blancas",
+          "image": "notes/maderas.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-452",
+    "code": "452",
+    "name": "Coco Chanel",
+    "reference": "Coco Chanel",
+    "brand": "Chanel",
+    "description": "Inspirada en Coco Chanel de Chanel. Pertenece a la prestigiosa familia olfativa SPICY. Abre con un despliegue radiante de oriental, revela un corazón fascinante de floral, y perdura sobre un fondo suntuoso de woody. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_452.jpg",
+    "olfactoryFamily": "SPICY",
+    "gender": "mujer",
+    "sales": 37,
+    "accords": [
+      {
+        "name": "spicy",
+        "percentage": 100,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Oriental",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Floral",
+          "image": "notes/rosa.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Woody",
+          "image": "notes/maderas.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-443",
+    "code": "443",
+    "name": "Chance Eau Tendre",
+    "reference": "Chance Eau Tendre",
+    "brand": "Chanel",
+    "description": "Inspirada en Chance Eau Tendre de Chanel. Pertenece a la prestigiosa familia olfativa FLORAL afrutado. Abre con un despliegue radiante de pomelo, quince, revela un corazón fascinante de jazmín, hyacinth, y perdura sobre un fondo suntuoso de almizcle, iris, cedro, ámbar. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_443.jpg",
+    "olfactoryFamily": "FLORAL afrutado",
+    "gender": "mujer",
+    "sales": 36,
+    "accords": [
+      {
+        "name": "floral",
+        "percentage": 100,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "afrutado",
+        "percentage": 84,
+        "bg": "#db2777",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cítrico",
+        "percentage": 70,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      },
+      {
+        "name": "dulce",
+        "percentage": 58,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      },
+      {
+        "name": "fresco especiado",
+        "percentage": 48,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      },
+      {
+        "name": "floral blanco",
+        "percentage": 40,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Pomelo",
+          "image": "notes/pomelo.jpg"
+        },
+        {
+          "name": "Quince",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Jazmín",
+          "image": "notes/jazmin.jpg"
+        },
+        {
+          "name": "Hyacinth",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Almizcle",
+          "image": "notes/almizcle.jpg"
+        },
+        {
+          "name": "Iris",
+          "image": "notes/iris.jpg"
+        },
+        {
+          "name": "Cedro",
+          "image": "notes/cedro.jpg"
+        },
+        {
+          "name": "Ámbar",
+          "image": "notes/ambar.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-352",
+    "code": "352",
+    "name": "Terre D'Hermes",
+    "reference": "Terre D'Hermes",
+    "brand": "Hermès",
+    "description": "Inspirada en Terre D'Hermes de Hermès. Pertenece a la prestigiosa familia olfativa CÍTRICO amaderado. Abre con un despliegue radiante de naranja, pomelo, revela un corazón fascinante de pimienta, pelargonium, y perdura sobre un fondo suntuoso de pachulí, cedro, vetiver, benjuí. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_352.jpg",
+    "olfactoryFamily": "CÍTRICO amaderado",
+    "gender": "hombre",
+    "sales": 34,
+    "accords": [
+      {
+        "name": "cítrico",
+        "percentage": 100,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 84,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "fresco especiado",
+        "percentage": 70,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      },
+      {
+        "name": "aromático",
+        "percentage": 58,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      },
+      {
+        "name": "terroso",
+        "percentage": 48,
+        "bg": "#2e1065",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Naranja",
+          "image": "notes/naranja.jpg"
+        },
+        {
+          "name": "Pomelo",
+          "image": "notes/pomelo.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Pimienta",
+          "image": "notes/pimienta-negra.jpg"
+        },
+        {
+          "name": "Pelargonium",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Pachulí",
+          "image": "notes/pachuli.jpg"
+        },
+        {
+          "name": "Cedro",
+          "image": "notes/cedro.jpg"
+        },
+        {
+          "name": "Vetiver",
+          "image": "notes/vetiver.jpg"
+        },
+        {
+          "name": "Benjuí",
+          "image": "notes/benjui.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-520",
+    "code": "520",
+    "name": "Jadore",
+    "reference": "Jadore",
+    "brand": "Dior",
+    "description": "Inspirada en Jadore de Dior. Pertenece a la prestigiosa familia olfativa Floral Frutal. Abre con un despliegue radiante de pera, melón, magnolia, melocotón, revela un corazón fascinante de jazmín, lirio de los valles, tuberosa, fresia, y perdura sobre un fondo suntuoso de almizcle, vainilla, mora, cedro. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_520.jpg",
+    "olfactoryFamily": "Floral Frutal",
+    "gender": "mujer",
+    "sales": 32,
+    "accords": [
+      {
+        "name": "floral",
+        "percentage": 100,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "afrutado",
+        "percentage": 84,
+        "bg": "#db2777",
+        "text": "#ffffff"
+      },
+      {
+        "name": "floral blanco",
+        "percentage": 70,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "dulce",
+        "percentage": 58,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Pera",
+          "image": "notes/pera.jpg"
+        },
+        {
+          "name": "Melón",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Magnolia",
+          "image": "notes/magnolia.jpg"
+        },
+        {
+          "name": "Melocotón",
+          "image": "notes/melocoton.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Jazmín",
+          "image": "notes/jazmin.jpg"
+        },
+        {
+          "name": "Lirio de los valles",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Tuberosa",
+          "image": "notes/rosa.jpg"
+        },
+        {
+          "name": "Fresia",
+          "image": "notes/jazmin.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Almizcle",
+          "image": "notes/almizcle.jpg"
+        },
+        {
+          "name": "Vainilla",
+          "image": "notes/vainilla.jpg"
+        },
+        {
+          "name": "Mora",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Cedro",
+          "image": "notes/cedro.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-130",
+    "code": "130",
+    "name": "9PM",
+    "reference": "9PM",
+    "brand": "Afnan",
+    "description": "Inspirada en 9PM de Afnan. Pertenece a la prestigiosa familia olfativa Ámbar Especiada. Abre con un despliegue radiante de manzana, canela, lavanda salvaje, bergamota, revela un corazón fascinante de flor de azahar, lirio de los valles, y perdura sobre un fondo suntuoso de vainilla, haba tonka, ámbar, pachulí. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_130.jpg",
+    "olfactoryFamily": "Ámbar Especiada",
+    "gender": "hombre",
+    "sales": 31,
+    "accords": [
+      {
+        "name": "avainillado",
+        "percentage": 100,
+        "bg": "#9333ea",
+        "text": "#ffffff"
+      },
+      {
+        "name": "ámbar",
+        "percentage": 84,
+        "bg": "#86198f",
+        "text": "#ffffff"
+      },
+      {
+        "name": "dulce",
+        "percentage": 70,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      },
+      {
+        "name": "afrutado",
+        "percentage": 58,
+        "bg": "#db2777",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cálido especiado",
+        "percentage": 48,
+        "bg": "#701a75",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Manzana",
+          "image": "notes/manzana.jpg"
+        },
+        {
+          "name": "Canela",
+          "image": "notes/canela.jpg"
+        },
+        {
+          "name": "Lavanda salvaje",
+          "image": "notes/lavanda.jpg"
+        },
+        {
+          "name": "Bergamota",
+          "image": "notes/bergamota.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Flor de azahar",
+          "image": "notes/flor-azahar.jpg"
+        },
+        {
+          "name": "Lirio de los valles",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Vainilla",
+          "image": "notes/vainilla.jpg"
+        },
+        {
+          "name": "Haba tonka",
+          "image": "notes/haba-tonka.jpg"
+        },
+        {
+          "name": "Ámbar",
+          "image": "notes/ambar.jpg"
+        },
+        {
+          "name": "Pachulí",
+          "image": "notes/pachuli.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-257",
+    "code": "257",
+    "name": "Jean Paul Gaultier",
+    "reference": "Jean Paul Gaultier",
+    "brand": "Jean Paul Gaultier",
+    "description": "Un tributo legendario a la figura icónica y sensual del marinero. La frescura vibrante de la menta y la lavanda tradicional se funde magistralmente con la calidez de la canela, el azahar y una vainilla sedosa irresistible.",
+    "image": "images/kode/kode_257.jpg",
+    "olfactoryFamily": "Ámbar Fougère",
+    "gender": "hombre",
+    "sales": 31,
+    "accords": [
+      {
+        "name": "avainillado",
+        "percentage": 100,
+        "bg": "#9333ea",
+        "text": "#ffffff"
+      },
+      {
+        "name": "aromático",
+        "percentage": 84,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      },
+      {
+        "name": "fresco especiado",
+        "percentage": 70,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cálido especiado",
+        "percentage": 58,
+        "bg": "#701a75",
+        "text": "#ffffff"
+      },
+      {
+        "name": "verde",
+        "percentage": 48,
+        "bg": "#059669",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Lavanda",
+          "image": "notes/lavanda.jpg"
+        },
+        {
+          "name": "Menta",
+          "image": "notes/menta.jpg"
+        },
+        {
+          "name": "Cardamomo",
+          "image": "notes/cardamomo.jpg"
+        },
+        {
+          "name": "Bergamota",
+          "image": "notes/bergamota.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Canela",
+          "image": "notes/canela.jpg"
+        },
+        {
+          "name": "Flor de azahar",
+          "image": "notes/flor-azahar.jpg"
+        },
+        {
+          "name": "Alcaravea",
+          "image": "notes/anis.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Vainilla",
+          "image": "notes/vainilla.jpg"
+        },
+        {
+          "name": "Haba tonka",
+          "image": "notes/haba-tonka.jpg"
+        },
+        {
+          "name": "Ámbar",
+          "image": "notes/ambar.jpg"
+        },
+        {
+          "name": "Sándalo",
+          "image": "notes/sandalo.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-360",
+    "code": "360",
+    "name": "Tommy",
+    "reference": "Tommy",
+    "brand": "Tommy Hilfiger",
+    "description": "Inspirada en Tommy de Tommy Hilfiger. Pertenece a la prestigiosa familia olfativa FRESCO ESPECIADO verde. Abre con un despliegue radiante de menta, lavanda, pomelo, bergamota, revela un corazón fascinante de cranberry, rosa, manzana, y perdura sobre un fondo suntuoso de ámbar, cactus, cotton flower. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_360.jpg",
+    "olfactoryFamily": "FRESCO ESPECIADO verde",
+    "gender": "hombre",
+    "sales": 31,
+    "accords": [
+      {
+        "name": "fresco especiado",
+        "percentage": 100,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      },
+      {
+        "name": "verde",
+        "percentage": 84,
+        "bg": "#059669",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cítrico",
+        "percentage": 70,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      },
+      {
+        "name": "afrutado",
+        "percentage": 58,
+        "bg": "#db2777",
+        "text": "#ffffff"
+      },
+      {
+        "name": "aromático",
+        "percentage": 48,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Menta",
+          "image": "notes/menta.jpg"
+        },
+        {
+          "name": "Lavanda",
+          "image": "notes/lavanda.jpg"
+        },
+        {
+          "name": "Pomelo",
+          "image": "notes/pomelo.jpg"
+        },
+        {
+          "name": "Bergamota",
+          "image": "notes/bergamota.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Cranberry",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Rosa",
+          "image": "notes/rosa.jpg"
+        },
+        {
+          "name": "Manzana",
+          "image": "notes/manzana.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Ámbar",
+          "image": "notes/ambar.jpg"
+        },
+        {
+          "name": "Cactus",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Cotton Flower",
+          "image": "notes/maderas.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-362",
+    "code": "362",
+    "name": "Toy Boy",
+    "reference": "Toy Boy",
+    "brand": "Moschino",
+    "description": "Inspirada en Toy Boy de Moschino. Pertenece a la prestigiosa familia olfativa FLORAL. Abre con un despliegue radiante de spicy, revela un corazón fascinante de sweet, y perdura sobre un fondo suntuoso de synthetic. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_362.jpg",
+    "olfactoryFamily": "FLORAL",
+    "gender": "hombre",
+    "sales": 31,
+    "accords": [
+      {
+        "name": "floral",
+        "percentage": 100,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Spicy",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Sweet",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Synthetic",
+          "image": "notes/maderas.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-102",
+    "code": "102",
+    "name": "1 Million",
+    "reference": "1 Million",
+    "brand": "Paco Rabanne",
+    "description": "Inspirada en 1 Million de Paco Rabanne. Pertenece a la prestigiosa familia olfativa CÁLIDO ESPECIADO canela. Abre con un despliegue radiante de pomelo, menta, mandarina, revela un corazón fascinante de rosa, canela, spicy notes, y perdura sobre un fondo suntuoso de cuero, maderas nobles, ámbar, pachulí. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_102.jpg",
+    "olfactoryFamily": "CÁLIDO ESPECIADO canela",
+    "gender": "hombre",
+    "sales": 29,
+    "accords": [
+      {
+        "name": "cálido especiado",
+        "percentage": 100,
+        "bg": "#701a75",
+        "text": "#ffffff"
+      },
+      {
+        "name": "canela",
+        "percentage": 84,
+        "bg": "#831843",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cítrico",
+        "percentage": 70,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cuero",
+        "percentage": 58,
+        "bg": "#3b0764",
+        "text": "#ffffff"
+      },
+      {
+        "name": "ámbar",
+        "percentage": 48,
+        "bg": "#86198f",
+        "text": "#ffffff"
+      },
+      {
+        "name": "rosas",
+        "percentage": 40,
+        "bg": "#be123c",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Pomelo",
+          "image": "notes/pomelo.jpg"
+        },
+        {
+          "name": "Menta",
+          "image": "notes/menta.jpg"
+        },
+        {
+          "name": "Mandarina",
+          "image": "notes/mandarina.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Rosa",
+          "image": "notes/rosa.jpg"
+        },
+        {
+          "name": "Canela",
+          "image": "notes/canela.jpg"
+        },
+        {
+          "name": "Spicy Notes",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Cuero",
+          "image": "notes/cuero.jpg"
+        },
+        {
+          "name": "Maderas nobles",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Ámbar",
+          "image": "notes/ambar.jpg"
+        },
+        {
+          "name": "Pachulí",
+          "image": "notes/pachuli.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-152",
+    "code": "152",
+    "name": "Bad Boy",
+    "reference": "Bad Boy",
+    "brand": "Carolina Herrera",
+    "description": "Inspirada en Bad Boy de Carolina Herrera. Pertenece a la prestigiosa familia olfativa DULCE. Abre con un despliegue radiante de synthetic, revela un corazón fascinante de spicy, y perdura sobre un fondo suntuoso de woody. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_152.jpg",
+    "olfactoryFamily": "DULCE",
+    "gender": "hombre",
+    "sales": 29,
+    "accords": [
+      {
+        "name": "dulce",
+        "percentage": 100,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Synthetic",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Spicy",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Woody",
+          "image": "notes/maderas.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-446",
+    "code": "446",
+    "name": "Chanel 5",
+    "reference": "Chanel 5",
+    "brand": "Chanel",
+    "description": "Inspirada en Chanel 5 de Chanel. Pertenece a la prestigiosa familia olfativa ATALCADO. Abre con un despliegue radiante de fresh, revela un corazón fascinante de floral, y perdura sobre un fondo suntuoso de creamy. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_446.jpg",
+    "olfactoryFamily": "ATALCADO",
+    "gender": "mujer",
+    "sales": 29,
+    "accords": [
+      {
+        "name": "atalcado",
+        "percentage": 100,
+        "bg": "#a855f7",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Fresh",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Floral",
+          "image": "notes/rosa.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Creamy",
+          "image": "notes/maderas.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-674",
+    "code": "674",
+    "name": "Ombre Leather",
+    "reference": "Ombre Leather",
+    "brand": "Tom Ford",
+    "description": "Un viaje sensual al corazón del desierto nocturno. Cuero negro flexible e intenso envuelto en especias de cardamomo, flores blancas de jazmín salvaje y un fondo misterioso de ámbar y pachulí.",
+    "image": "images/kode/kode_674.jpg",
+    "olfactoryFamily": "Cuero Floral",
+    "gender": "unisex",
+    "sales": 29,
+    "accords": [
+      {
+        "name": "cuero",
+        "percentage": 100,
+        "bg": "#3b0764",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cálido especiado",
+        "percentage": 84,
+        "bg": "#701a75",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 70,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "floral blanco",
+        "percentage": 58,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "terroso",
+        "percentage": 48,
+        "bg": "#2e1065",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Cardamomo",
+          "image": "notes/cardamomo.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Cuero",
+          "image": "notes/cuero.jpg"
+        },
+        {
+          "name": "Jazmín sambac",
+          "image": "notes/jazmin.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Ámbar",
+          "image": "notes/ambar.jpg"
+        },
+        {
+          "name": "Musgo",
+          "image": "notes/musgo-roble.jpg"
+        },
+        {
+          "name": "Pachulí",
+          "image": "notes/pachuli.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-255",
+    "code": "255",
+    "name": "Invictus Victory",
+    "reference": "Invictus Victory",
+    "brand": "Paco Rabanne",
+    "description": "Inspirada en Invictus Victory de Paco Rabanne. Pertenece a la prestigiosa familia olfativa DULCE. Abre con un despliegue radiante de spicy, revela un corazón fascinante de synthetic, y perdura sobre un fondo suntuoso de fresh. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_255.jpg",
+    "olfactoryFamily": "DULCE",
+    "gender": "hombre",
+    "sales": 27,
+    "accords": [
+      {
+        "name": "dulce",
+        "percentage": 100,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Spicy",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Synthetic",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Fresh",
+          "image": "notes/maderas.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-563",
+    "code": "563",
+    "name": "Miss Dior",
+    "reference": "Miss Dior",
+    "brand": "Dior",
+    "description": "Inspirada en Miss Dior de Dior. Pertenece a la prestigiosa familia olfativa AMADERADO verde. Abre con un despliegue radiante de aldehídos, gardenia, galbanum, salvia, revela un corazón fascinante de clavel, iris, lirio, jazmín, y perdura sobre un fondo suntuoso de ládano, cuero, sándalo, ámbar. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_563.jpg",
+    "olfactoryFamily": "AMADERADO verde",
+    "gender": "mujer",
+    "sales": 25,
+    "accords": [
+      {
+        "name": "amaderado",
+        "percentage": 100,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "verde",
+        "percentage": 84,
+        "bg": "#059669",
+        "text": "#ffffff"
+      },
+      {
+        "name": "aromático",
+        "percentage": 70,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      },
+      {
+        "name": "floral",
+        "percentage": 58,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "terroso",
+        "percentage": 48,
+        "bg": "#2e1065",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Aldehídos",
+          "image": "notes/aldehidos.jpg"
+        },
+        {
+          "name": "Gardenia",
+          "image": "notes/gardenia.jpg"
+        },
+        {
+          "name": "Galbanum",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Salvia",
+          "image": "notes/salvia.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Clavel",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Iris",
+          "image": "notes/iris.jpg"
+        },
+        {
+          "name": "Lirio",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Jazmín",
+          "image": "notes/jazmin.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Ládano",
+          "image": "notes/ladano.jpg"
+        },
+        {
+          "name": "Cuero",
+          "image": "notes/cuero.jpg"
+        },
+        {
+          "name": "Sándalo",
+          "image": "notes/sandalo.jpg"
+        },
+        {
+          "name": "Ámbar",
+          "image": "notes/ambar.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-355",
+    "code": "355",
+    "name": "The One",
+    "reference": "The One",
+    "brand": "Dolce & Gabbana",
+    "description": "Inspirada en The One de Dolce & Gabbana. Pertenece a la prestigiosa familia olfativa AFRUTADO avainillado. Abre con un despliegue radiante de litchi, mandarina, melocotón, bergamota, revela un corazón fascinante de lirio, ciruela, jazmín, lirio de los valles, y perdura sobre un fondo suntuoso de ámbar, almizcle, vainilla, vetiver. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_355.jpg",
+    "olfactoryFamily": "AFRUTADO avainillado",
+    "gender": "hombre",
+    "sales": 24,
+    "accords": [
+      {
+        "name": "afrutado",
+        "percentage": 100,
+        "bg": "#db2777",
+        "text": "#ffffff"
+      },
+      {
+        "name": "avainillado",
+        "percentage": 84,
+        "bg": "#9333ea",
+        "text": "#ffffff"
+      },
+      {
+        "name": "floral blanco",
+        "percentage": 70,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "dulce",
+        "percentage": 58,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      },
+      {
+        "name": "atalcado",
+        "percentage": 48,
+        "bg": "#a855f7",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Litchi",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Mandarina",
+          "image": "notes/mandarina.jpg"
+        },
+        {
+          "name": "Melocotón",
+          "image": "notes/melocoton.jpg"
+        },
+        {
+          "name": "Bergamota",
+          "image": "notes/bergamota.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Lirio",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Ciruela",
+          "image": "notes/ciruela.jpg"
+        },
+        {
+          "name": "Jazmín",
+          "image": "notes/jazmin.jpg"
+        },
+        {
+          "name": "Lirio de los valles",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Ámbar",
+          "image": "notes/ambar.jpg"
+        },
+        {
+          "name": "Almizcle",
+          "image": "notes/almizcle.jpg"
+        },
+        {
+          "name": "Vainilla",
+          "image": "notes/vainilla.jpg"
+        },
+        {
+          "name": "Vetiver",
+          "image": "notes/vetiver.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-345",
+    "code": "345",
+    "name": "Scandal",
+    "reference": "Scandal",
+    "brand": "Jean Paul Gaultier",
+    "description": "Inspirada en Scandal de Jean Paul Gaultier. Pertenece a la prestigiosa familia olfativa DULCE. Abre con un despliegue radiante de fruity, revela un corazón fascinante de floral, y perdura sobre un fondo suntuoso de gourmand. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_345.jpg",
+    "olfactoryFamily": "DULCE",
+    "gender": "hombre",
+    "sales": 23,
+    "accords": [
+      {
+        "name": "dulce",
+        "percentage": 100,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Fruity",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Floral",
+          "image": "notes/rosa.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Gourmand",
+          "image": "notes/maderas.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-347",
+    "code": "347",
+    "name": "Spicebomb",
+    "reference": "Spicebomb",
+    "brand": "Viktor&Rolf",
+    "description": "Inspirada en Spicebomb de Viktor&Rolf. Pertenece a la prestigiosa familia olfativa CÁLIDO ESPECIADO canela. Abre con un despliegue radiante de bergamota, pomelo, pimienta rosa, elemí, revela un corazón fascinante de azafrán, canela, paprika, y perdura sobre un fondo suntuoso de vetiver, tabaco, cuero. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_347.jpg",
+    "olfactoryFamily": "CÁLIDO ESPECIADO canela",
+    "gender": "hombre",
+    "sales": 23,
+    "accords": [
+      {
+        "name": "cálido especiado",
+        "percentage": 100,
+        "bg": "#701a75",
+        "text": "#ffffff"
+      },
+      {
+        "name": "canela",
+        "percentage": 84,
+        "bg": "#831843",
+        "text": "#ffffff"
+      },
+      {
+        "name": "tabaco",
+        "percentage": 70,
+        "bg": "#4c0519",
+        "text": "#ffffff"
+      },
+      {
+        "name": "dulce",
+        "percentage": 58,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cuero",
+        "percentage": 48,
+        "bg": "#3b0764",
+        "text": "#ffffff"
+      },
+      {
+        "name": "soft spicy",
+        "percentage": 40,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Bergamota",
+          "image": "notes/bergamota.jpg"
+        },
+        {
+          "name": "Pomelo",
+          "image": "notes/pomelo.jpg"
+        },
+        {
+          "name": "Pimienta rosa",
+          "image": "notes/pimienta-rosa.jpg"
+        },
+        {
+          "name": "Elemí",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Azafrán",
+          "image": "notes/azafran.jpg"
+        },
+        {
+          "name": "Canela",
+          "image": "notes/canela.jpg"
+        },
+        {
+          "name": "Paprika",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Vetiver",
+          "image": "notes/vetiver.jpg"
+        },
+        {
+          "name": "Tabaco",
+          "image": "notes/tabaco.jpg"
+        },
+        {
+          "name": "Cuero",
+          "image": "notes/cuero.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-428",
+    "code": "428",
+    "name": "Born in Roma",
+    "reference": "Born in Roma",
+    "brand": "Valentino",
+    "description": "Inspirada en Born in Roma de Valentino. Pertenece a la prestigiosa familia olfativa Ámbar Amaderada. Abre con un despliegue radiante de notas minerales, hojas de violeta, sal, revela un corazón fascinante de jengibre, salvia, y perdura sobre un fondo suntuoso de notas amaderadas, vetiver. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_428.jpg",
+    "olfactoryFamily": "Ámbar Amaderada",
+    "gender": "mujer",
+    "sales": 23,
+    "accords": [
+      {
+        "name": "amaderado",
+        "percentage": 100,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "aromático",
+        "percentage": 84,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      },
+      {
+        "name": "mineral",
+        "percentage": 70,
+        "bg": "#334155",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cálido especiado",
+        "percentage": 58,
+        "bg": "#701a75",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Notas minerales",
+          "image": "notes/notas-minerales.jpg"
+        },
+        {
+          "name": "Hojas de violeta",
+          "image": "notes/violeta.jpg"
+        },
+        {
+          "name": "Sal",
+          "image": "notes/notas-marinas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Jengibre",
+          "image": "notes/jengibre.jpg"
+        },
+        {
+          "name": "Salvia",
+          "image": "notes/salvia.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Notas amaderadas",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Vetiver",
+          "image": "notes/vetiver.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-549",
+    "code": "549",
+    "name": "Light Blue",
+    "reference": "Light Blue",
+    "brand": "Dolce & Gabbana",
+    "description": "Inspirada en Light Blue de Dolce & Gabbana. Pertenece a la prestigiosa familia olfativa CÍTRICO amaderado. Abre con un despliegue radiante de bergamota, citron, revela un corazón fascinante de petitgrain, y perdura sobre un fondo suntuoso de cedro, vetiver. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_549.jpg",
+    "olfactoryFamily": "CÍTRICO amaderado",
+    "gender": "mujer",
+    "sales": 23,
+    "accords": [
+      {
+        "name": "cítrico",
+        "percentage": 100,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 84,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "aromático",
+        "percentage": 70,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      },
+      {
+        "name": "verde",
+        "percentage": 58,
+        "bg": "#059669",
+        "text": "#ffffff"
+      },
+      {
+        "name": "fresco especiado",
+        "percentage": 48,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Bergamota",
+          "image": "notes/bergamota.jpg"
+        },
+        {
+          "name": "Citron",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Petitgrain",
+          "image": "notes/petitgrain.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Cedro",
+          "image": "notes/cedro.jpg"
+        },
+        {
+          "name": "Vetiver",
+          "image": "notes/vetiver.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-118",
+    "code": "118",
+    "name": "212 Vip",
+    "reference": "212 Vip",
+    "brand": "Carolina Herrera",
+    "description": "Inspirada en 212 Vip de Carolina Herrera. Pertenece a la prestigiosa familia olfativa DULCE avainillado. Abre con un despliegue radiante de maracuyá, ron, revela un corazón fascinante de almizcle, gardenia, y perdura sobre un fondo suntuoso de haba tonka, vanille. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_118.jpg",
+    "olfactoryFamily": "DULCE avainillado",
+    "gender": "hombre",
+    "sales": 22,
+    "accords": [
+      {
+        "name": "dulce",
+        "percentage": 100,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      },
+      {
+        "name": "avainillado",
+        "percentage": 84,
+        "bg": "#9333ea",
+        "text": "#ffffff"
+      },
+      {
+        "name": "rum",
+        "percentage": 70,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      },
+      {
+        "name": "afrutado",
+        "percentage": 58,
+        "bg": "#db2777",
+        "text": "#ffffff"
+      },
+      {
+        "name": "afrutado",
+        "percentage": 48,
+        "bg": "#db2777",
+        "text": "#ffffff"
+      },
+      {
+        "name": "floral blanco",
+        "percentage": 40,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Maracuyá",
+          "image": "notes/maracuya.jpg"
+        },
+        {
+          "name": "Ron",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Almizcle",
+          "image": "notes/almizcle.jpg"
+        },
+        {
+          "name": "Gardenia",
+          "image": "notes/gardenia.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Haba tonka",
+          "image": "notes/haba-tonka.jpg"
+        },
+        {
+          "name": "Vanille",
+          "image": "notes/maderas.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-132",
+    "code": "132",
+    "name": "Absolu Aventus",
+    "reference": "Absolu Aventus",
+    "brand": "Creed",
+    "description": "Inspirada en Absolu Aventus de Creed. Pertenece a la prestigiosa familia olfativa AFRUTADO. Abre con un despliegue radiante de fresh, revela un corazón fascinante de citrus, y perdura sobre un fondo suntuoso de spicy. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_132.jpg",
+    "olfactoryFamily": "AFRUTADO",
+    "gender": "hombre",
+    "sales": 22,
+    "accords": [
+      {
+        "name": "afrutado",
+        "percentage": 100,
+        "bg": "#db2777",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Fresh",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Citrus",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Spicy",
+          "image": "notes/maderas.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-669",
+    "code": "669",
+    "name": "Layton",
+    "reference": "Layton",
+    "brand": "Parfums de Marly",
+    "description": "Inspirada en Layton de Parfums de Marly. Pertenece a la prestigiosa familia olfativa FRESCO ESPECIADO aromático. Abre con un despliegue radiante de bergamota, lavanda, manzana, mandarina, revela un corazón fascinante de violeta, jazmín, geranio, y perdura sobre un fondo suntuoso de madera de gaiac, pachulí, sándalo, cardamomo. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_669.jpg",
+    "olfactoryFamily": "FRESCO ESPECIADO aromático",
+    "gender": "unisex",
+    "sales": 22,
+    "accords": [
+      {
+        "name": "fresco especiado",
+        "percentage": 100,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      },
+      {
+        "name": "aromático",
+        "percentage": 84,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cálido especiado",
+        "percentage": 70,
+        "bg": "#701a75",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 58,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "atalcado",
+        "percentage": 48,
+        "bg": "#a855f7",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Bergamota",
+          "image": "notes/bergamota.jpg"
+        },
+        {
+          "name": "Lavanda",
+          "image": "notes/lavanda.jpg"
+        },
+        {
+          "name": "Manzana",
+          "image": "notes/manzana.jpg"
+        },
+        {
+          "name": "Mandarina",
+          "image": "notes/mandarina.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Violeta",
+          "image": "notes/violeta.jpg"
+        },
+        {
+          "name": "Jazmín",
+          "image": "notes/jazmin.jpg"
+        },
+        {
+          "name": "Geranio",
+          "image": "notes/geranio.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Madera de gaiac",
+          "image": "notes/guayaco.jpg"
+        },
+        {
+          "name": "Pachulí",
+          "image": "notes/pachuli.jpg"
+        },
+        {
+          "name": "Sándalo",
+          "image": "notes/sandalo.jpg"
+        },
+        {
+          "name": "Cardamomo",
+          "image": "notes/cardamomo.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-154",
+    "code": "154",
+    "name": "Bharara King",
+    "reference": "Bharara King",
+    "brand": "Bharara",
+    "description": "Inspirada en Bharara King de Bharara. Pertenece a la prestigiosa familia olfativa Cítrica Amaderada. Abre con un despliegue radiante de naranja, limón, bergamota, revela un corazón fascinante de tutti frutti, y perdura sobre un fondo suntuoso de vainilla blanca, ámbar, almizcle. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_154.jpg",
+    "olfactoryFamily": "Cítrica Amaderada",
+    "gender": "hombre",
+    "sales": 21,
+    "accords": [
+      {
+        "name": "cítrico",
+        "percentage": 100,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      },
+      {
+        "name": "afrutado",
+        "percentage": 84,
+        "bg": "#db2777",
+        "text": "#ffffff"
+      },
+      {
+        "name": "dulce",
+        "percentage": 70,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      },
+      {
+        "name": "avainillado",
+        "percentage": 58,
+        "bg": "#9333ea",
+        "text": "#ffffff"
+      },
+      {
+        "name": "ámbar",
+        "percentage": 48,
+        "bg": "#86198f",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Naranja",
+          "image": "notes/naranja.jpg"
+        },
+        {
+          "name": "Limón",
+          "image": "notes/limon.jpg"
+        },
+        {
+          "name": "Bergamota",
+          "image": "notes/bergamota.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Tutti Frutti",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Vainilla blanca",
+          "image": "notes/vainilla.jpg"
+        },
+        {
+          "name": "Ámbar",
+          "image": "notes/ambar.jpg"
+        },
+        {
+          "name": "Almizcle",
+          "image": "notes/almizcle.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-315",
+    "code": "315",
+    "name": "Phantom",
+    "reference": "Phantom",
+    "brand": "Paco Rabanne",
+    "description": "Inspirada en Phantom de Paco Rabanne. Pertenece a la prestigiosa familia olfativa AFRUTADO. Abre con un despliegue radiante de sweet, revela un corazón fascinante de floral, y perdura sobre un fondo suntuoso de gourmand. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_315.jpg",
+    "olfactoryFamily": "AFRUTADO",
+    "gender": "hombre",
+    "sales": 21,
+    "accords": [
+      {
+        "name": "afrutado",
+        "percentage": 100,
+        "bg": "#db2777",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Sweet",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Floral",
+          "image": "notes/rosa.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Gourmand",
+          "image": "notes/maderas.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-692",
+    "code": "692",
+    "name": "Imagination",
+    "reference": "Imagination",
+    "brand": "Louis Vuitton",
+    "description": "Inspirada en Imagination de Louis Vuitton. Pertenece a la prestigiosa familia olfativa FRESCO. Abre con un despliegue radiante de citrus, revela un corazón fascinante de aquatic, y perdura sobre un fondo suntuoso de green. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_692.jpg",
+    "olfactoryFamily": "FRESCO",
+    "gender": "hombre",
+    "sales": 21,
+    "accords": [
+      {
+        "name": "fresco",
+        "percentage": 100,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Citrus",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Aquatic",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Green",
+          "image": "notes/maderas.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-213",
+    "code": "213",
+    "name": "Dylan Blue",
+    "reference": "Dylan Blue",
+    "brand": "Versace",
+    "description": "Inspirada en Dylan Blue de Versace. Pertenece a la prestigiosa familia olfativa CÍTRICO fresco especiado. Abre con un despliegue radiante de notas acuáticas, bergamota de calabria, pomelo, hojas de higuera, revela un corazón fascinante de hojas de violeta, papyrus, pachulí, pimienta negra, y perdura sobre un fondo suntuoso de almizcle, incienso, haba tonka, azafrán. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_213.jpg",
+    "olfactoryFamily": "CÍTRICO fresco especiado",
+    "gender": "hombre",
+    "sales": 20,
+    "accords": [
+      {
+        "name": "cítrico",
+        "percentage": 100,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      },
+      {
+        "name": "fresco especiado",
+        "percentage": 84,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      },
+      {
+        "name": "almizclado",
+        "percentage": 70,
+        "bg": "#64748b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "balsámico",
+        "percentage": 58,
+        "bg": "#6b21a8",
+        "text": "#ffffff"
+      },
+      {
+        "name": "ámbar",
+        "percentage": 48,
+        "bg": "#86198f",
+        "text": "#ffffff"
+      },
+      {
+        "name": "acuático",
+        "percentage": 40,
+        "bg": "#0284c7",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Notas acuáticas",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Bergamota de Calabria",
+          "image": "notes/bergamota.jpg"
+        },
+        {
+          "name": "Pomelo",
+          "image": "notes/pomelo.jpg"
+        },
+        {
+          "name": "Hojas de higuera",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Hojas de violeta",
+          "image": "notes/violeta.jpg"
+        },
+        {
+          "name": "Papyrus",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Pachulí",
+          "image": "notes/pachuli.jpg"
+        },
+        {
+          "name": "Pimienta negra",
+          "image": "notes/pimienta-negra.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Almizcle",
+          "image": "notes/almizcle.jpg"
+        },
+        {
+          "name": "Incienso",
+          "image": "notes/incienso.jpg"
+        },
+        {
+          "name": "Haba tonka",
+          "image": "notes/haba-tonka.jpg"
+        },
+        {
+          "name": "Azafrán",
+          "image": "notes/azafran.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-429",
+    "code": "429",
+    "name": "Bright Crystal",
+    "reference": "Bright Crystal",
+    "brand": "Versace",
+    "description": "Inspirada en Bright Crystal de Versace. Pertenece a la prestigiosa familia olfativa FLORAL acuático. Abre con un despliegue radiante de yuzu, granada, notas acuáticas, revela un corazón fascinante de flor de loto, magnolia, peonía, y perdura sobre un fondo suntuoso de almizcle, mahogany, ámbar. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_429.jpg",
+    "olfactoryFamily": "FLORAL acuático",
+    "gender": "mujer",
+    "sales": 20,
+    "accords": [
+      {
+        "name": "floral",
+        "percentage": 100,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "acuático",
+        "percentage": 84,
+        "bg": "#0284c7",
+        "text": "#ffffff"
+      },
+      {
+        "name": "fresco",
+        "percentage": 70,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cítrico",
+        "percentage": 58,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 48,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Yuzu",
+          "image": "notes/yuzu.jpg"
+        },
+        {
+          "name": "Granada",
+          "image": "notes/granada.jpg"
+        },
+        {
+          "name": "Notas acuáticas",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Flor de loto",
+          "image": "notes/flor-loto.jpg"
+        },
+        {
+          "name": "Magnolia",
+          "image": "notes/magnolia.jpg"
+        },
+        {
+          "name": "Peonía",
+          "image": "notes/peonia.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Almizcle",
+          "image": "notes/almizcle.jpg"
+        },
+        {
+          "name": "Mahogany",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Ámbar",
+          "image": "notes/ambar.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-448",
+    "code": "448",
+    "name": "Cloud",
+    "reference": "Cloud",
+    "brand": "Ariana Grande",
+    "description": "Inspirada en Cloud de Ariana Grande. Pertenece a la prestigiosa familia olfativa DULCE. Abre con un despliegue radiante de creamy, revela un corazón fascinante de gourmand, y perdura sobre un fondo suntuoso de synthetic. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_448.jpg",
+    "olfactoryFamily": "DULCE",
+    "gender": "mujer",
+    "sales": 20,
+    "accords": [
+      {
+        "name": "dulce",
+        "percentage": 100,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Creamy",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Gourmand",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Synthetic",
+          "image": "notes/maderas.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-4",
+    "code": "4",
+    "name": "Azzaro Most Wanted",
+    "reference": "Azzaro Most Wanted",
+    "brand": "Azzaro",
+    "description": "Inspirada en Azzaro Most Wanted de Azzaro. Pertenece a la prestigiosa familia olfativa AMADERADO floral blanco. Abre con un despliegue radiante de aldehídos, gardenia, fruity notes, revela un corazón fascinante de lirio, jazmín, ylang-ylang, rosa, y perdura sobre un fondo suntuoso de ámbar, pachulí, musgo de roble, vetiver. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_4.jpg",
+    "olfactoryFamily": "AMADERADO floral blanco",
+    "gender": "hombre",
+    "sales": 20,
+    "accords": [
+      {
+        "name": "amaderado",
+        "percentage": 100,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "floral blanco",
+        "percentage": 84,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "balsámico",
+        "percentage": 70,
+        "bg": "#6b21a8",
+        "text": "#ffffff"
+      },
+      {
+        "name": "terroso",
+        "percentage": 58,
+        "bg": "#2e1065",
+        "text": "#ffffff"
+      },
+      {
+        "name": "afrutado",
+        "percentage": 48,
+        "bg": "#db2777",
+        "text": "#ffffff"
+      },
+      {
+        "name": "dulce",
+        "percentage": 40,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Aldehídos",
+          "image": "notes/aldehidos.jpg"
+        },
+        {
+          "name": "Gardenia",
+          "image": "notes/gardenia.jpg"
+        },
+        {
+          "name": "Fruity Notes",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Lirio",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Jazmín",
+          "image": "notes/jazmin.jpg"
+        },
+        {
+          "name": "Ylang-Ylang",
+          "image": "notes/ylang-ylang.jpg"
+        },
+        {
+          "name": "Rosa",
+          "image": "notes/rosa.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Ámbar",
+          "image": "notes/ambar.jpg"
+        },
+        {
+          "name": "Pachulí",
+          "image": "notes/pachuli.jpg"
+        },
+        {
+          "name": "Musgo de roble",
+          "image": "notes/musgo-roble.jpg"
+        },
+        {
+          "name": "Vetiver",
+          "image": "notes/vetiver.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-237",
+    "code": "237",
+    "name": "Hugo Boss",
+    "reference": "Hugo Boss",
+    "brand": "Hugo Boss",
+    "description": "Inspirada en Hugo Boss de Hugo Boss. Pertenece a la prestigiosa familia olfativa AROMÁTICO fresco especiado. Abre con un despliegue radiante de lavanda, manzana verde, menta, pomelo, revela un corazón fascinante de clavel, salvia, geranio, jazmín, y perdura sobre un fondo suntuoso de pachulí, fir, cedro. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_237.jpg",
+    "olfactoryFamily": "AROMÁTICO fresco especiado",
+    "gender": "hombre",
+    "sales": 18,
+    "accords": [
+      {
+        "name": "aromático",
+        "percentage": 100,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      },
+      {
+        "name": "fresco especiado",
+        "percentage": 84,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      },
+      {
+        "name": "verde",
+        "percentage": 70,
+        "bg": "#059669",
+        "text": "#ffffff"
+      },
+      {
+        "name": "fresco",
+        "percentage": 58,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      },
+      {
+        "name": "afrutado",
+        "percentage": 48,
+        "bg": "#db2777",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 40,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Lavanda",
+          "image": "notes/lavanda.jpg"
+        },
+        {
+          "name": "Manzana verde",
+          "image": "notes/manzana-verde.jpg"
+        },
+        {
+          "name": "Menta",
+          "image": "notes/menta.jpg"
+        },
+        {
+          "name": "Pomelo",
+          "image": "notes/pomelo.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Clavel",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Salvia",
+          "image": "notes/salvia.jpg"
+        },
+        {
+          "name": "Geranio",
+          "image": "notes/geranio.jpg"
+        },
+        {
+          "name": "Jazmín",
+          "image": "notes/jazmin.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Pachulí",
+          "image": "notes/pachuli.jpg"
+        },
+        {
+          "name": "Fir",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Cedro",
+          "image": "notes/cedro.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-376",
+    "code": "376",
+    "name": "Y",
+    "reference": "Y",
+    "brand": "Yves Saint Laurent",
+    "description": "Inspirada en Y de Yves Saint Laurent. Pertenece a la prestigiosa familia olfativa Ámbar Amaderada. Abre con un despliegue radiante de azafrán, nuez moscada, lavanda, revela un corazón fascinante de madera de agar (oud), pachulí, y perdura sobre un fondo suntuoso de madera de agar (oud), pachulí, almizcle. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_376.jpg",
+    "olfactoryFamily": "Ámbar Amaderada",
+    "gender": "hombre",
+    "sales": 18,
+    "accords": [
+      {
+        "name": "oud",
+        "percentage": 100,
+        "bg": "#1e1b4b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cálido especiado",
+        "percentage": 84,
+        "bg": "#701a75",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 70,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "pachulí",
+        "percentage": 58,
+        "bg": "#581c87",
+        "text": "#ffffff"
+      },
+      {
+        "name": "lavanda",
+        "percentage": 48,
+        "bg": "#7e22ce",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Azafrán",
+          "image": "notes/azafran.jpg"
+        },
+        {
+          "name": "Nuez moscada",
+          "image": "notes/nuez-moscada.jpg"
+        },
+        {
+          "name": "Lavanda",
+          "image": "notes/lavanda.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Madera de agar (Oud)",
+          "image": "notes/oud.jpg"
+        },
+        {
+          "name": "Pachulí",
+          "image": "notes/pachuli.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Madera de agar (Oud)",
+          "image": "notes/oud.jpg"
+        },
+        {
+          "name": "Pachulí",
+          "image": "notes/pachuli.jpg"
+        },
+        {
+          "name": "Almizcle",
+          "image": "notes/almizcle.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-664",
+    "code": "664",
+    "name": "Costa Azzurra",
+    "reference": "Costa Azzurra",
+    "brand": "Tom Ford",
+    "description": "Inspirada en Costa Azzurra de Tom Ford. Pertenece a la prestigiosa familia olfativa AROMÁTICO amaderado. Abre con un despliegue radiante de seaweed, driftwood, madera de agar (oud), almizcle, revela un corazón fascinante de enebro, myrtle, lavanda, limón, y perdura sobre un fondo suntuoso de mastic or lentisque, incienso de olíbano, incienso, vainilla. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_664.jpg",
+    "olfactoryFamily": "AROMÁTICO amaderado",
+    "gender": "unisex",
+    "sales": 18,
+    "accords": [
+      {
+        "name": "aromático",
+        "percentage": 100,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 84,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cítrico",
+        "percentage": 70,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      },
+      {
+        "name": "fresco especiado",
+        "percentage": 58,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      },
+      {
+        "name": "marino",
+        "percentage": 48,
+        "bg": "#0284c7",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Seaweed",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Driftwood",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Madera de agar (Oud)",
+          "image": "notes/oud.jpg"
+        },
+        {
+          "name": "Almizcle",
+          "image": "notes/almizcle.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Enebro",
+          "image": "notes/enebro.jpg"
+        },
+        {
+          "name": "Myrtle",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Lavanda",
+          "image": "notes/lavanda.jpg"
+        },
+        {
+          "name": "Limón",
+          "image": "notes/limon.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Mastic or Lentisque",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Incienso de olíbano",
+          "image": "notes/incienso.jpg"
+        },
+        {
+          "name": "Incienso",
+          "image": "notes/incienso.jpg"
+        },
+        {
+          "name": "Vainilla",
+          "image": "notes/vainilla.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-1001",
+    "code": "1001",
+    "name": "Invictus Victory Elixir",
+    "reference": "Invictus Victory Elixir",
+    "brand": "Paco Rabanne",
+    "description": "Inspirada en Invictus Victory Elixir de Paco Rabanne. Pertenece a la prestigiosa familia olfativa DULCE. Abre con un despliegue radiante de synthetic, revela un corazón fascinante de gourmand, y perdura sobre un fondo suntuoso de spicy. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_1001.jpg",
+    "olfactoryFamily": "DULCE",
+    "gender": "hombre",
+    "sales": 18,
+    "accords": [
+      {
+        "name": "dulce",
+        "percentage": 100,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Synthetic",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Gourmand",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Spicy",
+          "image": "notes/maderas.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-363",
+    "code": "363",
+    "name": "Ultra Le Male",
+    "reference": "Ultra Le Male",
+    "brand": "Jean Paul Gaultier",
+    "description": "Inspirada en Ultra Le Male de Jean Paul Gaultier. Pertenece a la prestigiosa familia olfativa AVAINILLADO aromático. Abre con un despliegue radiante de bergamota, pera, menta, lavanda, revela un corazón fascinante de canela, salvia, caraway, y perdura sobre un fondo suntuoso de vainilla, ámbar, cedro, pachulí. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_363.jpg",
+    "olfactoryFamily": "AVAINILLADO aromático",
+    "gender": "hombre",
+    "sales": 17,
+    "accords": [
+      {
+        "name": "avainillado",
+        "percentage": 100,
+        "bg": "#9333ea",
+        "text": "#ffffff"
+      },
+      {
+        "name": "aromático",
+        "percentage": 84,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      },
+      {
+        "name": "dulce",
+        "percentage": 70,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      },
+      {
+        "name": "afrutado",
+        "percentage": 58,
+        "bg": "#db2777",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cálido especiado",
+        "percentage": 48,
+        "bg": "#701a75",
+        "text": "#ffffff"
+      },
+      {
+        "name": "canela",
+        "percentage": 40,
+        "bg": "#831843",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Bergamota",
+          "image": "notes/bergamota.jpg"
+        },
+        {
+          "name": "Pera",
+          "image": "notes/pera.jpg"
+        },
+        {
+          "name": "Menta",
+          "image": "notes/menta.jpg"
+        },
+        {
+          "name": "Lavanda",
+          "image": "notes/lavanda.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Canela",
+          "image": "notes/canela.jpg"
+        },
+        {
+          "name": "Salvia",
+          "image": "notes/salvia.jpg"
+        },
+        {
+          "name": "Caraway",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Vainilla",
+          "image": "notes/vainilla.jpg"
+        },
+        {
+          "name": "Ámbar",
+          "image": "notes/ambar.jpg"
+        },
+        {
+          "name": "Cedro",
+          "image": "notes/cedro.jpg"
+        },
+        {
+          "name": "Pachulí",
+          "image": "notes/pachuli.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-701",
+    "code": "701",
+    "name": "Le Beau Paradise Garden",
+    "reference": "Le Beau Paradise Garden",
+    "brand": "Jean Paul Gaultier",
+    "description": "Inspirada en Le Beau Paradise Garden de Jean Paul Gaultier. Pertenece a la prestigiosa familia olfativa DULCE. Abre con un despliegue radiante de fresh, revela un corazón fascinante de fruity, y perdura sobre un fondo suntuoso de green. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_701.jpg",
+    "olfactoryFamily": "DULCE",
+    "gender": "hombre",
+    "sales": 17,
+    "accords": [
+      {
+        "name": "dulce",
+        "percentage": 100,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Fresh",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Fruity",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Green",
+          "image": "notes/maderas.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-219",
+    "code": "219",
+    "name": "Eternity",
+    "reference": "Eternity",
+    "brand": "Calvin Klein",
+    "description": "Inspirada en Eternity de Calvin Klein. Pertenece a la prestigiosa familia olfativa FLORAL verde. Abre con un despliegue radiante de citruses, notas verdes, mandarina, fresia, revela un corazón fascinante de lirio, clavel, violeta, jazmín, y perdura sobre un fondo suntuoso de sándalo, ámbar, pachulí, almizcle. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_219.jpg",
+    "olfactoryFamily": "FLORAL verde",
+    "gender": "hombre",
+    "sales": 16,
+    "accords": [
+      {
+        "name": "floral",
+        "percentage": 100,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "verde",
+        "percentage": 84,
+        "bg": "#059669",
+        "text": "#ffffff"
+      },
+      {
+        "name": "aromático",
+        "percentage": 70,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      },
+      {
+        "name": "floral blanco",
+        "percentage": 58,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cálido especiado",
+        "percentage": 48,
+        "bg": "#701a75",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Citruses",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Notas verdes",
+          "image": "notes/notas-verdes.jpg"
+        },
+        {
+          "name": "Mandarina",
+          "image": "notes/mandarina.jpg"
+        },
+        {
+          "name": "Fresia",
+          "image": "notes/jazmin.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Lirio",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Clavel",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Violeta",
+          "image": "notes/violeta.jpg"
+        },
+        {
+          "name": "Jazmín",
+          "image": "notes/jazmin.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Sándalo",
+          "image": "notes/sandalo.jpg"
+        },
+        {
+          "name": "Ámbar",
+          "image": "notes/ambar.jpg"
+        },
+        {
+          "name": "Pachulí",
+          "image": "notes/pachuli.jpg"
+        },
+        {
+          "name": "Almizcle",
+          "image": "notes/almizcle.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-351",
+    "code": "351",
+    "name": "Swiss",
+    "reference": "Swiss",
+    "brand": "Victorinox Swiss Army",
+    "description": "La pureza estimulante de los Alpes suizos. Aire fresco de montaña protagonizado por hojas de menta, ciprés alpino y romero vigorizante, reposado sobre maderas alpinas limpias y duraderas.",
+    "image": "images/kode/kode_351.jpg",
+    "olfactoryFamily": "Aromática Verde",
+    "gender": "hombre",
+    "sales": 16,
+    "accords": [
+      {
+        "name": "aromático",
+        "percentage": 100,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      },
+      {
+        "name": "verde",
+        "percentage": 84,
+        "bg": "#059669",
+        "text": "#ffffff"
+      },
+      {
+        "name": "fresco especiado",
+        "percentage": 70,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 58,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cítrico",
+        "percentage": 48,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Menta",
+          "image": "notes/menta.jpg"
+        },
+        {
+          "name": "Bergamota",
+          "image": "notes/bergamota.jpg"
+        },
+        {
+          "name": "Yuzu",
+          "image": "notes/yuzu.jpg"
+        },
+        {
+          "name": "Notas verdes",
+          "image": "notes/notas-verdes.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Romero",
+          "image": "notes/romero.jpg"
+        },
+        {
+          "name": "Lavanda",
+          "image": "notes/lavanda.jpg"
+        },
+        {
+          "name": "Hojas de violeta",
+          "image": "notes/violeta.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Ciprés",
+          "image": "notes/cipres.jpg"
+        },
+        {
+          "name": "Cedro",
+          "image": "notes/cedro.jpg"
+        },
+        {
+          "name": "Abeto",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Almizcle",
+          "image": "notes/almizcle.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-417",
+    "code": "417",
+    "name": "Be Delicious",
+    "reference": "Be Delicious",
+    "brand": "Donna Karan",
+    "description": "Inspirada en Be Delicious de Donna Karan. Pertenece a la prestigiosa familia olfativa FLORAL. Abre con un despliegue radiante de fruity, revela un corazón fascinante de green, y perdura sobre un fondo suntuoso de grosella negra. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_417.jpg",
+    "olfactoryFamily": "FLORAL",
+    "gender": "mujer",
+    "sales": 16,
+    "accords": [
+      {
+        "name": "floral",
+        "percentage": 100,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Fruity",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Green",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Grosella negra",
+          "image": "notes/grosella.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-151",
+    "code": "151",
+    "name": "Azzaro most wanted Intense",
+    "reference": "Azzaro most wanted Intense",
+    "brand": "Azzaro",
+    "description": "Inspirada en Azzaro most wanted Intense de Azzaro. Pertenece a la prestigiosa familia olfativa AMADERADO floral blanco. Abre con un despliegue radiante de aldehídos, gardenia, fruity notes, revela un corazón fascinante de lirio, jazmín, ylang-ylang, rosa, y perdura sobre un fondo suntuoso de ámbar, pachulí, musgo de roble, vetiver. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_151.jpg",
+    "olfactoryFamily": "AMADERADO floral blanco",
+    "gender": "hombre",
+    "sales": 14,
+    "accords": [
+      {
+        "name": "amaderado",
+        "percentage": 100,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "floral blanco",
+        "percentage": 84,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "balsámico",
+        "percentage": 70,
+        "bg": "#6b21a8",
+        "text": "#ffffff"
+      },
+      {
+        "name": "terroso",
+        "percentage": 58,
+        "bg": "#2e1065",
+        "text": "#ffffff"
+      },
+      {
+        "name": "afrutado",
+        "percentage": 48,
+        "bg": "#db2777",
+        "text": "#ffffff"
+      },
+      {
+        "name": "dulce",
+        "percentage": 40,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Aldehídos",
+          "image": "notes/aldehidos.jpg"
+        },
+        {
+          "name": "Gardenia",
+          "image": "notes/gardenia.jpg"
+        },
+        {
+          "name": "Fruity Notes",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Lirio",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Jazmín",
+          "image": "notes/jazmin.jpg"
+        },
+        {
+          "name": "Ylang-Ylang",
+          "image": "notes/ylang-ylang.jpg"
+        },
+        {
+          "name": "Rosa",
+          "image": "notes/rosa.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Ámbar",
+          "image": "notes/ambar.jpg"
+        },
+        {
+          "name": "Pachulí",
+          "image": "notes/pachuli.jpg"
+        },
+        {
+          "name": "Musgo de roble",
+          "image": "notes/musgo-roble.jpg"
+        },
+        {
+          "name": "Vetiver",
+          "image": "notes/vetiver.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-349",
+    "code": "349",
+    "name": "Starwalker",
+    "reference": "Starwalker",
+    "brand": "Montblanc",
+    "description": "Inspirada en Starwalker de Montblanc. Pertenece a la prestigiosa familia olfativa AMADERADO cítrico. Abre con un despliegue radiante de mandarina, bamboo, bergamota, revela un corazón fascinante de sándalo, cedro, almizcle blanco, y perdura sobre un fondo suntuoso de nuez moscada, jengibre, ámbar, fir resin. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_349.jpg",
+    "olfactoryFamily": "AMADERADO cítrico",
+    "gender": "hombre",
+    "sales": 14,
+    "accords": [
+      {
+        "name": "amaderado",
+        "percentage": 100,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cítrico",
+        "percentage": 84,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      },
+      {
+        "name": "fresco especiado",
+        "percentage": 70,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      },
+      {
+        "name": "balsámico",
+        "percentage": 58,
+        "bg": "#6b21a8",
+        "text": "#ffffff"
+      },
+      {
+        "name": "atalcado",
+        "percentage": 48,
+        "bg": "#a855f7",
+        "text": "#ffffff"
+      },
+      {
+        "name": "aromático",
+        "percentage": 40,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Mandarina",
+          "image": "notes/mandarina.jpg"
+        },
+        {
+          "name": "Bamboo",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Bergamota",
+          "image": "notes/bergamota.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Sándalo",
+          "image": "notes/sandalo.jpg"
+        },
+        {
+          "name": "Cedro",
+          "image": "notes/cedro.jpg"
+        },
+        {
+          "name": "Almizcle blanco",
+          "image": "notes/almizcle.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Nuez moscada",
+          "image": "notes/nuez-moscada.jpg"
+        },
+        {
+          "name": "Jengibre",
+          "image": "notes/jengibre.jpg"
+        },
+        {
+          "name": "Ámbar",
+          "image": "notes/ambar.jpg"
+        },
+        {
+          "name": "Fir Resin",
+          "image": "notes/maderas.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-670",
+    "code": "670",
+    "name": "Lost Cherry",
+    "reference": "Lost Cherry",
+    "brand": "Tom Ford",
+    "description": "Inspirada en Lost Cherry de Tom Ford. Pertenece a la prestigiosa familia olfativa Perfumada. Abre con un despliegue radiante de cereza, revela un corazón fascinante de almendra amarga, y perdura sobre un fondo suntuoso de cereza. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_670.jpg",
+    "olfactoryFamily": "Perfumada",
+    "gender": "unisex",
+    "sales": 14,
+    "accords": [
+      {
+        "name": "cítrico",
+        "percentage": 100,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 84,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "aromático",
+        "percentage": 70,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      },
+      {
+        "name": "ámbar",
+        "percentage": 58,
+        "bg": "#86198f",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Cereza",
+          "image": "notes/cereza.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Almendra amarga",
+          "image": "notes/almendra.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Cereza",
+          "image": "notes/cereza.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-267",
+    "code": "267",
+    "name": "L1212 Blanco",
+    "reference": "L1212 Blanco",
+    "brand": "Lacoste",
+    "description": "Inspirada en L1212 Blanco de Lacoste. Pertenece a la prestigiosa familia olfativa Amaderada Aromática. Abre con un despliegue radiante de pomelo, romero, cardamomo, revela un corazón fascinante de ylang-ylang, tuberosa, y perdura sobre un fondo suntuoso de gamuza, cedro de virginia, cuero, vetiver. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_267.jpg",
+    "olfactoryFamily": "Amaderada Aromática",
+    "gender": "hombre",
+    "sales": 13,
+    "accords": [
+      {
+        "name": "floral blanco",
+        "percentage": 100,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cítrico",
+        "percentage": 84,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 70,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "aromático",
+        "percentage": 58,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cuero",
+        "percentage": 48,
+        "bg": "#3b0764",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Pomelo",
+          "image": "notes/pomelo.jpg"
+        },
+        {
+          "name": "Romero",
+          "image": "notes/romero.jpg"
+        },
+        {
+          "name": "Cardamomo",
+          "image": "notes/cardamomo.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Ylang-Ylang",
+          "image": "notes/ylang-ylang.jpg"
+        },
+        {
+          "name": "Tuberosa",
+          "image": "notes/rosa.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Gamuza",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Cedro de Virginia",
+          "image": "notes/cedro.jpg"
+        },
+        {
+          "name": "Cuero",
+          "image": "notes/cuero.jpg"
+        },
+        {
+          "name": "Vetiver",
+          "image": "notes/vetiver.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-293",
+    "code": "293",
+    "name": "Light Blue Intense",
+    "reference": "Light Blue Intense",
+    "brand": "Dolce & Gabbana",
+    "description": "Inspirada en Light Blue Intense de Dolce & Gabbana. Pertenece a la prestigiosa familia olfativa FRESCO. Abre con un despliegue radiante de citrus, revela un corazón fascinante de fruity, y perdura sobre un fondo suntuoso de aquatic. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_293.jpg",
+    "olfactoryFamily": "FRESCO",
+    "gender": "hombre",
+    "sales": 13,
+    "accords": [
+      {
+        "name": "fresco",
+        "percentage": 100,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Citrus",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Fruity",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Aquatic",
+          "image": "notes/maderas.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-442",
+    "code": "442",
+    "name": "Chance Eau Fraiche",
+    "reference": "Chance Eau Fraiche",
+    "brand": "Chanel",
+    "description": "Inspirada en Chance Eau Fraiche de Chanel. Pertenece a la prestigiosa familia olfativa AMADERADO cítrico. Abre con un despliegue radiante de limón, cedro, revela un corazón fascinante de pimienta rosa, water hyacinth, jazmín, y perdura sobre un fondo suntuoso de teak wood, iris, ámbar, pachulí. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_442.jpg",
+    "olfactoryFamily": "AMADERADO cítrico",
+    "gender": "mujer",
+    "sales": 12,
+    "accords": [
+      {
+        "name": "amaderado",
+        "percentage": 100,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cítrico",
+        "percentage": 84,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      },
+      {
+        "name": "verde",
+        "percentage": 70,
+        "bg": "#059669",
+        "text": "#ffffff"
+      },
+      {
+        "name": "aromático",
+        "percentage": 58,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      },
+      {
+        "name": "floral",
+        "percentage": 48,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Limón",
+          "image": "notes/limon.jpg"
+        },
+        {
+          "name": "Cedro",
+          "image": "notes/cedro.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Pimienta rosa",
+          "image": "notes/pimienta-rosa.jpg"
+        },
+        {
+          "name": "Water Hyacinth",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Jazmín",
+          "image": "notes/jazmin.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Teak Wood",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Iris",
+          "image": "notes/iris.jpg"
+        },
+        {
+          "name": "Ámbar",
+          "image": "notes/ambar.jpg"
+        },
+        {
+          "name": "Pachulí",
+          "image": "notes/pachuli.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-708",
+    "code": "708",
+    "name": "Born in Roma Donna",
+    "reference": "Born in Roma Donna",
+    "brand": "Valentino",
+    "description": "Inspirada en Born in Roma Donna de Valentino. Pertenece a la prestigiosa familia olfativa Ámbar Amaderada. Abre con un despliegue radiante de notas minerales, hojas de violeta, sal, revela un corazón fascinante de jengibre, salvia, y perdura sobre un fondo suntuoso de notas amaderadas, vetiver. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_708.jpg",
+    "olfactoryFamily": "Ámbar Amaderada",
+    "gender": "mujer",
+    "sales": 12,
+    "accords": [
+      {
+        "name": "amaderado",
+        "percentage": 100,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "aromático",
+        "percentage": 84,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      },
+      {
+        "name": "mineral",
+        "percentage": 70,
+        "bg": "#334155",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cálido especiado",
+        "percentage": 58,
+        "bg": "#701a75",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Notas minerales",
+          "image": "notes/notas-minerales.jpg"
+        },
+        {
+          "name": "Hojas de violeta",
+          "image": "notes/violeta.jpg"
+        },
+        {
+          "name": "Sal",
+          "image": "notes/notas-marinas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Jengibre",
+          "image": "notes/jengibre.jpg"
+        },
+        {
+          "name": "Salvia",
+          "image": "notes/salvia.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Notas amaderadas",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Vetiver",
+          "image": "notes/vetiver.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-711",
+    "code": "711",
+    "name": "Born in Roma Coral Fantasy",
+    "reference": "Born in Roma Coral Fantasy",
+    "brand": "Valentino",
+    "description": "Inspirada en Born in Roma Coral Fantasy de Valentino. Pertenece a la prestigiosa familia olfativa Ámbar Amaderada. Abre con un despliegue radiante de notas minerales, hojas de violeta, sal, revela un corazón fascinante de jengibre, salvia, y perdura sobre un fondo suntuoso de notas amaderadas, vetiver. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_711.jpg",
+    "olfactoryFamily": "Ámbar Amaderada",
+    "gender": "hombre",
+    "sales": 12,
+    "accords": [
+      {
+        "name": "amaderado",
+        "percentage": 100,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "aromático",
+        "percentage": 84,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      },
+      {
+        "name": "mineral",
+        "percentage": 70,
+        "bg": "#334155",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cálido especiado",
+        "percentage": 58,
+        "bg": "#701a75",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Notas minerales",
+          "image": "notes/notas-minerales.jpg"
+        },
+        {
+          "name": "Hojas de violeta",
+          "image": "notes/violeta.jpg"
+        },
+        {
+          "name": "Sal",
+          "image": "notes/notas-marinas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Jengibre",
+          "image": "notes/jengibre.jpg"
+        },
+        {
+          "name": "Salvia",
+          "image": "notes/salvia.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Notas amaderadas",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Vetiver",
+          "image": "notes/vetiver.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-366",
+    "code": "366",
+    "name": "Uomo",
+    "reference": "Uomo",
+    "brand": "Valentino",
+    "description": "Inspirada en Uomo de Valentino. Pertenece a la prestigiosa familia olfativa AMADERADO nutty. Abre con un despliegue radiante de bergamota, myrtle, revela un corazón fascinante de café, chocolate, avellana, y perdura sobre un fondo suntuoso de cuero, cedro. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_366.jpg",
+    "olfactoryFamily": "AMADERADO nutty",
+    "gender": "hombre",
+    "sales": 11,
+    "accords": [
+      {
+        "name": "amaderado",
+        "percentage": 100,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "nutty",
+        "percentage": 84,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      },
+      {
+        "name": "dulce",
+        "percentage": 70,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cacao",
+        "percentage": 58,
+        "bg": "#3b0764",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cálido especiado",
+        "percentage": 48,
+        "bg": "#701a75",
+        "text": "#ffffff"
+      },
+      {
+        "name": "café",
+        "percentage": 40,
+        "bg": "#311042",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Bergamota",
+          "image": "notes/bergamota.jpg"
+        },
+        {
+          "name": "Myrtle",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Café",
+          "image": "notes/cafe.jpg"
+        },
+        {
+          "name": "Chocolate",
+          "image": "notes/chocolate.jpg"
+        },
+        {
+          "name": "Avellana",
+          "image": "notes/avellana.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Cuero",
+          "image": "notes/cuero.jpg"
+        },
+        {
+          "name": "Cedro",
+          "image": "notes/cedro.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-379",
+    "code": "379",
+    "name": "18 Perry Ellis",
+    "reference": "18 Perry Ellis",
+    "brand": "Perry Ellis",
+    "description": "Inspirada en 18 Perry Ellis de Perry Ellis. Pertenece a la prestigiosa familia olfativa DULCE acuático. Abre con un despliegue radiante de mojito, frambuesa, pera, revela un corazón fascinante de lirio, orquídea, y perdura sobre un fondo suntuoso de sándalo, vanille. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_379.jpg",
+    "olfactoryFamily": "DULCE acuático",
+    "gender": "mujer",
+    "sales": 11,
+    "accords": [
+      {
+        "name": "dulce",
+        "percentage": 100,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      },
+      {
+        "name": "acuático",
+        "percentage": 84,
+        "bg": "#0284c7",
+        "text": "#ffffff"
+      },
+      {
+        "name": "fresco",
+        "percentage": 70,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      },
+      {
+        "name": "afrutado",
+        "percentage": 58,
+        "bg": "#db2777",
+        "text": "#ffffff"
+      },
+      {
+        "name": "floral",
+        "percentage": 48,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Mojito",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Frambuesa",
+          "image": "notes/frambuesa.jpg"
+        },
+        {
+          "name": "Pera",
+          "image": "notes/pera.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Lirio",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Orquídea",
+          "image": "notes/orquidea.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Sándalo",
+          "image": "notes/sandalo.jpg"
+        },
+        {
+          "name": "Vanille",
+          "image": "notes/maderas.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-412",
+    "code": "412",
+    "name": "Aqua De Gioia",
+    "reference": "Aqua De Gioia",
+    "brand": "Giorgio Armani",
+    "description": "Inspirada en Aqua De Gioia de Giorgio Armani. Pertenece a la prestigiosa familia olfativa Floral Acuática. Abre con un despliegue radiante de limón de amalfi, menta, revela un corazón fascinante de jazmín de agua, y perdura sobre un fondo suntuoso de cedro de virginia, azúcar moreno, ládano. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_412.jpg",
+    "olfactoryFamily": "Floral Acuática",
+    "gender": "mujer",
+    "sales": 11,
+    "accords": [
+      {
+        "name": "cítrico",
+        "percentage": 100,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      },
+      {
+        "name": "verde",
+        "percentage": 84,
+        "bg": "#059669",
+        "text": "#ffffff"
+      },
+      {
+        "name": "aromático",
+        "percentage": 70,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      },
+      {
+        "name": "fresco",
+        "percentage": 58,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Limón de Amalfi",
+          "image": "notes/limon.jpg"
+        },
+        {
+          "name": "Menta",
+          "image": "notes/menta.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Jazmín de agua",
+          "image": "notes/jazmin.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Cedro de Virginia",
+          "image": "notes/cedro.jpg"
+        },
+        {
+          "name": "Azúcar moreno",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Ládano",
+          "image": "notes/ladano.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-135",
+    "code": "135",
+    "name": "Allure Sport Extreme",
+    "reference": "Allure Sport Extreme",
+    "brand": "Chanel",
+    "description": "Inspirada en Allure Sport Extreme de Chanel. Pertenece a la prestigiosa familia olfativa FLORAL BLANCO cítrico. Abre con un despliegue radiante de limón, bergamota, mandarina, melocotón, revela un corazón fascinante de jazmín, lirio, miel, fresia, y perdura sobre un fondo suntuoso de sándalo, vetiver, vainilla, pachulí. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_135.jpg",
+    "olfactoryFamily": "FLORAL BLANCO cítrico",
+    "gender": "hombre",
+    "sales": 10,
+    "accords": [
+      {
+        "name": "floral blanco",
+        "percentage": 100,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cítrico",
+        "percentage": 84,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      },
+      {
+        "name": "floral",
+        "percentage": 70,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "afrutado",
+        "percentage": 58,
+        "bg": "#db2777",
+        "text": "#ffffff"
+      },
+      {
+        "name": "avainillado",
+        "percentage": 48,
+        "bg": "#9333ea",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Limón",
+          "image": "notes/limon.jpg"
+        },
+        {
+          "name": "Bergamota",
+          "image": "notes/bergamota.jpg"
+        },
+        {
+          "name": "Mandarina",
+          "image": "notes/mandarina.jpg"
+        },
+        {
+          "name": "Melocotón",
+          "image": "notes/melocoton.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Jazmín",
+          "image": "notes/jazmin.jpg"
+        },
+        {
+          "name": "Lirio",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Miel",
+          "image": "notes/miel.jpg"
+        },
+        {
+          "name": "Fresia",
+          "image": "notes/jazmin.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Sándalo",
+          "image": "notes/sandalo.jpg"
+        },
+        {
+          "name": "Vetiver",
+          "image": "notes/vetiver.jpg"
+        },
+        {
+          "name": "Vainilla",
+          "image": "notes/vainilla.jpg"
+        },
+        {
+          "name": "Pachulí",
+          "image": "notes/pachuli.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-519",
+    "code": "519",
+    "name": "Idole",
+    "reference": "Idole",
+    "brand": "Lancôme",
+    "description": "Inspirada en Idole de Lancôme. Pertenece a la prestigiosa familia olfativa FLORAL. Abre con un despliegue radiante de sweet, revela un corazón fascinante de fruity, y perdura sobre un fondo suntuoso de fresh. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_519.jpg",
+    "olfactoryFamily": "FLORAL",
+    "gender": "mujer",
+    "sales": 10,
+    "accords": [
+      {
+        "name": "floral",
+        "percentage": 100,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Sweet",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Fruity",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Fresh",
+          "image": "notes/maderas.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-184",
+    "code": "184",
+    "name": "Ch Men",
+    "reference": "Ch Men",
+    "brand": "Carolina Herrera",
+    "description": "Inspirada en Ch Men de Carolina Herrera. Pertenece a la prestigiosa familia olfativa CUERO amaderado. Abre con un despliegue radiante de bergamota, pomelo, grass, revela un corazón fascinante de azafrán, nuez moscada, woodsy notes, jazmín, y perdura sobre un fondo suntuoso de musgo de roble, ámbar, vainilla, cuero. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_184.jpg",
+    "olfactoryFamily": "CUERO amaderado",
+    "gender": "hombre",
+    "sales": 9,
+    "accords": [
+      {
+        "name": "cuero",
+        "percentage": 100,
+        "bg": "#3b0764",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 84,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "avainillado",
+        "percentage": 70,
+        "bg": "#9333ea",
+        "text": "#ffffff"
+      },
+      {
+        "name": "dulce",
+        "percentage": 58,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      },
+      {
+        "name": "atalcado",
+        "percentage": 48,
+        "bg": "#a855f7",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Bergamota",
+          "image": "notes/bergamota.jpg"
+        },
+        {
+          "name": "Pomelo",
+          "image": "notes/pomelo.jpg"
+        },
+        {
+          "name": "Grass",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Azafrán",
+          "image": "notes/azafran.jpg"
+        },
+        {
+          "name": "Nuez moscada",
+          "image": "notes/nuez-moscada.jpg"
+        },
+        {
+          "name": "Woodsy Notes",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Jazmín",
+          "image": "notes/jazmin.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Musgo de roble",
+          "image": "notes/musgo-roble.jpg"
+        },
+        {
+          "name": "Ámbar",
+          "image": "notes/ambar.jpg"
+        },
+        {
+          "name": "Vainilla",
+          "image": "notes/vainilla.jpg"
+        },
+        {
+          "name": "Cuero",
+          "image": "notes/cuero.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-395",
+    "code": "395",
+    "name": "360 Coral",
+    "reference": "360 Coral",
+    "brand": "Perry Ellis",
+    "description": "Inspirada en 360 Coral de Perry Ellis. Pertenece a la prestigiosa familia olfativa AFRUTADO floral. Abre con un despliegue radiante de bergamota, manzana, pera, pimienta rosa, revela un corazón fascinante de jazmín, peonía, lirio de los valles, y perdura sobre un fondo suntuoso de madera de cachemira, ámbar, haba tonka, almizcle. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_395.jpg",
+    "olfactoryFamily": "AFRUTADO floral",
+    "gender": "mujer",
+    "sales": 9,
+    "accords": [
+      {
+        "name": "afrutado",
+        "percentage": 100,
+        "bg": "#db2777",
+        "text": "#ffffff"
+      },
+      {
+        "name": "floral",
+        "percentage": 84,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cítrico",
+        "percentage": 70,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      },
+      {
+        "name": "dulce",
+        "percentage": 58,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      },
+      {
+        "name": "aromático",
+        "percentage": 48,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      },
+      {
+        "name": "fresco",
+        "percentage": 40,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Bergamota",
+          "image": "notes/bergamota.jpg"
+        },
+        {
+          "name": "Manzana",
+          "image": "notes/manzana.jpg"
+        },
+        {
+          "name": "Pera",
+          "image": "notes/pera.jpg"
+        },
+        {
+          "name": "Pimienta rosa",
+          "image": "notes/pimienta-rosa.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Jazmín",
+          "image": "notes/jazmin.jpg"
+        },
+        {
+          "name": "Peonía",
+          "image": "notes/peonia.jpg"
+        },
+        {
+          "name": "Lirio de los valles",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Madera de cachemira",
+          "image": "notes/cachemira.jpg"
+        },
+        {
+          "name": "Ámbar",
+          "image": "notes/ambar.jpg"
+        },
+        {
+          "name": "Haba tonka",
+          "image": "notes/haba-tonka.jpg"
+        },
+        {
+          "name": "Almizcle",
+          "image": "notes/almizcle.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-413",
+    "code": "413",
+    "name": "Aqua Di Gio",
+    "reference": "Aqua Di Gio",
+    "brand": "Giorgio Armani",
+    "description": "Inspirada en Aqua Di Gio de Giorgio Armani. Pertenece a la prestigiosa familia olfativa Cítrica Acuática. Abre con un despliegue radiante de lima, limón, bergamota, jazmín, revela un corazón fascinante de notas marinas, jazmín, calone, melocotón, y perdura sobre un fondo suntuoso de almizcle blanco, cedro, musgo de roble, pachulí. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_413.jpg",
+    "olfactoryFamily": "Cítrica Acuática",
+    "gender": "mujer",
+    "sales": 9,
+    "accords": [
+      {
+        "name": "cítrico",
+        "percentage": 100,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      },
+      {
+        "name": "aromático",
+        "percentage": 84,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      },
+      {
+        "name": "marino",
+        "percentage": 70,
+        "bg": "#0284c7",
+        "text": "#ffffff"
+      },
+      {
+        "name": "fresco especiado",
+        "percentage": 58,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Lima",
+          "image": "notes/lima.jpg"
+        },
+        {
+          "name": "Limón",
+          "image": "notes/limon.jpg"
+        },
+        {
+          "name": "Bergamota",
+          "image": "notes/bergamota.jpg"
+        },
+        {
+          "name": "Jazmín",
+          "image": "notes/jazmin.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Notas marinas",
+          "image": "notes/notas-marinas.jpg"
+        },
+        {
+          "name": "Jazmín",
+          "image": "notes/jazmin.jpg"
+        },
+        {
+          "name": "Calone",
+          "image": "notes/notas-marinas.jpg"
+        },
+        {
+          "name": "Melocotón",
+          "image": "notes/melocoton.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Almizcle blanco",
+          "image": "notes/almizcle.jpg"
+        },
+        {
+          "name": "Cedro",
+          "image": "notes/cedro.jpg"
+        },
+        {
+          "name": "Musgo de roble",
+          "image": "notes/musgo-roble.jpg"
+        },
+        {
+          "name": "Pachulí",
+          "image": "notes/pachuli.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-617",
+    "code": "617",
+    "name": "Scandal",
+    "reference": "Scandal",
+    "brand": "Jean Paul Gaultier",
+    "description": "Inspirada en Scandal de Jean Paul Gaultier. Pertenece a la prestigiosa familia olfativa DULCE. Abre con un despliegue radiante de fruity, revela un corazón fascinante de floral, y perdura sobre un fondo suntuoso de gourmand. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_617.jpg",
+    "olfactoryFamily": "DULCE",
+    "gender": "mujer",
+    "sales": 9,
+    "accords": [
+      {
+        "name": "dulce",
+        "percentage": 100,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Fruity",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Floral",
+          "image": "notes/rosa.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Gourmand",
+          "image": "notes/maderas.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-719",
+    "code": "719",
+    "name": "L'Immensité",
+    "reference": "L'Immensité",
+    "brand": "Louis Vuitton",
+    "description": "Inspirada en L'Immensité de Louis Vuitton. Pertenece a la prestigiosa familia olfativa FRESCO. Abre con un despliegue radiante de citrus, revela un corazón fascinante de spicy, y perdura sobre un fondo suntuoso de aquatic. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_719.jpg",
+    "olfactoryFamily": "FRESCO",
+    "gender": "hombre",
+    "sales": 9,
+    "accords": [
+      {
+        "name": "fresco",
+        "percentage": 100,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Citrus",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Spicy",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Aquatic",
+          "image": "notes/maderas.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-101",
+    "code": "101",
+    "name": "1 Million Golden Oud",
+    "reference": "1 Million Golden Oud",
+    "brand": "Paco Rabanne",
+    "description": "Inspirada en 1 Million Golden Oud de Paco Rabanne. Pertenece a la prestigiosa familia olfativa CÁLIDO ESPECIADO canela. Abre con un despliegue radiante de pomelo, menta, mandarina, revela un corazón fascinante de rosa, canela, spicy notes, y perdura sobre un fondo suntuoso de cuero, maderas nobles, ámbar, pachulí. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_101.jpg",
+    "olfactoryFamily": "CÁLIDO ESPECIADO canela",
+    "gender": "hombre",
+    "sales": 8,
+    "accords": [
+      {
+        "name": "cálido especiado",
+        "percentage": 100,
+        "bg": "#701a75",
+        "text": "#ffffff"
+      },
+      {
+        "name": "canela",
+        "percentage": 84,
+        "bg": "#831843",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cítrico",
+        "percentage": 70,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cuero",
+        "percentage": 58,
+        "bg": "#3b0764",
+        "text": "#ffffff"
+      },
+      {
+        "name": "ámbar",
+        "percentage": 48,
+        "bg": "#86198f",
+        "text": "#ffffff"
+      },
+      {
+        "name": "rosas",
+        "percentage": 40,
+        "bg": "#be123c",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Pomelo",
+          "image": "notes/pomelo.jpg"
+        },
+        {
+          "name": "Menta",
+          "image": "notes/menta.jpg"
+        },
+        {
+          "name": "Mandarina",
+          "image": "notes/mandarina.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Rosa",
+          "image": "notes/rosa.jpg"
+        },
+        {
+          "name": "Canela",
+          "image": "notes/canela.jpg"
+        },
+        {
+          "name": "Spicy Notes",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Cuero",
+          "image": "notes/cuero.jpg"
+        },
+        {
+          "name": "Maderas nobles",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Ámbar",
+          "image": "notes/ambar.jpg"
+        },
+        {
+          "name": "Pachulí",
+          "image": "notes/pachuli.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-115",
+    "code": "115",
+    "name": "212 Vip Black",
+    "reference": "212 Vip Black",
+    "brand": "Carolina Herrera",
+    "description": "Inspirada en 212 Vip Black de Carolina Herrera. Pertenece a la prestigiosa familia olfativa DULCE avainillado. Abre con un despliegue radiante de maracuyá, ron, revela un corazón fascinante de almizcle, gardenia, y perdura sobre un fondo suntuoso de haba tonka, vanille. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_115.jpg",
+    "olfactoryFamily": "DULCE avainillado",
+    "gender": "hombre",
+    "sales": 8,
+    "accords": [
+      {
+        "name": "dulce",
+        "percentage": 100,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      },
+      {
+        "name": "avainillado",
+        "percentage": 84,
+        "bg": "#9333ea",
+        "text": "#ffffff"
+      },
+      {
+        "name": "rum",
+        "percentage": 70,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      },
+      {
+        "name": "afrutado",
+        "percentage": 58,
+        "bg": "#db2777",
+        "text": "#ffffff"
+      },
+      {
+        "name": "afrutado",
+        "percentage": 48,
+        "bg": "#db2777",
+        "text": "#ffffff"
+      },
+      {
+        "name": "floral blanco",
+        "percentage": 40,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Maracuyá",
+          "image": "notes/maracuya.jpg"
+        },
+        {
+          "name": "Ron",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Almizcle",
+          "image": "notes/almizcle.jpg"
+        },
+        {
+          "name": "Gardenia",
+          "image": "notes/gardenia.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Haba tonka",
+          "image": "notes/haba-tonka.jpg"
+        },
+        {
+          "name": "Vanille",
+          "image": "notes/maderas.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-254",
+    "code": "254",
+    "name": "Invictus Platinum",
+    "reference": "Invictus Platinum",
+    "brand": "Paco Rabanne",
+    "description": "Inspirada en Invictus Platinum de Paco Rabanne. Pertenece a la prestigiosa familia olfativa DULCE. Abre con un despliegue radiante de synthetic, revela un corazón fascinante de fresh, y perdura sobre un fondo suntuoso de green. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_254.jpg",
+    "olfactoryFamily": "DULCE",
+    "gender": "hombre",
+    "sales": 8,
+    "accords": [
+      {
+        "name": "dulce",
+        "percentage": 100,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Synthetic",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Fresh",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Green",
+          "image": "notes/maderas.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-311",
+    "code": "311",
+    "name": "Paris Hilton",
+    "reference": "Paris Hilton",
+    "brand": "Paris Hilton",
+    "description": "Inspirada en Paris Hilton de Paris Hilton. Pertenece a la prestigiosa familia olfativa AFRUTADO floral. Abre con un despliegue radiante de melón, melocotón, manzana, revela un corazón fascinante de mimosa, tuberosa, lirio, fresia, y perdura sobre un fondo suntuoso de sándalo, almizcle, musgo de roble, ylang-ylang. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_311.jpg",
+    "olfactoryFamily": "AFRUTADO floral",
+    "gender": "hombre",
+    "sales": 8,
+    "accords": [
+      {
+        "name": "afrutado",
+        "percentage": 100,
+        "bg": "#db2777",
+        "text": "#ffffff"
+      },
+      {
+        "name": "floral",
+        "percentage": 84,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "fresco",
+        "percentage": 70,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      },
+      {
+        "name": "floral blanco",
+        "percentage": 58,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "ozónico",
+        "percentage": 48,
+        "bg": "#38bdf8",
+        "text": "#0f172a"
+      },
+      {
+        "name": "acuático",
+        "percentage": 40,
+        "bg": "#0284c7",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Melón",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Melocotón",
+          "image": "notes/melocoton.jpg"
+        },
+        {
+          "name": "Manzana",
+          "image": "notes/manzana.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Mimosa",
+          "image": "notes/jazmin.jpg"
+        },
+        {
+          "name": "Tuberosa",
+          "image": "notes/rosa.jpg"
+        },
+        {
+          "name": "Lirio",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Fresia",
+          "image": "notes/jazmin.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Sándalo",
+          "image": "notes/sandalo.jpg"
+        },
+        {
+          "name": "Almizcle",
+          "image": "notes/almizcle.jpg"
+        },
+        {
+          "name": "Musgo de roble",
+          "image": "notes/musgo-roble.jpg"
+        },
+        {
+          "name": "Ylang-Ylang",
+          "image": "notes/ylang-ylang.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-323",
+    "code": "323",
+    "name": "Polo Black",
+    "reference": "Polo Black",
+    "brand": "Ralph Lauren",
+    "description": "Una propuesta audaz, moderna y decididamente nocturna. El golpe jugoso del mango helado se contrasta con notas aromáticas de salvia española y un fondo profundo de sándalo y pachulí negro.",
+    "image": "images/kode/kode_323.jpg",
+    "olfactoryFamily": "Amaderada Aromática",
+    "gender": "hombre",
+    "sales": 8,
+    "accords": [
+      {
+        "name": "afrutado",
+        "percentage": 100,
+        "bg": "#db2777",
+        "text": "#ffffff"
+      },
+      {
+        "name": "aromático",
+        "percentage": 84,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 70,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cálido especiado",
+        "percentage": 58,
+        "bg": "#701a75",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cítrico",
+        "percentage": 48,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Mango helado",
+          "image": "notes/ginebra-helada.jpg"
+        },
+        {
+          "name": "Salvia",
+          "image": "notes/salvia.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Artemisia",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Limón",
+          "image": "notes/limon.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Pachulí negro",
+          "image": "notes/pachuli.jpg"
+        },
+        {
+          "name": "Sándalo",
+          "image": "notes/sandalo.jpg"
+        },
+        {
+          "name": "Haba tonka",
+          "image": "notes/haba-tonka.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-427",
+    "code": "427",
+    "name": "Bombshell",
+    "reference": "Bombshell",
+    "brand": "Victoria's Secret",
+    "description": "Inspirada en Bombshell de Victoria's Secret. Pertenece a la prestigiosa familia olfativa AFRUTADO dulce. Abre con un despliegue radiante de tangerine, pomelo, piña, big strawberry, revela un corazón fascinante de jazmín, frutos rojos, lirio de los valles, peonía, y perdura sobre un fondo suntuoso de almizcle, maderas nobles, musgo de roble. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_427.jpg",
+    "olfactoryFamily": "AFRUTADO dulce",
+    "gender": "mujer",
+    "sales": 8,
+    "accords": [
+      {
+        "name": "afrutado",
+        "percentage": 100,
+        "bg": "#db2777",
+        "text": "#ffffff"
+      },
+      {
+        "name": "dulce",
+        "percentage": 84,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      },
+      {
+        "name": "fresco",
+        "percentage": 70,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cítrico",
+        "percentage": 58,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      },
+      {
+        "name": "floral",
+        "percentage": 48,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Tangerine",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Pomelo",
+          "image": "notes/pomelo.jpg"
+        },
+        {
+          "name": "Piña",
+          "image": "notes/pina.jpg"
+        },
+        {
+          "name": "Big Strawberry",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Jazmín",
+          "image": "notes/jazmin.jpg"
+        },
+        {
+          "name": "Frutos rojos",
+          "image": "notes/frambuesa.jpg"
+        },
+        {
+          "name": "Lirio de los valles",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Peonía",
+          "image": "notes/peonia.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Almizcle",
+          "image": "notes/almizcle.jpg"
+        },
+        {
+          "name": "Maderas nobles",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Musgo de roble",
+          "image": "notes/musgo-roble.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-458",
+    "code": "458",
+    "name": "Daisy Dream",
+    "reference": "Daisy Dream",
+    "brand": "Marc Jacobs",
+    "description": "Inspirada en Daisy Dream de Marc Jacobs. Pertenece a la prestigiosa familia olfativa AFRUTADO fresco. Abre con un despliegue radiante de blackberry, pomelo, pera, revela un corazón fascinante de wisteria, jazmín, litchi, y perdura sobre un fondo suntuoso de white wood, almizcle, coco. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_458.jpg",
+    "olfactoryFamily": "AFRUTADO fresco",
+    "gender": "mujer",
+    "sales": 8,
+    "accords": [
+      {
+        "name": "afrutado",
+        "percentage": 100,
+        "bg": "#db2777",
+        "text": "#ffffff"
+      },
+      {
+        "name": "fresco",
+        "percentage": 84,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      },
+      {
+        "name": "dulce",
+        "percentage": 70,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      },
+      {
+        "name": "floral",
+        "percentage": 58,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "afrutado",
+        "percentage": 48,
+        "bg": "#db2777",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Blackberry",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Pomelo",
+          "image": "notes/pomelo.jpg"
+        },
+        {
+          "name": "Pera",
+          "image": "notes/pera.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Wisteria",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Jazmín",
+          "image": "notes/jazmin.jpg"
+        },
+        {
+          "name": "Litchi",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "White Wood",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Almizcle",
+          "image": "notes/almizcle.jpg"
+        },
+        {
+          "name": "Coco",
+          "image": "notes/coco.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-607",
+    "code": "607",
+    "name": "Ralph Lauren",
+    "reference": "Ralph Lauren",
+    "brand": "Ralph Lauren",
+    "description": "Inspirada en Ralph Lauren de Ralph Lauren. Pertenece a la prestigiosa familia olfativa FRESCO ESPECIADO afrutado. Abre con un despliegue radiante de pomelo, cranberry, limón, azafrán, revela un corazón fascinante de jengibre, café, salvia, lavanda, y perdura sobre un fondo suntuoso de ámbar, cedro, cuero. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_607.jpg",
+    "olfactoryFamily": "FRESCO ESPECIADO afrutado",
+    "gender": "mujer",
+    "sales": 8,
+    "accords": [
+      {
+        "name": "fresco especiado",
+        "percentage": 100,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      },
+      {
+        "name": "afrutado",
+        "percentage": 84,
+        "bg": "#db2777",
+        "text": "#ffffff"
+      },
+      {
+        "name": "aromático",
+        "percentage": 70,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      },
+      {
+        "name": "café",
+        "percentage": 58,
+        "bg": "#311042",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cítrico",
+        "percentage": 48,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cálido especiado",
+        "percentage": 40,
+        "bg": "#701a75",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Pomelo",
+          "image": "notes/pomelo.jpg"
+        },
+        {
+          "name": "Cranberry",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Limón",
+          "image": "notes/limon.jpg"
+        },
+        {
+          "name": "Azafrán",
+          "image": "notes/azafran.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Jengibre",
+          "image": "notes/jengibre.jpg"
+        },
+        {
+          "name": "Café",
+          "image": "notes/cafe.jpg"
+        },
+        {
+          "name": "Salvia",
+          "image": "notes/salvia.jpg"
+        },
+        {
+          "name": "Lavanda",
+          "image": "notes/lavanda.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Ámbar",
+          "image": "notes/ambar.jpg"
+        },
+        {
+          "name": "Cedro",
+          "image": "notes/cedro.jpg"
+        },
+        {
+          "name": "Cuero",
+          "image": "notes/cuero.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-695",
+    "code": "695",
+    "name": "La Bomba",
+    "reference": "La Bomba",
+    "brand": "Carolina Herrera",
+    "description": "Inspirada en La Bomba de Carolina Herrera. Pertenece a la prestigiosa familia olfativa Floral Frutal. Abre con un despliegue radiante de cereza ácida, almendra amarga, revela un corazón fascinante de rosa, azucena, y perdura sobre un fondo suntuoso de vainilla bourbon, vetiver. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_695.jpg",
+    "olfactoryFamily": "Floral Frutal",
+    "gender": "mujer",
+    "sales": 8,
+    "accords": [
+      {
+        "name": "cereza",
+        "percentage": 100,
+        "bg": "#9f1239",
+        "text": "#ffffff"
+      },
+      {
+        "name": "dulce",
+        "percentage": 84,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      },
+      {
+        "name": "almendrado",
+        "percentage": 70,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      },
+      {
+        "name": "avainillado",
+        "percentage": 58,
+        "bg": "#9333ea",
+        "text": "#ffffff"
+      },
+      {
+        "name": "rosas",
+        "percentage": 48,
+        "bg": "#be123c",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Cereza ácida",
+          "image": "notes/cereza.jpg"
+        },
+        {
+          "name": "Almendra amarga",
+          "image": "notes/almendra.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Rosa",
+          "image": "notes/rosa.jpg"
+        },
+        {
+          "name": "Azucena",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Vainilla Bourbon",
+          "image": "notes/vainilla.jpg"
+        },
+        {
+          "name": "Vetiver",
+          "image": "notes/vetiver.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-714",
+    "code": "714",
+    "name": "Black Opium Over Red",
+    "reference": "Black Opium Over Red",
+    "brand": "Yves Saint Laurent",
+    "description": "Inspirada en Black Opium Over Red de Yves Saint Laurent. Pertenece a la prestigiosa familia olfativa AVAINILLADO café. Abre con un despliegue radiante de pimienta rosa, flor de azahar, pera, revela un corazón fascinante de café, jazmín, almendra amarga, licorice, y perdura sobre un fondo suntuoso de vainilla, pachulí, cedro, madera de cachemira. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_714.jpg",
+    "olfactoryFamily": "AVAINILLADO café",
+    "gender": "unisex",
+    "sales": 8,
+    "accords": [
+      {
+        "name": "avainillado",
+        "percentage": 100,
+        "bg": "#9333ea",
+        "text": "#ffffff"
+      },
+      {
+        "name": "café",
+        "percentage": 84,
+        "bg": "#311042",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cálido especiado",
+        "percentage": 70,
+        "bg": "#701a75",
+        "text": "#ffffff"
+      },
+      {
+        "name": "dulce",
+        "percentage": 58,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      },
+      {
+        "name": "floral blanco",
+        "percentage": 48,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Pimienta rosa",
+          "image": "notes/pimienta-rosa.jpg"
+        },
+        {
+          "name": "Flor de azahar",
+          "image": "notes/flor-azahar.jpg"
+        },
+        {
+          "name": "Pera",
+          "image": "notes/pera.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Café",
+          "image": "notes/cafe.jpg"
+        },
+        {
+          "name": "Jazmín",
+          "image": "notes/jazmin.jpg"
+        },
+        {
+          "name": "Almendra amarga",
+          "image": "notes/almendra.jpg"
+        },
+        {
+          "name": "Licorice",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Vainilla",
+          "image": "notes/vainilla.jpg"
+        },
+        {
+          "name": "Pachulí",
+          "image": "notes/pachuli.jpg"
+        },
+        {
+          "name": "Cedro",
+          "image": "notes/cedro.jpg"
+        },
+        {
+          "name": "Madera de cachemira",
+          "image": "notes/cachemira.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-134",
+    "code": "134",
+    "name": "Allure",
+    "reference": "Allure",
+    "brand": "Chanel",
+    "description": "Inspirada en Allure de Chanel. Pertenece a la prestigiosa familia olfativa FLORAL BLANCO cítrico. Abre con un despliegue radiante de limón, bergamota, mandarina, melocotón, revela un corazón fascinante de jazmín, lirio, miel, fresia, y perdura sobre un fondo suntuoso de sándalo, vetiver, vainilla, pachulí. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_134.jpg",
+    "olfactoryFamily": "FLORAL BLANCO cítrico",
+    "gender": "hombre",
+    "sales": 7,
+    "accords": [
+      {
+        "name": "floral blanco",
+        "percentage": 100,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cítrico",
+        "percentage": 84,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      },
+      {
+        "name": "floral",
+        "percentage": 70,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "afrutado",
+        "percentage": 58,
+        "bg": "#db2777",
+        "text": "#ffffff"
+      },
+      {
+        "name": "avainillado",
+        "percentage": 48,
+        "bg": "#9333ea",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Limón",
+          "image": "notes/limon.jpg"
+        },
+        {
+          "name": "Bergamota",
+          "image": "notes/bergamota.jpg"
+        },
+        {
+          "name": "Mandarina",
+          "image": "notes/mandarina.jpg"
+        },
+        {
+          "name": "Melocotón",
+          "image": "notes/melocoton.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Jazmín",
+          "image": "notes/jazmin.jpg"
+        },
+        {
+          "name": "Lirio",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Miel",
+          "image": "notes/miel.jpg"
+        },
+        {
+          "name": "Fresia",
+          "image": "notes/jazmin.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Sándalo",
+          "image": "notes/sandalo.jpg"
+        },
+        {
+          "name": "Vetiver",
+          "image": "notes/vetiver.jpg"
+        },
+        {
+          "name": "Vainilla",
+          "image": "notes/vainilla.jpg"
+        },
+        {
+          "name": "Pachulí",
+          "image": "notes/pachuli.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-139",
+    "code": "139",
+    "name": "Aqua Di Gio Absolu",
+    "reference": "Aqua Di Gio Absolu",
+    "brand": "Giorgio Armani",
+    "description": "Inspirada en Aqua Di Gio Absolu de Giorgio Armani. Pertenece a la prestigiosa familia olfativa Cítrica Acuática. Abre con un despliegue radiante de lima, limón, bergamota, jazmín, revela un corazón fascinante de notas marinas, jazmín, calone, melocotón, y perdura sobre un fondo suntuoso de almizcle blanco, cedro, musgo de roble, pachulí. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_139.jpg",
+    "olfactoryFamily": "Cítrica Acuática",
+    "gender": "hombre",
+    "sales": 7,
+    "accords": [
+      {
+        "name": "cítrico",
+        "percentage": 100,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      },
+      {
+        "name": "aromático",
+        "percentage": 84,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      },
+      {
+        "name": "marino",
+        "percentage": 70,
+        "bg": "#0284c7",
+        "text": "#ffffff"
+      },
+      {
+        "name": "fresco especiado",
+        "percentage": 58,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Lima",
+          "image": "notes/lima.jpg"
+        },
+        {
+          "name": "Limón",
+          "image": "notes/limon.jpg"
+        },
+        {
+          "name": "Bergamota",
+          "image": "notes/bergamota.jpg"
+        },
+        {
+          "name": "Jazmín",
+          "image": "notes/jazmin.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Notas marinas",
+          "image": "notes/notas-marinas.jpg"
+        },
+        {
+          "name": "Jazmín",
+          "image": "notes/jazmin.jpg"
+        },
+        {
+          "name": "Calone",
+          "image": "notes/notas-marinas.jpg"
+        },
+        {
+          "name": "Melocotón",
+          "image": "notes/melocoton.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Almizcle blanco",
+          "image": "notes/almizcle.jpg"
+        },
+        {
+          "name": "Cedro",
+          "image": "notes/cedro.jpg"
+        },
+        {
+          "name": "Musgo de roble",
+          "image": "notes/musgo-roble.jpg"
+        },
+        {
+          "name": "Pachulí",
+          "image": "notes/pachuli.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-150",
+    "code": "150",
+    "name": "Azzaro",
+    "reference": "Azzaro",
+    "brand": "Azzaro",
+    "description": "Inspirada en Azzaro de Azzaro. Pertenece a la prestigiosa familia olfativa AMADERADO floral blanco. Abre con un despliegue radiante de aldehídos, gardenia, fruity notes, revela un corazón fascinante de lirio, jazmín, ylang-ylang, rosa, y perdura sobre un fondo suntuoso de ámbar, pachulí, musgo de roble, vetiver. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_150.jpg",
+    "olfactoryFamily": "AMADERADO floral blanco",
+    "gender": "hombre",
+    "sales": 7,
+    "accords": [
+      {
+        "name": "amaderado",
+        "percentage": 100,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "floral blanco",
+        "percentage": 84,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "balsámico",
+        "percentage": 70,
+        "bg": "#6b21a8",
+        "text": "#ffffff"
+      },
+      {
+        "name": "terroso",
+        "percentage": 58,
+        "bg": "#2e1065",
+        "text": "#ffffff"
+      },
+      {
+        "name": "afrutado",
+        "percentage": 48,
+        "bg": "#db2777",
+        "text": "#ffffff"
+      },
+      {
+        "name": "dulce",
+        "percentage": 40,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Aldehídos",
+          "image": "notes/aldehidos.jpg"
+        },
+        {
+          "name": "Gardenia",
+          "image": "notes/gardenia.jpg"
+        },
+        {
+          "name": "Fruity Notes",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Lirio",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Jazmín",
+          "image": "notes/jazmin.jpg"
+        },
+        {
+          "name": "Ylang-Ylang",
+          "image": "notes/ylang-ylang.jpg"
+        },
+        {
+          "name": "Rosa",
+          "image": "notes/rosa.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Ámbar",
+          "image": "notes/ambar.jpg"
+        },
+        {
+          "name": "Pachulí",
+          "image": "notes/pachuli.jpg"
+        },
+        {
+          "name": "Musgo de roble",
+          "image": "notes/musgo-roble.jpg"
+        },
+        {
+          "name": "Vetiver",
+          "image": "notes/vetiver.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-295",
+    "code": "295",
+    "name": "Luna Rossa Carbon",
+    "reference": "Luna Rossa Carbon",
+    "brand": "Prada",
+    "description": "Inspirada en Luna Rossa Carbon de Prada. Pertenece a la prestigiosa familia olfativa FRESCO. Abre con un despliegue radiante de synthetic, revela un corazón fascinante de spicy, y perdura sobre un fondo suntuoso de citrus. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_295.jpg",
+    "olfactoryFamily": "FRESCO",
+    "gender": "hombre",
+    "sales": 7,
+    "accords": [
+      {
+        "name": "fresco",
+        "percentage": 100,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Synthetic",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Spicy",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Citrus",
+          "image": "notes/maderas.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-317",
+    "code": "317",
+    "name": "Phantom Parfum",
+    "reference": "Phantom Parfum",
+    "brand": "Paco Rabanne",
+    "description": "Inspirada en Phantom Parfum de Paco Rabanne. Pertenece a la prestigiosa familia olfativa DULCE. Abre con un despliegue radiante de synthetic, revela un corazón fascinante de spicy, y perdura sobre un fondo suntuoso de fruity. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_317.jpg",
+    "olfactoryFamily": "DULCE",
+    "gender": "hombre",
+    "sales": 7,
+    "accords": [
+      {
+        "name": "dulce",
+        "percentage": 100,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Synthetic",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Spicy",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Fruity",
+          "image": "notes/maderas.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-328",
+    "code": "328",
+    "name": "Polo Red",
+    "reference": "Polo Red",
+    "brand": "Ralph Lauren",
+    "description": "Inspirada en Polo Red de Ralph Lauren. Pertenece a la prestigiosa familia olfativa CÍTRICO cálido especiado. Abre con un despliegue radiante de pomelo, limón italiano, cranberry, revela un corazón fascinante de azafrán, salvia, y perdura sobre un fondo suntuoso de woodsy notes, ámbar, café. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_328.jpg",
+    "olfactoryFamily": "CÍTRICO cálido especiado",
+    "gender": "hombre",
+    "sales": 7,
+    "accords": [
+      {
+        "name": "cítrico",
+        "percentage": 100,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cálido especiado",
+        "percentage": 84,
+        "bg": "#701a75",
+        "text": "#ffffff"
+      },
+      {
+        "name": "afrutado",
+        "percentage": 70,
+        "bg": "#db2777",
+        "text": "#ffffff"
+      },
+      {
+        "name": "ámbar",
+        "percentage": 58,
+        "bg": "#86198f",
+        "text": "#ffffff"
+      },
+      {
+        "name": "café",
+        "percentage": 48,
+        "bg": "#311042",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Pomelo",
+          "image": "notes/pomelo.jpg"
+        },
+        {
+          "name": "Limón italiano",
+          "image": "notes/limon.jpg"
+        },
+        {
+          "name": "Cranberry",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Azafrán",
+          "image": "notes/azafran.jpg"
+        },
+        {
+          "name": "Salvia",
+          "image": "notes/salvia.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Woodsy Notes",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Ámbar",
+          "image": "notes/ambar.jpg"
+        },
+        {
+          "name": "Café",
+          "image": "notes/cafe.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-380",
+    "code": "380",
+    "name": "212",
+    "reference": "212",
+    "brand": "Carolina Herrera",
+    "description": "Inspirada en 212 de Carolina Herrera. Pertenece a la prestigiosa familia olfativa Amaderada Aromática. Abre con un despliegue radiante de pomelo, romero, cardamomo, revela un corazón fascinante de ylang-ylang, tuberosa, y perdura sobre un fondo suntuoso de gamuza, cedro de virginia, cuero, vetiver. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_380.jpg",
+    "olfactoryFamily": "Amaderada Aromática",
+    "gender": "mujer",
+    "sales": 7,
+    "accords": [
+      {
+        "name": "floral blanco",
+        "percentage": 100,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cítrico",
+        "percentage": 84,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 70,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "aromático",
+        "percentage": 58,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cuero",
+        "percentage": 48,
+        "bg": "#3b0764",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Pomelo",
+          "image": "notes/pomelo.jpg"
+        },
+        {
+          "name": "Romero",
+          "image": "notes/romero.jpg"
+        },
+        {
+          "name": "Cardamomo",
+          "image": "notes/cardamomo.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Ylang-Ylang",
+          "image": "notes/ylang-ylang.jpg"
+        },
+        {
+          "name": "Tuberosa",
+          "image": "notes/rosa.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Gamuza",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Cedro de Virginia",
+          "image": "notes/cedro.jpg"
+        },
+        {
+          "name": "Cuero",
+          "image": "notes/cuero.jpg"
+        },
+        {
+          "name": "Vetiver",
+          "image": "notes/vetiver.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-436",
+    "code": "436",
+    "name": "Carolina Herrera",
+    "reference": "Carolina Herrera",
+    "brand": "Carolina Herrera",
+    "description": "Inspirada en Carolina Herrera de Carolina Herrera. Pertenece a la prestigiosa familia olfativa FLORAL BLANCO rosas. Abre con un despliegue radiante de notas verdes, citruses, revela un corazón fascinante de tuberosa, jazmín, y perdura sobre un fondo suntuoso de maderas nobles. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_436.jpg",
+    "olfactoryFamily": "FLORAL BLANCO rosas",
+    "gender": "mujer",
+    "sales": 7,
+    "accords": [
+      {
+        "name": "floral blanco",
+        "percentage": 100,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "rosas",
+        "percentage": 84,
+        "bg": "#be123c",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 70,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "almizclado",
+        "percentage": 58,
+        "bg": "#64748b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "verde",
+        "percentage": 48,
+        "bg": "#059669",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cítrico",
+        "percentage": 40,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Notas verdes",
+          "image": "notes/notas-verdes.jpg"
+        },
+        {
+          "name": "Citruses",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Tuberosa",
+          "image": "notes/rosa.jpg"
+        },
+        {
+          "name": "Jazmín",
+          "image": "notes/jazmin.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Maderas nobles",
+          "image": "notes/maderas.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-489",
+    "code": "489",
+    "name": "Flowerbomb",
+    "reference": "Flowerbomb",
+    "brand": "Viktor&Rolf",
+    "description": "Inspirada en Flowerbomb de Viktor&Rolf. Pertenece a la prestigiosa familia olfativa FLORAL pachulí. Abre con un despliegue radiante de bergamota, tea, osmanto, revela un corazón fascinante de jazmín, naranja, fresia, rosa, y perdura sobre un fondo suntuoso de almizcle, pachulí. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_489.jpg",
+    "olfactoryFamily": "FLORAL pachulí",
+    "gender": "mujer",
+    "sales": 7,
+    "accords": [
+      {
+        "name": "floral",
+        "percentage": 100,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "pachulí",
+        "percentage": 84,
+        "bg": "#581c87",
+        "text": "#ffffff"
+      },
+      {
+        "name": "floral blanco",
+        "percentage": 70,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "verde",
+        "percentage": 58,
+        "bg": "#059669",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cítrico",
+        "percentage": 48,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Bergamota",
+          "image": "notes/bergamota.jpg"
+        },
+        {
+          "name": "Tea",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Osmanto",
+          "image": "notes/jazmin.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Jazmín",
+          "image": "notes/jazmin.jpg"
+        },
+        {
+          "name": "Naranja",
+          "image": "notes/naranja.jpg"
+        },
+        {
+          "name": "Fresia",
+          "image": "notes/jazmin.jpg"
+        },
+        {
+          "name": "Rosa",
+          "image": "notes/rosa.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Almizcle",
+          "image": "notes/almizcle.jpg"
+        },
+        {
+          "name": "Pachulí",
+          "image": "notes/pachuli.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-678",
+    "code": "678",
+    "name": "Red Tobacco",
+    "reference": "Red Tobacco",
+    "brand": "Mancera",
+    "description": "Inspirada en Red Tobacco de Mancera. Pertenece a la prestigiosa familia olfativa SPICY. Abre con un despliegue radiante de sweet, revela un corazón fascinante de woody, y perdura sobre un fondo suntuoso de smoky. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_678.jpg",
+    "olfactoryFamily": "SPICY",
+    "gender": "unisex",
+    "sales": 7,
+    "accords": [
+      {
+        "name": "spicy",
+        "percentage": 100,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Sweet",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Woody",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Smoky",
+          "image": "notes/maderas.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-729",
+    "code": "729",
+    "name": "Le beau Le Parfum",
+    "reference": "Le beau Le Parfum",
+    "brand": "Jean Paul Gaultier",
+    "description": "Inspirada en Le beau Le Parfum de Jean Paul Gaultier. Pertenece a la prestigiosa familia olfativa DULCE. Abre con un despliegue radiante de fruity, revela un corazón fascinante de creamy, y perdura sobre un fondo suntuoso de fresh. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_729.jpg",
+    "olfactoryFamily": "DULCE",
+    "gender": "hombre",
+    "sales": 7,
+    "accords": [
+      {
+        "name": "dulce",
+        "percentage": 100,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Fruity",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Creamy",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Fresh",
+          "image": "notes/maderas.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-108",
+    "code": "108",
+    "name": "18 Perry Ellis",
+    "reference": "18 Perry Ellis",
+    "brand": "Perry Ellis",
+    "description": "Inspirada en 18 Perry Ellis de Perry Ellis. Pertenece a la prestigiosa familia olfativa DULCE acuático. Abre con un despliegue radiante de mojito, frambuesa, pera, revela un corazón fascinante de lirio, orquídea, y perdura sobre un fondo suntuoso de sándalo, vanille. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_108.jpg",
+    "olfactoryFamily": "DULCE acuático",
+    "gender": "hombre",
+    "sales": 6,
+    "accords": [
+      {
+        "name": "dulce",
+        "percentage": 100,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      },
+      {
+        "name": "acuático",
+        "percentage": 84,
+        "bg": "#0284c7",
+        "text": "#ffffff"
+      },
+      {
+        "name": "fresco",
+        "percentage": 70,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      },
+      {
+        "name": "afrutado",
+        "percentage": 58,
+        "bg": "#db2777",
+        "text": "#ffffff"
+      },
+      {
+        "name": "floral",
+        "percentage": 48,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Mojito",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Frambuesa",
+          "image": "notes/frambuesa.jpg"
+        },
+        {
+          "name": "Pera",
+          "image": "notes/pera.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Lirio",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Orquídea",
+          "image": "notes/orquidea.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Sándalo",
+          "image": "notes/sandalo.jpg"
+        },
+        {
+          "name": "Vanille",
+          "image": "notes/maderas.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-145",
+    "code": "145",
+    "name": "Armani Black Code",
+    "reference": "Armani Black Code",
+    "brand": "Giorgio Armani",
+    "description": "Inspirada en Armani Black Code de Giorgio Armani. Pertenece a la prestigiosa familia olfativa AMADERADO balsámico. Abre con un despliegue radiante de aldehídos, piña, menta, galbanum, revela un corazón fascinante de cyclamen, tuberosa, orquídea, lirio, y perdura sobre un fondo suntuoso de sándalo, haba tonka, ámbar, almizcle. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_145.jpg",
+    "olfactoryFamily": "AMADERADO balsámico",
+    "gender": "hombre",
+    "sales": 6,
+    "accords": [
+      {
+        "name": "amaderado",
+        "percentage": 100,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "balsámico",
+        "percentage": 84,
+        "bg": "#6b21a8",
+        "text": "#ffffff"
+      },
+      {
+        "name": "aromático",
+        "percentage": 70,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      },
+      {
+        "name": "verde",
+        "percentage": 58,
+        "bg": "#059669",
+        "text": "#ffffff"
+      },
+      {
+        "name": "floral",
+        "percentage": 48,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Aldehídos",
+          "image": "notes/aldehidos.jpg"
+        },
+        {
+          "name": "Piña",
+          "image": "notes/pina.jpg"
+        },
+        {
+          "name": "Menta",
+          "image": "notes/menta.jpg"
+        },
+        {
+          "name": "Galbanum",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Cyclamen",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Tuberosa",
+          "image": "notes/rosa.jpg"
+        },
+        {
+          "name": "Orquídea",
+          "image": "notes/orquidea.jpg"
+        },
+        {
+          "name": "Lirio",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Sándalo",
+          "image": "notes/sandalo.jpg"
+        },
+        {
+          "name": "Haba tonka",
+          "image": "notes/haba-tonka.jpg"
+        },
+        {
+          "name": "Ámbar",
+          "image": "notes/ambar.jpg"
+        },
+        {
+          "name": "Almizcle",
+          "image": "notes/almizcle.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-167",
+    "code": "167",
+    "name": "Boss Bottled 98 Intense",
+    "reference": "Boss Bottled 98 Intense",
+    "brand": "Hugo Boss",
+    "description": "Inspirada en Boss Bottled 98 Intense de Hugo Boss. Pertenece a la prestigiosa familia olfativa AMADERADO avainillado. Abre con un despliegue radiante de ciruela, musgo de roble, manzana, limón, revela un corazón fascinante de mahogany, clavel, canela, y perdura sobre un fondo suntuoso de sándalo, olive tree, vainilla, vetiver. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_167.jpg",
+    "olfactoryFamily": "AMADERADO avainillado",
+    "gender": "hombre",
+    "sales": 6,
+    "accords": [
+      {
+        "name": "amaderado",
+        "percentage": 100,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "avainillado",
+        "percentage": 84,
+        "bg": "#9333ea",
+        "text": "#ffffff"
+      },
+      {
+        "name": "afrutado",
+        "percentage": 70,
+        "bg": "#db2777",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cálido especiado",
+        "percentage": 58,
+        "bg": "#701a75",
+        "text": "#ffffff"
+      },
+      {
+        "name": "canela",
+        "percentage": 48,
+        "bg": "#831843",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Ciruela",
+          "image": "notes/ciruela.jpg"
+        },
+        {
+          "name": "Musgo de roble",
+          "image": "notes/musgo-roble.jpg"
+        },
+        {
+          "name": "Manzana",
+          "image": "notes/manzana.jpg"
+        },
+        {
+          "name": "Limón",
+          "image": "notes/limon.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Mahogany",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Clavel",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Canela",
+          "image": "notes/canela.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Sándalo",
+          "image": "notes/sandalo.jpg"
+        },
+        {
+          "name": "Olive Tree",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Vainilla",
+          "image": "notes/vainilla.jpg"
+        },
+        {
+          "name": "Vetiver",
+          "image": "notes/vetiver.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-304",
+    "code": "304",
+    "name": "Nautica Voyage Blue",
+    "reference": "Nautica Voyage Blue",
+    "brand": "Nautica",
+    "description": "Inspirada en Nautica Voyage Blue de Nautica. Pertenece a la prestigiosa familia olfativa VERDE floral. Abre con un despliegue radiante de green leaves, manzana, revela un corazón fascinante de mimosa, flor de loto, y perdura sobre un fondo suntuoso de ámbar, almizcle, musgo de roble, cedro. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_304.jpg",
+    "olfactoryFamily": "VERDE floral",
+    "gender": "hombre",
+    "sales": 6,
+    "accords": [
+      {
+        "name": "verde",
+        "percentage": 100,
+        "bg": "#059669",
+        "text": "#ffffff"
+      },
+      {
+        "name": "floral",
+        "percentage": 84,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "afrutado",
+        "percentage": 70,
+        "bg": "#db2777",
+        "text": "#ffffff"
+      },
+      {
+        "name": "fresco",
+        "percentage": 58,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      },
+      {
+        "name": "acuático",
+        "percentage": 48,
+        "bg": "#0284c7",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 40,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Green Leaves",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Manzana",
+          "image": "notes/manzana.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Mimosa",
+          "image": "notes/jazmin.jpg"
+        },
+        {
+          "name": "Flor de loto",
+          "image": "notes/flor-loto.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Ámbar",
+          "image": "notes/ambar.jpg"
+        },
+        {
+          "name": "Almizcle",
+          "image": "notes/almizcle.jpg"
+        },
+        {
+          "name": "Musgo de roble",
+          "image": "notes/musgo-roble.jpg"
+        },
+        {
+          "name": "Cedro",
+          "image": "notes/cedro.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-386",
+    "code": "386",
+    "name": "212 Vip",
+    "reference": "212 Vip",
+    "brand": "Carolina Herrera",
+    "description": "Inspirada en 212 Vip de Carolina Herrera. Pertenece a la prestigiosa familia olfativa DULCE avainillado. Abre con un despliegue radiante de maracuyá, ron, revela un corazón fascinante de almizcle, gardenia, y perdura sobre un fondo suntuoso de haba tonka, vanille. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_386.jpg",
+    "olfactoryFamily": "DULCE avainillado",
+    "gender": "mujer",
+    "sales": 6,
+    "accords": [
+      {
+        "name": "dulce",
+        "percentage": 100,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      },
+      {
+        "name": "avainillado",
+        "percentage": 84,
+        "bg": "#9333ea",
+        "text": "#ffffff"
+      },
+      {
+        "name": "rum",
+        "percentage": 70,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      },
+      {
+        "name": "afrutado",
+        "percentage": 58,
+        "bg": "#db2777",
+        "text": "#ffffff"
+      },
+      {
+        "name": "afrutado",
+        "percentage": 48,
+        "bg": "#db2777",
+        "text": "#ffffff"
+      },
+      {
+        "name": "floral blanco",
+        "percentage": 40,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Maracuyá",
+          "image": "notes/maracuya.jpg"
+        },
+        {
+          "name": "Ron",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Almizcle",
+          "image": "notes/almizcle.jpg"
+        },
+        {
+          "name": "Gardenia",
+          "image": "notes/gardenia.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Haba tonka",
+          "image": "notes/haba-tonka.jpg"
+        },
+        {
+          "name": "Vanille",
+          "image": "notes/maderas.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-396",
+    "code": "396",
+    "name": "360",
+    "reference": "360",
+    "brand": "Perry Ellis",
+    "description": "Inspirada en 360 de Perry Ellis. Pertenece a la prestigiosa familia olfativa FLORAL acuático. Abre con un despliegue radiante de lirio, melón, osmanto, rosa, revela un corazón fascinante de lavanda, lirio, salvia, lirio de los valles, y perdura sobre un fondo suntuoso de sándalo, ámbar, almizcle, vainilla. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_396.jpg",
+    "olfactoryFamily": "FLORAL acuático",
+    "gender": "mujer",
+    "sales": 6,
+    "accords": [
+      {
+        "name": "floral",
+        "percentage": 100,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "acuático",
+        "percentage": 84,
+        "bg": "#0284c7",
+        "text": "#ffffff"
+      },
+      {
+        "name": "aromático",
+        "percentage": 70,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      },
+      {
+        "name": "floral blanco",
+        "percentage": 58,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 48,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "afrutado",
+        "percentage": 40,
+        "bg": "#db2777",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Lirio",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Melón",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Osmanto",
+          "image": "notes/jazmin.jpg"
+        },
+        {
+          "name": "Rosa",
+          "image": "notes/rosa.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Lavanda",
+          "image": "notes/lavanda.jpg"
+        },
+        {
+          "name": "Lirio",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Salvia",
+          "image": "notes/salvia.jpg"
+        },
+        {
+          "name": "Lirio de los valles",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Sándalo",
+          "image": "notes/sandalo.jpg"
+        },
+        {
+          "name": "Ámbar",
+          "image": "notes/ambar.jpg"
+        },
+        {
+          "name": "Almizcle",
+          "image": "notes/almizcle.jpg"
+        },
+        {
+          "name": "Vainilla",
+          "image": "notes/vainilla.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-494",
+    "code": "494",
+    "name": "Good Girl Blush",
+    "reference": "Good Girl Blush",
+    "brand": "Carolina Herrera",
+    "description": "Inspirada en Good Girl Blush de Carolina Herrera. Pertenece a la prestigiosa familia olfativa FLORAL BLANCO cálido especiado. Abre con un despliegue radiante de almendra, café, revela un corazón fascinante de jazmín sambac, tuberosa, y perdura sobre un fondo suntuoso de haba tonka, cacao. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_494.jpg",
+    "olfactoryFamily": "FLORAL BLANCO cálido especiado",
+    "gender": "mujer",
+    "sales": 6,
+    "accords": [
+      {
+        "name": "floral blanco",
+        "percentage": 100,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cálido especiado",
+        "percentage": 84,
+        "bg": "#701a75",
+        "text": "#ffffff"
+      },
+      {
+        "name": "rosas",
+        "percentage": 70,
+        "bg": "#be123c",
+        "text": "#ffffff"
+      },
+      {
+        "name": "dulce",
+        "percentage": 58,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cacao",
+        "percentage": 48,
+        "bg": "#3b0764",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Almendra",
+          "image": "notes/almendra.jpg"
+        },
+        {
+          "name": "Café",
+          "image": "notes/cafe.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Jazmín Sambac",
+          "image": "notes/jazmin.jpg"
+        },
+        {
+          "name": "Tuberosa",
+          "image": "notes/rosa.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Haba tonka",
+          "image": "notes/haba-tonka.jpg"
+        },
+        {
+          "name": "Cacao",
+          "image": "notes/cacao.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-514",
+    "code": "514",
+    "name": "Hipnotic Poison",
+    "reference": "Hipnotic Poison",
+    "brand": "Dior",
+    "description": "Inspirada en Hipnotic Poison de Dior. Pertenece a la prestigiosa familia olfativa Ámbar Vainilla. Abre con un despliegue radiante de coco, ciruela, albaricoque, revela un corazón fascinante de palo de rosa de brasil, jazmín, alcaravea, tuberosa, y perdura sobre un fondo suntuoso de vainilla, almendra, sándalo, almizcle. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_514.jpg",
+    "olfactoryFamily": "Ámbar Vainilla",
+    "gender": "mujer",
+    "sales": 6,
+    "accords": [
+      {
+        "name": "avainillado",
+        "percentage": 100,
+        "bg": "#9333ea",
+        "text": "#ffffff"
+      },
+      {
+        "name": "almendrado",
+        "percentage": 84,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      },
+      {
+        "name": "dulce",
+        "percentage": 70,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      },
+      {
+        "name": "ámbar",
+        "percentage": 58,
+        "bg": "#86198f",
+        "text": "#ffffff"
+      },
+      {
+        "name": "afrutado",
+        "percentage": 48,
+        "bg": "#db2777",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Coco",
+          "image": "notes/coco.jpg"
+        },
+        {
+          "name": "Ciruela",
+          "image": "notes/ciruela.jpg"
+        },
+        {
+          "name": "Albaricoque",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Palo de rosa de Brasil",
+          "image": "notes/rosa.jpg"
+        },
+        {
+          "name": "Jazmín",
+          "image": "notes/jazmin.jpg"
+        },
+        {
+          "name": "Alcaravea",
+          "image": "notes/anis.jpg"
+        },
+        {
+          "name": "Tuberosa",
+          "image": "notes/rosa.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Vainilla",
+          "image": "notes/vainilla.jpg"
+        },
+        {
+          "name": "Almendra",
+          "image": "notes/almendra.jpg"
+        },
+        {
+          "name": "Sándalo",
+          "image": "notes/sandalo.jpg"
+        },
+        {
+          "name": "Almizcle",
+          "image": "notes/almizcle.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-537",
+    "code": "537",
+    "name": "La Vida Es Bella Intense",
+    "reference": "La Vida Es Bella Intense",
+    "brand": "Lancôme",
+    "description": "Inspirada en La Vida Es Bella Intense de Lancôme. Pertenece a la prestigiosa familia olfativa Floral Frutal Gourmand. Abre con un despliegue radiante de grosellas negras, pera, revela un corazón fascinante de iris, jazmín, flor de azahar, y perdura sobre un fondo suntuoso de praliné, vainilla, pachulí, haba tonka. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_537.jpg",
+    "olfactoryFamily": "Floral Frutal Gourmand",
+    "gender": "mujer",
+    "sales": 6,
+    "accords": [
+      {
+        "name": "dulce",
+        "percentage": 100,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      },
+      {
+        "name": "avainillado",
+        "percentage": 84,
+        "bg": "#9333ea",
+        "text": "#ffffff"
+      },
+      {
+        "name": "afrutado",
+        "percentage": 70,
+        "bg": "#db2777",
+        "text": "#ffffff"
+      },
+      {
+        "name": "pachulí",
+        "percentage": 58,
+        "bg": "#581c87",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 48,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Grosellas negras",
+          "image": "notes/grosella.jpg"
+        },
+        {
+          "name": "Pera",
+          "image": "notes/pera.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Iris",
+          "image": "notes/iris.jpg"
+        },
+        {
+          "name": "Jazmín",
+          "image": "notes/jazmin.jpg"
+        },
+        {
+          "name": "Flor de azahar",
+          "image": "notes/flor-azahar.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Praliné",
+          "image": "notes/avellana.jpg"
+        },
+        {
+          "name": "Vainilla",
+          "image": "notes/vainilla.jpg"
+        },
+        {
+          "name": "Pachulí",
+          "image": "notes/pachuli.jpg"
+        },
+        {
+          "name": "Haba tonka",
+          "image": "notes/haba-tonka.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-651",
+    "code": "651",
+    "name": "Yara",
+    "reference": "Yara",
+    "brand": "Lattafa",
+    "description": "Inspirada en Yara de Lattafa. Pertenece a la prestigiosa familia olfativa Ámbar Floral. Abre con un despliegue radiante de jazmín, melocotón, revela un corazón fascinante de caramelo, ámbar, y perdura sobre un fondo suntuoso de pachulí, sándalo. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_651.jpg",
+    "olfactoryFamily": "Ámbar Floral",
+    "gender": "mujer",
+    "sales": 6,
+    "accords": [
+      {
+        "name": "dulce",
+        "percentage": 100,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      },
+      {
+        "name": "caramelo",
+        "percentage": 84,
+        "bg": "#a855f7",
+        "text": "#ffffff"
+      },
+      {
+        "name": "avainillado",
+        "percentage": 70,
+        "bg": "#9333ea",
+        "text": "#ffffff"
+      },
+      {
+        "name": "floral blanco",
+        "percentage": 58,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Jazmín",
+          "image": "notes/jazmin.jpg"
+        },
+        {
+          "name": "Melocotón",
+          "image": "notes/melocoton.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Caramelo",
+          "image": "notes/caramelo.jpg"
+        },
+        {
+          "name": "Ámbar",
+          "image": "notes/ambar.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Pachulí",
+          "image": "notes/pachuli.jpg"
+        },
+        {
+          "name": "Sándalo",
+          "image": "notes/sandalo.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-683",
+    "code": "683",
+    "name": "Tuscan Leather",
+    "reference": "Tuscan Leather",
+    "brand": "Tom Ford",
+    "description": "Inspirada en Tuscan Leather de Tom Ford. Pertenece a la prestigiosa familia olfativa CUERO almizclado. Abre con un despliegue radiante de azafrán, frambuesa, tomillo, revela un corazón fascinante de incienso de olíbano, jazmín, y perdura sobre un fondo suntuoso de cuero, gamuza, ámbar, maderas nobles. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_683.jpg",
+    "olfactoryFamily": "CUERO almizclado",
+    "gender": "unisex",
+    "sales": 6,
+    "accords": [
+      {
+        "name": "cuero",
+        "percentage": 100,
+        "bg": "#3b0764",
+        "text": "#ffffff"
+      },
+      {
+        "name": "almizclado",
+        "percentage": 84,
+        "bg": "#64748b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "dulce",
+        "percentage": 70,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      },
+      {
+        "name": "ahumado",
+        "percentage": 58,
+        "bg": "#334155",
+        "text": "#ffffff"
+      },
+      {
+        "name": "afrutado",
+        "percentage": 48,
+        "bg": "#db2777",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 40,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Azafrán",
+          "image": "notes/azafran.jpg"
+        },
+        {
+          "name": "Frambuesa",
+          "image": "notes/frambuesa.jpg"
+        },
+        {
+          "name": "Tomillo",
+          "image": "notes/tomillo.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Incienso de olíbano",
+          "image": "notes/incienso.jpg"
+        },
+        {
+          "name": "Jazmín",
+          "image": "notes/jazmin.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Cuero",
+          "image": "notes/cuero.jpg"
+        },
+        {
+          "name": "Gamuza",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Ámbar",
+          "image": "notes/ambar.jpg"
+        },
+        {
+          "name": "Maderas nobles",
+          "image": "notes/maderas.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-748",
+    "code": "748",
+    "name": "Born in Roma Purple melancholia",
+    "reference": "Born in Roma Purple melancholia",
+    "brand": "Valentino",
+    "description": "Inspirada en Valentino Born in Roma. Una oda a la alta costura romana con contrastes fascinantes entre notas minerales frescas, acordes aromáticos de salvia y la intensidad envolvente de la vainilla Bourbon.",
+    "image": "images/kode/kode_748.jpg",
+    "olfactoryFamily": "Amaderada Especiada",
+    "gender": "hombre",
+    "sales": 6,
+    "accords": [
+      {
+        "name": "amaderado",
+        "percentage": 100,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cálido especiado",
+        "percentage": 84,
+        "bg": "#701a75",
+        "text": "#ffffff"
+      },
+      {
+        "name": "aromático",
+        "percentage": 70,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      },
+      {
+        "name": "avainillado",
+        "percentage": 58,
+        "bg": "#9333ea",
+        "text": "#ffffff"
+      },
+      {
+        "name": "mineral",
+        "percentage": 48,
+        "bg": "#334155",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Pimienta rosa",
+          "image": "notes/pimienta-rosa.jpg"
+        },
+        {
+          "name": "Bergamota",
+          "image": "notes/bergamota.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Lavanda",
+          "image": "notes/lavanda.jpg"
+        },
+        {
+          "name": "Salvia aromática",
+          "image": "notes/salvia.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Vainilla Bourbon",
+          "image": "notes/vainilla.jpg"
+        },
+        {
+          "name": "Vetiver ahumado",
+          "image": "notes/vetiver.jpg"
+        },
+        {
+          "name": "Maderas minerales",
+          "image": "notes/maderas.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-407",
+    "code": "407",
+    "name": "Anais Anais",
+    "reference": "Anais Anais",
+    "brand": "Cacharel",
+    "description": "Inspirada en Anais Anais de Cacharel. Pertenece a la prestigiosa familia olfativa FLORAL BLANCO floral. Abre con un despliegue radiante de flor de azahar, lavanda, galbanum, miel, revela un corazón fascinante de jazmín, miel, clavel, tuberosa, y perdura sobre un fondo suntuoso de cuero, sándalo, ámbar, pachulí. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_407.jpg",
+    "olfactoryFamily": "FLORAL BLANCO floral",
+    "gender": "mujer",
+    "sales": 5,
+    "accords": [
+      {
+        "name": "floral blanco",
+        "percentage": 100,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "floral",
+        "percentage": 84,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "verde",
+        "percentage": 70,
+        "bg": "#059669",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 58,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "fresco especiado",
+        "percentage": 48,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      },
+      {
+        "name": "aromático",
+        "percentage": 40,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Flor de azahar",
+          "image": "notes/flor-azahar.jpg"
+        },
+        {
+          "name": "Lavanda",
+          "image": "notes/lavanda.jpg"
+        },
+        {
+          "name": "Galbanum",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Miel",
+          "image": "notes/miel.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Jazmín",
+          "image": "notes/jazmin.jpg"
+        },
+        {
+          "name": "Miel",
+          "image": "notes/miel.jpg"
+        },
+        {
+          "name": "Clavel",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Tuberosa",
+          "image": "notes/rosa.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Cuero",
+          "image": "notes/cuero.jpg"
+        },
+        {
+          "name": "Sándalo",
+          "image": "notes/sandalo.jpg"
+        },
+        {
+          "name": "Ámbar",
+          "image": "notes/ambar.jpg"
+        },
+        {
+          "name": "Pachulí",
+          "image": "notes/pachuli.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-425",
+    "code": "425",
+    "name": "Black Opium",
+    "reference": "Black Opium",
+    "brand": "Yves Saint Laurent",
+    "description": "Inspirada en Black Opium de Yves Saint Laurent. Pertenece a la prestigiosa familia olfativa AVAINILLADO café. Abre con un despliegue radiante de pimienta rosa, flor de azahar, pera, revela un corazón fascinante de café, jazmín, almendra amarga, licorice, y perdura sobre un fondo suntuoso de vainilla, pachulí, cedro, madera de cachemira. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_425.jpg",
+    "olfactoryFamily": "AVAINILLADO café",
+    "gender": "mujer",
+    "sales": 5,
+    "accords": [
+      {
+        "name": "avainillado",
+        "percentage": 100,
+        "bg": "#9333ea",
+        "text": "#ffffff"
+      },
+      {
+        "name": "café",
+        "percentage": 84,
+        "bg": "#311042",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cálido especiado",
+        "percentage": 70,
+        "bg": "#701a75",
+        "text": "#ffffff"
+      },
+      {
+        "name": "dulce",
+        "percentage": 58,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      },
+      {
+        "name": "floral blanco",
+        "percentage": 48,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Pimienta rosa",
+          "image": "notes/pimienta-rosa.jpg"
+        },
+        {
+          "name": "Flor de azahar",
+          "image": "notes/flor-azahar.jpg"
+        },
+        {
+          "name": "Pera",
+          "image": "notes/pera.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Café",
+          "image": "notes/cafe.jpg"
+        },
+        {
+          "name": "Jazmín",
+          "image": "notes/jazmin.jpg"
+        },
+        {
+          "name": "Almendra amarga",
+          "image": "notes/almendra.jpg"
+        },
+        {
+          "name": "Licorice",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Vainilla",
+          "image": "notes/vainilla.jpg"
+        },
+        {
+          "name": "Pachulí",
+          "image": "notes/pachuli.jpg"
+        },
+        {
+          "name": "Cedro",
+          "image": "notes/cedro.jpg"
+        },
+        {
+          "name": "Madera de cachemira",
+          "image": "notes/cachemira.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-426",
+    "code": "426",
+    "name": "Black Orchid",
+    "reference": "Black Orchid",
+    "brand": "Tom Ford",
+    "description": "Inspirada en Black Orchid de Tom Ford. Pertenece a la prestigiosa familia olfativa CÁLIDO ESPECIADO dulce. Abre con un despliegue radiante de jazmín, gardenia, ylang-ylang, bergamota, revela un corazón fascinante de spices, fruity notes, flor de loto, orquídea, y perdura sobre un fondo suntuoso de vetiver, sándalo, pachulí, ámbar. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_426.jpg",
+    "olfactoryFamily": "CÁLIDO ESPECIADO dulce",
+    "gender": "mujer",
+    "sales": 5,
+    "accords": [
+      {
+        "name": "cálido especiado",
+        "percentage": 100,
+        "bg": "#701a75",
+        "text": "#ffffff"
+      },
+      {
+        "name": "dulce",
+        "percentage": 84,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      },
+      {
+        "name": "terroso",
+        "percentage": 70,
+        "bg": "#2e1065",
+        "text": "#ffffff"
+      },
+      {
+        "name": "balsámico",
+        "percentage": 58,
+        "bg": "#6b21a8",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cacao",
+        "percentage": 48,
+        "bg": "#3b0764",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Jazmín",
+          "image": "notes/jazmin.jpg"
+        },
+        {
+          "name": "Gardenia",
+          "image": "notes/gardenia.jpg"
+        },
+        {
+          "name": "Ylang-Ylang",
+          "image": "notes/ylang-ylang.jpg"
+        },
+        {
+          "name": "Bergamota",
+          "image": "notes/bergamota.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Spices",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Fruity Notes",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Flor de loto",
+          "image": "notes/flor-loto.jpg"
+        },
+        {
+          "name": "Orquídea",
+          "image": "notes/orquidea.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Vetiver",
+          "image": "notes/vetiver.jpg"
+        },
+        {
+          "name": "Sándalo",
+          "image": "notes/sandalo.jpg"
+        },
+        {
+          "name": "Pachulí",
+          "image": "notes/pachuli.jpg"
+        },
+        {
+          "name": "Ámbar",
+          "image": "notes/ambar.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-432",
+    "code": "432",
+    "name": "Can Can",
+    "reference": "Can Can",
+    "brand": "Paris Hilton",
+    "description": "Inspirada en Can Can de Paris Hilton. Pertenece a la prestigiosa familia olfativa AFRUTADO dulce. Abre con un despliegue radiante de clementine, grosella negra, nectarine, revela un corazón fascinante de flor de azahar, orquídea, y perdura sobre un fondo suntuoso de ámbar, almizcle, woodsy notes. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_432.jpg",
+    "olfactoryFamily": "AFRUTADO dulce",
+    "gender": "mujer",
+    "sales": 5,
+    "accords": [
+      {
+        "name": "afrutado",
+        "percentage": 100,
+        "bg": "#db2777",
+        "text": "#ffffff"
+      },
+      {
+        "name": "dulce",
+        "percentage": 84,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      },
+      {
+        "name": "ámbar",
+        "percentage": 70,
+        "bg": "#86198f",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cítrico",
+        "percentage": 58,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      },
+      {
+        "name": "floral",
+        "percentage": 48,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Clementine",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Grosella negra",
+          "image": "notes/grosella.jpg"
+        },
+        {
+          "name": "Nectarine",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Flor de azahar",
+          "image": "notes/flor-azahar.jpg"
+        },
+        {
+          "name": "Orquídea",
+          "image": "notes/orquidea.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Ámbar",
+          "image": "notes/ambar.jpg"
+        },
+        {
+          "name": "Almizcle",
+          "image": "notes/almizcle.jpg"
+        },
+        {
+          "name": "Woodsy Notes",
+          "image": "notes/maderas.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-445",
+    "code": "445",
+    "name": "Chance",
+    "reference": "Chance",
+    "brand": "Chanel",
+    "description": "Un torbellino floral inesperado, optimista y radiante. Pimienta rosa y piña se entrelazan con la elegancia celestial del jazmín y la sensualidad atemporal del pachulí y la vainilla.",
+    "image": "images/kode/kode_445.jpg",
+    "olfactoryFamily": "Chipre Floral",
+    "gender": "mujer",
+    "sales": 5,
+    "accords": [
+      {
+        "name": "cítrico",
+        "percentage": 100,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      },
+      {
+        "name": "floral blanco",
+        "percentage": 84,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "pachulí",
+        "percentage": 70,
+        "bg": "#581c87",
+        "text": "#ffffff"
+      },
+      {
+        "name": "dulce",
+        "percentage": 58,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      },
+      {
+        "name": "fresco especiado",
+        "percentage": 48,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Pimienta rosa",
+          "image": "notes/pimienta-rosa.jpg"
+        },
+        {
+          "name": "Piña",
+          "image": "notes/pina.jpg"
+        },
+        {
+          "name": "Iris",
+          "image": "notes/iris.jpg"
+        },
+        {
+          "name": "Pachulí",
+          "image": "notes/pachuli.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Limón",
+          "image": "notes/limon.jpg"
+        },
+        {
+          "name": "Jazmín",
+          "image": "notes/jazmin.jpg"
+        },
+        {
+          "name": "Rosa",
+          "image": "notes/rosa.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Pachulí",
+          "image": "notes/pachuli.jpg"
+        },
+        {
+          "name": "Almizcle",
+          "image": "notes/almizcle.jpg"
+        },
+        {
+          "name": "Vainilla",
+          "image": "notes/vainilla.jpg"
+        },
+        {
+          "name": "Vetiver",
+          "image": "notes/vetiver.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-588",
+    "code": "588",
+    "name": "Paris Hilton",
+    "reference": "Paris Hilton",
+    "brand": "Paris Hilton",
+    "description": "Inspirada en Paris Hilton de Paris Hilton. Pertenece a la prestigiosa familia olfativa AFRUTADO floral. Abre con un despliegue radiante de melón, melocotón, manzana, revela un corazón fascinante de mimosa, tuberosa, lirio, fresia, y perdura sobre un fondo suntuoso de sándalo, almizcle, musgo de roble, ylang-ylang. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_588.jpg",
+    "olfactoryFamily": "AFRUTADO floral",
+    "gender": "mujer",
+    "sales": 5,
+    "accords": [
+      {
+        "name": "afrutado",
+        "percentage": 100,
+        "bg": "#db2777",
+        "text": "#ffffff"
+      },
+      {
+        "name": "floral",
+        "percentage": 84,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "fresco",
+        "percentage": 70,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      },
+      {
+        "name": "floral blanco",
+        "percentage": 58,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "ozónico",
+        "percentage": 48,
+        "bg": "#38bdf8",
+        "text": "#0f172a"
+      },
+      {
+        "name": "acuático",
+        "percentage": 40,
+        "bg": "#0284c7",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Melón",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Melocotón",
+          "image": "notes/melocoton.jpg"
+        },
+        {
+          "name": "Manzana",
+          "image": "notes/manzana.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Mimosa",
+          "image": "notes/jazmin.jpg"
+        },
+        {
+          "name": "Tuberosa",
+          "image": "notes/rosa.jpg"
+        },
+        {
+          "name": "Lirio",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Fresia",
+          "image": "notes/jazmin.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Sándalo",
+          "image": "notes/sandalo.jpg"
+        },
+        {
+          "name": "Almizcle",
+          "image": "notes/almizcle.jpg"
+        },
+        {
+          "name": "Musgo de roble",
+          "image": "notes/musgo-roble.jpg"
+        },
+        {
+          "name": "Ylang-Ylang",
+          "image": "notes/ylang-ylang.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-590",
+    "code": "590",
+    "name": "Perfect",
+    "reference": "Perfect",
+    "brand": "Marc Jacobs",
+    "description": "Inspirada en Perfect de Marc Jacobs. Pertenece a la prestigiosa familia olfativa FLORAL. Abre con un despliegue radiante de fresh, revela un corazón fascinante de fruity, y perdura sobre un fondo suntuoso de sweet. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_590.jpg",
+    "olfactoryFamily": "FLORAL",
+    "gender": "mujer",
+    "sales": 5,
+    "accords": [
+      {
+        "name": "floral",
+        "percentage": 100,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Fresh",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Fruity",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Sweet",
+          "image": "notes/maderas.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-636",
+    "code": "636",
+    "name": "Toy 2 Bubble Gum",
+    "reference": "Toy 2 Bubble Gum",
+    "brand": "Moschino",
+    "description": "Inspirada en Toy 2 Bubble Gum de Moschino. Pertenece a la prestigiosa familia olfativa AROMÁTICO amaderado. Abre con un despliegue radiante de bergamota, mandarina, enebro, cardamomo, revela un corazón fascinante de violeta, lavanda, hawthorn, y perdura sobre un fondo suntuoso de sándalo, cedro, musgo, vainilla. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_636.jpg",
+    "olfactoryFamily": "AROMÁTICO amaderado",
+    "gender": "mujer",
+    "sales": 5,
+    "accords": [
+      {
+        "name": "aromático",
+        "percentage": 100,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 84,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "fresco especiado",
+        "percentage": 70,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      },
+      {
+        "name": "floral",
+        "percentage": 58,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cítrico",
+        "percentage": 48,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cálido especiado",
+        "percentage": 40,
+        "bg": "#701a75",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Bergamota",
+          "image": "notes/bergamota.jpg"
+        },
+        {
+          "name": "Mandarina",
+          "image": "notes/mandarina.jpg"
+        },
+        {
+          "name": "Enebro",
+          "image": "notes/enebro.jpg"
+        },
+        {
+          "name": "Cardamomo",
+          "image": "notes/cardamomo.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Violeta",
+          "image": "notes/violeta.jpg"
+        },
+        {
+          "name": "Lavanda",
+          "image": "notes/lavanda.jpg"
+        },
+        {
+          "name": "Hawthorn",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Sándalo",
+          "image": "notes/sandalo.jpg"
+        },
+        {
+          "name": "Cedro",
+          "image": "notes/cedro.jpg"
+        },
+        {
+          "name": "Musgo",
+          "image": "notes/musgo-roble.jpg"
+        },
+        {
+          "name": "Vainilla",
+          "image": "notes/vainilla.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-825",
+    "code": "825",
+    "name": "212 VIP MEN NYC",
+    "reference": "212 VIP MEN NYC",
+    "brand": "Carolina Herrera",
+    "description": "Inspirada en 212 VIP MEN NYC de Carolina Herrera. Pertenece a la prestigiosa familia olfativa FRESCO ESPECIADO aromático. Abre con un despliegue radiante de lima, caviar, pimienta, jengibre, revela un corazón fascinante de spices, vodka helado, ginebra, menta, y perdura sobre un fondo suntuoso de ámbar, cuero, woodsy notes. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_825.jpg",
+    "olfactoryFamily": "FRESCO ESPECIADO aromático",
+    "gender": "hombre",
+    "sales": 5,
+    "accords": [
+      {
+        "name": "fresco especiado",
+        "percentage": 100,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      },
+      {
+        "name": "aromático",
+        "percentage": 84,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      },
+      {
+        "name": "vodka",
+        "percentage": 70,
+        "bg": "#38bdf8",
+        "text": "#0f172a"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 58,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "verde",
+        "percentage": 48,
+        "bg": "#059669",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Lima",
+          "image": "notes/lima.jpg"
+        },
+        {
+          "name": "Caviar",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Pimienta",
+          "image": "notes/pimienta-negra.jpg"
+        },
+        {
+          "name": "Jengibre",
+          "image": "notes/jengibre.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Spices",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Vodka helado",
+          "image": "notes/ginebra-helada.jpg"
+        },
+        {
+          "name": "Ginebra",
+          "image": "notes/ginebra-helada.jpg"
+        },
+        {
+          "name": "Menta",
+          "image": "notes/menta.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Ámbar",
+          "image": "notes/ambar.jpg"
+        },
+        {
+          "name": "Cuero",
+          "image": "notes/cuero.jpg"
+        },
+        {
+          "name": "Woodsy Notes",
+          "image": "notes/maderas.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-720",
+    "code": "720",
+    "name": "Stronger With You Intensely",
+    "reference": "Stronger With You Intensely",
+    "brand": "Giorgio Armani",
+    "description": "Inspirada en Stronger With You Intensely de Giorgio Armani. Pertenece a la prestigiosa familia olfativa DULCE. Abre con un despliegue radiante de gourmand, revela un corazón fascinante de spicy, y perdura sobre un fondo suntuoso de oriental. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_720.jpg",
+    "olfactoryFamily": "DULCE",
+    "gender": "hombre",
+    "sales": 5,
+    "accords": [
+      {
+        "name": "dulce",
+        "percentage": 100,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Gourmand",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Spicy",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Oriental",
+          "image": "notes/maderas.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-181",
+    "code": "181",
+    "name": "Carolina Herrera",
+    "reference": "Carolina Herrera",
+    "brand": "Carolina Herrera",
+    "description": "Inspirada en Carolina Herrera de Carolina Herrera. Pertenece a la prestigiosa familia olfativa FLORAL BLANCO rosas. Abre con un despliegue radiante de notas verdes, citruses, revela un corazón fascinante de tuberosa, jazmín, y perdura sobre un fondo suntuoso de maderas nobles. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_181.jpg",
+    "olfactoryFamily": "FLORAL BLANCO rosas",
+    "gender": "hombre",
+    "sales": 4,
+    "accords": [
+      {
+        "name": "floral blanco",
+        "percentage": 100,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "rosas",
+        "percentage": 84,
+        "bg": "#be123c",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 70,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "almizclado",
+        "percentage": 58,
+        "bg": "#64748b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "verde",
+        "percentage": 48,
+        "bg": "#059669",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cítrico",
+        "percentage": 40,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Notas verdes",
+          "image": "notes/notas-verdes.jpg"
+        },
+        {
+          "name": "Citruses",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Tuberosa",
+          "image": "notes/rosa.jpg"
+        },
+        {
+          "name": "Jazmín",
+          "image": "notes/jazmin.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Maderas nobles",
+          "image": "notes/maderas.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-186",
+    "code": "186",
+    "name": "Chrome Azzaro",
+    "reference": "Chrome Azzaro",
+    "brand": "Azzaro",
+    "description": "Inspirada en Chrome Azzaro de Azzaro. Pertenece a la prestigiosa familia olfativa CÍTRICO aromático. Abre con un despliegue radiante de romero, piña, neroli, bergamota, revela un corazón fascinante de cyclamen, cilantro, jazmín, musgo de roble, y perdura sobre un fondo suntuoso de sándalo, haba tonka, almizcle, musgo de roble. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_186.jpg",
+    "olfactoryFamily": "CÍTRICO aromático",
+    "gender": "hombre",
+    "sales": 4,
+    "accords": [
+      {
+        "name": "cítrico",
+        "percentage": 100,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      },
+      {
+        "name": "aromático",
+        "percentage": 84,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 70,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "fresco especiado",
+        "percentage": 58,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      },
+      {
+        "name": "fresco",
+        "percentage": 48,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Romero",
+          "image": "notes/romero.jpg"
+        },
+        {
+          "name": "Piña",
+          "image": "notes/pina.jpg"
+        },
+        {
+          "name": "Neroli",
+          "image": "notes/flor-azahar.jpg"
+        },
+        {
+          "name": "Bergamota",
+          "image": "notes/bergamota.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Cyclamen",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Cilantro",
+          "image": "notes/cilantro.jpg"
+        },
+        {
+          "name": "Jazmín",
+          "image": "notes/jazmin.jpg"
+        },
+        {
+          "name": "Musgo de roble",
+          "image": "notes/musgo-roble.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Sándalo",
+          "image": "notes/sandalo.jpg"
+        },
+        {
+          "name": "Haba tonka",
+          "image": "notes/haba-tonka.jpg"
+        },
+        {
+          "name": "Almizcle",
+          "image": "notes/almizcle.jpg"
+        },
+        {
+          "name": "Musgo de roble",
+          "image": "notes/musgo-roble.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-234",
+    "code": "234",
+    "name": "Halloween X",
+    "reference": "Halloween X",
+    "brand": "Halloween",
+    "description": "Inspirada en Halloween X de Halloween. Pertenece a la prestigiosa familia olfativa FLORAL atalcado. Abre con un despliegue radiante de petitgrain, violeta, banana leaf, notas marinas, revela un corazón fascinante de tuberosa, violeta, pimienta, magnolia, y perdura sobre un fondo suntuoso de sándalo, incienso, vainilla de madagascar, mirra. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_234.jpg",
+    "olfactoryFamily": "FLORAL atalcado",
+    "gender": "hombre",
+    "sales": 4,
+    "accords": [
+      {
+        "name": "floral",
+        "percentage": 100,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "atalcado",
+        "percentage": 84,
+        "bg": "#a855f7",
+        "text": "#ffffff"
+      },
+      {
+        "name": "marino",
+        "percentage": 70,
+        "bg": "#0284c7",
+        "text": "#ffffff"
+      },
+      {
+        "name": "verde",
+        "percentage": 58,
+        "bg": "#059669",
+        "text": "#ffffff"
+      },
+      {
+        "name": "balsámico",
+        "percentage": 48,
+        "bg": "#6b21a8",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 40,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Petitgrain",
+          "image": "notes/petitgrain.jpg"
+        },
+        {
+          "name": "Violeta",
+          "image": "notes/violeta.jpg"
+        },
+        {
+          "name": "Banana Leaf",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Notas marinas",
+          "image": "notes/notas-marinas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Tuberosa",
+          "image": "notes/rosa.jpg"
+        },
+        {
+          "name": "Violeta",
+          "image": "notes/violeta.jpg"
+        },
+        {
+          "name": "Pimienta",
+          "image": "notes/pimienta-negra.jpg"
+        },
+        {
+          "name": "Magnolia",
+          "image": "notes/magnolia.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Sándalo",
+          "image": "notes/sandalo.jpg"
+        },
+        {
+          "name": "Incienso",
+          "image": "notes/incienso.jpg"
+        },
+        {
+          "name": "Vainilla de Madagascar",
+          "image": "notes/vainilla.jpg"
+        },
+        {
+          "name": "Mirra",
+          "image": "notes/mirra.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-310",
+    "code": "310",
+    "name": "Paco Rabanne",
+    "reference": "Paco Rabanne",
+    "brand": "Paco Rabanne",
+    "description": "Inspirada en Paco Rabanne de Paco Rabanne. Pertenece a la prestigiosa familia olfativa CÍTRICO aromático. Abre con un despliegue radiante de cilantro, limón, mandarina, pine, revela un corazón fascinante de lavanda, jazmín, tea, cyclamen, y perdura sobre un fondo suntuoso de almizcle, sándalo, cedro, haba tonka. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_310.jpg",
+    "olfactoryFamily": "CÍTRICO aromático",
+    "gender": "hombre",
+    "sales": 4,
+    "accords": [
+      {
+        "name": "cítrico",
+        "percentage": 100,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      },
+      {
+        "name": "aromático",
+        "percentage": 84,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      },
+      {
+        "name": "verde",
+        "percentage": 70,
+        "bg": "#059669",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 58,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "fresco",
+        "percentage": 48,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Cilantro",
+          "image": "notes/cilantro.jpg"
+        },
+        {
+          "name": "Limón",
+          "image": "notes/limon.jpg"
+        },
+        {
+          "name": "Mandarina",
+          "image": "notes/mandarina.jpg"
+        },
+        {
+          "name": "Pine",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Lavanda",
+          "image": "notes/lavanda.jpg"
+        },
+        {
+          "name": "Jazmín",
+          "image": "notes/jazmin.jpg"
+        },
+        {
+          "name": "Tea",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Cyclamen",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Almizcle",
+          "image": "notes/almizcle.jpg"
+        },
+        {
+          "name": "Sándalo",
+          "image": "notes/sandalo.jpg"
+        },
+        {
+          "name": "Cedro",
+          "image": "notes/cedro.jpg"
+        },
+        {
+          "name": "Haba tonka",
+          "image": "notes/haba-tonka.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-330",
+    "code": "330",
+    "name": "Polo Sport",
+    "reference": "Polo Sport",
+    "brand": "Ralph Lauren",
+    "description": "Inspirada en Polo Sport de Ralph Lauren. Pertenece a la prestigiosa familia olfativa AROMÁTICO fresco especiado. Abre con un despliegue radiante de aldehídos, artemisia, lavanda, mandarina, revela un corazón fascinante de cyclamen, jengibre, seagrass, jazmín, y perdura sobre un fondo suntuoso de sándalo, ámbar, almizcle, madera de gaiac. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_330.jpg",
+    "olfactoryFamily": "AROMÁTICO fresco especiado",
+    "gender": "hombre",
+    "sales": 4,
+    "accords": [
+      {
+        "name": "aromático",
+        "percentage": 100,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      },
+      {
+        "name": "fresco especiado",
+        "percentage": 84,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      },
+      {
+        "name": "verde",
+        "percentage": 70,
+        "bg": "#059669",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cítrico",
+        "percentage": 58,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      },
+      {
+        "name": "aldehídico",
+        "percentage": 48,
+        "bg": "#a5b4fc",
+        "text": "#1e1b4b"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Aldehídos",
+          "image": "notes/aldehidos.jpg"
+        },
+        {
+          "name": "Artemisia",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Lavanda",
+          "image": "notes/lavanda.jpg"
+        },
+        {
+          "name": "Mandarina",
+          "image": "notes/mandarina.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Cyclamen",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Jengibre",
+          "image": "notes/jengibre.jpg"
+        },
+        {
+          "name": "Seagrass",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Jazmín",
+          "image": "notes/jazmin.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Sándalo",
+          "image": "notes/sandalo.jpg"
+        },
+        {
+          "name": "Ámbar",
+          "image": "notes/ambar.jpg"
+        },
+        {
+          "name": "Almizcle",
+          "image": "notes/almizcle.jpg"
+        },
+        {
+          "name": "Madera de gaiac",
+          "image": "notes/guayaco.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-334",
+    "code": "334",
+    "name": "Pour Homme",
+    "reference": "Pour Homme",
+    "brand": "Caron",
+    "description": "Una obra de arte clásica de la alta perfumería francesa. El diálogo poético entre la frescura silvestre de la lavanda fina de Provenza y la nobleza reconfortante de la vainilla dulce y el ámbar.",
+    "image": "images/kode/kode_334.jpg",
+    "olfactoryFamily": "Aromática Lavanda",
+    "gender": "hombre",
+    "sales": 4,
+    "accords": [
+      {
+        "name": "lavanda",
+        "percentage": 100,
+        "bg": "#7e22ce",
+        "text": "#ffffff"
+      },
+      {
+        "name": "avainillado",
+        "percentage": 84,
+        "bg": "#9333ea",
+        "text": "#ffffff"
+      },
+      {
+        "name": "aromático",
+        "percentage": 70,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 58,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "fresco",
+        "percentage": 48,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Lavanda",
+          "image": "notes/lavanda.jpg"
+        },
+        {
+          "name": "Romero",
+          "image": "notes/romero.jpg"
+        },
+        {
+          "name": "Bergamota",
+          "image": "notes/bergamota.jpg"
+        },
+        {
+          "name": "Limón",
+          "image": "notes/limon.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Salvia sclarea",
+          "image": "notes/salvia.jpg"
+        },
+        {
+          "name": "Cedro",
+          "image": "notes/cedro.jpg"
+        },
+        {
+          "name": "Rosa",
+          "image": "notes/rosa.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Vainilla",
+          "image": "notes/vainilla.jpg"
+        },
+        {
+          "name": "Almizcle",
+          "image": "notes/almizcle.jpg"
+        },
+        {
+          "name": "Haba tonka",
+          "image": "notes/haba-tonka.jpg"
+        },
+        {
+          "name": "Ámbar",
+          "image": "notes/ambar.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-408",
+    "code": "408",
+    "name": "Ange O Demon",
+    "reference": "Ange O Demon",
+    "brand": "Givenchy",
+    "description": "Inspirada en Ange O Demon de Givenchy. Pertenece a la prestigiosa familia olfativa DULCE cálido especiado. Abre con un despliegue radiante de mandarina, azafrán, tomillo, revela un corazón fascinante de lirio, orquídea, ylang-ylang, y perdura sobre un fondo suntuoso de haba tonka, vainilla, rosa, musgo de roble. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_408.jpg",
+    "olfactoryFamily": "DULCE cálido especiado",
+    "gender": "mujer",
+    "sales": 4,
+    "accords": [
+      {
+        "name": "dulce",
+        "percentage": 100,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cálido especiado",
+        "percentage": 84,
+        "bg": "#701a75",
+        "text": "#ffffff"
+      },
+      {
+        "name": "avainillado",
+        "percentage": 70,
+        "bg": "#9333ea",
+        "text": "#ffffff"
+      },
+      {
+        "name": "aromático",
+        "percentage": 58,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      },
+      {
+        "name": "floral blanco",
+        "percentage": 48,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 40,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Mandarina",
+          "image": "notes/mandarina.jpg"
+        },
+        {
+          "name": "Azafrán",
+          "image": "notes/azafran.jpg"
+        },
+        {
+          "name": "Tomillo",
+          "image": "notes/tomillo.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Lirio",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Orquídea",
+          "image": "notes/orquidea.jpg"
+        },
+        {
+          "name": "Ylang-Ylang",
+          "image": "notes/ylang-ylang.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Haba tonka",
+          "image": "notes/haba-tonka.jpg"
+        },
+        {
+          "name": "Vainilla",
+          "image": "notes/vainilla.jpg"
+        },
+        {
+          "name": "Rosa",
+          "image": "notes/rosa.jpg"
+        },
+        {
+          "name": "Musgo de roble",
+          "image": "notes/musgo-roble.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-451",
+    "code": "451",
+    "name": "Club de Nuit Intense",
+    "reference": "Club de Nuit Intense",
+    "brand": "Armaf",
+    "description": "Inspirada en Club de Nuit Intense de Armaf. Pertenece a la prestigiosa familia olfativa FRESCO ESPECIADO rosas. Abre con un despliegue radiante de geranio, azafrán, rosa, revela un corazón fascinante de caraway, nuez moscada, violeta, pimienta, y perdura sobre un fondo suntuoso de ámbar, madera de agar (oud), vainilla, pachulí. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_451.jpg",
+    "olfactoryFamily": "FRESCO ESPECIADO rosas",
+    "gender": "mujer",
+    "sales": 4,
+    "accords": [
+      {
+        "name": "fresco especiado",
+        "percentage": 100,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      },
+      {
+        "name": "rosas",
+        "percentage": 84,
+        "bg": "#be123c",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cálido especiado",
+        "percentage": 70,
+        "bg": "#701a75",
+        "text": "#ffffff"
+      },
+      {
+        "name": "pachulí",
+        "percentage": 58,
+        "bg": "#581c87",
+        "text": "#ffffff"
+      },
+      {
+        "name": "avainillado",
+        "percentage": 48,
+        "bg": "#9333ea",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Geranio",
+          "image": "notes/geranio.jpg"
+        },
+        {
+          "name": "Azafrán",
+          "image": "notes/azafran.jpg"
+        },
+        {
+          "name": "Rosa",
+          "image": "notes/rosa.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Caraway",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Nuez moscada",
+          "image": "notes/nuez-moscada.jpg"
+        },
+        {
+          "name": "Violeta",
+          "image": "notes/violeta.jpg"
+        },
+        {
+          "name": "Pimienta",
+          "image": "notes/pimienta-negra.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Ámbar",
+          "image": "notes/ambar.jpg"
+        },
+        {
+          "name": "Madera de agar (Oud)",
+          "image": "notes/oud.jpg"
+        },
+        {
+          "name": "Vainilla",
+          "image": "notes/vainilla.jpg"
+        },
+        {
+          "name": "Pachulí",
+          "image": "notes/pachuli.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-478",
+    "code": "478",
+    "name": "Eternity",
+    "reference": "Eternity",
+    "brand": "Calvin Klein",
+    "description": "Inspirada en Eternity de Calvin Klein. Pertenece a la prestigiosa familia olfativa FLORAL verde. Abre con un despliegue radiante de citruses, notas verdes, mandarina, fresia, revela un corazón fascinante de lirio, clavel, violeta, jazmín, y perdura sobre un fondo suntuoso de sándalo, ámbar, pachulí, almizcle. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_478.jpg",
+    "olfactoryFamily": "FLORAL verde",
+    "gender": "mujer",
+    "sales": 4,
+    "accords": [
+      {
+        "name": "floral",
+        "percentage": 100,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "verde",
+        "percentage": 84,
+        "bg": "#059669",
+        "text": "#ffffff"
+      },
+      {
+        "name": "aromático",
+        "percentage": 70,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      },
+      {
+        "name": "floral blanco",
+        "percentage": 58,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cálido especiado",
+        "percentage": 48,
+        "bg": "#701a75",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Citruses",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Notas verdes",
+          "image": "notes/notas-verdes.jpg"
+        },
+        {
+          "name": "Mandarina",
+          "image": "notes/mandarina.jpg"
+        },
+        {
+          "name": "Fresia",
+          "image": "notes/jazmin.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Lirio",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Clavel",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Violeta",
+          "image": "notes/violeta.jpg"
+        },
+        {
+          "name": "Jazmín",
+          "image": "notes/jazmin.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Sándalo",
+          "image": "notes/sandalo.jpg"
+        },
+        {
+          "name": "Ámbar",
+          "image": "notes/ambar.jpg"
+        },
+        {
+          "name": "Pachulí",
+          "image": "notes/pachuli.jpg"
+        },
+        {
+          "name": "Almizcle",
+          "image": "notes/almizcle.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-536",
+    "code": "536",
+    "name": "La Vida Es Bella En Rose",
+    "reference": "La Vida Es Bella En Rose",
+    "brand": "Lancôme",
+    "description": "Inspirada en La Vida Es Bella En Rose de Lancôme. Pertenece a la prestigiosa familia olfativa Floral Frutal Gourmand. Abre con un despliegue radiante de grosellas negras, pera, revela un corazón fascinante de iris, jazmín, flor de azahar, y perdura sobre un fondo suntuoso de praliné, vainilla, pachulí, haba tonka. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_536.jpg",
+    "olfactoryFamily": "Floral Frutal Gourmand",
+    "gender": "mujer",
+    "sales": 4,
+    "accords": [
+      {
+        "name": "dulce",
+        "percentage": 100,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      },
+      {
+        "name": "avainillado",
+        "percentage": 84,
+        "bg": "#9333ea",
+        "text": "#ffffff"
+      },
+      {
+        "name": "afrutado",
+        "percentage": 70,
+        "bg": "#db2777",
+        "text": "#ffffff"
+      },
+      {
+        "name": "pachulí",
+        "percentage": 58,
+        "bg": "#581c87",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 48,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Grosellas negras",
+          "image": "notes/grosella.jpg"
+        },
+        {
+          "name": "Pera",
+          "image": "notes/pera.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Iris",
+          "image": "notes/iris.jpg"
+        },
+        {
+          "name": "Jazmín",
+          "image": "notes/jazmin.jpg"
+        },
+        {
+          "name": "Flor de azahar",
+          "image": "notes/flor-azahar.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Praliné",
+          "image": "notes/avellana.jpg"
+        },
+        {
+          "name": "Vainilla",
+          "image": "notes/vainilla.jpg"
+        },
+        {
+          "name": "Pachulí",
+          "image": "notes/pachuli.jpg"
+        },
+        {
+          "name": "Haba tonka",
+          "image": "notes/haba-tonka.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-626",
+    "code": "626",
+    "name": "Sweet Like Candy",
+    "reference": "Sweet Like Candy",
+    "brand": "Ariana Grande",
+    "description": "Inspirada en Sweet Like Candy de Ariana Grande. Pertenece a la prestigiosa familia olfativa DULCE afrutado. Abre con un despliegue radiante de blackberry, bergamota, pera, revela un corazón fascinante de grosella negra, crema batida, marshmallow, jazmín, y perdura sobre un fondo suntuoso de vainilla, madera de cachemira. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_626.jpg",
+    "olfactoryFamily": "DULCE afrutado",
+    "gender": "mujer",
+    "sales": 4,
+    "accords": [
+      {
+        "name": "dulce",
+        "percentage": 100,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      },
+      {
+        "name": "afrutado",
+        "percentage": 84,
+        "bg": "#db2777",
+        "text": "#ffffff"
+      },
+      {
+        "name": "avainillado",
+        "percentage": 70,
+        "bg": "#9333ea",
+        "text": "#ffffff"
+      },
+      {
+        "name": "atalcado",
+        "percentage": 58,
+        "bg": "#a855f7",
+        "text": "#ffffff"
+      },
+      {
+        "name": "floral blanco",
+        "percentage": 48,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Blackberry",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Bergamota",
+          "image": "notes/bergamota.jpg"
+        },
+        {
+          "name": "Pera",
+          "image": "notes/pera.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Grosella negra",
+          "image": "notes/grosella.jpg"
+        },
+        {
+          "name": "Crema batida",
+          "image": "notes/crema-batida.jpg"
+        },
+        {
+          "name": "Marshmallow",
+          "image": "notes/notas-marinas.jpg"
+        },
+        {
+          "name": "Jazmín",
+          "image": "notes/jazmin.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Vainilla",
+          "image": "notes/vainilla.jpg"
+        },
+        {
+          "name": "Madera de cachemira",
+          "image": "notes/cachemira.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-630",
+    "code": "630",
+    "name": "The One",
+    "reference": "The One",
+    "brand": "Dolce & Gabbana",
+    "description": "Inspirada en The One de Dolce & Gabbana. Pertenece a la prestigiosa familia olfativa AFRUTADO avainillado. Abre con un despliegue radiante de litchi, mandarina, melocotón, bergamota, revela un corazón fascinante de lirio, ciruela, jazmín, lirio de los valles, y perdura sobre un fondo suntuoso de ámbar, almizcle, vainilla, vetiver. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_630.jpg",
+    "olfactoryFamily": "AFRUTADO avainillado",
+    "gender": "mujer",
+    "sales": 4,
+    "accords": [
+      {
+        "name": "afrutado",
+        "percentage": 100,
+        "bg": "#db2777",
+        "text": "#ffffff"
+      },
+      {
+        "name": "avainillado",
+        "percentage": 84,
+        "bg": "#9333ea",
+        "text": "#ffffff"
+      },
+      {
+        "name": "floral blanco",
+        "percentage": 70,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "dulce",
+        "percentage": 58,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      },
+      {
+        "name": "atalcado",
+        "percentage": 48,
+        "bg": "#a855f7",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Litchi",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Mandarina",
+          "image": "notes/mandarina.jpg"
+        },
+        {
+          "name": "Melocotón",
+          "image": "notes/melocoton.jpg"
+        },
+        {
+          "name": "Bergamota",
+          "image": "notes/bergamota.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Lirio",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Ciruela",
+          "image": "notes/ciruela.jpg"
+        },
+        {
+          "name": "Jazmín",
+          "image": "notes/jazmin.jpg"
+        },
+        {
+          "name": "Lirio de los valles",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Ámbar",
+          "image": "notes/ambar.jpg"
+        },
+        {
+          "name": "Almizcle",
+          "image": "notes/almizcle.jpg"
+        },
+        {
+          "name": "Vainilla",
+          "image": "notes/vainilla.jpg"
+        },
+        {
+          "name": "Vetiver",
+          "image": "notes/vetiver.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-632",
+    "code": "632",
+    "name": "Tommy",
+    "reference": "Tommy",
+    "brand": "Tommy Hilfiger",
+    "description": "Inspirada en Tommy de Tommy Hilfiger. Pertenece a la prestigiosa familia olfativa FRESCO ESPECIADO verde. Abre con un despliegue radiante de menta, lavanda, pomelo, bergamota, revela un corazón fascinante de cranberry, rosa, manzana, y perdura sobre un fondo suntuoso de ámbar, cactus, cotton flower. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_632.jpg",
+    "olfactoryFamily": "FRESCO ESPECIADO verde",
+    "gender": "mujer",
+    "sales": 4,
+    "accords": [
+      {
+        "name": "fresco especiado",
+        "percentage": 100,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      },
+      {
+        "name": "verde",
+        "percentage": 84,
+        "bg": "#059669",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cítrico",
+        "percentage": 70,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      },
+      {
+        "name": "afrutado",
+        "percentage": 58,
+        "bg": "#db2777",
+        "text": "#ffffff"
+      },
+      {
+        "name": "aromático",
+        "percentage": 48,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Menta",
+          "image": "notes/menta.jpg"
+        },
+        {
+          "name": "Lavanda",
+          "image": "notes/lavanda.jpg"
+        },
+        {
+          "name": "Pomelo",
+          "image": "notes/pomelo.jpg"
+        },
+        {
+          "name": "Bergamota",
+          "image": "notes/bergamota.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Cranberry",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Rosa",
+          "image": "notes/rosa.jpg"
+        },
+        {
+          "name": "Manzana",
+          "image": "notes/manzana.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Ámbar",
+          "image": "notes/ambar.jpg"
+        },
+        {
+          "name": "Cactus",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Cotton Flower",
+          "image": "notes/maderas.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-668",
+    "code": "668",
+    "name": "Khamrah",
+    "reference": "Khamrah",
+    "brand": "Lattafa",
+    "description": "Inspirada en Khamrah de Lattafa. Pertenece a la prestigiosa familia olfativa Aromática Especiada. Abre con un despliegue radiante de canela, nuez moscada, bergamota, revela un corazón fascinante de dátiles, praliné, tuberosa, mahonia, y perdura sobre un fondo suntuoso de vainilla, haba tonka, benjuí, mirra. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_668.jpg",
+    "olfactoryFamily": "Aromática Especiada",
+    "gender": "unisex",
+    "sales": 4,
+    "accords": [
+      {
+        "name": "cálido especiado",
+        "percentage": 100,
+        "bg": "#701a75",
+        "text": "#ffffff"
+      },
+      {
+        "name": "dulce",
+        "percentage": 84,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      },
+      {
+        "name": "avainillado",
+        "percentage": 70,
+        "bg": "#9333ea",
+        "text": "#ffffff"
+      },
+      {
+        "name": "ámbar",
+        "percentage": 58,
+        "bg": "#86198f",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 48,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Canela",
+          "image": "notes/canela.jpg"
+        },
+        {
+          "name": "Nuez moscada",
+          "image": "notes/nuez-moscada.jpg"
+        },
+        {
+          "name": "Bergamota",
+          "image": "notes/bergamota.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Dátiles",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Praliné",
+          "image": "notes/avellana.jpg"
+        },
+        {
+          "name": "Tuberosa",
+          "image": "notes/rosa.jpg"
+        },
+        {
+          "name": "Mahonia",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Vainilla",
+          "image": "notes/vainilla.jpg"
+        },
+        {
+          "name": "Haba tonka",
+          "image": "notes/haba-tonka.jpg"
+        },
+        {
+          "name": "Benjuí",
+          "image": "notes/benjui.jpg"
+        },
+        {
+          "name": "Mirra",
+          "image": "notes/mirra.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-698",
+    "code": "698",
+    "name": "K Eau de Parfum",
+    "reference": "K Eau de Parfum",
+    "brand": "Dolce & Gabbana",
+    "description": "Inspirada en K Eau de Parfum de Dolce & Gabbana. Pertenece a la prestigiosa familia olfativa Amaderada Especiada. Abre con un despliegue radiante de naranja sanguina, pimienta de jamaica, bayas de enebro, limón, revela un corazón fascinante de néctar de higo, geranio, lavanda, salvia esclarea, y perdura sobre un fondo suntuoso de cedro, pachulí, vetiver, cipriol. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_698.jpg",
+    "olfactoryFamily": "Amaderada Especiada",
+    "gender": "hombre",
+    "sales": 4,
+    "accords": [
+      {
+        "name": "amaderado",
+        "percentage": 100,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cítrico",
+        "percentage": 84,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      },
+      {
+        "name": "aromático",
+        "percentage": 70,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cálido especiado",
+        "percentage": 58,
+        "bg": "#701a75",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Naranja sanguina",
+          "image": "notes/naranja.jpg"
+        },
+        {
+          "name": "Pimienta de Jamaica",
+          "image": "notes/pimienta-negra.jpg"
+        },
+        {
+          "name": "Bayas de enebro",
+          "image": "notes/enebro.jpg"
+        },
+        {
+          "name": "Limón",
+          "image": "notes/limon.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Néctar de higo",
+          "image": "notes/higo.jpg"
+        },
+        {
+          "name": "Geranio",
+          "image": "notes/geranio.jpg"
+        },
+        {
+          "name": "Lavanda",
+          "image": "notes/lavanda.jpg"
+        },
+        {
+          "name": "Salvia esclarea",
+          "image": "notes/salvia.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Cedro",
+          "image": "notes/cedro.jpg"
+        },
+        {
+          "name": "Pachulí",
+          "image": "notes/pachuli.jpg"
+        },
+        {
+          "name": "Vetiver",
+          "image": "notes/vetiver.jpg"
+        },
+        {
+          "name": "Cipriol",
+          "image": "notes/maderas.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-780",
+    "code": "780",
+    "name": "Armani Code",
+    "reference": "Armani Code",
+    "brand": "Giorgio Armani",
+    "description": "Inspirada en Armani Code de Giorgio Armani. Pertenece a la prestigiosa familia olfativa CÍTRICO cuero. Abre con un despliegue radiante de bergamota, limón, revela un corazón fascinante de anís estrellado, olive blossom, madera de gaiac, y perdura sobre un fondo suntuoso de cuero, tabaco, haba tonka. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_780.jpg",
+    "olfactoryFamily": "CÍTRICO cuero",
+    "gender": "hombre",
+    "sales": 4,
+    "accords": [
+      {
+        "name": "cítrico",
+        "percentage": 100,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cuero",
+        "percentage": 84,
+        "bg": "#3b0764",
+        "text": "#ffffff"
+      },
+      {
+        "name": "aromático",
+        "percentage": 70,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      },
+      {
+        "name": "floral",
+        "percentage": 58,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "soft spicy",
+        "percentage": 48,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      },
+      {
+        "name": "tabaco",
+        "percentage": 40,
+        "bg": "#4c0519",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Bergamota",
+          "image": "notes/bergamota.jpg"
+        },
+        {
+          "name": "Limón",
+          "image": "notes/limon.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Anís estrellado",
+          "image": "notes/anis.jpg"
+        },
+        {
+          "name": "Olive Blossom",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Madera de gaiac",
+          "image": "notes/guayaco.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Cuero",
+          "image": "notes/cuero.jpg"
+        },
+        {
+          "name": "Tabaco",
+          "image": "notes/tabaco.jpg"
+        },
+        {
+          "name": "Haba tonka",
+          "image": "notes/haba-tonka.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-732",
+    "code": "732",
+    "name": "MYSLF EDP",
+    "reference": "MYSLF EDP",
+    "brand": "Yves Saint Laurent",
+    "description": "Inspirada en MYSLF de Yves Saint Laurent. La afirmación moderna de la masculinidad auténtica. Una apertura chispeante de bergamota de Calabria complementada por un corazón floral radiante de azahar y maderas sensuales.",
+    "image": "images/kode/kode_732.jpg",
+    "olfactoryFamily": "Floral Amaderada",
+    "gender": "hombre",
+    "sales": 4,
+    "accords": [
+      {
+        "name": "floral blanco",
+        "percentage": 100,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cítrico",
+        "percentage": 84,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 70,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "fresco",
+        "percentage": 58,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      },
+      {
+        "name": "aromático",
+        "percentage": 48,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Bergamota de Calabria",
+          "image": "notes/bergamota.jpg"
+        },
+        {
+          "name": "Bergamota verde",
+          "image": "notes/bergamota.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Flor de azahar del naranjo de Túnez",
+          "image": "notes/flor-azahar.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Ambrofix",
+          "image": "notes/ambroxan.jpg"
+        },
+        {
+          "name": "Pachulí",
+          "image": "notes/pachuli.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-148",
+    "code": "148",
+    "name": "Asad",
+    "reference": "Asad",
+    "brand": "Lattafa",
+    "description": "Inspirada en Asad de Lattafa. Pertenece a la prestigiosa familia olfativa Ámbar Especiada. Abre con un despliegue radiante de pimienta negra, tabaco, piña, revela un corazón fascinante de pachulí, café, iris, y perdura sobre un fondo suntuoso de vainilla, ámbar, madera seca, benjuí. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_148.jpg",
+    "olfactoryFamily": "Ámbar Especiada",
+    "gender": "hombre",
+    "sales": 3,
+    "accords": [
+      {
+        "name": "cálido especiado",
+        "percentage": 100,
+        "bg": "#701a75",
+        "text": "#ffffff"
+      },
+      {
+        "name": "ámbar",
+        "percentage": 84,
+        "bg": "#86198f",
+        "text": "#ffffff"
+      },
+      {
+        "name": "avainillado",
+        "percentage": 70,
+        "bg": "#9333ea",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 58,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Pimienta negra",
+          "image": "notes/pimienta-negra.jpg"
+        },
+        {
+          "name": "Tabaco",
+          "image": "notes/tabaco.jpg"
+        },
+        {
+          "name": "Piña",
+          "image": "notes/pina.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Pachulí",
+          "image": "notes/pachuli.jpg"
+        },
+        {
+          "name": "Café",
+          "image": "notes/cafe.jpg"
+        },
+        {
+          "name": "Iris",
+          "image": "notes/iris.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Vainilla",
+          "image": "notes/vainilla.jpg"
+        },
+        {
+          "name": "Ámbar",
+          "image": "notes/ambar.jpg"
+        },
+        {
+          "name": "Madera seca",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Benjuí",
+          "image": "notes/benjui.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-208",
+    "code": "208",
+    "name": "Dior Homme",
+    "reference": "Dior Homme",
+    "brand": "Dior",
+    "description": "Inspirada en Dior Homme de Dior. Pertenece a la prestigiosa familia olfativa AROMÁTICO floral. Abre con un despliegue radiante de lavanda, salvia, bergamota, revela un corazón fascinante de iris, ámbar, cacao, cardamomo, y perdura sobre un fondo suntuoso de pachulí, cuero, vetiver. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_208.jpg",
+    "olfactoryFamily": "AROMÁTICO floral",
+    "gender": "hombre",
+    "sales": 3,
+    "accords": [
+      {
+        "name": "aromático",
+        "percentage": 100,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      },
+      {
+        "name": "floral",
+        "percentage": 84,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "atalcado",
+        "percentage": 70,
+        "bg": "#a855f7",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 58,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cálido especiado",
+        "percentage": 48,
+        "bg": "#701a75",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Lavanda",
+          "image": "notes/lavanda.jpg"
+        },
+        {
+          "name": "Salvia",
+          "image": "notes/salvia.jpg"
+        },
+        {
+          "name": "Bergamota",
+          "image": "notes/bergamota.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Iris",
+          "image": "notes/iris.jpg"
+        },
+        {
+          "name": "Ámbar",
+          "image": "notes/ambar.jpg"
+        },
+        {
+          "name": "Cacao",
+          "image": "notes/cacao.jpg"
+        },
+        {
+          "name": "Cardamomo",
+          "image": "notes/cardamomo.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Pachulí",
+          "image": "notes/pachuli.jpg"
+        },
+        {
+          "name": "Cuero",
+          "image": "notes/cuero.jpg"
+        },
+        {
+          "name": "Vetiver",
+          "image": "notes/vetiver.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-209",
+    "code": "209",
+    "name": "Dior Homme Intense",
+    "reference": "Dior Homme Intense",
+    "brand": "Dior",
+    "description": "El sumun de la elegancia masculina sofisticada. El iris noble de Toscana aporta una textura aterciopelada y sublime, enriquecida por la caricia afrutada de la ambreta y la firmeza del cedro de Virginia.",
+    "image": "images/kode/kode_209.jpg",
+    "olfactoryFamily": "Amaderada Floral Almizclada",
+    "gender": "hombre",
+    "sales": 3,
+    "accords": [
+      {
+        "name": "iris",
+        "percentage": 100,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 84,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "terroso",
+        "percentage": 70,
+        "bg": "#2e1065",
+        "text": "#ffffff"
+      },
+      {
+        "name": "atalcado",
+        "percentage": 58,
+        "bg": "#a855f7",
+        "text": "#ffffff"
+      },
+      {
+        "name": "aromático",
+        "percentage": 48,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Lavanda",
+          "image": "notes/lavanda.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Iris de Toscana",
+          "image": "notes/iris.jpg"
+        },
+        {
+          "name": "Ambreta",
+          "image": "notes/almizcle.jpg"
+        },
+        {
+          "name": "Pera",
+          "image": "notes/pera.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Cedro de Virginia",
+          "image": "notes/cedro.jpg"
+        },
+        {
+          "name": "Vetiver",
+          "image": "notes/vetiver.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-211",
+    "code": "211",
+    "name": "Dolce Gabbana",
+    "reference": "Dolce Gabbana",
+    "brand": "Dolce & Gabbana",
+    "description": "La esencia del hombre mediterráneo clásico: carismático, seguro y elegante. Salida luminosa de neroli y bergamota con corazón aromático de lavanda y un fondo varonil inconfundible de tabaco noble.",
+    "image": "images/kode/kode_211.jpg",
+    "olfactoryFamily": "Aromática Fougère",
+    "gender": "hombre",
+    "sales": 3,
+    "accords": [
+      {
+        "name": "cítrico",
+        "percentage": 100,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      },
+      {
+        "name": "aromático",
+        "percentage": 84,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      },
+      {
+        "name": "fresco especiado",
+        "percentage": 70,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      },
+      {
+        "name": "lavanda",
+        "percentage": 58,
+        "bg": "#7e22ce",
+        "text": "#ffffff"
+      },
+      {
+        "name": "tabaco",
+        "percentage": 48,
+        "bg": "#4c0519",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Cítricos",
+          "image": "notes/limon.jpg"
+        },
+        {
+          "name": "Bergamota",
+          "image": "notes/bergamota.jpg"
+        },
+        {
+          "name": "Neroli",
+          "image": "notes/flor-azahar.jpg"
+        },
+        {
+          "name": "Mandarina",
+          "image": "notes/mandarina.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Lavanda",
+          "image": "notes/lavanda.jpg"
+        },
+        {
+          "name": "Salvia",
+          "image": "notes/salvia.jpg"
+        },
+        {
+          "name": "Pimienta",
+          "image": "notes/pimienta-negra.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Tabaco",
+          "image": "notes/tabaco.jpg"
+        },
+        {
+          "name": "Haba tonka",
+          "image": "notes/haba-tonka.jpg"
+        },
+        {
+          "name": "Cedro",
+          "image": "notes/cedro.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-226",
+    "code": "226",
+    "name": "Gentleman Only",
+    "reference": "Gentleman Only",
+    "brand": "Givenchy",
+    "description": "Inspirada en Gentleman Only de Givenchy. Pertenece a la prestigiosa familia olfativa Amaderada. Abre con un despliegue radiante de pimienta rosa, mandarina verde, hojas de abedul, nuez moscada, revela un corazón fascinante de vetiver, cedro, pachulí, hojas de violeta, y perdura sobre un fondo suntuoso de incienso, almizcle. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_226.jpg",
+    "olfactoryFamily": "Amaderada",
+    "gender": "hombre",
+    "sales": 3,
+    "accords": [
+      {
+        "name": "amaderado",
+        "percentage": 100,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "ahumado",
+        "percentage": 84,
+        "bg": "#334155",
+        "text": "#ffffff"
+      },
+      {
+        "name": "balsámico",
+        "percentage": 70,
+        "bg": "#6b21a8",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cálido especiado",
+        "percentage": 58,
+        "bg": "#701a75",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Pimienta rosa",
+          "image": "notes/pimienta-rosa.jpg"
+        },
+        {
+          "name": "Mandarina verde",
+          "image": "notes/mandarina.jpg"
+        },
+        {
+          "name": "Hojas de abedul",
+          "image": "notes/abedul.jpg"
+        },
+        {
+          "name": "Nuez moscada",
+          "image": "notes/nuez-moscada.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Vetiver",
+          "image": "notes/vetiver.jpg"
+        },
+        {
+          "name": "Cedro",
+          "image": "notes/cedro.jpg"
+        },
+        {
+          "name": "Pachulí",
+          "image": "notes/pachuli.jpg"
+        },
+        {
+          "name": "Hojas de violeta",
+          "image": "notes/violeta.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Incienso",
+          "image": "notes/incienso.jpg"
+        },
+        {
+          "name": "Almizcle",
+          "image": "notes/almizcle.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-242",
+    "code": "242",
+    "name": "Hugo Red",
+    "reference": "Hugo Red",
+    "brand": "Hugo Boss",
+    "description": "Inspirada en Hugo Red de Hugo Boss. Pertenece a la prestigiosa familia olfativa DULCE afrutado. Abre con un despliegue radiante de notas metálicas, pomelo, pimienta rosa, galbanum, revela un corazón fascinante de rhubarb, cedro, piña, notas metálicas, y perdura sobre un fondo suntuoso de haba tonka, ámbar. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_242.jpg",
+    "olfactoryFamily": "DULCE afrutado",
+    "gender": "hombre",
+    "sales": 3,
+    "accords": [
+      {
+        "name": "dulce",
+        "percentage": 100,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      },
+      {
+        "name": "afrutado",
+        "percentage": 84,
+        "bg": "#db2777",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cítrico",
+        "percentage": 70,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      },
+      {
+        "name": "metálico",
+        "percentage": 58,
+        "bg": "#475569",
+        "text": "#ffffff"
+      },
+      {
+        "name": "sour",
+        "percentage": 48,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Notas metálicas",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Pomelo",
+          "image": "notes/pomelo.jpg"
+        },
+        {
+          "name": "Pimienta rosa",
+          "image": "notes/pimienta-rosa.jpg"
+        },
+        {
+          "name": "Galbanum",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Rhubarb",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Cedro",
+          "image": "notes/cedro.jpg"
+        },
+        {
+          "name": "Piña",
+          "image": "notes/pina.jpg"
+        },
+        {
+          "name": "Notas metálicas",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Haba tonka",
+          "image": "notes/haba-tonka.jpg"
+        },
+        {
+          "name": "Ámbar",
+          "image": "notes/ambar.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-305",
+    "code": "305",
+    "name": "Nautica Voyage",
+    "reference": "Nautica Voyage",
+    "brand": "Nautica",
+    "description": "Inspirada en Nautica Voyage de Nautica. Pertenece a la prestigiosa familia olfativa VERDE floral. Abre con un despliegue radiante de green leaves, manzana, revela un corazón fascinante de mimosa, flor de loto, y perdura sobre un fondo suntuoso de ámbar, almizcle, musgo de roble, cedro. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_305.jpg",
+    "olfactoryFamily": "VERDE floral",
+    "gender": "hombre",
+    "sales": 3,
+    "accords": [
+      {
+        "name": "verde",
+        "percentage": 100,
+        "bg": "#059669",
+        "text": "#ffffff"
+      },
+      {
+        "name": "floral",
+        "percentage": 84,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "afrutado",
+        "percentage": 70,
+        "bg": "#db2777",
+        "text": "#ffffff"
+      },
+      {
+        "name": "fresco",
+        "percentage": 58,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      },
+      {
+        "name": "acuático",
+        "percentage": 48,
+        "bg": "#0284c7",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 40,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Green Leaves",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Manzana",
+          "image": "notes/manzana.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Mimosa",
+          "image": "notes/jazmin.jpg"
+        },
+        {
+          "name": "Flor de loto",
+          "image": "notes/flor-loto.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Ámbar",
+          "image": "notes/ambar.jpg"
+        },
+        {
+          "name": "Almizcle",
+          "image": "notes/almizcle.jpg"
+        },
+        {
+          "name": "Musgo de roble",
+          "image": "notes/musgo-roble.jpg"
+        },
+        {
+          "name": "Cedro",
+          "image": "notes/cedro.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-368",
+    "code": "368",
+    "name": "Versce Eau Fraiche",
+    "reference": "Versce Eau Fraiche",
+    "brand": "Versace",
+    "description": "Inspirada en Versce Eau Fraiche de Versace. Pertenece a la prestigiosa familia olfativa AMADERADO floral. Abre con un despliegue radiante de naranja, bergamota, limón, aldehídos, revela un corazón fascinante de jazmín, narcissus, ylang-ylang, lirio, y perdura sobre un fondo suntuoso de almizcle, sándalo, musgo, cedro. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_368.jpg",
+    "olfactoryFamily": "AMADERADO floral",
+    "gender": "hombre",
+    "sales": 3,
+    "accords": [
+      {
+        "name": "amaderado",
+        "percentage": 100,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "floral",
+        "percentage": 84,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "floral",
+        "percentage": 70,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "verde",
+        "percentage": 58,
+        "bg": "#059669",
+        "text": "#ffffff"
+      },
+      {
+        "name": "atalcado",
+        "percentage": 48,
+        "bg": "#a855f7",
+        "text": "#ffffff"
+      },
+      {
+        "name": "floral blanco",
+        "percentage": 40,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Naranja",
+          "image": "notes/naranja.jpg"
+        },
+        {
+          "name": "Bergamota",
+          "image": "notes/bergamota.jpg"
+        },
+        {
+          "name": "Limón",
+          "image": "notes/limon.jpg"
+        },
+        {
+          "name": "Aldehídos",
+          "image": "notes/aldehidos.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Jazmín",
+          "image": "notes/jazmin.jpg"
+        },
+        {
+          "name": "Narcissus",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Ylang-Ylang",
+          "image": "notes/ylang-ylang.jpg"
+        },
+        {
+          "name": "Lirio",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Almizcle",
+          "image": "notes/almizcle.jpg"
+        },
+        {
+          "name": "Sándalo",
+          "image": "notes/sandalo.jpg"
+        },
+        {
+          "name": "Musgo",
+          "image": "notes/musgo-roble.jpg"
+        },
+        {
+          "name": "Cedro",
+          "image": "notes/cedro.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-388",
+    "code": "388",
+    "name": "212 Vip Rose Extra",
+    "reference": "212 Vip Rose Extra",
+    "brand": "Carolina Herrera",
+    "description": "Inspirada en 212 Vip Rose Extra de Carolina Herrera. Pertenece a la prestigiosa familia olfativa AFRUTADO floral. Abre con un despliegue radiante de champaña, fruity notes, revela un corazón fascinante de melocotón, y perdura sobre un fondo suntuoso de maderas nobles, almizcle blanco, ámbar. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_388.jpg",
+    "olfactoryFamily": "AFRUTADO floral",
+    "gender": "mujer",
+    "sales": 3,
+    "accords": [
+      {
+        "name": "afrutado",
+        "percentage": 100,
+        "bg": "#db2777",
+        "text": "#ffffff"
+      },
+      {
+        "name": "floral",
+        "percentage": 84,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 70,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "aldehídico",
+        "percentage": 58,
+        "bg": "#a5b4fc",
+        "text": "#1e1b4b"
+      },
+      {
+        "name": "dulce",
+        "percentage": 48,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      },
+      {
+        "name": "almizclado",
+        "percentage": 40,
+        "bg": "#64748b",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Champaña",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Fruity Notes",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Melocotón",
+          "image": "notes/melocoton.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Maderas nobles",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Almizcle blanco",
+          "image": "notes/almizcle.jpg"
+        },
+        {
+          "name": "Ámbar",
+          "image": "notes/ambar.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-403",
+    "code": "403",
+    "name": "Allure",
+    "reference": "Allure",
+    "brand": "Chanel",
+    "description": "Inspirada en Allure de Chanel. Pertenece a la prestigiosa familia olfativa FLORAL BLANCO cítrico. Abre con un despliegue radiante de limón, bergamota, mandarina, melocotón, revela un corazón fascinante de jazmín, lirio, miel, fresia, y perdura sobre un fondo suntuoso de sándalo, vetiver, vainilla, pachulí. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_403.jpg",
+    "olfactoryFamily": "FLORAL BLANCO cítrico",
+    "gender": "mujer",
+    "sales": 3,
+    "accords": [
+      {
+        "name": "floral blanco",
+        "percentage": 100,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cítrico",
+        "percentage": 84,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      },
+      {
+        "name": "floral",
+        "percentage": 70,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "afrutado",
+        "percentage": 58,
+        "bg": "#db2777",
+        "text": "#ffffff"
+      },
+      {
+        "name": "avainillado",
+        "percentage": 48,
+        "bg": "#9333ea",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Limón",
+          "image": "notes/limon.jpg"
+        },
+        {
+          "name": "Bergamota",
+          "image": "notes/bergamota.jpg"
+        },
+        {
+          "name": "Mandarina",
+          "image": "notes/mandarina.jpg"
+        },
+        {
+          "name": "Melocotón",
+          "image": "notes/melocoton.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Jazmín",
+          "image": "notes/jazmin.jpg"
+        },
+        {
+          "name": "Lirio",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Miel",
+          "image": "notes/miel.jpg"
+        },
+        {
+          "name": "Fresia",
+          "image": "notes/jazmin.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Sándalo",
+          "image": "notes/sandalo.jpg"
+        },
+        {
+          "name": "Vetiver",
+          "image": "notes/vetiver.jpg"
+        },
+        {
+          "name": "Vainilla",
+          "image": "notes/vainilla.jpg"
+        },
+        {
+          "name": "Pachulí",
+          "image": "notes/pachuli.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-404",
+    "code": "404",
+    "name": "Amarige",
+    "reference": "Amarige",
+    "brand": "Givenchy",
+    "description": "Inspirada en Amarige de Givenchy. Pertenece a la prestigiosa familia olfativa FLORAL BLANCO dulce. Abre con un despliegue radiante de flor de azahar, ciruela, mandarina, violeta, revela un corazón fascinante de frutos rojos, mimosa, clavel, black locust, y perdura sobre un fondo suntuoso de sándalo, haba tonka, ámbar, almizcle. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_404.jpg",
+    "olfactoryFamily": "FLORAL BLANCO dulce",
+    "gender": "mujer",
+    "sales": 3,
+    "accords": [
+      {
+        "name": "floral blanco",
+        "percentage": 100,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "dulce",
+        "percentage": 84,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 70,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "floral",
+        "percentage": 58,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "atalcado",
+        "percentage": 48,
+        "bg": "#a855f7",
+        "text": "#ffffff"
+      },
+      {
+        "name": "rosas",
+        "percentage": 40,
+        "bg": "#be123c",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Flor de azahar",
+          "image": "notes/flor-azahar.jpg"
+        },
+        {
+          "name": "Ciruela",
+          "image": "notes/ciruela.jpg"
+        },
+        {
+          "name": "Mandarina",
+          "image": "notes/mandarina.jpg"
+        },
+        {
+          "name": "Violeta",
+          "image": "notes/violeta.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Frutos rojos",
+          "image": "notes/frambuesa.jpg"
+        },
+        {
+          "name": "Mimosa",
+          "image": "notes/jazmin.jpg"
+        },
+        {
+          "name": "Clavel",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Black locust",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Sándalo",
+          "image": "notes/sandalo.jpg"
+        },
+        {
+          "name": "Haba tonka",
+          "image": "notes/haba-tonka.jpg"
+        },
+        {
+          "name": "Ámbar",
+          "image": "notes/ambar.jpg"
+        },
+        {
+          "name": "Almizcle",
+          "image": "notes/almizcle.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-415",
+    "code": "415",
+    "name": "Aventus",
+    "reference": "Aventus",
+    "brand": "Creed",
+    "description": "Inspirada en Aventus de Creed. Pertenece a la prestigiosa familia olfativa AFRUTADO dulce. Abre con un despliegue radiante de bergamota, grosella negra, piña, manzana, revela un corazón fascinante de abedul, pachulí, rosa, jazmín, y perdura sobre un fondo suntuoso de almizcle, musgo, vanille, ámbar gris. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_415.jpg",
+    "olfactoryFamily": "AFRUTADO dulce",
+    "gender": "mujer",
+    "sales": 3,
+    "accords": [
+      {
+        "name": "afrutado",
+        "percentage": 100,
+        "bg": "#db2777",
+        "text": "#ffffff"
+      },
+      {
+        "name": "dulce",
+        "percentage": 84,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cuero",
+        "percentage": 70,
+        "bg": "#3b0764",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 58,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "ahumado",
+        "percentage": 48,
+        "bg": "#334155",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Bergamota",
+          "image": "notes/bergamota.jpg"
+        },
+        {
+          "name": "Grosella negra",
+          "image": "notes/grosella.jpg"
+        },
+        {
+          "name": "Piña",
+          "image": "notes/pina.jpg"
+        },
+        {
+          "name": "Manzana",
+          "image": "notes/manzana.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Abedul",
+          "image": "notes/abedul.jpg"
+        },
+        {
+          "name": "Pachulí",
+          "image": "notes/pachuli.jpg"
+        },
+        {
+          "name": "Rosa",
+          "image": "notes/rosa.jpg"
+        },
+        {
+          "name": "Jazmín",
+          "image": "notes/jazmin.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Almizcle",
+          "image": "notes/almizcle.jpg"
+        },
+        {
+          "name": "Musgo",
+          "image": "notes/musgo-roble.jpg"
+        },
+        {
+          "name": "Vanille",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Ámbar gris",
+          "image": "notes/ambar.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-430",
+    "code": "430",
+    "name": "Bulgari",
+    "reference": "Bulgari",
+    "brand": "Bvlgari",
+    "description": "Inspirada en Bulgari de Bvlgari. Pertenece a la prestigiosa familia olfativa Amaderada Floral. Abre con un despliegue radiante de té, aldehídos, bergamota, lavanda, revela un corazón fascinante de pimienta, iris, madera de gaiac, palo de rosa, y perdura sobre un fondo suntuoso de almizcle, cedro, musgo de roble, vetiver. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_430.jpg",
+    "olfactoryFamily": "Amaderada Floral",
+    "gender": "mujer",
+    "sales": 3,
+    "accords": [
+      {
+        "name": "amaderado",
+        "percentage": 100,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "fresco especiado",
+        "percentage": 84,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      },
+      {
+        "name": "aromático",
+        "percentage": 70,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cítrico",
+        "percentage": 58,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      },
+      {
+        "name": "verde",
+        "percentage": 48,
+        "bg": "#059669",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Té",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Aldehídos",
+          "image": "notes/aldehidos.jpg"
+        },
+        {
+          "name": "Bergamota",
+          "image": "notes/bergamota.jpg"
+        },
+        {
+          "name": "Lavanda",
+          "image": "notes/lavanda.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Pimienta",
+          "image": "notes/pimienta-negra.jpg"
+        },
+        {
+          "name": "Iris",
+          "image": "notes/iris.jpg"
+        },
+        {
+          "name": "Madera de gaiac",
+          "image": "notes/guayaco.jpg"
+        },
+        {
+          "name": "Palo de rosa",
+          "image": "notes/rosa.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Almizcle",
+          "image": "notes/almizcle.jpg"
+        },
+        {
+          "name": "Cedro",
+          "image": "notes/cedro.jpg"
+        },
+        {
+          "name": "Musgo de roble",
+          "image": "notes/musgo-roble.jpg"
+        },
+        {
+          "name": "Vetiver",
+          "image": "notes/vetiver.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-460",
+    "code": "460",
+    "name": "Daisy",
+    "reference": "Daisy",
+    "brand": "Marc Jacobs",
+    "description": "Inspirada en Daisy de Marc Jacobs. Pertenece a la prestigiosa familia olfativa OZÓNICO floral blanco. Abre con un despliegue radiante de hojas de violeta, pomelo, strawberry, revela un corazón fascinante de gardenia, violeta, jazmín, y perdura sobre un fondo suntuoso de almizcle, white woods, vainilla. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_460.jpg",
+    "olfactoryFamily": "OZÓNICO floral blanco",
+    "gender": "mujer",
+    "sales": 3,
+    "accords": [
+      {
+        "name": "ozónico",
+        "percentage": 100,
+        "bg": "#38bdf8",
+        "text": "#0f172a"
+      },
+      {
+        "name": "floral blanco",
+        "percentage": 84,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "atalcado",
+        "percentage": 70,
+        "bg": "#a855f7",
+        "text": "#ffffff"
+      },
+      {
+        "name": "acuático",
+        "percentage": 58,
+        "bg": "#0284c7",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cítrico",
+        "percentage": 48,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Hojas de violeta",
+          "image": "notes/violeta.jpg"
+        },
+        {
+          "name": "Pomelo",
+          "image": "notes/pomelo.jpg"
+        },
+        {
+          "name": "Strawberry",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Gardenia",
+          "image": "notes/gardenia.jpg"
+        },
+        {
+          "name": "Violeta",
+          "image": "notes/violeta.jpg"
+        },
+        {
+          "name": "Jazmín",
+          "image": "notes/jazmin.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Almizcle",
+          "image": "notes/almizcle.jpg"
+        },
+        {
+          "name": "White Woods",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Vainilla",
+          "image": "notes/vainilla.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-621",
+    "code": "621",
+    "name": "Si Giorgio Armani",
+    "reference": "Si Giorgio Armani",
+    "brand": "Giorgio Armani",
+    "description": "Inspirada en Si Giorgio Armani de Giorgio Armani. Pertenece a la prestigiosa familia olfativa AVAINILLADO aromático. Abre con un despliegue radiante de cassis, revela un corazón fascinante de fresia, rosa, y perdura sobre un fondo suntuoso de vainilla, pachulí, ambroxan, maderas nobles. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_621.jpg",
+    "olfactoryFamily": "AVAINILLADO aromático",
+    "gender": "mujer",
+    "sales": 3,
+    "accords": [
+      {
+        "name": "avainillado",
+        "percentage": 100,
+        "bg": "#9333ea",
+        "text": "#ffffff"
+      },
+      {
+        "name": "aromático",
+        "percentage": 84,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      },
+      {
+        "name": "verde",
+        "percentage": 70,
+        "bg": "#059669",
+        "text": "#ffffff"
+      },
+      {
+        "name": "afrutado",
+        "percentage": 58,
+        "bg": "#db2777",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 48,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "soft spicy",
+        "percentage": 40,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Cassis",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Fresia",
+          "image": "notes/jazmin.jpg"
+        },
+        {
+          "name": "Rosa",
+          "image": "notes/rosa.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Vainilla",
+          "image": "notes/vainilla.jpg"
+        },
+        {
+          "name": "Pachulí",
+          "image": "notes/pachuli.jpg"
+        },
+        {
+          "name": "Ambroxan",
+          "image": "notes/ambroxan.jpg"
+        },
+        {
+          "name": "Maderas nobles",
+          "image": "notes/maderas.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-638",
+    "code": "638",
+    "name": "Tresor",
+    "reference": "Tresor",
+    "brand": "Lancôme",
+    "description": "Inspirada en Tresor de Lancôme. Pertenece a la prestigiosa familia olfativa FLORAL afrutado. Abre con un despliegue radiante de piña, lilac, melocotón, apricot blossom, revela un corazón fascinante de iris, jazmín, heliotropo, rosa, y perdura sobre un fondo suntuoso de apricot, sándalo, ámbar, almizcle. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_638.jpg",
+    "olfactoryFamily": "FLORAL afrutado",
+    "gender": "mujer",
+    "sales": 3,
+    "accords": [
+      {
+        "name": "floral",
+        "percentage": 100,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "afrutado",
+        "percentage": 84,
+        "bg": "#db2777",
+        "text": "#ffffff"
+      },
+      {
+        "name": "atalcado",
+        "percentage": 70,
+        "bg": "#a855f7",
+        "text": "#ffffff"
+      },
+      {
+        "name": "dulce",
+        "percentage": 58,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      },
+      {
+        "name": "rosas",
+        "percentage": 48,
+        "bg": "#be123c",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Piña",
+          "image": "notes/pina.jpg"
+        },
+        {
+          "name": "Lilac",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Melocotón",
+          "image": "notes/melocoton.jpg"
+        },
+        {
+          "name": "Apricot Blossom",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Iris",
+          "image": "notes/iris.jpg"
+        },
+        {
+          "name": "Jazmín",
+          "image": "notes/jazmin.jpg"
+        },
+        {
+          "name": "Heliotropo",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Rosa",
+          "image": "notes/rosa.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Apricot",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Sándalo",
+          "image": "notes/sandalo.jpg"
+        },
+        {
+          "name": "Ámbar",
+          "image": "notes/ambar.jpg"
+        },
+        {
+          "name": "Almizcle",
+          "image": "notes/almizcle.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-663",
+    "code": "663",
+    "name": "Ck One",
+    "reference": "Ck One",
+    "brand": "Calvin Klein",
+    "description": "Inspirada en Ck One de Calvin Klein. Pertenece a la prestigiosa familia olfativa CÍTRICO verde. Abre con un despliegue radiante de piña, notas verdes, mandarina, papaya, revela un corazón fascinante de nuez moscada, violeta, lirio, jazmín, y perdura sobre un fondo suntuoso de sándalo, ámbar, almizcle, cedro. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_663.jpg",
+    "olfactoryFamily": "CÍTRICO verde",
+    "gender": "unisex",
+    "sales": 3,
+    "accords": [
+      {
+        "name": "cítrico",
+        "percentage": 100,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      },
+      {
+        "name": "verde",
+        "percentage": 84,
+        "bg": "#059669",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 70,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "floral",
+        "percentage": 58,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "aromático",
+        "percentage": 48,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      },
+      {
+        "name": "atalcado",
+        "percentage": 40,
+        "bg": "#a855f7",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Piña",
+          "image": "notes/pina.jpg"
+        },
+        {
+          "name": "Notas verdes",
+          "image": "notes/notas-verdes.jpg"
+        },
+        {
+          "name": "Mandarina",
+          "image": "notes/mandarina.jpg"
+        },
+        {
+          "name": "Papaya",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Nuez moscada",
+          "image": "notes/nuez-moscada.jpg"
+        },
+        {
+          "name": "Violeta",
+          "image": "notes/violeta.jpg"
+        },
+        {
+          "name": "Lirio",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Jazmín",
+          "image": "notes/jazmin.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Sándalo",
+          "image": "notes/sandalo.jpg"
+        },
+        {
+          "name": "Ámbar",
+          "image": "notes/ambar.jpg"
+        },
+        {
+          "name": "Almizcle",
+          "image": "notes/almizcle.jpg"
+        },
+        {
+          "name": "Cedro",
+          "image": "notes/cedro.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-682",
+    "code": "682",
+    "name": "Toy 2 Pearl",
+    "reference": "Toy 2 Pearl",
+    "brand": "Moschino",
+    "description": "Inspirada en Toy 2 Pearl de Moschino. Pertenece a la prestigiosa familia olfativa CÍTRICO. Abre con un despliegue radiante de fresh, revela un corazón fascinante de aquatic, y perdura sobre un fondo suntuoso de woody. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_682.jpg",
+    "olfactoryFamily": "CÍTRICO",
+    "gender": "unisex",
+    "sales": 3,
+    "accords": [
+      {
+        "name": "cítrico",
+        "percentage": 100,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Fresh",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Aquatic",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Woody",
+          "image": "notes/maderas.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-702",
+    "code": "702",
+    "name": "Le Beau Eau de Parfum",
+    "reference": "Le Beau Eau de Parfum",
+    "brand": "Jean Paul Gaultier",
+    "description": "Inspirada en Le Beau Eau de Parfum de Jean Paul Gaultier. Pertenece a la prestigiosa familia olfativa DULCE. Abre con un despliegue radiante de fresh, revela un corazón fascinante de synthetic, y perdura sobre un fondo suntuoso de fruity. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_702.jpg",
+    "olfactoryFamily": "DULCE",
+    "gender": "hombre",
+    "sales": 3,
+    "accords": [
+      {
+        "name": "dulce",
+        "percentage": 100,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Fresh",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Synthetic",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Fruity",
+          "image": "notes/maderas.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-704",
+    "code": "704",
+    "name": "Club de Nuit Woman",
+    "reference": "Club de Nuit Woman",
+    "brand": "Armaf",
+    "description": "Inspirada en Club de Nuit Woman de Armaf. Pertenece a la prestigiosa familia olfativa CÍTRICO rosas. Abre con un despliegue radiante de bergamota, pomelo, melocotón, naranja, revela un corazón fascinante de geranio, jazmín, litchi, rosa, y perdura sobre un fondo suntuoso de almizcle, pachulí, vainilla, vetiver. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_704.jpg",
+    "olfactoryFamily": "CÍTRICO rosas",
+    "gender": "mujer",
+    "sales": 3,
+    "accords": [
+      {
+        "name": "cítrico",
+        "percentage": 100,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      },
+      {
+        "name": "rosas",
+        "percentage": 84,
+        "bg": "#be123c",
+        "text": "#ffffff"
+      },
+      {
+        "name": "pachulí",
+        "percentage": 70,
+        "bg": "#581c87",
+        "text": "#ffffff"
+      },
+      {
+        "name": "aromático",
+        "percentage": 58,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      },
+      {
+        "name": "almizclado",
+        "percentage": 48,
+        "bg": "#64748b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "avainillado",
+        "percentage": 40,
+        "bg": "#9333ea",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Bergamota",
+          "image": "notes/bergamota.jpg"
+        },
+        {
+          "name": "Pomelo",
+          "image": "notes/pomelo.jpg"
+        },
+        {
+          "name": "Melocotón",
+          "image": "notes/melocoton.jpg"
+        },
+        {
+          "name": "Naranja",
+          "image": "notes/naranja.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Geranio",
+          "image": "notes/geranio.jpg"
+        },
+        {
+          "name": "Jazmín",
+          "image": "notes/jazmin.jpg"
+        },
+        {
+          "name": "Litchi",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Rosa",
+          "image": "notes/rosa.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Almizcle",
+          "image": "notes/almizcle.jpg"
+        },
+        {
+          "name": "Pachulí",
+          "image": "notes/pachuli.jpg"
+        },
+        {
+          "name": "Vainilla",
+          "image": "notes/vainilla.jpg"
+        },
+        {
+          "name": "Vetiver",
+          "image": "notes/vetiver.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-705",
+    "code": "705",
+    "name": "Born in Roma Extradose",
+    "reference": "Born in Roma Extradose",
+    "brand": "Valentino",
+    "description": "Inspirada en Born in Roma Extradose de Valentino. Pertenece a la prestigiosa familia olfativa Ámbar Amaderada. Abre con un despliegue radiante de notas minerales, hojas de violeta, sal, revela un corazón fascinante de jengibre, salvia, y perdura sobre un fondo suntuoso de notas amaderadas, vetiver. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_705.jpg",
+    "olfactoryFamily": "Ámbar Amaderada",
+    "gender": "hombre",
+    "sales": 3,
+    "accords": [
+      {
+        "name": "amaderado",
+        "percentage": 100,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "aromático",
+        "percentage": 84,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      },
+      {
+        "name": "mineral",
+        "percentage": 70,
+        "bg": "#334155",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cálido especiado",
+        "percentage": 58,
+        "bg": "#701a75",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Notas minerales",
+          "image": "notes/notas-minerales.jpg"
+        },
+        {
+          "name": "Hojas de violeta",
+          "image": "notes/violeta.jpg"
+        },
+        {
+          "name": "Sal",
+          "image": "notes/notas-marinas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Jengibre",
+          "image": "notes/jengibre.jpg"
+        },
+        {
+          "name": "Salvia",
+          "image": "notes/salvia.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Notas amaderadas",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Vetiver",
+          "image": "notes/vetiver.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-728",
+    "code": "728",
+    "name": "Herloss",
+    "reference": "Herloss",
+    "brand": "Top shelf",
+    "description": "Inspirada en Herloss de Top shelf. Pertenece a la prestigiosa familia olfativa Floral Frutal Gourmand. Abre con un despliegue radiante de fresa, frambuesa, mora, grosella negra, revela un corazón fascinante de violeta, jazmín, y perdura sobre un fondo suntuoso de almizcle, vainilla, cashmeran, maderas nobles. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_728.jpg",
+    "olfactoryFamily": "Floral Frutal Gourmand",
+    "gender": "hombre",
+    "sales": 3,
+    "accords": [
+      {
+        "name": "afrutado",
+        "percentage": 100,
+        "bg": "#db2777",
+        "text": "#ffffff"
+      },
+      {
+        "name": "dulce",
+        "percentage": 84,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 70,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "almizclado",
+        "percentage": 58,
+        "bg": "#64748b",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Fresa",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Frambuesa",
+          "image": "notes/frambuesa.jpg"
+        },
+        {
+          "name": "Mora",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Grosella negra",
+          "image": "notes/grosella.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Violeta",
+          "image": "notes/violeta.jpg"
+        },
+        {
+          "name": "Jazmín",
+          "image": "notes/jazmin.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Almizcle",
+          "image": "notes/almizcle.jpg"
+        },
+        {
+          "name": "Vainilla",
+          "image": "notes/vainilla.jpg"
+        },
+        {
+          "name": "Cashmeran",
+          "image": "notes/cachemira.jpg"
+        },
+        {
+          "name": "Maderas nobles",
+          "image": "notes/maderas.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-716",
+    "code": "716",
+    "name": "Boss Bottled Parfum",
+    "reference": "Boss Bottled Parfum",
+    "brand": "Hugo Boss",
+    "description": "Inspirada en Boss Bottled Parfum de Hugo Boss. Pertenece a la prestigiosa familia olfativa AMADERADO. Abre con un despliegue radiante de spicy, revela un corazón fascinante de sweet, y perdura sobre un fondo suntuoso de fresh. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_716.jpg",
+    "olfactoryFamily": "AMADERADO",
+    "gender": "hombre",
+    "sales": 3,
+    "accords": [
+      {
+        "name": "amaderado",
+        "percentage": 100,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Spicy",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Sweet",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Fresh",
+          "image": "notes/maderas.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-722",
+    "code": "722",
+    "name": "I Want Choo",
+    "reference": "I Want Choo",
+    "brand": "Jimmy Choo",
+    "description": "Inspirada en I Want Choo de Jimmy Choo. Pertenece a la prestigiosa familia olfativa DULCE. Abre con un despliegue radiante de fruity, revela un corazón fascinante de floral, y perdura sobre un fondo suntuoso de synthetic. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_722.jpg",
+    "olfactoryFamily": "DULCE",
+    "gender": "mujer",
+    "sales": 3,
+    "accords": [
+      {
+        "name": "dulce",
+        "percentage": 100,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Fruity",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Floral",
+          "image": "notes/rosa.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Synthetic",
+          "image": "notes/maderas.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-107",
+    "code": "107",
+    "name": "1 Million Royal",
+    "reference": "1 Million Royal",
+    "brand": "Paco Rabanne",
+    "description": "Inspirada en 1 Million Royal de Paco Rabanne. Pertenece a la prestigiosa familia olfativa CÁLIDO ESPECIADO canela. Abre con un despliegue radiante de pomelo, menta, mandarina, revela un corazón fascinante de rosa, canela, spicy notes, y perdura sobre un fondo suntuoso de cuero, maderas nobles, ámbar, pachulí. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_107.jpg",
+    "olfactoryFamily": "CÁLIDO ESPECIADO canela",
+    "gender": "hombre",
+    "sales": 2,
+    "accords": [
+      {
+        "name": "cálido especiado",
+        "percentage": 100,
+        "bg": "#701a75",
+        "text": "#ffffff"
+      },
+      {
+        "name": "canela",
+        "percentage": 84,
+        "bg": "#831843",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cítrico",
+        "percentage": 70,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cuero",
+        "percentage": 58,
+        "bg": "#3b0764",
+        "text": "#ffffff"
+      },
+      {
+        "name": "ámbar",
+        "percentage": 48,
+        "bg": "#86198f",
+        "text": "#ffffff"
+      },
+      {
+        "name": "rosas",
+        "percentage": 40,
+        "bg": "#be123c",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Pomelo",
+          "image": "notes/pomelo.jpg"
+        },
+        {
+          "name": "Menta",
+          "image": "notes/menta.jpg"
+        },
+        {
+          "name": "Mandarina",
+          "image": "notes/mandarina.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Rosa",
+          "image": "notes/rosa.jpg"
+        },
+        {
+          "name": "Canela",
+          "image": "notes/canela.jpg"
+        },
+        {
+          "name": "Spicy Notes",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Cuero",
+          "image": "notes/cuero.jpg"
+        },
+        {
+          "name": "Maderas nobles",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Ámbar",
+          "image": "notes/ambar.jpg"
+        },
+        {
+          "name": "Pachulí",
+          "image": "notes/pachuli.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-126",
+    "code": "126",
+    "name": "360",
+    "reference": "360",
+    "brand": "Perry Ellis",
+    "description": "Inspirada en 360 de Perry Ellis. Pertenece a la prestigiosa familia olfativa FLORAL acuático. Abre con un despliegue radiante de lirio, melón, osmanto, rosa, revela un corazón fascinante de lavanda, lirio, salvia, lirio de los valles, y perdura sobre un fondo suntuoso de sándalo, ámbar, almizcle, vainilla. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_126.jpg",
+    "olfactoryFamily": "FLORAL acuático",
+    "gender": "hombre",
+    "sales": 2,
+    "accords": [
+      {
+        "name": "floral",
+        "percentage": 100,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "acuático",
+        "percentage": 84,
+        "bg": "#0284c7",
+        "text": "#ffffff"
+      },
+      {
+        "name": "aromático",
+        "percentage": 70,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      },
+      {
+        "name": "floral blanco",
+        "percentage": 58,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 48,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "afrutado",
+        "percentage": 40,
+        "bg": "#db2777",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Lirio",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Melón",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Osmanto",
+          "image": "notes/jazmin.jpg"
+        },
+        {
+          "name": "Rosa",
+          "image": "notes/rosa.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Lavanda",
+          "image": "notes/lavanda.jpg"
+        },
+        {
+          "name": "Lirio",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Salvia",
+          "image": "notes/salvia.jpg"
+        },
+        {
+          "name": "Lirio de los valles",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Sándalo",
+          "image": "notes/sandalo.jpg"
+        },
+        {
+          "name": "Ámbar",
+          "image": "notes/ambar.jpg"
+        },
+        {
+          "name": "Almizcle",
+          "image": "notes/almizcle.jpg"
+        },
+        {
+          "name": "Vainilla",
+          "image": "notes/vainilla.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-128",
+    "code": "128",
+    "name": "360 Red",
+    "reference": "360 Red",
+    "brand": "Perry Ellis",
+    "description": "Inspirada en 360 Red de Perry Ellis. Pertenece a la prestigiosa familia olfativa FLORAL floral blanco. Abre con un despliegue radiante de cyclamen, ciruela, naranja, revela un corazón fascinante de mimosa, flor de azahar, jazmín, orquídea, y perdura sobre un fondo suntuoso de ámbar, almizcle. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_128.jpg",
+    "olfactoryFamily": "FLORAL floral blanco",
+    "gender": "hombre",
+    "sales": 2,
+    "accords": [
+      {
+        "name": "floral",
+        "percentage": 100,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "floral blanco",
+        "percentage": 84,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "dulce",
+        "percentage": 70,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      },
+      {
+        "name": "atalcado",
+        "percentage": 58,
+        "bg": "#a855f7",
+        "text": "#ffffff"
+      },
+      {
+        "name": "ámbar",
+        "percentage": 48,
+        "bg": "#86198f",
+        "text": "#ffffff"
+      },
+      {
+        "name": "almizclado",
+        "percentage": 40,
+        "bg": "#64748b",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Cyclamen",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Ciruela",
+          "image": "notes/ciruela.jpg"
+        },
+        {
+          "name": "Naranja",
+          "image": "notes/naranja.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Mimosa",
+          "image": "notes/jazmin.jpg"
+        },
+        {
+          "name": "Flor de azahar",
+          "image": "notes/flor-azahar.jpg"
+        },
+        {
+          "name": "Jazmín",
+          "image": "notes/jazmin.jpg"
+        },
+        {
+          "name": "Orquídea",
+          "image": "notes/orquidea.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Ámbar",
+          "image": "notes/ambar.jpg"
+        },
+        {
+          "name": "Almizcle",
+          "image": "notes/almizcle.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-194",
+    "code": "194",
+    "name": "Cool Water",
+    "reference": "Cool Water",
+    "brand": "Davidoff",
+    "description": "Inspirada en Cool Water de Davidoff. Pertenece a la prestigiosa familia olfativa AROMÁTICO marino. Abre con un despliegue radiante de sea water, menta, notas verdes, lavanda, revela un corazón fascinante de sándalo, jazmín, neroli, geranio, y perdura sobre un fondo suntuoso de almizcle, musgo de roble, cedro, tabaco. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_194.jpg",
+    "olfactoryFamily": "AROMÁTICO marino",
+    "gender": "hombre",
+    "sales": 2,
+    "accords": [
+      {
+        "name": "aromático",
+        "percentage": 100,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      },
+      {
+        "name": "marino",
+        "percentage": 84,
+        "bg": "#0284c7",
+        "text": "#ffffff"
+      },
+      {
+        "name": "fresco especiado",
+        "percentage": 70,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      },
+      {
+        "name": "verde",
+        "percentage": 58,
+        "bg": "#059669",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 48,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Sea water",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Menta",
+          "image": "notes/menta.jpg"
+        },
+        {
+          "name": "Notas verdes",
+          "image": "notes/notas-verdes.jpg"
+        },
+        {
+          "name": "Lavanda",
+          "image": "notes/lavanda.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Sándalo",
+          "image": "notes/sandalo.jpg"
+        },
+        {
+          "name": "Jazmín",
+          "image": "notes/jazmin.jpg"
+        },
+        {
+          "name": "Neroli",
+          "image": "notes/flor-azahar.jpg"
+        },
+        {
+          "name": "Geranio",
+          "image": "notes/geranio.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Almizcle",
+          "image": "notes/almizcle.jpg"
+        },
+        {
+          "name": "Musgo de roble",
+          "image": "notes/musgo-roble.jpg"
+        },
+        {
+          "name": "Cedro",
+          "image": "notes/cedro.jpg"
+        },
+        {
+          "name": "Tabaco",
+          "image": "notes/tabaco.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-229",
+    "code": "229",
+    "name": "Guilty",
+    "reference": "Guilty",
+    "brand": "Gucci",
+    "description": "Inspirada en Guilty de Gucci. Pertenece a la prestigiosa familia olfativa CÍTRICO aromático. Abre con un despliegue radiante de lavanda, limón, revela un corazón fascinante de naranja, y perdura sobre un fondo suntuoso de pachulí, cedro, vainilla. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_229.jpg",
+    "olfactoryFamily": "CÍTRICO aromático",
+    "gender": "hombre",
+    "sales": 2,
+    "accords": [
+      {
+        "name": "cítrico",
+        "percentage": 100,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      },
+      {
+        "name": "aromático",
+        "percentage": 84,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      },
+      {
+        "name": "floral blanco",
+        "percentage": 70,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "fresco especiado",
+        "percentage": 58,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      },
+      {
+        "name": "floral",
+        "percentage": 48,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 40,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Lavanda",
+          "image": "notes/lavanda.jpg"
+        },
+        {
+          "name": "Limón",
+          "image": "notes/limon.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Naranja",
+          "image": "notes/naranja.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Pachulí",
+          "image": "notes/pachuli.jpg"
+        },
+        {
+          "name": "Cedro",
+          "image": "notes/cedro.jpg"
+        },
+        {
+          "name": "Vainilla",
+          "image": "notes/vainilla.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-236",
+    "code": "236",
+    "name": "Hawas",
+    "reference": "Hawas",
+    "brand": "Rasasi",
+    "description": "Inspirada en Hawas de Rasasi. Pertenece a la prestigiosa familia olfativa Aromática Acuática. Abre con un despliegue radiante de manzana, bergamota, limón, canela, revela un corazón fascinante de notas marinas, ciruela, flor de azahar, cardamomo, y perdura sobre un fondo suntuoso de ámbar gris, almizcle, pachulí, madera flotante. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_236.jpg",
+    "olfactoryFamily": "Aromática Acuática",
+    "gender": "hombre",
+    "sales": 2,
+    "accords": [
+      {
+        "name": "afrutado",
+        "percentage": 100,
+        "bg": "#db2777",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cítrico",
+        "percentage": 84,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      },
+      {
+        "name": "acuático",
+        "percentage": 70,
+        "bg": "#0284c7",
+        "text": "#ffffff"
+      },
+      {
+        "name": "aromático",
+        "percentage": 58,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      },
+      {
+        "name": "fresco especiado",
+        "percentage": 48,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Manzana",
+          "image": "notes/manzana.jpg"
+        },
+        {
+          "name": "Bergamota",
+          "image": "notes/bergamota.jpg"
+        },
+        {
+          "name": "Limón",
+          "image": "notes/limon.jpg"
+        },
+        {
+          "name": "Canela",
+          "image": "notes/canela.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Notas marinas",
+          "image": "notes/notas-marinas.jpg"
+        },
+        {
+          "name": "Ciruela",
+          "image": "notes/ciruela.jpg"
+        },
+        {
+          "name": "Flor de azahar",
+          "image": "notes/flor-azahar.jpg"
+        },
+        {
+          "name": "Cardamomo",
+          "image": "notes/cardamomo.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Ámbar gris",
+          "image": "notes/ambar.jpg"
+        },
+        {
+          "name": "Almizcle",
+          "image": "notes/almizcle.jpg"
+        },
+        {
+          "name": "Pachulí",
+          "image": "notes/pachuli.jpg"
+        },
+        {
+          "name": "Madera flotante",
+          "image": "notes/maderas.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-367",
+    "code": "367",
+    "name": "Versace",
+    "reference": "Versace",
+    "brand": "Versace",
+    "description": "Inspirada en Versace de Versace. Pertenece a la prestigiosa familia olfativa CÍTRICO aromático. Abre con un despliegue radiante de limón, neroli, bergamota, rosa, revela un corazón fascinante de hyacinth, salvia, cedro, geranio, y perdura sobre un fondo suntuoso de haba tonka, almizcle, ámbar. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_367.jpg",
+    "olfactoryFamily": "CÍTRICO aromático",
+    "gender": "hombre",
+    "sales": 2,
+    "accords": [
+      {
+        "name": "cítrico",
+        "percentage": 100,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      },
+      {
+        "name": "aromático",
+        "percentage": 84,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      },
+      {
+        "name": "fresco especiado",
+        "percentage": 70,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      },
+      {
+        "name": "verde",
+        "percentage": 58,
+        "bg": "#059669",
+        "text": "#ffffff"
+      },
+      {
+        "name": "floral",
+        "percentage": 48,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Limón",
+          "image": "notes/limon.jpg"
+        },
+        {
+          "name": "Neroli",
+          "image": "notes/flor-azahar.jpg"
+        },
+        {
+          "name": "Bergamota",
+          "image": "notes/bergamota.jpg"
+        },
+        {
+          "name": "Rosa",
+          "image": "notes/rosa.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Hyacinth",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Salvia",
+          "image": "notes/salvia.jpg"
+        },
+        {
+          "name": "Cedro",
+          "image": "notes/cedro.jpg"
+        },
+        {
+          "name": "Geranio",
+          "image": "notes/geranio.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Haba tonka",
+          "image": "notes/haba-tonka.jpg"
+        },
+        {
+          "name": "Almizcle",
+          "image": "notes/almizcle.jpg"
+        },
+        {
+          "name": "Ámbar",
+          "image": "notes/ambar.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-398",
+    "code": "398",
+    "name": "360 Purple",
+    "reference": "360 Purple",
+    "brand": "Perry Ellis",
+    "description": "Inspirada en 360 Purple de Perry Ellis. Pertenece a la prestigiosa familia olfativa AFRUTADO floral. Abre con un despliegue radiante de melocotón, blackberry, manzana, revela un corazón fascinante de rosa, lirio de los valles, tuberosa, jazmín, y perdura sobre un fondo suntuoso de almizcle, musgo de roble, sándalo. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_398.jpg",
+    "olfactoryFamily": "AFRUTADO floral",
+    "gender": "mujer",
+    "sales": 2,
+    "accords": [
+      {
+        "name": "afrutado",
+        "percentage": 100,
+        "bg": "#db2777",
+        "text": "#ffffff"
+      },
+      {
+        "name": "floral",
+        "percentage": 84,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "floral blanco",
+        "percentage": 70,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 58,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "dulce",
+        "percentage": 48,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Melocotón",
+          "image": "notes/melocoton.jpg"
+        },
+        {
+          "name": "Blackberry",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Manzana",
+          "image": "notes/manzana.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Rosa",
+          "image": "notes/rosa.jpg"
+        },
+        {
+          "name": "Lirio de los valles",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Tuberosa",
+          "image": "notes/rosa.jpg"
+        },
+        {
+          "name": "Jazmín",
+          "image": "notes/jazmin.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Almizcle",
+          "image": "notes/almizcle.jpg"
+        },
+        {
+          "name": "Musgo de roble",
+          "image": "notes/musgo-roble.jpg"
+        },
+        {
+          "name": "Sándalo",
+          "image": "notes/sandalo.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-402",
+    "code": "402",
+    "name": "Alien",
+    "reference": "Alien",
+    "brand": "Mugler",
+    "description": "Inspirada en Alien de Mugler. Pertenece a la prestigiosa familia olfativa FLORAL BLANCO ámbar. Abre con un despliegue radiante de jazmín, revela un corazón fascinante de woodsy notes, y perdura sobre un fondo suntuoso de ámbar. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_402.jpg",
+    "olfactoryFamily": "FLORAL BLANCO ámbar",
+    "gender": "mujer",
+    "sales": 2,
+    "accords": [
+      {
+        "name": "floral blanco",
+        "percentage": 100,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "ámbar",
+        "percentage": 84,
+        "bg": "#86198f",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 70,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "almizclado",
+        "percentage": 58,
+        "bg": "#64748b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "balsámico",
+        "percentage": 48,
+        "bg": "#6b21a8",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Jazmín",
+          "image": "notes/jazmin.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Woodsy Notes",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Ámbar",
+          "image": "notes/ambar.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-414",
+    "code": "414",
+    "name": "Ari",
+    "reference": "Ari",
+    "brand": "Ariana Grande",
+    "description": "Inspirada en Ari de Ariana Grande. Pertenece a la prestigiosa familia olfativa Aromática Frutal. Abre con un despliegue radiante de pomelo, pimienta rosa, tónica, revela un corazón fascinante de manzana roja, coriandro, y perdura sobre un fondo suntuoso de ciprés, vetiver, ámbar. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_414.jpg",
+    "olfactoryFamily": "Aromática Frutal",
+    "gender": "mujer",
+    "sales": 2,
+    "accords": [
+      {
+        "name": "cítrico",
+        "percentage": 100,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      },
+      {
+        "name": "aromático",
+        "percentage": 84,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      },
+      {
+        "name": "fresco especiado",
+        "percentage": 70,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      },
+      {
+        "name": "afrutado",
+        "percentage": 58,
+        "bg": "#db2777",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Pomelo",
+          "image": "notes/pomelo.jpg"
+        },
+        {
+          "name": "Pimienta rosa",
+          "image": "notes/pimienta-rosa.jpg"
+        },
+        {
+          "name": "Tónica",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Manzana roja",
+          "image": "notes/manzana.jpg"
+        },
+        {
+          "name": "Coriandro",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Ciprés",
+          "image": "notes/cipres.jpg"
+        },
+        {
+          "name": "Vetiver",
+          "image": "notes/vetiver.jpg"
+        },
+        {
+          "name": "Ámbar",
+          "image": "notes/ambar.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-454",
+    "code": "454",
+    "name": "Cool Water",
+    "reference": "Cool Water",
+    "brand": "Davidoff",
+    "description": "Inspirada en Cool Water de Davidoff. Pertenece a la prestigiosa familia olfativa AROMÁTICO marino. Abre con un despliegue radiante de sea water, menta, notas verdes, lavanda, revela un corazón fascinante de sándalo, jazmín, neroli, geranio, y perdura sobre un fondo suntuoso de almizcle, musgo de roble, cedro, tabaco. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_454.jpg",
+    "olfactoryFamily": "AROMÁTICO marino",
+    "gender": "mujer",
+    "sales": 2,
+    "accords": [
+      {
+        "name": "aromático",
+        "percentage": 100,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      },
+      {
+        "name": "marino",
+        "percentage": 84,
+        "bg": "#0284c7",
+        "text": "#ffffff"
+      },
+      {
+        "name": "fresco especiado",
+        "percentage": 70,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      },
+      {
+        "name": "verde",
+        "percentage": 58,
+        "bg": "#059669",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 48,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Sea water",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Menta",
+          "image": "notes/menta.jpg"
+        },
+        {
+          "name": "Notas verdes",
+          "image": "notes/notas-verdes.jpg"
+        },
+        {
+          "name": "Lavanda",
+          "image": "notes/lavanda.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Sándalo",
+          "image": "notes/sandalo.jpg"
+        },
+        {
+          "name": "Jazmín",
+          "image": "notes/jazmin.jpg"
+        },
+        {
+          "name": "Neroli",
+          "image": "notes/flor-azahar.jpg"
+        },
+        {
+          "name": "Geranio",
+          "image": "notes/geranio.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Almizcle",
+          "image": "notes/almizcle.jpg"
+        },
+        {
+          "name": "Musgo de roble",
+          "image": "notes/musgo-roble.jpg"
+        },
+        {
+          "name": "Cedro",
+          "image": "notes/cedro.jpg"
+        },
+        {
+          "name": "Tabaco",
+          "image": "notes/tabaco.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-513",
+    "code": "513",
+    "name": "Heiress",
+    "reference": "Heiress",
+    "brand": "Paris Hilton",
+    "description": "Inspirada en Heiress de Paris Hilton. Pertenece a la prestigiosa familia olfativa AFRUTADO dulce. Abre con un despliegue radiante de naranja, mimosa, maracuyá, melocotón, revela un corazón fascinante de miel, jazmín, ylang-ylang, tiare flower, y perdura sobre un fondo suntuoso de haba tonka, white woods, hojas de violeta. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_513.jpg",
+    "olfactoryFamily": "AFRUTADO dulce",
+    "gender": "mujer",
+    "sales": 2,
+    "accords": [
+      {
+        "name": "afrutado",
+        "percentage": 100,
+        "bg": "#db2777",
+        "text": "#ffffff"
+      },
+      {
+        "name": "dulce",
+        "percentage": 84,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      },
+      {
+        "name": "floral blanco",
+        "percentage": 70,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "afrutado",
+        "percentage": 58,
+        "bg": "#db2777",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cítrico",
+        "percentage": 48,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Naranja",
+          "image": "notes/naranja.jpg"
+        },
+        {
+          "name": "Mimosa",
+          "image": "notes/jazmin.jpg"
+        },
+        {
+          "name": "Maracuyá",
+          "image": "notes/maracuya.jpg"
+        },
+        {
+          "name": "Melocotón",
+          "image": "notes/melocoton.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Miel",
+          "image": "notes/miel.jpg"
+        },
+        {
+          "name": "Jazmín",
+          "image": "notes/jazmin.jpg"
+        },
+        {
+          "name": "Ylang-Ylang",
+          "image": "notes/ylang-ylang.jpg"
+        },
+        {
+          "name": "Tiare Flower",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Haba tonka",
+          "image": "notes/haba-tonka.jpg"
+        },
+        {
+          "name": "White Woods",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Hojas de violeta",
+          "image": "notes/violeta.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-548",
+    "code": "548",
+    "name": "Libre Intense",
+    "reference": "Libre Intense",
+    "brand": "Yves Saint Laurent",
+    "description": "Inspirada en Libre Intense de Yves Saint Laurent. Pertenece a la prestigiosa familia olfativa DULCE. Abre con un despliegue radiante de floral, revela un corazón fascinante de spicy, y perdura sobre un fondo suntuoso de creamy. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_548.jpg",
+    "olfactoryFamily": "DULCE",
+    "gender": "mujer",
+    "sales": 2,
+    "accords": [
+      {
+        "name": "dulce",
+        "percentage": 100,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Floral",
+          "image": "notes/rosa.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Spicy",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Creamy",
+          "image": "notes/maderas.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-562",
+    "code": "562",
+    "name": "Miss Dior Cherie",
+    "reference": "Miss Dior Cherie",
+    "brand": "Dior",
+    "description": "Inspirada en Miss Dior Cherie de Dior. Pertenece a la prestigiosa familia olfativa DULCE afrutado. Abre con un despliegue radiante de mandarina, piña, cereza, strawberry, revela un corazón fascinante de jazmín, rosa, violeta, caramelo, y perdura sobre un fondo suntuoso de almizcle, pachulí, ámbar. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_562.jpg",
+    "olfactoryFamily": "DULCE afrutado",
+    "gender": "mujer",
+    "sales": 2,
+    "accords": [
+      {
+        "name": "dulce",
+        "percentage": 100,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      },
+      {
+        "name": "afrutado",
+        "percentage": 84,
+        "bg": "#db2777",
+        "text": "#ffffff"
+      },
+      {
+        "name": "dulce",
+        "percentage": 70,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      },
+      {
+        "name": "pachulí",
+        "percentage": 58,
+        "bg": "#581c87",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cereza",
+        "percentage": 48,
+        "bg": "#9f1239",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Mandarina",
+          "image": "notes/mandarina.jpg"
+        },
+        {
+          "name": "Piña",
+          "image": "notes/pina.jpg"
+        },
+        {
+          "name": "Cereza",
+          "image": "notes/cereza.jpg"
+        },
+        {
+          "name": "Strawberry",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Jazmín",
+          "image": "notes/jazmin.jpg"
+        },
+        {
+          "name": "Rosa",
+          "image": "notes/rosa.jpg"
+        },
+        {
+          "name": "Violeta",
+          "image": "notes/violeta.jpg"
+        },
+        {
+          "name": "Caramelo",
+          "image": "notes/caramelo.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Almizcle",
+          "image": "notes/almizcle.jpg"
+        },
+        {
+          "name": "Pachulí",
+          "image": "notes/pachuli.jpg"
+        },
+        {
+          "name": "Ámbar",
+          "image": "notes/ambar.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-569",
+    "code": "569",
+    "name": "My Way",
+    "reference": "My Way",
+    "brand": "Giorgio Armani",
+    "description": "Inspirada en My Way de Giorgio Armani. Pertenece a la prestigiosa familia olfativa FLORAL. Abre con un despliegue radiante de sweet, revela un corazón fascinante de fruity, y perdura sobre un fondo suntuoso de fresh. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_569.jpg",
+    "olfactoryFamily": "FLORAL",
+    "gender": "mujer",
+    "sales": 2,
+    "accords": [
+      {
+        "name": "floral",
+        "percentage": 100,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Sweet",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Fruity",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Fresh",
+          "image": "notes/maderas.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-578",
+    "code": "578",
+    "name": "Olympea",
+    "reference": "Olympea",
+    "brand": "Paco Rabanne",
+    "description": "Inspirada en Olympea de Paco Rabanne. Pertenece a la prestigiosa familia olfativa AVAINILLADO floral blanco. Abre con un despliegue radiante de mandarina verde, jazmín, jengibre, revela un corazón fascinante de vainilla, salt, y perdura sobre un fondo suntuoso de ámbar gris, madera de cachemira, sándalo. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_578.jpg",
+    "olfactoryFamily": "AVAINILLADO floral blanco",
+    "gender": "mujer",
+    "sales": 2,
+    "accords": [
+      {
+        "name": "avainillado",
+        "percentage": 100,
+        "bg": "#9333ea",
+        "text": "#ffffff"
+      },
+      {
+        "name": "floral blanco",
+        "percentage": 84,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "marino",
+        "percentage": 70,
+        "bg": "#0284c7",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 58,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "atalcado",
+        "percentage": 48,
+        "bg": "#a855f7",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Mandarina verde",
+          "image": "notes/mandarina.jpg"
+        },
+        {
+          "name": "Jazmín",
+          "image": "notes/jazmin.jpg"
+        },
+        {
+          "name": "Jengibre",
+          "image": "notes/jengibre.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Vainilla",
+          "image": "notes/vainilla.jpg"
+        },
+        {
+          "name": "Salt",
+          "image": "notes/notas-marinas.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Ámbar gris",
+          "image": "notes/ambar.jpg"
+        },
+        {
+          "name": "Madera de cachemira",
+          "image": "notes/cachemira.jpg"
+        },
+        {
+          "name": "Sándalo",
+          "image": "notes/sandalo.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-597",
+    "code": "597",
+    "name": "Poison",
+    "reference": "Poison",
+    "brand": "Dior",
+    "description": "Inspirada en Poison de Dior. Pertenece a la prestigiosa familia olfativa Ámbar Vainilla. Abre con un despliegue radiante de coco, ciruela, albaricoque, revela un corazón fascinante de palo de rosa de brasil, jazmín, alcaravea, tuberosa, y perdura sobre un fondo suntuoso de vainilla, almendra, sándalo, almizcle. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_597.jpg",
+    "olfactoryFamily": "Ámbar Vainilla",
+    "gender": "mujer",
+    "sales": 2,
+    "accords": [
+      {
+        "name": "avainillado",
+        "percentage": 100,
+        "bg": "#9333ea",
+        "text": "#ffffff"
+      },
+      {
+        "name": "almendrado",
+        "percentage": 84,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      },
+      {
+        "name": "dulce",
+        "percentage": 70,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      },
+      {
+        "name": "ámbar",
+        "percentage": 58,
+        "bg": "#86198f",
+        "text": "#ffffff"
+      },
+      {
+        "name": "afrutado",
+        "percentage": 48,
+        "bg": "#db2777",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Coco",
+          "image": "notes/coco.jpg"
+        },
+        {
+          "name": "Ciruela",
+          "image": "notes/ciruela.jpg"
+        },
+        {
+          "name": "Albaricoque",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Palo de rosa de Brasil",
+          "image": "notes/rosa.jpg"
+        },
+        {
+          "name": "Jazmín",
+          "image": "notes/jazmin.jpg"
+        },
+        {
+          "name": "Alcaravea",
+          "image": "notes/anis.jpg"
+        },
+        {
+          "name": "Tuberosa",
+          "image": "notes/rosa.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Vainilla",
+          "image": "notes/vainilla.jpg"
+        },
+        {
+          "name": "Almendra",
+          "image": "notes/almendra.jpg"
+        },
+        {
+          "name": "Sándalo",
+          "image": "notes/sandalo.jpg"
+        },
+        {
+          "name": "Almizcle",
+          "image": "notes/almizcle.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-598",
+    "code": "598",
+    "name": "Poison Girl",
+    "reference": "Poison Girl",
+    "brand": "Dior",
+    "description": "Inspirada en Poison Girl de Dior. Pertenece a la prestigiosa familia olfativa BALSÁMICO avainillado. Abre con un despliegue radiante de naranja amarga, limón, revela un corazón fascinante de rosa de damasco, rosa, flor de azahar, y perdura sobre un fondo suntuoso de haba tonka, sándalo, vainilla, almendra. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_598.jpg",
+    "olfactoryFamily": "BALSÁMICO avainillado",
+    "gender": "mujer",
+    "sales": 2,
+    "accords": [
+      {
+        "name": "balsámico",
+        "percentage": 100,
+        "bg": "#6b21a8",
+        "text": "#ffffff"
+      },
+      {
+        "name": "avainillado",
+        "percentage": 84,
+        "bg": "#9333ea",
+        "text": "#ffffff"
+      },
+      {
+        "name": "dulce",
+        "percentage": 70,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      },
+      {
+        "name": "almendrado",
+        "percentage": 58,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      },
+      {
+        "name": "atalcado",
+        "percentage": 48,
+        "bg": "#a855f7",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Naranja amarga",
+          "image": "notes/naranja.jpg"
+        },
+        {
+          "name": "Limón",
+          "image": "notes/limon.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Rosa de Damasco",
+          "image": "notes/rosa.jpg"
+        },
+        {
+          "name": "Rosa",
+          "image": "notes/rosa.jpg"
+        },
+        {
+          "name": "Flor de azahar",
+          "image": "notes/flor-azahar.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Haba tonka",
+          "image": "notes/haba-tonka.jpg"
+        },
+        {
+          "name": "Sándalo",
+          "image": "notes/sandalo.jpg"
+        },
+        {
+          "name": "Vainilla",
+          "image": "notes/vainilla.jpg"
+        },
+        {
+          "name": "Almendra",
+          "image": "notes/almendra.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-637",
+    "code": "637",
+    "name": "Toy 2",
+    "reference": "Toy 2",
+    "brand": "Moschino",
+    "description": "Inspirada en Toy 2 de Moschino. Pertenece a la prestigiosa familia olfativa AFRUTADO. Abre con un despliegue radiante de fresh, revela un corazón fascinante de floral, y perdura sobre un fondo suntuoso de synthetic. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_637.jpg",
+    "olfactoryFamily": "AFRUTADO",
+    "gender": "mujer",
+    "sales": 2,
+    "accords": [
+      {
+        "name": "afrutado",
+        "percentage": 100,
+        "bg": "#db2777",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Fresh",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Floral",
+          "image": "notes/rosa.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Synthetic",
+          "image": "notes/maderas.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-641",
+    "code": "641",
+    "name": "Very Good Glam",
+    "reference": "Very Good Glam",
+    "brand": "Carolina Herrera",
+    "description": "Inspirada en Very Good Glam de Carolina Herrera. Pertenece a la prestigiosa familia olfativa AFRUTADO. Abre con un despliegue radiante de sweet, revela un corazón fascinante de floral, y perdura sobre un fondo suntuoso de synthetic. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_641.jpg",
+    "olfactoryFamily": "AFRUTADO",
+    "gender": "mujer",
+    "sales": 2,
+    "accords": [
+      {
+        "name": "afrutado",
+        "percentage": 100,
+        "bg": "#db2777",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Sweet",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Floral",
+          "image": "notes/rosa.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Synthetic",
+          "image": "notes/maderas.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-672",
+    "code": "672",
+    "name": "Naxos",
+    "reference": "Naxos",
+    "brand": "Xerjoff",
+    "description": "Inspirada en Naxos de Xerjoff. Pertenece a la prestigiosa familia olfativa DULCE. Abre con un despliegue radiante de spicy, revela un corazón fascinante de gourmand, y perdura sobre un fondo suntuoso de creamy. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_672.jpg",
+    "olfactoryFamily": "DULCE",
+    "gender": "unisex",
+    "sales": 2,
+    "accords": [
+      {
+        "name": "dulce",
+        "percentage": 100,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Spicy",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Gourmand",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Creamy",
+          "image": "notes/maderas.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-900",
+    "code": "900",
+    "name": "By the Fireplace",
+    "reference": "By the Fireplace",
+    "brand": "Maison Margiela",
+    "description": "Inspirada en By the Fireplace de Maison Margiela. Pertenece a la prestigiosa familia olfativa Amaderada. Abre con un despliegue radiante de clavo, pimienta rosa, flor de azahar, revela un corazón fascinante de castaña, madera de gaiac, enebro, y perdura sobre un fondo suntuoso de vainilla, bálsamo de perú, cashmeran. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_900.jpg",
+    "olfactoryFamily": "Amaderada",
+    "gender": "unisex",
+    "sales": 2,
+    "accords": [
+      {
+        "name": "amaderado",
+        "percentage": 100,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "avainillado",
+        "percentage": 84,
+        "bg": "#9333ea",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cálido especiado",
+        "percentage": 70,
+        "bg": "#701a75",
+        "text": "#ffffff"
+      },
+      {
+        "name": "balsámico",
+        "percentage": 58,
+        "bg": "#6b21a8",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Clavo",
+          "image": "notes/clavo.jpg"
+        },
+        {
+          "name": "Pimienta rosa",
+          "image": "notes/pimienta-rosa.jpg"
+        },
+        {
+          "name": "Flor de azahar",
+          "image": "notes/flor-azahar.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Castaña",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Madera de gaiac",
+          "image": "notes/guayaco.jpg"
+        },
+        {
+          "name": "Enebro",
+          "image": "notes/enebro.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Vainilla",
+          "image": "notes/vainilla.jpg"
+        },
+        {
+          "name": "Bálsamo de Perú",
+          "image": "notes/incienso.jpg"
+        },
+        {
+          "name": "Cashmeran",
+          "image": "notes/cachemira.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-693",
+    "code": "693",
+    "name": "Green Irish Tweed",
+    "reference": "Green Irish Tweed",
+    "brand": "Creed",
+    "description": "Inspirada en Green Irish Tweed de Creed. Pertenece a la prestigiosa familia olfativa CÍTRICO atalcado. Abre con un despliegue radiante de iris, limón, revela un corazón fascinante de hojas de violeta, y perdura sobre un fondo suntuoso de sándalo, ámbar gris. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_693.jpg",
+    "olfactoryFamily": "CÍTRICO atalcado",
+    "gender": "hombre",
+    "sales": 2,
+    "accords": [
+      {
+        "name": "cítrico",
+        "percentage": 100,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      },
+      {
+        "name": "atalcado",
+        "percentage": 84,
+        "bg": "#a855f7",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 70,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "ozónico",
+        "percentage": 58,
+        "bg": "#38bdf8",
+        "text": "#0f172a"
+      },
+      {
+        "name": "acuático",
+        "percentage": 48,
+        "bg": "#0284c7",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Iris",
+          "image": "notes/iris.jpg"
+        },
+        {
+          "name": "Limón",
+          "image": "notes/limon.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Hojas de violeta",
+          "image": "notes/violeta.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Sándalo",
+          "image": "notes/sandalo.jpg"
+        },
+        {
+          "name": "Ámbar gris",
+          "image": "notes/ambar.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-1006",
+    "code": "1006",
+    "name": "Invictus EDT",
+    "reference": "Invictus EDT",
+    "brand": "Paco Rabanne",
+    "description": "Inspirada en Invictus EDT de Paco Rabanne. Pertenece a la prestigiosa familia olfativa CÍTRICO marino. Abre con un despliegue radiante de pomelo, notas marinas, mandarina, revela un corazón fascinante de bay leaf, jazmín, y perdura sobre un fondo suntuoso de madera de gaiac, musgo de roble, pachulí, ámbar gris. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_1006.jpg",
+    "olfactoryFamily": "CÍTRICO marino",
+    "gender": "hombre",
+    "sales": 2,
+    "accords": [
+      {
+        "name": "cítrico",
+        "percentage": 100,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      },
+      {
+        "name": "marino",
+        "percentage": 84,
+        "bg": "#0284c7",
+        "text": "#ffffff"
+      },
+      {
+        "name": "aromático",
+        "percentage": 70,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      },
+      {
+        "name": "fresco especiado",
+        "percentage": 58,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 48,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Pomelo",
+          "image": "notes/pomelo.jpg"
+        },
+        {
+          "name": "Notas marinas",
+          "image": "notes/notas-marinas.jpg"
+        },
+        {
+          "name": "Mandarina",
+          "image": "notes/mandarina.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Bay Leaf",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Jazmín",
+          "image": "notes/jazmin.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Madera de gaiac",
+          "image": "notes/guayaco.jpg"
+        },
+        {
+          "name": "Musgo de roble",
+          "image": "notes/musgo-roble.jpg"
+        },
+        {
+          "name": "Pachulí",
+          "image": "notes/pachuli.jpg"
+        },
+        {
+          "name": "Ámbar gris",
+          "image": "notes/ambar.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-699",
+    "code": "699",
+    "name": "The Scent Elixir",
+    "reference": "The Scent Elixir",
+    "brand": "Hugo Boss",
+    "description": "Inspirada en The Scent Elixir de Hugo Boss. Pertenece a la prestigiosa familia olfativa DULCE. Abre con un despliegue radiante de spicy, revela un corazón fascinante de fruity, y perdura sobre un fondo suntuoso de oriental. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_699.jpg",
+    "olfactoryFamily": "DULCE",
+    "gender": "hombre",
+    "sales": 2,
+    "accords": [
+      {
+        "name": "dulce",
+        "percentage": 100,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Spicy",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Fruity",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Oriental",
+          "image": "notes/maderas.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-709",
+    "code": "709",
+    "name": "Tommy Girl",
+    "reference": "Tommy Girl",
+    "brand": "Tommy Hilfiger",
+    "description": "Inspirada en Tommy Girl de Tommy Hilfiger. Pertenece a la prestigiosa familia olfativa CÍTRICO floral blanco. Abre con un despliegue radiante de grosella negra, camelia, mandarina, manzana, revela un corazón fascinante de miel, lirio, violeta, menta, y perdura sobre un fondo suntuoso de magnolia, cuero, sándalo, jazmín. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_709.jpg",
+    "olfactoryFamily": "CÍTRICO floral blanco",
+    "gender": "mujer",
+    "sales": 2,
+    "accords": [
+      {
+        "name": "cítrico",
+        "percentage": 100,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      },
+      {
+        "name": "floral blanco",
+        "percentage": 84,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "floral",
+        "percentage": 70,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "verde",
+        "percentage": 58,
+        "bg": "#059669",
+        "text": "#ffffff"
+      },
+      {
+        "name": "afrutado",
+        "percentage": 48,
+        "bg": "#db2777",
+        "text": "#ffffff"
+      },
+      {
+        "name": "aromático",
+        "percentage": 40,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Grosella negra",
+          "image": "notes/grosella.jpg"
+        },
+        {
+          "name": "Camelia",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Mandarina",
+          "image": "notes/mandarina.jpg"
+        },
+        {
+          "name": "Manzana",
+          "image": "notes/manzana.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Miel",
+          "image": "notes/miel.jpg"
+        },
+        {
+          "name": "Lirio",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Violeta",
+          "image": "notes/violeta.jpg"
+        },
+        {
+          "name": "Menta",
+          "image": "notes/menta.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Magnolia",
+          "image": "notes/magnolia.jpg"
+        },
+        {
+          "name": "Cuero",
+          "image": "notes/cuero.jpg"
+        },
+        {
+          "name": "Sándalo",
+          "image": "notes/sandalo.jpg"
+        },
+        {
+          "name": "Jazmín",
+          "image": "notes/jazmin.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-707",
+    "code": "707",
+    "name": "Angel's Share On The Rocks",
+    "reference": "Angel's Share On The Rocks",
+    "brand": "Kilian",
+    "description": "Inspirada en Angel's Share On The Rocks de Kilian. Pertenece a la prestigiosa familia olfativa Ámbar Vainilla. Abre con un despliegue radiante de coñac, revela un corazón fascinante de canela, haba tonka, roble, y perdura sobre un fondo suntuoso de praliné, vainilla, sándalo. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_707.jpg",
+    "olfactoryFamily": "Ámbar Vainilla",
+    "gender": "unisex",
+    "sales": 2,
+    "accords": [
+      {
+        "name": "amaderado",
+        "percentage": 100,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cálido especiado",
+        "percentage": 84,
+        "bg": "#701a75",
+        "text": "#ffffff"
+      },
+      {
+        "name": "dulce",
+        "percentage": 70,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      },
+      {
+        "name": "avainillado",
+        "percentage": 58,
+        "bg": "#9333ea",
+        "text": "#ffffff"
+      },
+      {
+        "name": "canela",
+        "percentage": 48,
+        "bg": "#831843",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Coñac",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Canela",
+          "image": "notes/canela.jpg"
+        },
+        {
+          "name": "Haba tonka",
+          "image": "notes/haba-tonka.jpg"
+        },
+        {
+          "name": "Roble",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Praliné",
+          "image": "notes/avellana.jpg"
+        },
+        {
+          "name": "Vainilla",
+          "image": "notes/vainilla.jpg"
+        },
+        {
+          "name": "Sándalo",
+          "image": "notes/sandalo.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-712",
+    "code": "712",
+    "name": "God of Fire",
+    "reference": "God of Fire",
+    "brand": "Stéphane Humbert Lucas",
+    "description": "Inspirada en God of Fire de Stéphane Humbert Lucas. Pertenece a la prestigiosa familia olfativa AFRUTADO. Abre con un despliegue radiante de sweet, revela un corazón fascinante de fresh, y perdura sobre un fondo suntuoso de citrus. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_712.jpg",
+    "olfactoryFamily": "AFRUTADO",
+    "gender": "unisex",
+    "sales": 2,
+    "accords": [
+      {
+        "name": "afrutado",
+        "percentage": 100,
+        "bg": "#db2777",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Sweet",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Fresh",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Citrus",
+          "image": "notes/maderas.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-791",
+    "code": "791",
+    "name": "Ombre Nomade",
+    "reference": "Ombre Nomade",
+    "brand": "Louis Vuitton",
+    "description": "Inspirada en Ombre Nomade de Louis Vuitton. Pertenece a la prestigiosa familia olfativa AMADERADO. Abre con un despliegue radiante de smoky, revela un corazón fascinante de oriental, y perdura sobre un fondo suntuoso de cuero. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_791.jpg",
+    "olfactoryFamily": "AMADERADO",
+    "gender": "hombre",
+    "sales": 2,
+    "accords": [
+      {
+        "name": "amaderado",
+        "percentage": 100,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Smoky",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Oriental",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Cuero",
+          "image": "notes/cuero.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-820",
+    "code": "820",
+    "name": "Afternoon Swim",
+    "reference": "Afternoon Swim",
+    "brand": "Louis Vuitton",
+    "description": "Inspirada en Afternoon Swim de Louis Vuitton. Pertenece a la prestigiosa familia olfativa FRESCO. Abre con un despliegue radiante de citrus, revela un corazón fascinante de aquatic, y perdura sobre un fondo suntuoso de fruity. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_820.jpg",
+    "olfactoryFamily": "FRESCO",
+    "gender": "unisex",
+    "sales": 2,
+    "accords": [
+      {
+        "name": "fresco",
+        "percentage": 100,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Citrus",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Aquatic",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Fruity",
+          "image": "notes/maderas.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-830",
+    "code": "830",
+    "name": "Hugo boss bottled Elixir",
+    "reference": "Hugo boss bottled Elixir",
+    "brand": "Hugo Boss",
+    "description": "Inspirada en Hugo boss bottled Elixir de Hugo Boss. Pertenece a la prestigiosa familia olfativa AROMÁTICO fresco especiado. Abre con un despliegue radiante de lavanda, manzana verde, menta, pomelo, revela un corazón fascinante de clavel, salvia, geranio, jazmín, y perdura sobre un fondo suntuoso de pachulí, fir, cedro. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_830.jpg",
+    "olfactoryFamily": "AROMÁTICO fresco especiado",
+    "gender": "hombre",
+    "sales": 2,
+    "accords": [
+      {
+        "name": "aromático",
+        "percentage": 100,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      },
+      {
+        "name": "fresco especiado",
+        "percentage": 84,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      },
+      {
+        "name": "verde",
+        "percentage": 70,
+        "bg": "#059669",
+        "text": "#ffffff"
+      },
+      {
+        "name": "fresco",
+        "percentage": 58,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      },
+      {
+        "name": "afrutado",
+        "percentage": 48,
+        "bg": "#db2777",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 40,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Lavanda",
+          "image": "notes/lavanda.jpg"
+        },
+        {
+          "name": "Manzana verde",
+          "image": "notes/manzana-verde.jpg"
+        },
+        {
+          "name": "Menta",
+          "image": "notes/menta.jpg"
+        },
+        {
+          "name": "Pomelo",
+          "image": "notes/pomelo.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Clavel",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Salvia",
+          "image": "notes/salvia.jpg"
+        },
+        {
+          "name": "Geranio",
+          "image": "notes/geranio.jpg"
+        },
+        {
+          "name": "Jazmín",
+          "image": "notes/jazmin.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Pachulí",
+          "image": "notes/pachuli.jpg"
+        },
+        {
+          "name": "Fir",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Cedro",
+          "image": "notes/cedro.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-715",
+    "code": "715",
+    "name": "Jadore Eau de Parfum",
+    "reference": "Jadore Eau de Parfum",
+    "brand": "Dior",
+    "description": "Inspirada en Jadore Eau de Parfum de Dior. Pertenece a la prestigiosa familia olfativa Floral Frutal. Abre con un despliegue radiante de pera, melón, magnolia, melocotón, revela un corazón fascinante de jazmín, lirio de los valles, tuberosa, fresia, y perdura sobre un fondo suntuoso de almizcle, vainilla, mora, cedro. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_715.jpg",
+    "olfactoryFamily": "Floral Frutal",
+    "gender": "mujer",
+    "sales": 2,
+    "accords": [
+      {
+        "name": "floral",
+        "percentage": 100,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "afrutado",
+        "percentage": 84,
+        "bg": "#db2777",
+        "text": "#ffffff"
+      },
+      {
+        "name": "floral blanco",
+        "percentage": 70,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "dulce",
+        "percentage": 58,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Pera",
+          "image": "notes/pera.jpg"
+        },
+        {
+          "name": "Melón",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Magnolia",
+          "image": "notes/magnolia.jpg"
+        },
+        {
+          "name": "Melocotón",
+          "image": "notes/melocoton.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Jazmín",
+          "image": "notes/jazmin.jpg"
+        },
+        {
+          "name": "Lirio de los valles",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Tuberosa",
+          "image": "notes/rosa.jpg"
+        },
+        {
+          "name": "Fresia",
+          "image": "notes/jazmin.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Almizcle",
+          "image": "notes/almizcle.jpg"
+        },
+        {
+          "name": "Vainilla",
+          "image": "notes/vainilla.jpg"
+        },
+        {
+          "name": "Mora",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Cedro",
+          "image": "notes/cedro.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-717",
+    "code": "717",
+    "name": "Hawas for Him",
+    "reference": "Hawas for Him",
+    "brand": "Rasasi",
+    "description": "Inspirada en Hawas for Him de Rasasi. Pertenece a la prestigiosa familia olfativa Aromática Acuática. Abre con un despliegue radiante de manzana, bergamota, limón, canela, revela un corazón fascinante de notas marinas, ciruela, flor de azahar, cardamomo, y perdura sobre un fondo suntuoso de ámbar gris, almizcle, pachulí, madera flotante. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_717.jpg",
+    "olfactoryFamily": "Aromática Acuática",
+    "gender": "hombre",
+    "sales": 2,
+    "accords": [
+      {
+        "name": "afrutado",
+        "percentage": 100,
+        "bg": "#db2777",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cítrico",
+        "percentage": 84,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      },
+      {
+        "name": "acuático",
+        "percentage": 70,
+        "bg": "#0284c7",
+        "text": "#ffffff"
+      },
+      {
+        "name": "aromático",
+        "percentage": 58,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      },
+      {
+        "name": "fresco especiado",
+        "percentage": 48,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Manzana",
+          "image": "notes/manzana.jpg"
+        },
+        {
+          "name": "Bergamota",
+          "image": "notes/bergamota.jpg"
+        },
+        {
+          "name": "Limón",
+          "image": "notes/limon.jpg"
+        },
+        {
+          "name": "Canela",
+          "image": "notes/canela.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Notas marinas",
+          "image": "notes/notas-marinas.jpg"
+        },
+        {
+          "name": "Ciruela",
+          "image": "notes/ciruela.jpg"
+        },
+        {
+          "name": "Flor de azahar",
+          "image": "notes/flor-azahar.jpg"
+        },
+        {
+          "name": "Cardamomo",
+          "image": "notes/cardamomo.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Ámbar gris",
+          "image": "notes/ambar.jpg"
+        },
+        {
+          "name": "Almizcle",
+          "image": "notes/almizcle.jpg"
+        },
+        {
+          "name": "Pachulí",
+          "image": "notes/pachuli.jpg"
+        },
+        {
+          "name": "Madera flotante",
+          "image": "notes/maderas.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-721",
+    "code": "721",
+    "name": "Yara Candy",
+    "reference": "Yara Candy",
+    "brand": "Lattafa",
+    "description": "Inspirada en Yara Candy de Lattafa. Pertenece a la prestigiosa familia olfativa Floral Frutal Gourmand. Abre con un despliegue radiante de mandarina verde, grosella negra, revela un corazón fascinante de caramelo de fresa, gardenia, y perdura sobre un fondo suntuoso de vainilla, sándalo, ámbar. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_721.jpg",
+    "olfactoryFamily": "Floral Frutal Gourmand",
+    "gender": "mujer",
+    "sales": 2,
+    "accords": [
+      {
+        "name": "dulce",
+        "percentage": 100,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      },
+      {
+        "name": "afrutado",
+        "percentage": 84,
+        "bg": "#db2777",
+        "text": "#ffffff"
+      },
+      {
+        "name": "avainillado",
+        "percentage": 70,
+        "bg": "#9333ea",
+        "text": "#ffffff"
+      },
+      {
+        "name": "caramelo",
+        "percentage": 58,
+        "bg": "#a855f7",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Mandarina verde",
+          "image": "notes/mandarina.jpg"
+        },
+        {
+          "name": "Grosella negra",
+          "image": "notes/grosella.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Caramelo de fresa",
+          "image": "notes/caramelo.jpg"
+        },
+        {
+          "name": "Gardenia",
+          "image": "notes/gardenia.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Vainilla",
+          "image": "notes/vainilla.jpg"
+        },
+        {
+          "name": "Sándalo",
+          "image": "notes/sandalo.jpg"
+        },
+        {
+          "name": "Ámbar",
+          "image": "notes/ambar.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-726",
+    "code": "726",
+    "name": "Eros Eau de Parfum",
+    "reference": "Eros Eau de Parfum",
+    "brand": "Versace",
+    "description": "Inspirada en Versace Eros EDP. Pasión desbordante y poder mitológico. Acordes frescos de menta crujiente y cáscara de limón que se funden en la sensualidad adictiva de la vainilla oriental y las maderas nobles.",
+    "image": "images/kode/kode_726.jpg",
+    "olfactoryFamily": "Ámbar Amaderada",
+    "gender": "hombre",
+    "sales": 2,
+    "accords": [
+      {
+        "name": "aromático",
+        "percentage": 100,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cítrico",
+        "percentage": 84,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      },
+      {
+        "name": "avainillado",
+        "percentage": 70,
+        "bg": "#9333ea",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 58,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "fresco especiado",
+        "percentage": 48,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Menta",
+          "image": "notes/menta.jpg"
+        },
+        {
+          "name": "Manzana acaramelada",
+          "image": "notes/manzana.jpg"
+        },
+        {
+          "name": "Limón",
+          "image": "notes/limon.jpg"
+        },
+        {
+          "name": "Mandarina",
+          "image": "notes/mandarina.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Ambroxan",
+          "image": "notes/ambroxan.jpg"
+        },
+        {
+          "name": "Salvia esclarea",
+          "image": "notes/salvia.jpg"
+        },
+        {
+          "name": "Geranio",
+          "image": "notes/geranio.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Vainilla",
+          "image": "notes/vainilla.jpg"
+        },
+        {
+          "name": "Cedro",
+          "image": "notes/cedro.jpg"
+        },
+        {
+          "name": "Sándalo",
+          "image": "notes/sandalo.jpg"
+        },
+        {
+          "name": "Pachulí",
+          "image": "notes/pachuli.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-727",
+    "code": "727",
+    "name": "Eros Energy Eau de Parfum",
+    "reference": "Eros Energy Eau de Parfum",
+    "brand": "Versace",
+    "description": "Inspirada en Versace Eros Energy. Una explosión solar cítrica y vivificante que captura la alegría y el magnetismo de la costa mediterránea, impulsada por pimienta rosa y una base amaderada de almizcle.",
+    "image": "images/kode/kode_727.jpg",
+    "olfactoryFamily": "Cítrica Aromática",
+    "gender": "hombre",
+    "sales": 2,
+    "accords": [
+      {
+        "name": "cítrico",
+        "percentage": 100,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      },
+      {
+        "name": "aromático",
+        "percentage": 84,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      },
+      {
+        "name": "fresco especiado",
+        "percentage": 70,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 58,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "almizclado",
+        "percentage": 48,
+        "bg": "#64748b",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Limón italiano",
+          "image": "notes/limon.jpg"
+        },
+        {
+          "name": "Bergamota",
+          "image": "notes/bergamota.jpg"
+        },
+        {
+          "name": "Naranja sanguina",
+          "image": "notes/naranja.jpg"
+        },
+        {
+          "name": "Lima",
+          "image": "notes/lima.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Pimienta rosa",
+          "image": "notes/pimienta-rosa.jpg"
+        },
+        {
+          "name": "Grosellas negras",
+          "image": "notes/grosella.jpg"
+        },
+        {
+          "name": "Ámbar blanco",
+          "image": "notes/ambar.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Pachulí",
+          "image": "notes/pachuli.jpg"
+        },
+        {
+          "name": "Almizcle",
+          "image": "notes/almizcle.jpg"
+        },
+        {
+          "name": "Musgo de roble",
+          "image": "notes/musgo-roble.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-733",
+    "code": "733",
+    "name": "L'homme",
+    "reference": "L'homme",
+    "brand": "Prada",
+    "description": "Inspirada en L'homme de Prada. Pertenece a la prestigiosa familia olfativa FRESCO ESPECIADO cítrico. Abre con un despliegue radiante de jengibre, bergamota, limón, revela un corazón fascinante de spices, pimienta blanca, albahaca, hojas de violeta, y perdura sobre un fondo suntuoso de haba tonka, vetiver, cedro. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_733.jpg",
+    "olfactoryFamily": "FRESCO ESPECIADO cítrico",
+    "gender": "hombre",
+    "sales": 2,
+    "accords": [
+      {
+        "name": "fresco especiado",
+        "percentage": 100,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cítrico",
+        "percentage": 84,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      },
+      {
+        "name": "aromático",
+        "percentage": 70,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cálido especiado",
+        "percentage": 58,
+        "bg": "#701a75",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 48,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "verde",
+        "percentage": 40,
+        "bg": "#059669",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Jengibre",
+          "image": "notes/jengibre.jpg"
+        },
+        {
+          "name": "Bergamota",
+          "image": "notes/bergamota.jpg"
+        },
+        {
+          "name": "Limón",
+          "image": "notes/limon.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Spices",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Pimienta blanca",
+          "image": "notes/pimienta-blanca.jpg"
+        },
+        {
+          "name": "Albahaca",
+          "image": "notes/albahaca.jpg"
+        },
+        {
+          "name": "Hojas de violeta",
+          "image": "notes/violeta.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Haba tonka",
+          "image": "notes/haba-tonka.jpg"
+        },
+        {
+          "name": "Vetiver",
+          "image": "notes/vetiver.jpg"
+        },
+        {
+          "name": "Cedro",
+          "image": "notes/cedro.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-103",
+    "code": "103",
+    "name": "1 Million Intense",
+    "reference": "1 Million Intense",
+    "brand": "Paco Rabanne",
+    "description": "Inspirada en 1 Million Intense de Paco Rabanne. Pertenece a la prestigiosa familia olfativa CÁLIDO ESPECIADO rosas. Abre con un despliegue radiante de mandarina, cardamomo, pimienta negra, azafrán, revela un corazón fascinante de rosa, neroli, canela, y perdura sobre un fondo suntuoso de cuero, lirio, pachulí, sándalo. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_103.jpg",
+    "olfactoryFamily": "CÁLIDO ESPECIADO rosas",
+    "gender": "hombre",
+    "sales": 1,
+    "accords": [
+      {
+        "name": "cálido especiado",
+        "percentage": 100,
+        "bg": "#701a75",
+        "text": "#ffffff"
+      },
+      {
+        "name": "rosas",
+        "percentage": 84,
+        "bg": "#be123c",
+        "text": "#ffffff"
+      },
+      {
+        "name": "canela",
+        "percentage": 70,
+        "bg": "#831843",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cuero",
+        "percentage": 58,
+        "bg": "#3b0764",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 48,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cítrico",
+        "percentage": 40,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Mandarina",
+          "image": "notes/mandarina.jpg"
+        },
+        {
+          "name": "Cardamomo",
+          "image": "notes/cardamomo.jpg"
+        },
+        {
+          "name": "Pimienta negra",
+          "image": "notes/pimienta-negra.jpg"
+        },
+        {
+          "name": "Azafrán",
+          "image": "notes/azafran.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Rosa",
+          "image": "notes/rosa.jpg"
+        },
+        {
+          "name": "Neroli",
+          "image": "notes/flor-azahar.jpg"
+        },
+        {
+          "name": "Canela",
+          "image": "notes/canela.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Cuero",
+          "image": "notes/cuero.jpg"
+        },
+        {
+          "name": "Lirio",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Pachulí",
+          "image": "notes/pachuli.jpg"
+        },
+        {
+          "name": "Sándalo",
+          "image": "notes/sandalo.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-105",
+    "code": "105",
+    "name": "1 Million Parfum",
+    "reference": "1 Million Parfum",
+    "brand": "Paco Rabanne",
+    "description": "Inspirada en 1 Million Parfum de Paco Rabanne. Pertenece a la prestigiosa familia olfativa CÁLIDO ESPECIADO canela. Abre con un despliegue radiante de pomelo, menta, mandarina, revela un corazón fascinante de rosa, canela, spicy notes, y perdura sobre un fondo suntuoso de cuero, maderas nobles, ámbar, pachulí. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_105.jpg",
+    "olfactoryFamily": "CÁLIDO ESPECIADO canela",
+    "gender": "hombre",
+    "sales": 1,
+    "accords": [
+      {
+        "name": "cálido especiado",
+        "percentage": 100,
+        "bg": "#701a75",
+        "text": "#ffffff"
+      },
+      {
+        "name": "canela",
+        "percentage": 84,
+        "bg": "#831843",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cítrico",
+        "percentage": 70,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cuero",
+        "percentage": 58,
+        "bg": "#3b0764",
+        "text": "#ffffff"
+      },
+      {
+        "name": "ámbar",
+        "percentage": 48,
+        "bg": "#86198f",
+        "text": "#ffffff"
+      },
+      {
+        "name": "rosas",
+        "percentage": 40,
+        "bg": "#be123c",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Pomelo",
+          "image": "notes/pomelo.jpg"
+        },
+        {
+          "name": "Menta",
+          "image": "notes/menta.jpg"
+        },
+        {
+          "name": "Mandarina",
+          "image": "notes/mandarina.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Rosa",
+          "image": "notes/rosa.jpg"
+        },
+        {
+          "name": "Canela",
+          "image": "notes/canela.jpg"
+        },
+        {
+          "name": "Spicy Notes",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Cuero",
+          "image": "notes/cuero.jpg"
+        },
+        {
+          "name": "Maderas nobles",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Ámbar",
+          "image": "notes/ambar.jpg"
+        },
+        {
+          "name": "Pachulí",
+          "image": "notes/pachuli.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-112",
+    "code": "112",
+    "name": "212 Heroes",
+    "reference": "212 Heroes",
+    "brand": "Carolina Herrera",
+    "description": "Inspirada en 212 Heroes de Carolina Herrera. Pertenece a la prestigiosa familia olfativa FLORAL BLANCO floral. Abre con un despliegue radiante de flor de azahar, mandarina, cactus flower, bergamota, revela un corazón fascinante de white camelia, lirio, gardenia, fresia, y perdura sobre un fondo suntuoso de sándalo, almizcle. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_112.jpg",
+    "olfactoryFamily": "FLORAL BLANCO floral",
+    "gender": "hombre",
+    "sales": 1,
+    "accords": [
+      {
+        "name": "floral blanco",
+        "percentage": 100,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "floral",
+        "percentage": 84,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cítrico",
+        "percentage": 70,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      },
+      {
+        "name": "almizclado",
+        "percentage": 58,
+        "bg": "#64748b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "verde",
+        "percentage": 48,
+        "bg": "#059669",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Flor de azahar",
+          "image": "notes/flor-azahar.jpg"
+        },
+        {
+          "name": "Mandarina",
+          "image": "notes/mandarina.jpg"
+        },
+        {
+          "name": "Cactus Flower",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Bergamota",
+          "image": "notes/bergamota.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "White Camelia",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Lirio",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Gardenia",
+          "image": "notes/gardenia.jpg"
+        },
+        {
+          "name": "Fresia",
+          "image": "notes/jazmin.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Sándalo",
+          "image": "notes/sandalo.jpg"
+        },
+        {
+          "name": "Almizcle",
+          "image": "notes/almizcle.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-137",
+    "code": "137",
+    "name": "Altitude",
+    "reference": "Altitude",
+    "brand": "Victorinox Swiss Army",
+    "description": "Inspirada en Altitude de Victorinox Swiss Army. Pertenece a la prestigiosa familia olfativa AROMÁTICO amaderado. Abre con un despliegue radiante de cedro, enebro, cilantro, revela un corazón fascinante de salvia, menta, galbanum, y perdura sobre un fondo suntuoso de woodsy notes, almizcle. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_137.jpg",
+    "olfactoryFamily": "AROMÁTICO amaderado",
+    "gender": "hombre",
+    "sales": 1,
+    "accords": [
+      {
+        "name": "aromático",
+        "percentage": 100,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 84,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "verde",
+        "percentage": 70,
+        "bg": "#059669",
+        "text": "#ffffff"
+      },
+      {
+        "name": "fresco especiado",
+        "percentage": 58,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      },
+      {
+        "name": "aromático",
+        "percentage": 48,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Cedro",
+          "image": "notes/cedro.jpg"
+        },
+        {
+          "name": "Enebro",
+          "image": "notes/enebro.jpg"
+        },
+        {
+          "name": "Cilantro",
+          "image": "notes/cilantro.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Salvia",
+          "image": "notes/salvia.jpg"
+        },
+        {
+          "name": "Menta",
+          "image": "notes/menta.jpg"
+        },
+        {
+          "name": "Galbanum",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Woodsy Notes",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Almizcle",
+          "image": "notes/almizcle.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-144",
+    "code": "144",
+    "name": "Aqva",
+    "reference": "Aqva",
+    "brand": "Bvlgari",
+    "description": "Inspirada en Aqva de Bvlgari. Pertenece a la prestigiosa familia olfativa CÍTRICO acuático. Abre con un despliegue radiante de mandarina, revela un corazón fascinante de neroli, watery notes, y perdura sobre un fondo suntuoso de pachulí, incienso de olíbano. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_144.jpg",
+    "olfactoryFamily": "CÍTRICO acuático",
+    "gender": "hombre",
+    "sales": 1,
+    "accords": [
+      {
+        "name": "cítrico",
+        "percentage": 100,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      },
+      {
+        "name": "acuático",
+        "percentage": 84,
+        "bg": "#0284c7",
+        "text": "#ffffff"
+      },
+      {
+        "name": "balsámico",
+        "percentage": 70,
+        "bg": "#6b21a8",
+        "text": "#ffffff"
+      },
+      {
+        "name": "fresco",
+        "percentage": 58,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      },
+      {
+        "name": "floral blanco",
+        "percentage": 48,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "ahumado",
+        "percentage": 40,
+        "bg": "#334155",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Mandarina",
+          "image": "notes/mandarina.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Neroli",
+          "image": "notes/flor-azahar.jpg"
+        },
+        {
+          "name": "Watery Notes",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Pachulí",
+          "image": "notes/pachuli.jpg"
+        },
+        {
+          "name": "Incienso de olíbano",
+          "image": "notes/incienso.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-169",
+    "code": "169",
+    "name": "Boss Bottled Night",
+    "reference": "Boss Bottled Night",
+    "brand": "Hugo Boss",
+    "description": "Inspirada en Boss Bottled Night de Hugo Boss. Pertenece a la prestigiosa familia olfativa AMADERADO floral. Abre con un despliegue radiante de lavanda, abedul, revela un corazón fascinante de violeta, y perdura sobre un fondo suntuoso de woodsy notes, almizcle. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_169.jpg",
+    "olfactoryFamily": "AMADERADO floral",
+    "gender": "hombre",
+    "sales": 1,
+    "accords": [
+      {
+        "name": "amaderado",
+        "percentage": 100,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "floral",
+        "percentage": 84,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "atalcado",
+        "percentage": 70,
+        "bg": "#a855f7",
+        "text": "#ffffff"
+      },
+      {
+        "name": "aromático",
+        "percentage": 58,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cuero",
+        "percentage": 48,
+        "bg": "#3b0764",
+        "text": "#ffffff"
+      },
+      {
+        "name": "fresco especiado",
+        "percentage": 40,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Lavanda",
+          "image": "notes/lavanda.jpg"
+        },
+        {
+          "name": "Abedul",
+          "image": "notes/abedul.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Violeta",
+          "image": "notes/violeta.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Woodsy Notes",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Almizcle",
+          "image": "notes/almizcle.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-178",
+    "code": "178",
+    "name": "Bulgari",
+    "reference": "Bulgari",
+    "brand": "Bvlgari",
+    "description": "Inspirada en Bulgari de Bvlgari. Pertenece a la prestigiosa familia olfativa Amaderada Floral. Abre con un despliegue radiante de té, aldehídos, bergamota, lavanda, revela un corazón fascinante de pimienta, iris, madera de gaiac, palo de rosa, y perdura sobre un fondo suntuoso de almizcle, cedro, musgo de roble, vetiver. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_178.jpg",
+    "olfactoryFamily": "Amaderada Floral",
+    "gender": "hombre",
+    "sales": 1,
+    "accords": [
+      {
+        "name": "amaderado",
+        "percentage": 100,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "fresco especiado",
+        "percentage": 84,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      },
+      {
+        "name": "aromático",
+        "percentage": 70,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cítrico",
+        "percentage": 58,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      },
+      {
+        "name": "verde",
+        "percentage": 48,
+        "bg": "#059669",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Té",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Aldehídos",
+          "image": "notes/aldehidos.jpg"
+        },
+        {
+          "name": "Bergamota",
+          "image": "notes/bergamota.jpg"
+        },
+        {
+          "name": "Lavanda",
+          "image": "notes/lavanda.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Pimienta",
+          "image": "notes/pimienta-negra.jpg"
+        },
+        {
+          "name": "Iris",
+          "image": "notes/iris.jpg"
+        },
+        {
+          "name": "Madera de gaiac",
+          "image": "notes/guayaco.jpg"
+        },
+        {
+          "name": "Palo de rosa",
+          "image": "notes/rosa.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Almizcle",
+          "image": "notes/almizcle.jpg"
+        },
+        {
+          "name": "Cedro",
+          "image": "notes/cedro.jpg"
+        },
+        {
+          "name": "Musgo de roble",
+          "image": "notes/musgo-roble.jpg"
+        },
+        {
+          "name": "Vetiver",
+          "image": "notes/vetiver.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-195",
+    "code": "195",
+    "name": "CR7",
+    "reference": "CR7",
+    "brand": "Cristiano Ronaldo",
+    "description": "Inspirada en CR7 de Cristiano Ronaldo. Pertenece a la prestigiosa familia olfativa Perfumada. Abre con un despliegue radiante de lavanda, revela un corazón fascinante de cardamomo, y perdura sobre un fondo suntuoso de mugwort. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_195.jpg",
+    "olfactoryFamily": "Perfumada",
+    "gender": "hombre",
+    "sales": 1,
+    "accords": [
+      {
+        "name": "cítrico",
+        "percentage": 100,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 84,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "aromático",
+        "percentage": 70,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      },
+      {
+        "name": "ámbar",
+        "percentage": 58,
+        "bg": "#86198f",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Lavanda",
+          "image": "notes/lavanda.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Cardamomo",
+          "image": "notes/cardamomo.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Mugwort",
+          "image": "notes/maderas.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-212",
+    "code": "212",
+    "name": "Drakar",
+    "reference": "Drakar",
+    "brand": "Guy Laroche",
+    "description": "Inspirada en Drakar de Guy Laroche. Pertenece a la prestigiosa familia olfativa Aromática Fougère. Abre con un despliegue radiante de lavanda, limón, bergamota, menta, revela un corazón fascinante de enebro, coriandro, canela, clavel, y perdura sobre un fondo suntuoso de musgo de roble, cuero, cedro, pino. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_212.jpg",
+    "olfactoryFamily": "Aromática Fougère",
+    "gender": "hombre",
+    "sales": 1,
+    "accords": [
+      {
+        "name": "aromático",
+        "percentage": 100,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 84,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "fresco especiado",
+        "percentage": 70,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      },
+      {
+        "name": "verde",
+        "percentage": 58,
+        "bg": "#059669",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Lavanda",
+          "image": "notes/lavanda.jpg"
+        },
+        {
+          "name": "Limón",
+          "image": "notes/limon.jpg"
+        },
+        {
+          "name": "Bergamota",
+          "image": "notes/bergamota.jpg"
+        },
+        {
+          "name": "Menta",
+          "image": "notes/menta.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Enebro",
+          "image": "notes/enebro.jpg"
+        },
+        {
+          "name": "Coriandro",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Canela",
+          "image": "notes/canela.jpg"
+        },
+        {
+          "name": "Clavel",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Musgo de roble",
+          "image": "notes/musgo-roble.jpg"
+        },
+        {
+          "name": "Cuero",
+          "image": "notes/cuero.jpg"
+        },
+        {
+          "name": "Cedro",
+          "image": "notes/cedro.jpg"
+        },
+        {
+          "name": "Pino",
+          "image": "notes/maderas.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-215",
+    "code": "215",
+    "name": "Emporio",
+    "reference": "Emporio",
+    "brand": "Giorgio Armani",
+    "description": "Inspirada en Emporio de Giorgio Armani. Pertenece a la prestigiosa familia olfativa DULCE atalcado. Abre con un despliegue radiante de litchi, frambuesa, maracuyá, revela un corazón fascinante de rosa búlgara, lirio de los valles, violeta, y perdura sobre un fondo suntuoso de praliné, pachulí, vainilla. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_215.jpg",
+    "olfactoryFamily": "DULCE atalcado",
+    "gender": "hombre",
+    "sales": 1,
+    "accords": [
+      {
+        "name": "dulce",
+        "percentage": 100,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      },
+      {
+        "name": "atalcado",
+        "percentage": 84,
+        "bg": "#a855f7",
+        "text": "#ffffff"
+      },
+      {
+        "name": "afrutado",
+        "percentage": 70,
+        "bg": "#db2777",
+        "text": "#ffffff"
+      },
+      {
+        "name": "floral",
+        "percentage": 58,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "avainillado",
+        "percentage": 48,
+        "bg": "#9333ea",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Litchi",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Frambuesa",
+          "image": "notes/frambuesa.jpg"
+        },
+        {
+          "name": "Maracuyá",
+          "image": "notes/maracuya.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Rosa búlgara",
+          "image": "notes/rosa.jpg"
+        },
+        {
+          "name": "Lirio de los valles",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Violeta",
+          "image": "notes/violeta.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Praliné",
+          "image": "notes/avellana.jpg"
+        },
+        {
+          "name": "Pachulí",
+          "image": "notes/pachuli.jpg"
+        },
+        {
+          "name": "Vainilla",
+          "image": "notes/vainilla.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-221",
+    "code": "221",
+    "name": "Euphoria",
+    "reference": "Euphoria",
+    "brand": "Calvin Klein",
+    "description": "Inspirada en Euphoria de Calvin Klein. Pertenece a la prestigiosa familia olfativa AMADERADO floral. Abre con un despliegue radiante de granada, revela un corazón fascinante de flor de loto, orquídea, y perdura sobre un fondo suntuoso de violeta, ámbar, almizcle, mahogany. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_221.jpg",
+    "olfactoryFamily": "AMADERADO floral",
+    "gender": "hombre",
+    "sales": 1,
+    "accords": [
+      {
+        "name": "amaderado",
+        "percentage": 100,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "floral",
+        "percentage": 84,
+        "bg": "#c026d3",
+        "text": "#ffffff"
+      },
+      {
+        "name": "atalcado",
+        "percentage": 70,
+        "bg": "#a855f7",
+        "text": "#ffffff"
+      },
+      {
+        "name": "dulce",
+        "percentage": 58,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      },
+      {
+        "name": "ámbar",
+        "percentage": 48,
+        "bg": "#86198f",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Granada",
+          "image": "notes/granada.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Flor de loto",
+          "image": "notes/flor-loto.jpg"
+        },
+        {
+          "name": "Orquídea",
+          "image": "notes/orquidea.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Violeta",
+          "image": "notes/violeta.jpg"
+        },
+        {
+          "name": "Ámbar",
+          "image": "notes/ambar.jpg"
+        },
+        {
+          "name": "Almizcle",
+          "image": "notes/almizcle.jpg"
+        },
+        {
+          "name": "Mahogany",
+          "image": "notes/maderas.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-228",
+    "code": "228",
+    "name": "Guess",
+    "reference": "Guess",
+    "brand": "Guess",
+    "description": "Inspirada en Guess de Guess. Pertenece a la prestigiosa familia olfativa FRESCO ESPECIADO amaderado. Abre con un despliegue radiante de bergamota, pimienta blanca, enebro, revela un corazón fascinante de geranio, madera de cachemira, jazmín, y perdura sobre un fondo suntuoso de almizcle, pachulí, cedro. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_228.jpg",
+    "olfactoryFamily": "FRESCO ESPECIADO amaderado",
+    "gender": "hombre",
+    "sales": 1,
+    "accords": [
+      {
+        "name": "fresco especiado",
+        "percentage": 100,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 84,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "aromático",
+        "percentage": 70,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      },
+      {
+        "name": "almizclado",
+        "percentage": 58,
+        "bg": "#64748b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cítrico",
+        "percentage": 48,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Bergamota",
+          "image": "notes/bergamota.jpg"
+        },
+        {
+          "name": "Pimienta blanca",
+          "image": "notes/pimienta-blanca.jpg"
+        },
+        {
+          "name": "Enebro",
+          "image": "notes/enebro.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Geranio",
+          "image": "notes/geranio.jpg"
+        },
+        {
+          "name": "Madera de cachemira",
+          "image": "notes/cachemira.jpg"
+        },
+        {
+          "name": "Jazmín",
+          "image": "notes/jazmin.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Almizcle",
+          "image": "notes/almizcle.jpg"
+        },
+        {
+          "name": "Pachulí",
+          "image": "notes/pachuli.jpg"
+        },
+        {
+          "name": "Cedro",
+          "image": "notes/cedro.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-252",
+    "code": "252",
+    "name": "Invictus Intense",
+    "reference": "Invictus Intense",
+    "brand": "Paco Rabanne",
+    "description": "El aroma del triunfo elevado a su máxima potencia. Una colisión ardiente entre la frescura salina del laurel y el azahar con notas licorosas embriagadoras sobre un lecho dorado de ámbar gris.",
+    "image": "images/kode/kode_252.jpg",
+    "olfactoryFamily": "Ámbar Amaderada",
+    "gender": "hombre",
+    "sales": 1,
+    "accords": [
+      {
+        "name": "ámbar",
+        "percentage": 100,
+        "bg": "#86198f",
+        "text": "#ffffff"
+      },
+      {
+        "name": "marino",
+        "percentage": 84,
+        "bg": "#0284c7",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cálido especiado",
+        "percentage": 70,
+        "bg": "#701a75",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 58,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "dulce",
+        "percentage": 48,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Pimienta negra",
+          "image": "notes/pimienta-negra.jpg"
+        },
+        {
+          "name": "Flor de azahar",
+          "image": "notes/flor-azahar.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Laurel",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Licor",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Ámbar gris",
+          "image": "notes/ambar.jpg"
+        },
+        {
+          "name": "Ámbar negro",
+          "image": "notes/ambar.jpg"
+        },
+        {
+          "name": "Sal",
+          "image": "notes/notas-marinas.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-260",
+    "code": "260",
+    "name": "K",
+    "reference": "K",
+    "brand": "Dolce & Gabbana",
+    "description": "Inspirada en K de Dolce & Gabbana. Pertenece a la prestigiosa familia olfativa Aromática Fougère. Abre con un despliegue radiante de lavanda, limón, bergamota, menta, revela un corazón fascinante de enebro, coriandro, canela, clavel, y perdura sobre un fondo suntuoso de musgo de roble, cuero, cedro, pino. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_260.jpg",
+    "olfactoryFamily": "Aromática Fougère",
+    "gender": "hombre",
+    "sales": 1,
+    "accords": [
+      {
+        "name": "aromático",
+        "percentage": 100,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 84,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "fresco especiado",
+        "percentage": 70,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      },
+      {
+        "name": "verde",
+        "percentage": 58,
+        "bg": "#059669",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Lavanda",
+          "image": "notes/lavanda.jpg"
+        },
+        {
+          "name": "Limón",
+          "image": "notes/limon.jpg"
+        },
+        {
+          "name": "Bergamota",
+          "image": "notes/bergamota.jpg"
+        },
+        {
+          "name": "Menta",
+          "image": "notes/menta.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Enebro",
+          "image": "notes/enebro.jpg"
+        },
+        {
+          "name": "Coriandro",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Canela",
+          "image": "notes/canela.jpg"
+        },
+        {
+          "name": "Clavel",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Musgo de roble",
+          "image": "notes/musgo-roble.jpg"
+        },
+        {
+          "name": "Cuero",
+          "image": "notes/cuero.jpg"
+        },
+        {
+          "name": "Cedro",
+          "image": "notes/cedro.jpg"
+        },
+        {
+          "name": "Pino",
+          "image": "notes/maderas.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-272",
+    "code": "272",
+    "name": "L1212 Rojo",
+    "reference": "L1212 Rojo",
+    "brand": "Lacoste",
+    "description": "Inspirada en L1212 Rojo de Lacoste. Pertenece a la prestigiosa familia olfativa Amaderada Especiada. Abre con un despliegue radiante de mango, rooibos, mandarina, revela un corazón fascinante de cardamomo, pimienta negra, jengibre, y perdura sobre un fondo suntuoso de maderas nobles, acacia, benjuí. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_272.jpg",
+    "olfactoryFamily": "Amaderada Especiada",
+    "gender": "hombre",
+    "sales": 1,
+    "accords": [
+      {
+        "name": "cálido especiado",
+        "percentage": 100,
+        "bg": "#701a75",
+        "text": "#ffffff"
+      },
+      {
+        "name": "afrutado",
+        "percentage": 84,
+        "bg": "#db2777",
+        "text": "#ffffff"
+      },
+      {
+        "name": "fresco especiado",
+        "percentage": 70,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 58,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Mango",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Rooibos",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Mandarina",
+          "image": "notes/mandarina.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Cardamomo",
+          "image": "notes/cardamomo.jpg"
+        },
+        {
+          "name": "Pimienta negra",
+          "image": "notes/pimienta-negra.jpg"
+        },
+        {
+          "name": "Jengibre",
+          "image": "notes/jengibre.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Maderas nobles",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Acacia",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Benjuí",
+          "image": "notes/benjui.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-275",
+    "code": "275",
+    "name": "Lacoste Essential",
+    "reference": "Lacoste Essential",
+    "brand": "Lacoste",
+    "description": "Inspirada en Lacoste Essential de Lacoste. Pertenece a la prestigiosa familia olfativa AROMÁTICO fresco especiado. Abre con un despliegue radiante de lima, lavanda, salvia, bergamota, revela un corazón fascinante de clavel, notas verdes, galbanum, albahaca, y perdura sobre un fondo suntuoso de haba tonka, ámbar, almizcle, musgo de roble. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_275.jpg",
+    "olfactoryFamily": "AROMÁTICO fresco especiado",
+    "gender": "hombre",
+    "sales": 1,
+    "accords": [
+      {
+        "name": "aromático",
+        "percentage": 100,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      },
+      {
+        "name": "fresco especiado",
+        "percentage": 84,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cítrico",
+        "percentage": 70,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      },
+      {
+        "name": "verde",
+        "percentage": 58,
+        "bg": "#059669",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 48,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Lima",
+          "image": "notes/lima.jpg"
+        },
+        {
+          "name": "Lavanda",
+          "image": "notes/lavanda.jpg"
+        },
+        {
+          "name": "Salvia",
+          "image": "notes/salvia.jpg"
+        },
+        {
+          "name": "Bergamota",
+          "image": "notes/bergamota.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Clavel",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Notas verdes",
+          "image": "notes/notas-verdes.jpg"
+        },
+        {
+          "name": "Galbanum",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Albahaca",
+          "image": "notes/albahaca.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Haba tonka",
+          "image": "notes/haba-tonka.jpg"
+        },
+        {
+          "name": "Ámbar",
+          "image": "notes/ambar.jpg"
+        },
+        {
+          "name": "Almizcle",
+          "image": "notes/almizcle.jpg"
+        },
+        {
+          "name": "Musgo de roble",
+          "image": "notes/musgo-roble.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-306",
+    "code": "306",
+    "name": "Obsession",
+    "reference": "Obsession",
+    "brand": "Calvin Klein",
+    "description": "Inspirada en Obsession de Calvin Klein. Pertenece a la prestigiosa familia olfativa CÁLIDO ESPECIADO amaderado. Abre con un despliegue radiante de notas verdes, mandarina, vainilla, melocotón, revela un corazón fascinante de spices, cilantro, sándalo, flor de azahar, y perdura sobre un fondo suntuoso de ámbar, almizcle, civet, vainilla. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_306.jpg",
+    "olfactoryFamily": "CÁLIDO ESPECIADO amaderado",
+    "gender": "hombre",
+    "sales": 1,
+    "accords": [
+      {
+        "name": "cálido especiado",
+        "percentage": 100,
+        "bg": "#701a75",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 84,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "balsámico",
+        "percentage": 70,
+        "bg": "#6b21a8",
+        "text": "#ffffff"
+      },
+      {
+        "name": "atalcado",
+        "percentage": 58,
+        "bg": "#a855f7",
+        "text": "#ffffff"
+      },
+      {
+        "name": "ámbar",
+        "percentage": 48,
+        "bg": "#86198f",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Notas verdes",
+          "image": "notes/notas-verdes.jpg"
+        },
+        {
+          "name": "Mandarina",
+          "image": "notes/mandarina.jpg"
+        },
+        {
+          "name": "Vainilla",
+          "image": "notes/vainilla.jpg"
+        },
+        {
+          "name": "Melocotón",
+          "image": "notes/melocoton.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Spices",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Cilantro",
+          "image": "notes/cilantro.jpg"
+        },
+        {
+          "name": "Sándalo",
+          "image": "notes/sandalo.jpg"
+        },
+        {
+          "name": "Flor de azahar",
+          "image": "notes/flor-azahar.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Ámbar",
+          "image": "notes/ambar.jpg"
+        },
+        {
+          "name": "Almizcle",
+          "image": "notes/almizcle.jpg"
+        },
+        {
+          "name": "Civet",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Vainilla",
+          "image": "notes/vainilla.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-319",
+    "code": "319",
+    "name": "Pino Silvestre",
+    "reference": "Pino Silvestre",
+    "brand": "Pino Silvestre",
+    "description": "Inspirada en Pino Silvestre de Pino Silvestre. Pertenece a la prestigiosa familia olfativa AROMÁTICO amaderado. Abre con un despliegue radiante de enebro, lavanda, albahaca, bergamota, revela un corazón fascinante de clavel, salvia, caraway, pine tree needles, y perdura sobre un fondo suntuoso de haba tonka, ámbar, almizcle, musgo de roble. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_319.jpg",
+    "olfactoryFamily": "AROMÁTICO amaderado",
+    "gender": "hombre",
+    "sales": 1,
+    "accords": [
+      {
+        "name": "aromático",
+        "percentage": 100,
+        "bg": "#4338ca",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 84,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "fresco especiado",
+        "percentage": 70,
+        "bg": "#4f46e5",
+        "text": "#ffffff"
+      },
+      {
+        "name": "verde",
+        "percentage": 58,
+        "bg": "#059669",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cítrico",
+        "percentage": 48,
+        "bg": "#6366f1",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Enebro",
+          "image": "notes/enebro.jpg"
+        },
+        {
+          "name": "Lavanda",
+          "image": "notes/lavanda.jpg"
+        },
+        {
+          "name": "Albahaca",
+          "image": "notes/albahaca.jpg"
+        },
+        {
+          "name": "Bergamota",
+          "image": "notes/bergamota.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Clavel",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Salvia",
+          "image": "notes/salvia.jpg"
+        },
+        {
+          "name": "Caraway",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Pine Tree Needles",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Haba tonka",
+          "image": "notes/haba-tonka.jpg"
+        },
+        {
+          "name": "Ámbar",
+          "image": "notes/ambar.jpg"
+        },
+        {
+          "name": "Almizcle",
+          "image": "notes/almizcle.jpg"
+        },
+        {
+          "name": "Musgo de roble",
+          "image": "notes/musgo-roble.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-332",
+    "code": "332",
+    "name": "Polo Ultra Blue",
+    "reference": "Polo Ultra Blue",
+    "brand": "Ralph Lauren",
+    "description": "Inspirada en Polo Ultra Blue de Ralph Lauren. Pertenece a la prestigiosa familia olfativa ACUÁTICO. Abre con un despliegue radiante de fresh, revela un corazón fascinante de citrus, y perdura sobre un fondo suntuoso de synthetic. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_332.jpg",
+    "olfactoryFamily": "ACUÁTICO",
+    "gender": "hombre",
+    "sales": 1,
+    "accords": [
+      {
+        "name": "acuático",
+        "percentage": 100,
+        "bg": "#0284c7",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Fresh",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Citrus",
+          "image": "notes/maderas.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Synthetic",
+          "image": "notes/maderas.jpg"
+        }
+      ]
+    }
+  }
+];
