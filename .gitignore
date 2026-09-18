@@ -11,6 +11,5 @@ pdf_page-*.png
 label_crop_test.jpg
 kalam_*.jpg
 crop_inspect/
-notes/
 clean_erase_666.js
 build_full_catalog.js
