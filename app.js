@@ -6,7 +6,7 @@ const WHATSAPP_NUMBER = '50378339470';
 let CATALOG = [];
 let currentSearch = '';
 let currentBrand = 'todas';
-let currentGender = 'todos';
+let currentGender = 'hombre';
 let cart = [];
 
 // Estado por perfume para la selección de concentración en la tarjeta (true = extra shot)
@@ -112,7 +112,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 // Pools de productos: primeros 6 más vendidos (top 3 con badge) y resto aleatorio
 const catalogPools = {
-  todos: [],
   hombre: [],
   mujer: [],
   unisex: []
@@ -133,19 +132,16 @@ function initializeCatalogOrder() {
     const savedPools = sessionStorage.getItem('kode_catalog_pools');
     if (savedPools) {
       const parsed = JSON.parse(savedPools);
-      if (parsed && parsed.todos && parsed.todos.length > 0) {
+      if (parsed && parsed.hombre && parsed.hombre.length > 0) {
         Object.assign(catalogPools, parsed);
         return;
       }
     }
   } catch (e) {}
 
-  const genders = ['todos', 'hombre', 'mujer', 'unisex'];
+  const genders = ['hombre', 'mujer', 'unisex'];
   genders.forEach(g => {
-    const pool = (g === 'todos' 
-      ? [...CATALOG] 
-      : CATALOG.filter(item => item.gender === g)
-    ).map(item => ({ ...item }));
+    const pool = CATALOG.filter(item => item.gender === g).map(item => ({ ...item }));
 
     // 1. Ordenar por ventas estrictamente descendente
     pool.sort((a, b) => (b.sales || 0) - (a.sales || 0));
@@ -188,17 +184,47 @@ async function loadCatalogData() {
   }
 }
 
-// Configurar pestañas del selector de género (Todos / Hombre / Mujer / Unisex)
+// Configurar pestañas del selector de género (Hombre / Mujer / Unisex / Maceración)
 function setupGenderTabs() {
   const tabs = document.querySelectorAll('.gender-tab');
-  const urlGender = new URLSearchParams(window.location.search).get('gender');
-  if (urlGender && ['todos', 'hombre', 'mujer', 'unisex'].includes(urlGender)) {
-    tabs.forEach(t => {
-      const match = t.dataset.gender === urlGender;
-      t.classList.toggle('active', match);
-      t.setAttribute('aria-selected', match ? 'true' : 'false');
-    });
-    currentGender = urlGender;
+  const catalogWrap = document.getElementById('catalog-showcase-wrap');
+  const maceracionWrap = document.getElementById('maceracion-blog');
+  const searchWrap = document.querySelector('.search-input-wrap');
+
+  function switchTab(gender, userInitiated = false) {
+    if (gender === 'maceracion') {
+      if (catalogWrap) catalogWrap.style.display = 'none';
+      if (maceracionWrap) {
+        maceracionWrap.style.display = 'block';
+        if (userInitiated) {
+          const nav = document.querySelector('.apple-nav');
+          const filterBar = document.querySelector('.sticky-filter-bar');
+          const offset = (nav ? nav.offsetHeight : 65) + (filterBar ? filterBar.offsetHeight : 50) + 20;
+          const targetTop = maceracionWrap.getBoundingClientRect().top + window.scrollY - offset;
+          window.scrollTo({ top: Math.max(0, targetTop), behavior: 'smooth' });
+        }
+      }
+      if (searchWrap) searchWrap.style.display = 'none';
+
+      const eyebrow = document.getElementById('hero-eyebrow');
+      if (eyebrow) eyebrow.textContent = 'GUÍA DE PERFUMERÍA';
+    } else {
+      if (catalogWrap) catalogWrap.style.display = 'block';
+      if (maceracionWrap) maceracionWrap.style.display = 'none';
+      if (searchWrap) searchWrap.style.display = '';
+
+      currentGender = gender;
+
+      const eyebrow = document.getElementById('hero-eyebrow');
+      if (eyebrow) {
+        if (currentGender === 'mujer') eyebrow.textContent = 'COLECCIÓN FEMENINA';
+        else if (currentGender === 'hombre') eyebrow.textContent = 'COLECCIÓN MASCULINA';
+        else if (currentGender === 'unisex') eyebrow.textContent = 'COLECCIÓN UNISEX';
+      }
+
+      populateBrandSelect();
+      renderCatalog();
+    }
   }
 
   tabs.forEach(tab => {
@@ -209,30 +235,30 @@ function setupGenderTabs() {
       });
       tab.classList.add('active');
       tab.setAttribute('aria-selected', 'true');
-      currentGender = tab.dataset.gender || 'todos';
 
-      // Actualizar dinámicamente el eyebrow del hero si está visible
-      const eyebrow = document.getElementById('hero-eyebrow');
-      if (eyebrow) {
-        if (currentGender === 'mujer') eyebrow.textContent = 'COLECCIÓN FEMENINA';
-        else if (currentGender === 'hombre') eyebrow.textContent = 'COLECCIÓN MASCULINA';
-        else if (currentGender === 'unisex') eyebrow.textContent = 'COLECCIÓN UNISEX';
-        else eyebrow.textContent = 'CATÁLOGO GENERAL';
-      }
+      // Asegurar que la pestaña activa sea visible en pantallas móviles con scroll horizontal
+      try {
+        tab.scrollIntoView({ behavior: 'smooth', inline: 'nearest', block: 'nearest' });
+      } catch (e) {}
 
-      // Reiniciar y actualizar selector de marcas para el género activo
-      populateBrandSelect();
-      renderCatalog();
+      const selected = tab.dataset.gender || 'hombre';
+      switchTab(selected, true);
     });
   });
 
-  // Soporte para parámetro URL ?gender=mujer o ?gender=hombre
+  // Soporte para parámetro URL ?gender=mujer o ?gender=maceracion
   const urlParams = new URLSearchParams(window.location.search);
   const paramGender = urlParams.get('gender');
   if (paramGender) {
     const target = Array.from(tabs).find(t => t.dataset.gender === paramGender.toLowerCase());
-    if (target) target.click();
+    if (target) {
+      target.click();
+      return;
+    }
   }
+
+  // Por defecto 'hombre'
+  switchTab(currentGender || 'hombre');
 }
 
 // Llenar selector de marcas / diseñadores según el género actual
@@ -240,9 +266,7 @@ function populateBrandSelect() {
   const select = document.getElementById('brand-select');
   if (!select) return;
 
-  const pool = currentGender === 'todos'
-    ? CATALOG
-    : CATALOG.filter(item => item.gender === currentGender);
+  const pool = CATALOG.filter(item => item.gender === currentGender);
 
   const brands = [...new Set(pool.map(item => item.brand).filter(Boolean))].sort();
 
@@ -529,7 +553,7 @@ function renderCatalog() {
 
   const sourcePool = catalogPools[currentGender] && catalogPools[currentGender].length > 0
     ? catalogPools[currentGender]
-    : (currentGender === 'todos' ? CATALOG : CATALOG.filter(item => item.gender === currentGender));
+    : CATALOG.filter(item => item.gender === currentGender);
 
   const filtered = sourcePool.filter(item => {
     const matchesBrand = currentBrand === 'todas' || item.brand === currentBrand;

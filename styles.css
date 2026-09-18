@@ -711,12 +711,20 @@ body {
 @media (max-width: 640px) {
   .gender-segmented-control {
     width: 100%;
-    justify-content: space-between;
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 3px;
+    gap: 3px;
+  }
+  .gender-segmented-control::-webkit-scrollbar {
+    display: none;
   }
   .gender-tab {
-    flex: 1;
+    flex: 0 0 auto;
     text-align: center;
-    padding: 7px 6px;
+    padding: 7px 12px;
     font-size: 0.8rem;
   }
 }
@@ -1898,6 +1906,144 @@ body {
 .disclaimer-text strong {
   color: var(--text-sub);
   font-weight: 700;
+}
+
+/* ================= SECCIÓN BLOG: QUÉ ES LA MACERACIÓN ================= */
+.maceracion-blog {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 30px 16px 80px 16px;
+  animation: fadeInBlog 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeInBlog {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.maceracion-header {
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto 36px auto;
+  padding: 0 16px;
+}
+
+.maceracion-eyebrow {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--amber-gold);
+  margin-bottom: 12px;
+}
+
+.maceracion-title {
+  font-size: clamp(1.6rem, 3.5vw, 2.3rem);
+  font-weight: 800;
+  line-height: 1.22;
+  letter-spacing: -0.025em;
+  color: var(--text-main);
+  margin-bottom: 16px;
+}
+
+.maceracion-lead {
+  font-size: clamp(0.95rem, 2vw, 1.12rem);
+  line-height: 1.65;
+  color: var(--text-sub);
+}
+
+.maceracion-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.maceracion-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 28px 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.maceracion-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+}
+
+.maceracion-card-icon {
+  font-size: 1.75rem;
+  margin-bottom: 14px;
+}
+
+.maceracion-card-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  color: var(--text-main);
+  margin-bottom: 12px;
+  line-height: 1.35;
+}
+
+.maceracion-card-text {
+  font-size: 0.94rem;
+  line-height: 1.65;
+  color: var(--text-sub);
+}
+
+.maceracion-card-text strong {
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+.maceracion-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.maceracion-list li {
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: var(--text-sub);
+  position: relative;
+  padding-left: 20px;
+}
+
+.maceracion-list li::before {
+  content: "•";
+  position: absolute;
+  left: 4px;
+  color: var(--text-main);
+  font-weight: bold;
+}
+
+.maceracion-list li strong {
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .maceracion-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .maceracion-card {
+    padding: 22px 18px;
+  }
 }
 
 /* ================= PREVENCIÓN TOTAL DE MODO OSCURO FORZADO ================= */
