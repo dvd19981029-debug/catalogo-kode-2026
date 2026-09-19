@@ -176,114 +176,340 @@
       step: 2,
       key: 'vibe',
       badge: 'PASO 2 DE 4',
-      title: '¿Qué vibra o aura deseas proyectar?',
-      subtitle: 'Elige la energía con la que quieres impactar a quienes te rodean.',
-      options: [
-        {
-          id: 'power',
-          icon: '👑',
-          title: 'Poder, Lujo y Éxito Alfa',
-          desc: 'Presencia imponente de líder. Que sepan que llegué y mande respeto.'
-        },
-        {
-          id: 'seduction',
-          icon: '🔥',
-          title: 'Seducción y Magnetismo Prohibido',
-          desc: 'Misterioso, sensual e irresistible. Un imán de miradas y cumplidos de cerca.'
-        },
-        {
-          id: 'fresh',
-          icon: '⚡',
-          title: 'Frescura Imparable y Energía Limpia',
-          desc: 'Vibrante, dinámico y pulcro. Como recién salido de una ducha de lujo.'
-        },
-        {
-          id: 'elegance',
-          icon: '💎',
-          title: 'Elegancia Silenciosa y Clase Atemporal',
-          desc: 'Lujo sutil y refinado. Seguro de sí mismo, sobrio y con impecable buen gusto.'
-        },
-        {
-          id: 'sweet',
-          icon: '🍯',
-          title: 'Dulzura Cálida y Encanto Envolvente',
-          desc: 'Acogedor, tentador y goloso. Un abrazo cálido del que nadie se quiere soltar.'
-        }
-      ]
+      titlesByGender: {
+        hombre: '¿Qué vibra o aura deseas proyectar?',
+        mujer: '¿Qué vibra o aura deseas proyectar?',
+        unisex: '¿Qué vibra o personalidad buscas?'
+      },
+      subtitlesByGender: {
+        hombre: 'Elige la energía con la que quieres impactar a quienes te rodean.',
+        mujer: 'Elige la energía y presencia con la que quieres cautivar hoy.',
+        unisex: 'Elige la declaración olfativa que mejor define tu estilo.'
+      },
+      optionsByGender: {
+        hombre: [
+          {
+            id: 'power',
+            icon: '👑',
+            title: 'Poder, Lujo y Éxito Alfa',
+            desc: 'Presencia imponente de líder. Que sepan que llegué y mande respeto.'
+          },
+          {
+            id: 'seduction',
+            icon: '🔥',
+            title: 'Seducción y Magnetismo Prohibido',
+            desc: 'Misterioso, sensual e irresistible. Un imán de miradas y cumplidos de cerca.'
+          },
+          {
+            id: 'fresh',
+            icon: '⚡',
+            title: 'Frescura Imparable y Energía Limpia',
+            desc: 'Vibrante, dinámico y pulcro. Como recién salido de una ducha de lujo.'
+          },
+          {
+            id: 'elegance',
+            icon: '💎',
+            title: 'Elegancia Silenciosa y Clase Atemporal',
+            desc: 'Lujo sutil y refinado. Seguro de sí mismo, sobrio y con impecable buen gusto.'
+          },
+          {
+            id: 'sweet',
+            icon: '🍯',
+            title: 'Dulzura Cálida y Encanto Envolvente',
+            desc: 'Acogedor, tentador y goloso. Un abrazo cálido del que nadie se quiere soltar.'
+          }
+        ],
+        mujer: [
+          {
+            id: 'power',
+            icon: '👑',
+            title: 'Seguridad, Glamour & Empoderamiento',
+            desc: 'Aura de mujer exitosa y magnética. Imponente, segura y dueña de su espacio.'
+          },
+          {
+            id: 'seduction',
+            icon: '💋',
+            title: 'Sensualidad, Misterio & Femme Fatale',
+            desc: 'Irresistible, seductora y apasionada. Un imán de miradas y cumplidos al pasar.'
+          },
+          {
+            id: 'fresh',
+            icon: '✨',
+            title: 'Frescura Radiante, Luz & Vitalidad',
+            desc: 'Limpia, luminosa, alegre y chic. Sensación de brisa fresca, bienestar y energía viva.'
+          },
+          {
+            id: 'elegance',
+            icon: '💎',
+            title: 'Elegancia Chic & Distinción Atemporal',
+            desc: 'Sofisticada, impecable y refinada. Buen gusto absoluto con porte de alta costura.'
+          },
+          {
+            id: 'sweet',
+            icon: '💖',
+            title: 'Dulzura Adictiva, Vainilla & Encanto',
+            desc: 'Deliciosa, envolvente y coqueta. Un abrazo dulce y tentador que nadie olvida.'
+          }
+        ],
+        unisex: [
+          {
+            id: 'power',
+            icon: '👑',
+            title: 'Exclusividad, Estatus & Jerarquía',
+            desc: 'Personalidad arrolladora y de autor. Un halo sofisticado que impone distinción.'
+          },
+          {
+            id: 'seduction',
+            icon: '🔥',
+            title: 'Atracción Enigmática & Magnetismo',
+            desc: 'Misterioso, hipnótico y adictivo en piel. Deja una huella inolvidable y cercana.'
+          },
+          {
+            id: 'fresh',
+            icon: '🌊',
+            title: 'Frescura Pura & Minimalismo Pulcro',
+            desc: 'Limpio, tonificante, moderno y cristalino. Una bocanada revitalizante de puro lujo.'
+          },
+          {
+            id: 'elegance',
+            icon: '💎',
+            title: 'Lujo Silencioso & Vanguardia de Nicho',
+            desc: 'Alta perfumería, sobrio y contemporáneo. Para quienes aprecian la maestría artesanal.'
+          },
+          {
+            id: 'sweet',
+            icon: '🍯',
+            title: 'Calidez Ambarina & Adicción Suntuosa',
+            desc: 'Notas tostadas, envolventes y golosas. Confort cálido y adictivo de máxima calidad.'
+          }
+        ]
+      }
     },
     {
       step: 3,
       key: 'occasion',
       badge: 'PASO 3 DE 4',
-      title: '¿En qué momentos será tu arma secreta?',
-      subtitle: 'Dinos cuándo lo vas a lucir más.',
-      options: [
-        {
-          id: 'daily',
-          icon: '💼',
-          title: 'Uso Diario, Trabajo y Oficina',
-          desc: 'Ser quien mejor huele todos los días sin abrumar a nadie.'
-        },
-        {
-          id: 'night',
-          icon: '🌙',
-          title: 'Citas Especiales y Salidas Nocturnas',
-          desc: 'Máxima estela y fijación para conquistar y arrancar suspiros.'
-        },
-        {
-          id: 'signature',
-          icon: '🌟',
-          title: 'Mi Firma Personal 24/7',
-          desc: 'Un aroma versátil y todoterreno que me identifique siempre.'
-        },
-        {
-          id: 'events',
-          icon: '🥂',
-          title: 'Fiestas, Eventos y Momentos VIP',
-          desc: 'Destacar entre la multitud y que me volteen a ver al pasar.'
-        }
-      ]
+      titlesByGender: {
+        hombre: '¿En qué momentos será tu arma secreta?',
+        mujer: '¿Para qué ocasión buscas tu perfume?',
+        unisex: '¿En qué momentos lo vas a utilizar?'
+      },
+      subtitlesByGender: {
+        hombre: 'Dinos cuándo lo vas a lucir más.',
+        mujer: 'Dinos en qué momentos quieres que sea tu cómplice ideal.',
+        unisex: 'Dinos el momento o uso principal que tienes en mente.'
+      },
+      optionsByGender: {
+        hombre: [
+          {
+            id: 'daily',
+            icon: '💼',
+            title: 'Uso Diario, Trabajo y Oficina',
+            desc: 'Ser quien mejor huele todos los días sin abrumar a nadie.'
+          },
+          {
+            id: 'night',
+            icon: '🌙',
+            title: 'Citas Especiales y Salidas Nocturnas',
+            desc: 'Máxima estela y fijación para conquistar y arrancar suspiros.'
+          },
+          {
+            id: 'signature',
+            icon: '🌟',
+            title: 'Mi Firma Personal 24/7',
+            desc: 'Un aroma versátil y todoterreno que me identifique siempre.'
+          },
+          {
+            id: 'events',
+            icon: '🥂',
+            title: 'Fiestas, Eventos y Momentos VIP',
+            desc: 'Destacar entre la multitud y que me volteen a ver al pasar.'
+          }
+        ],
+        mujer: [
+          {
+            id: 'daily',
+            icon: '💼',
+            title: 'Día a Día, Oficina & Rutina Chic',
+            desc: 'Oler impecable, femenina y fresca todo el día sin abrumar.'
+          },
+          {
+            id: 'night',
+            icon: '🌙',
+            title: 'Citas Románticas & Noches Especiales',
+            desc: 'Estela hipnótica e intensa para enamorar, cautivar y dejar huella.'
+          },
+          {
+            id: 'signature',
+            icon: '🌟',
+            title: 'Mi Firma Personal (Mi Sello Diario)',
+            desc: 'El aroma por el que todos me reconozcan y recuerden siempre.'
+          },
+          {
+            id: 'events',
+            icon: '🥂',
+            title: 'Fiestas, Galas & Eventos Inolvidables',
+            desc: 'Brillar con luz propia, robar suspiros y recibir elogios sin parar.'
+          }
+        ],
+        unisex: [
+          {
+            id: 'daily',
+            icon: '💼',
+            title: 'Día a Día, Trabajo & Espacios Compartidos',
+            desc: 'Aroma pulcro y agradable para una presencia constante y refinada.'
+          },
+          {
+            id: 'night',
+            icon: '🌙',
+            title: 'Noches Especiales & Encuentros Clave',
+            desc: 'Profundidad, proyección y fijación duradera bajo las luces.'
+          },
+          {
+            id: 'signature',
+            icon: '🌟',
+            title: 'Firma de Autor Versátil (Todo Momento)',
+            desc: 'Un perfume insignia adaptable a cualquier clima, ocasión y hora.'
+          },
+          {
+            id: 'events',
+            icon: '🥂',
+            title: 'Eventos Sociales & Fiestas Exclusivas',
+            desc: 'Para destacar en reuniones y proyectar un gusto de nivel superior.'
+          }
+        ]
+      }
     },
     {
       step: 4,
       key: 'notes',
       badge: 'PASO 4 DE 4',
-      title: '¿Qué familia o sensación aromática prefieres?',
-      subtitle: 'Elige tu perfil olfativo favorito.',
-      options: [
-        {
-          id: 'woody_spicy',
-          icon: '🌲',
-          title: 'Maderas Nobles, Especias o Ámbar',
-          desc: 'Cálido, profundo, imponente y con gran cuerpo.'
-        },
-        {
-          id: 'citrus_aquatic',
-          icon: '🌊',
-          title: 'Cítricos Frescos o Notas Marinas',
-          desc: 'Azul, chispeante, energizante y sumamente limpio.'
-        },
-        {
-          id: 'vanilla_gourmand',
-          icon: '🍦',
-          title: 'Vainilla Cremosa, Haba Tonka o Miel',
-          desc: 'Gourmand, licoroso, tentador y ultra adictivo.'
-        },
-        {
-          id: 'floral_fruity',
-          icon: '🌸',
-          title: 'Flores Blancas, Frutos Rojos o Almizcle',
-          desc: 'Radiante, chic, delicado y embriagador.'
-        },
-        {
-          id: 'surprise',
-          icon: '🎲',
-          title: '¡Sorpréndanme con su Top 1 Más Vendido!',
-          desc: 'Confío en KöDE, quiero la bomba de cumplidos que todos aman.'
-        }
-      ]
+      titlesByGender: {
+        hombre: '¿Qué familia o sensación aromática prefieres?',
+        mujer: '¿Qué aromas o notas te enamoran más?',
+        unisex: '¿Qué acordes o sensaciones olfativas buscas?'
+      },
+      subtitlesByGender: {
+        hombre: 'Elige tu perfil olfativo favorito.',
+        mujer: 'Elige la familia aromática que más te hace suspirar.',
+        unisex: 'Elige el perfil aromático que mejor va contigo.'
+      },
+      optionsByGender: {
+        hombre: [
+          {
+            id: 'woody_spicy',
+            icon: '🌲',
+            title: 'Maderas Nobles, Especias o Ámbar',
+            desc: 'Cálido, profundo, imponente y con gran cuerpo.'
+          },
+          {
+            id: 'citrus_aquatic',
+            icon: '🌊',
+            title: 'Cítricos Frescos o Notas Marinas',
+            desc: 'Azul, chispeante, energizante y sumamente limpio.'
+          },
+          {
+            id: 'vanilla_gourmand',
+            icon: '🍦',
+            title: 'Vainilla Cremosa, Haba Tonka o Miel',
+            desc: 'Gourmand, licoroso, tentador y ultra adictivo.'
+          },
+          {
+            id: 'floral_fruity',
+            icon: '🌸',
+            title: 'Flores Blancas, Frutos Rojos o Almizcle',
+            desc: 'Radiante, chic, delicado y embriagador.'
+          },
+          {
+            id: 'surprise',
+            icon: '🎲',
+            title: '¡Sorpréndanme con su Top 1 Más Vendido!',
+            desc: 'Confío en KöDE, quiero la bomba de cumplidos masculina que todos aman.'
+          }
+        ],
+        mujer: [
+          {
+            id: 'floral_fruity',
+            icon: '🌸',
+            title: 'Flores Delicadas, Jazmín o Frutos Rojos',
+            desc: 'Femenino, romántico, luminoso, alegre y sumamente chic.'
+          },
+          {
+            id: 'vanilla_gourmand',
+            icon: '🍰',
+            title: 'Vainilla Cremosa, Caramelo o Bombón',
+            desc: 'Gourmand dulce, adictivo, cálido y absolutamente delicioso.'
+          },
+          {
+            id: 'citrus_aquatic',
+            icon: '🍋',
+            title: 'Cítricos Chispeantes & Brisa Marina Fresca',
+            desc: 'Luminoso, fresco, revitalizante y de sensación limpia radiante.'
+          },
+          {
+            id: 'woody_spicy',
+            icon: '🪵',
+            title: 'Maderas Finas, Pachulí & Especias Cálidas',
+            desc: 'Misterioso, elegante, con cuerpo sofisticado y gran carácter.'
+          },
+          {
+            id: 'surprise',
+            icon: '🎲',
+            title: '¡Sorpréndanme con su Top 1 Más Vendido!',
+            desc: 'Confío en KöDE, quiero el perfume femenino más elogiado e irresistible.'
+          }
+        ],
+        unisex: [
+          {
+            id: 'woody_spicy',
+            icon: '🌲',
+            title: 'Maderas Nobles, Ámbar & Especias Cálidas',
+            desc: 'Seco, resinoso, profundo y de arquitectura olfativa compleja.'
+          },
+          {
+            id: 'citrus_aquatic',
+            icon: '🌊',
+            title: 'Cítricos Puros, Té Verde & Brisa Mineral',
+            desc: 'Crisp, ozónico, limpio y con una frescura translúcida vibrante.'
+          },
+          {
+            id: 'vanilla_gourmand',
+            icon: '🍦',
+            title: 'Vainilla Bourbon, Haba Tonka & Praliné',
+            desc: 'Gourmand refinado, balsámico y profundamente seductor.'
+          },
+          {
+            id: 'floral_fruity',
+            icon: '🌺',
+            title: 'Florales de Autor & Acordes Frutales Jugosos',
+            desc: 'Rosa aterciopelada, iris o higo maduro de alta gama.'
+          },
+          {
+            id: 'surprise',
+            icon: '🎲',
+            title: '¡Sorpréndanme con su Top 1 Más Vendido!',
+            desc: 'Confío en KöDE, recomiéndame su joya unisex más codiciada.'
+          }
+        ]
+      }
     }
   ];
+
+  // Helper para resolver dinámicamente la pregunta y opciones según el género seleccionado
+  function getQuizQuestion(step, gender) {
+    const q = QUIZ_QUESTIONS.find(item => item.step === step);
+    if (!q) return null;
+    const targetGender = ['hombre', 'mujer', 'unisex'].includes(gender) ? gender : 'hombre';
+
+    return {
+      step: q.step,
+      key: q.key,
+      badge: q.badge,
+      title: (q.titlesByGender && q.titlesByGender[targetGender]) || q.title,
+      subtitle: (q.subtitlesByGender && q.subtitlesByGender[targetGender]) || q.subtitle,
+      options: (q.optionsByGender && q.optionsByGender[targetGender]) || q.options
+    };
+  }
 
   // Estado del Cuestionario
   let quizCurrentStep = 1;
@@ -361,7 +587,7 @@
     const container = document.getElementById('perfume-quiz-content');
     if (!container) return;
 
-    const currentQuestion = QUIZ_QUESTIONS.find(q => q.step === quizCurrentStep);
+    const currentQuestion = getQuizQuestion(quizCurrentStep, quizAnswers.gender);
     if (!currentQuestion) return;
 
     const progressPct = ((quizCurrentStep - 1) / QUIZ_QUESTIONS.length) * 100;
