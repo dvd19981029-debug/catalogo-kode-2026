@@ -7,6 +7,8 @@ const perfumes = JSON.parse(fs.readFileSync(path.join(__dirname, '../perfumes.js
 // 2. Load kodelocal databases
 const db = JSON.parse(fs.readFileSync('/Users/luis/.gemini/antigravity/scratch/kodelocal/src/lib/fragranceDatabase.json', 'utf8'));
 
+const { FRAGRANTICA_OVERRIDES } = require('./fragrantica_overrides.js');
+
 // 3. Palette for accord bars
 const ACCORD_COLORS = {
   'amaderado': { bg: '#4a154b', text: '#ffffff' },
@@ -47,6 +49,10 @@ const ACCORD_COLORS = {
   'cítrico': { bg: '#6366f1', text: '#ffffff' },
   'marino': { bg: '#0284c7', text: '#ffffff' },
   'acuático': { bg: '#0284c7', text: '#ffffff' },
+  'salado': { bg: '#0284c7', text: '#ffffff' },
+  'tropical': { bg: '#db2777', text: '#ffffff' },
+  'nardo': { bg: '#818cf8', text: '#ffffff' },
+  'almendra': { bg: '#a855f7', text: '#ffffff' },
   'ozónico': { bg: '#38bdf8', text: '#0f172a' },
   'vodka': { bg: '#38bdf8', text: '#0f172a' },
   'verde': { bg: '#059669', text: '#ffffff' },
@@ -100,8 +106,10 @@ const NOTE_RULES = [
   { pattern: /coco/i, file: 'coco' },
   { pattern: /cereza/i, file: 'cereza' },
   { pattern: /frambuesa/i, file: 'frambuesa' },
+  { pattern: /fresa/i, file: 'frambuesa' },
+  { pattern: /zarzamora|mora\b/i, file: 'grosella' },
   { pattern: /grosella/i, file: 'grosella' },
-  { pattern: /melocot[óo]n|durazno/i, file: 'melocoton' },
+  { pattern: /melocot[óo]n|durazno|mel[oó]n|sand[íi]a/i, file: 'melocoton' },
   { pattern: /granada/i, file: 'granada' },
   { pattern: /maracuy[áa]/i, file: 'maracuya' },
   { pattern: /lichi/i, file: 'lichi' },
@@ -109,7 +117,7 @@ const NOTE_RULES = [
   { pattern: /fruto/i, file: 'frambuesa' },
 
   // Aromáticas y Hierbas
-  { pattern: /lavanda/i, file: 'lavanda' },
+  { pattern: /lavand/i, file: 'lavanda' },
   { pattern: /menta/i, file: 'menta' },
   { pattern: /salvia/i, file: 'salvia' },
   { pattern: /romero/i, file: 'romero' },
@@ -199,12 +207,29 @@ const NOTE_RULES = [
   { pattern: /almizcle|ambreta/i, file: 'almizcle' },
 
   // Acuático, Fresco y Especial
-  { pattern: /marina|mar|aquozone|calone|sal/i, file: 'notas-marinas' },
-  { pattern: /mineral/i, file: 'notas-minerales' },
+  { pattern: /marina|mar\b|acu[aá]t|acuos|aquozone|calone|sal\b|salado/i, file: 'notas-marinas' },
+  { pattern: /mineral|met[aá]lic|carb[oó]n|arena|humo/i, file: 'notas-minerales' },
   { pattern: /oz[óo]nic/i, file: 'notas-ozonicas' },
-  { pattern: /verde/i, file: 'notas-verdes' },
-  { pattern: /helad|vodka|ginebra/i, file: 'ginebra-helada' },
-  { pattern: /aldeh[íi]d/i, file: 'aldehidos' }
+  { pattern: /verde|pepino|ruibarbo|t[eé]|hierba\s*luisa/i, file: 'notas-verdes' },
+  { pattern: /helad|vodka|ginebra|licor/i, file: 'ginebra-helada' },
+  { pattern: /aldeh[íi]d/i, file: 'aldehidos' },
+  { pattern: /mango/i, file: 'maracuya' },
+  { pattern: /casta[ñn]a/i, file: 'avellana' },
+  { pattern: /cidra|sorbete/i, file: 'limon' },
+  { pattern: /narciso/i, file: 'magnolia' },
+  { pattern: /azucena|muguete|lirio|lino|tagetes/i, file: 'flor-azahar' },
+  { pattern: /or[ée]gano/i, file: 'romero' },
+  { pattern: /algalia|civet/i, file: 'almizcle' },
+  { pattern: /opop[oó]naco/i, file: 'benjui' },
+  { pattern: /chinotto/i, file: 'naranja' },
+  { pattern: /pimiento|chile/i, file: 'pimienta-rosa' },
+  { pattern: /nagarmot|cipriol/i, file: 'pachuli' },
+  { pattern: /cumarina/i, file: 'haba-tonka' },
+  { pattern: /abr[oó]tano|artemisia|mugwort/i, file: 'salvia' },
+  { pattern: /gamuza/i, file: 'cuero' },
+  { pattern: /elem[íi]/i, file: 'incienso' },
+  { pattern: /cera\s*(de\s*)?abeja/i, file: 'miel' },
+  { pattern: /oriental/i, file: 'ambar' }
 ];
 
 function getNoteImageUrl(note) {
@@ -473,6 +498,9 @@ const OVERRIDES = {
   }
 };
 
+// Merge canonical Fragrantica overrides
+Object.assign(OVERRIDES, FRAGRANTICA_OVERRIDES);
+
 function normalize(str) {
   return (str || '')
     .toLowerCase()
@@ -565,15 +593,15 @@ const enrichedPerfumes = perfumes.map((p) => {
     : ['Cedro', 'Vainilla', 'Pachulí'];
 
   // Map to objects with image
-  const top = topNotesRaw.slice(0, 4).map(n => ({
+  const top = topNotesRaw.slice(0, 5).map(n => ({
     name: n,
     image: getNoteImageUrl(n)
   }));
-  const heart = heartNotesRaw.slice(0, 4).map(n => ({
+  const heart = heartNotesRaw.slice(0, 5).map(n => ({
     name: n,
     image: getNoteImageUrl(n)
   }));
-  const base = baseNotesRaw.slice(0, 4).map(n => ({
+  const base = baseNotesRaw.slice(0, 5).map(n => ({
     name: n,
     image: getNoteImageUrl(n)
   }));
