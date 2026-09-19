@@ -353,9 +353,21 @@ function updateCardBuyButton(productId) {
 // Event listeners
 function setupEventListeners() {
   const searchInput = document.getElementById('search-input');
+  const searchClearBtn = document.getElementById('search-clear-btn');
+
+  function updateSearchClearBtn() {
+    if (!searchClearBtn || !searchInput) return;
+    if (searchInput.value.trim().length > 0) {
+      searchClearBtn.classList.add('is-visible');
+    } else {
+      searchClearBtn.classList.remove('is-visible');
+    }
+  }
+
   if (searchInput) {
     searchInput.addEventListener('input', (e) => {
       currentSearch = e.target.value.toLowerCase().trim();
+      updateSearchClearBtn();
       const catalogWrap = document.getElementById('catalog-showcase-wrap');
       const maceracionWrap = document.getElementById('maceracion-blog');
       if (currentSearch) {
@@ -371,6 +383,26 @@ function setupEventListeners() {
         }
       }
       renderCatalog();
+    });
+  }
+
+  if (searchClearBtn && searchInput) {
+    searchClearBtn.addEventListener('mousedown', (e) => {
+      e.preventDefault();
+    });
+    searchClearBtn.addEventListener('click', () => {
+      searchInput.value = '';
+      currentSearch = '';
+      updateSearchClearBtn();
+      const catalogWrap = document.getElementById('catalog-showcase-wrap');
+      const maceracionWrap = document.getElementById('maceracion-blog');
+      const activeTab = document.querySelector('.gender-tab.active');
+      if (activeTab && activeTab.getAttribute('data-gender') === 'maceracion') {
+        if (maceracionWrap) maceracionWrap.style.display = 'block';
+        if (catalogWrap) catalogWrap.style.display = 'none';
+      }
+      renderCatalog();
+      searchInput.focus();
     });
   }
 
