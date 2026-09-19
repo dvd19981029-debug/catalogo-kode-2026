@@ -417,15 +417,6 @@ const FRAGRANTICA_OVERRIDES = {
     baseNotes: ['Ámbar gris'],
     description: 'Inspirada en Afternoon Swim de Louis Vuitton. Una inmersión radiante en un océano de pura energía solar. Un torrente vitamínico y ultra refrescante de mandarina de Sicilia, naranja y bergamota, realzado con un toque chispeante de jengibre fresco sobre un fondo salino y limpio de ámbar gris.'
   },
-  '195': {
-    name: 'CR7',
-    family: 'Aromática Fougère',
-    accords: ['aromático', 'cálido especiado', 'amaderado', 'avainillado', 'tabaco', 'fresco especiado'],
-    topNotes: ['Lavanda', 'Cardamomo', 'Bergamota', 'Artemisia'],
-    heartNotes: ['Tabaco', 'Canela', 'Cedro', 'Iris'],
-    baseNotes: ['Vainilla', 'Almizcle', 'Sándalo', 'Ámbar'],
-    description: 'Inspirada en CR7 de Cristiano Ronaldo. La fragancia dinámica y carismática para el hombre que persigue el triunfo. Una apertura fresca y vigorizante de lavanda y cardamomo que evoluciona hacia un corazón especiado y masculino de tabaco rubio y canela, sobre un fondo cálido de sándalo y vainilla.'
-  },
   '332': {
     name: 'Polo Ultra Blue',
     family: 'Aromática Cítrica',
