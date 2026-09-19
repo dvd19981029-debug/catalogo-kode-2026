@@ -1602,8 +1602,8 @@ body {
 /* Item del Carrito */
 .cart-row {
   display: flex;
-  align-items: center;
-  gap: 16px;
+  align-items: flex-start;
+  gap: 14px;
   padding-bottom: 16px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
@@ -1616,9 +1616,25 @@ body {
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.08);
   padding: 2px;
+  flex-shrink: 0;
 }
 
-.cart-row-info {
+.cart-row-content {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cart-row-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.cart-row-titles {
   flex: 1;
   min-width: 0;
 }
@@ -1631,103 +1647,119 @@ body {
 }
 
 .cart-row-name {
-  font-size: 1rem;
+  font-size: 0.98rem;
   font-weight: 700;
   color: #1d1d1f;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  line-height: 1.25;
+  margin-top: 1px;
+  word-break: break-word;
 }
 
-.cart-row-badge {
-  display: inline-block;
-  font-size: 0.75rem;
-  font-weight: 600;
-  padding: 2px 8px;
-  border-radius: 4px;
-  margin-top: 4px;
-}
-
-.badge-norm {
-  background: #f5f5f7;
-  color: #6e6e73;
-}
-
-.badge-gold {
-  background: #f5f5f7;
-  color: #1d1d1f;
-  border: 1px solid #e5e5ea;
-  font-weight: 700;
-}
-
-/* Selector Interactivo de Concentración dentro de cada Ítem del Carrito */
-.cart-conc-toggle {
-  display: inline-flex;
-  background: #f5f5f7;
-  border: 1px solid #e5e5ea;
-  border-radius: 8px;
-  padding: 2px;
-  gap: 2px;
-  margin-top: 5px;
-}
-
-.cart-conc-btn {
+.cart-row-delete {
+  background: none;
   border: none;
-  background: transparent;
-  color: #6e6e73;
+  color: #86868b;
+  cursor: pointer;
+  padding: 4px;
+  font-size: 1.1rem;
+  line-height: 1;
+  transition: color 0.15s ease, transform 0.15s ease;
+  flex-shrink: 0;
+}
+
+.cart-row-delete:hover {
+  color: #e11d48;
+  transform: scale(1.1);
+}
+
+.cart-row-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  margin-top: 2px;
+}
+
+/* Botones de Concentración Claramente Presionables */
+.cart-conc-pills {
+  display: inline-flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.cart-conc-pill {
+  appearance: none;
+  border: 1.5px solid #d2d2d7;
+  background: #ffffff;
+  color: #1d1d1f;
   font-size: 0.72rem;
   font-weight: 600;
   font-family: inherit;
-  padding: 3px 8px;
-  border-radius: 6px;
+  padding: 4px 8px;
+  border-radius: var(--radius-pill);
   cursor: pointer;
   transition: all 0.15s ease;
   white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.2;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
 }
 
-.cart-conc-btn:hover {
-  color: #1d1d1f;
+.cart-conc-pill:hover {
+  border-color: #86868b;
+  background: #f5f5f7;
 }
 
-.cart-conc-btn.active {
-  background: #ffffff;
-  color: #1d1d1f;
+.cart-conc-pill:active {
+  transform: scale(0.93);
+}
+
+.cart-conc-pill.active {
+  background: #1d1d1f;
+  color: #ffffff;
+  border-color: #1d1d1f;
   font-weight: 700;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
 }
 
 @media (max-width: 420px) {
-  .cart-conc-btn {
-    font-size: 0.68rem;
-    padding: 3px 5px;
+  .cart-conc-pill {
+    font-size: 0.69rem;
+    padding: 4px 7px;
+  }
+  .cart-row {
+    gap: 10px;
   }
 }
 
 /* Controles de Cantidad Estilo iOS */
 .cart-row-stepper {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   background: #f5f5f7;
   border: 1px solid #e5e5ea;
   border-radius: var(--radius-pill);
-  padding: 3px;
-  gap: 6px;
+  padding: 2px 4px;
+  gap: 4px;
+  flex-shrink: 0;
 }
 
 .stepper-btn {
-  width: 28px;
-  height: 28px;
+  width: 24px;
+  height: 24px;
   border-radius: var(--radius-pill);
   border: none;
   background: #ffffff;
   color: #1d1d1f;
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   font-weight: 600;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
   transition: var(--transition-smooth);
 }
 
@@ -1736,27 +1768,13 @@ body {
 }
 
 .stepper-val {
-  font-size: 0.92rem;
+  font-size: 0.86rem;
   font-weight: 700;
-  min-width: 18px;
+  min-width: 16px;
   text-align: center;
   color: #1d1d1f;
 }
 
-.cart-row-delete {
-  background: none;
-  border: none;
-  color: #86868b;
-  cursor: pointer;
-  padding: 6px;
-  margin-left: 2px;
-  font-size: 0.9rem;
-  transition: color 0.2s ease;
-}
-
-.cart-row-delete:hover {
-  color: #1d1d1f;
-}
 
 /* Footer del Carrito */
 .dialog-footer {

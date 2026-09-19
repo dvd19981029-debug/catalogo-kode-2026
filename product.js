@@ -870,15 +870,13 @@ function calculateOrderPricing() {
   };
 }
 
-function renderCart() {
-  const container = document.getElementById('cart-items');
+// Actualizar desglose y totales del carrito sin recargar imágenes
+function updateCartTotalsAndPricing() {
   const breakdownContainer = document.getElementById('pricing-breakdown');
   const totalAmountElem = document.getElementById('cart-total-amount');
   const savingsElem = document.getElementById('cart-total-savings');
-  if (!container) return;
 
   if (cart.length === 0) {
-    container.innerHTML = '<p class="dialog-empty">Tu bolsa está vacía.</p>';
     if (breakdownContainer) breakdownContainer.innerHTML = '';
     if (totalAmountElem) totalAmountElem.textContent = '$0.00';
     if (savingsElem) {
@@ -890,38 +888,6 @@ function renderCart() {
   }
 
   const pricing = calculateOrderPricing();
-
-  // Lista de items
-  container.innerHTML = cart.map(item => {
-    const imgSrc = item.image || `images/kode/kode_${item.code}.webp`;
-    return `
-      <div class="cart-row">
-        <img src="${imgSrc}" alt="${item.name}" class="cart-row-img" onerror="this.src='images/kode_cover.png'">
-        <div class="cart-row-info">
-          <div class="cart-row-code">KÓDIGO ${item.code}</div>
-          <h4 class="cart-row-name">${item.name}</h4>
-          <div class="cart-conc-toggle">
-            <button type="button" 
-                    class="cart-conc-btn ${!item.extraShot ? 'active' : ''}" 
-                    onclick="setCartItemConcentration('${item.cartItemId}', false)">
-              Normal (30%)
-            </button>
-            <button type="button" 
-                    class="cart-conc-btn ${item.extraShot ? 'active' : ''}" 
-                    onclick="setCartItemConcentration('${item.cartItemId}', true)">
-              Extra Shot (45%)
-            </button>
-          </div>
-        </div>
-        <div class="cart-row-stepper">
-          <button type="button" class="stepper-btn" onclick="changeCartQty('${item.cartItemId}', -1)" aria-label="Disminuir">−</button>
-          <span class="stepper-val">${item.quantity}</span>
-          <button type="button" class="stepper-btn" onclick="changeCartQty('${item.cartItemId}', 1)" aria-label="Aumentar">+</button>
-        </div>
-        <button type="button" class="cart-row-delete" onclick="removeCartItem('${item.cartItemId}')" aria-label="Eliminar producto">✕</button>
-      </div>
-    `;
-  }).join('');
 
   if (breakdownContainer) {
     let rowsHtml = '';
@@ -993,12 +959,101 @@ function renderCart() {
   if (window.updateDetailPriceDisplay) window.updateDetailPriceDisplay();
 }
 
+function renderCart() {
+  const container = document.getElementById('cart-items');
+  if (!container) return;
+
+  if (cart.length === 0) {
+    container.innerHTML = '<p class="dialog-empty">Tu bolsa está vacía.</p>';
+    updateCartTotalsAndPricing();
+    return;
+  }
+
+  // Comprobar filas existentes para reutilizar elementos DOM y evitar recarga/parpadeo de imágenes
+  const existingRows = Array.from(container.querySelectorAll('.cart-row[data-cart-item-id]'));
+  const existingMap = new Map();
+  existingRows.forEach(r => existingMap.set(r.getAttribute('data-cart-item-id'), r));
+
+  const currentIds = cart.map(i => i.cartItemId);
+  const existingIds = existingRows.map(r => r.getAttribute('data-cart-item-id'));
+  const isSameList = currentIds.length === existingIds.length && currentIds.every((id, idx) => id === existingIds[idx]);
+
+  if (isSameList) {
+    cart.forEach(item => {
+      const row = existingMap.get(item.cartItemId);
+      if (!row) return;
+      const normalBtn = row.querySelector('.cart-conc-pill[data-conc="normal"]');
+      const extraBtn = row.querySelector('.cart-conc-pill[data-conc="extra"]');
+      if (normalBtn) normalBtn.classList.toggle('active', !item.extraShot);
+      if (extraBtn) extraBtn.classList.toggle('active', item.extraShot);
+      const valSpan = row.querySelector('.stepper-val');
+      if (valSpan) valSpan.textContent = item.quantity;
+    });
+    updateCartTotalsAndPricing();
+    return;
+  }
+
+  // Lista de items con diseño optimizado (título completo sin truncar, botones táctiles y elementos estables)
+  container.innerHTML = cart.map(item => {
+    const imgSrc = item.image || `images/kode/kode_${item.code}.webp`;
+    return `
+      <div class="cart-row" data-cart-item-id="${item.cartItemId}">
+        <img src="${imgSrc}" alt="${item.name}" class="cart-row-img" width="64" height="64" onerror="this.src='images/kode_cover.png'">
+        <div class="cart-row-content">
+          <div class="cart-row-top">
+            <div class="cart-row-titles">
+              <span class="cart-row-code">KÓDIGO ${item.code}</span>
+              <h4 class="cart-row-name">${item.name}</h4>
+            </div>
+            <button type="button" class="cart-row-delete" onclick="removeCartItem('${item.cartItemId}')" aria-label="Eliminar producto">✕</button>
+          </div>
+          <div class="cart-row-bottom">
+            <div class="cart-conc-pills" role="group" aria-label="Concentración">
+              <button type="button" 
+                      class="cart-conc-pill ${!item.extraShot ? 'active' : ''}" 
+                      data-conc="normal"
+                      onclick="setCartItemConcentration('${item.cartItemId}', false)">
+                Normal (30%)
+              </button>
+              <button type="button" 
+                      class="cart-conc-pill ${item.extraShot ? 'active' : ''}" 
+                      data-conc="extra"
+                      onclick="setCartItemConcentration('${item.cartItemId}', true)">
+                Extra Shot (45%)
+              </button>
+            </div>
+            <div class="cart-row-stepper">
+              <button type="button" class="stepper-btn" onclick="changeCartQty('${item.cartItemId}', -1)" aria-label="Disminuir">−</button>
+              <span class="stepper-val">${item.quantity}</span>
+              <button type="button" class="stepper-btn" onclick="changeCartQty('${item.cartItemId}', 1)" aria-label="Aumentar">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+  }).join('');
+
+  updateCartTotalsAndPricing();
+}
+
 window.changeCartQty = function(cartItemId, delta) {
   const index = cart.findIndex(ci => ci.cartItemId === cartItemId);
   if (index === -1) return;
 
   if (delta < 0) {
     cart.splice(index, 1);
+    saveCart();
+    const row = document.querySelector(`.cart-row[data-cart-item-id="${cartItemId}"]`);
+    if (row) {
+      row.remove();
+      if (cart.length === 0) {
+        renderCart();
+      } else {
+        updateCartTotalsAndPricing();
+      }
+    } else {
+      renderCart();
+    }
   } else if (delta > 0) {
     const src = cart[index];
     const newUid = 'c_' + Date.now().toString(36) + '_' + Math.random().toString(36).substring(2, 7);
@@ -1007,10 +1062,9 @@ window.changeCartQty = function(cartItemId, delta) {
       cartItemId: newUid,
       quantity: 1
     });
+    saveCart();
+    renderCart();
   }
-
-  saveCart();
-  renderCart();
 };
 
 window.setCartItemConcentration = function(cartItemId, isExtra) {
@@ -1018,13 +1072,34 @@ window.setCartItemConcentration = function(cartItemId, isExtra) {
   if (!item) return;
   item.extraShot = !!isExtra;
   saveCart();
-  renderCart();
+
+  // Actualización quirúrgica inmediata sin recargar imágenes ni DOM completo
+  const row = document.querySelector(`.cart-row[data-cart-item-id="${cartItemId}"]`);
+  if (row) {
+    const normalBtn = row.querySelector('.cart-conc-pill[data-conc="normal"]');
+    const extraBtn = row.querySelector('.cart-conc-pill[data-conc="extra"]');
+    if (normalBtn) normalBtn.classList.toggle('active', !item.extraShot);
+    if (extraBtn) extraBtn.classList.toggle('active', item.extraShot);
+    updateCartTotalsAndPricing();
+  } else {
+    renderCart();
+  }
 };
 
 window.removeCartItem = function(cartItemId) {
   cart = cart.filter(ci => ci.cartItemId !== cartItemId);
   saveCart();
-  renderCart();
+  const row = document.querySelector(`.cart-row[data-cart-item-id="${cartItemId}"]`);
+  if (row) {
+    row.remove();
+    if (cart.length === 0) {
+      renderCart();
+    } else {
+      updateCartTotalsAndPricing();
+    }
+  } else {
+    renderCart();
+  }
 };
 
 function openCartDialog() {
