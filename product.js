@@ -538,6 +538,7 @@ async function loadAndRenderProduct() {
   if (isPromo343) {
     setTimeout(launchConfetti, 220);
   }
+  updateDirectBuyButton();
 }
 
 // Selector de concentración (Normal vs Extra Shot)
@@ -600,6 +601,53 @@ function updateProductBuyButton() {
   } else {
     btnText.textContent = 'Agregar al Carrito';
     btn.classList.remove('in-cart');
+  }
+
+  updateDirectBuyButton();
+}
+
+function updateDirectBuyButton() {
+  const btn = document.getElementById('btn-whatsapp-direct');
+  if (!btn || !currentPerfume) return;
+  const span = btn.querySelector('span');
+  if (!span) return;
+
+  const previewItems = [];
+  cart.forEach(item => {
+    const qty = item.quantity || 1;
+    for (let i = 0; i < qty; i++) {
+      previewItems.push({
+        productId: item.productId || item.id,
+        code: item.code,
+        extraShot: !!item.extraShot
+      });
+    }
+  });
+
+  const alreadyInCart = previewItems.some(ci => (ci.productId === currentPerfume.id || ci.code === currentPerfume.code) && ci.extraShot === isExtraShot);
+  if (!alreadyInCart) {
+    previewItems.push({
+      productId: currentPerfume.id,
+      code: currentPerfume.code,
+      extraShot: isExtraShot
+    });
+  }
+
+  const totalCount = previewItems.length;
+  if (totalCount > 1) {
+    let total = 0;
+    const hasPromo343 = previewItems.some(b => b.code === '343');
+    previewItems.forEach((item, index) => {
+      const isFirst = index === 0;
+      if (isFirst) {
+        total += item.extraShot ? (hasPromo343 ? 20 : 25) : 20;
+      } else {
+        total += item.extraShot ? 20 : 15;
+      }
+    });
+    span.textContent = `Pedir ya por WhatsApp (${totalCount}) — $${total.toFixed(2)}`;
+  } else {
+    span.textContent = 'Pedir ya por WhatsApp';
   }
 }
 
@@ -740,7 +788,7 @@ function getSuggestedPerfumes(current, excludeIds = []) {
 
   const candidates = cat.filter(item => {
     if (item.id === current.id || item.code === current.code) return false;
-    if (excludeIds.includes(item.id)) return false;
+    if (excludeIds.includes(item.id) || excludeIds.includes(item.code)) return false;
     return true;
   });
 
@@ -810,7 +858,8 @@ function renderDirectUpsellSuggestions() {
   const track = document.getElementById('upsell-carousel-track');
   if (!track || !currentPerfume) return;
 
-  const suggestions = getSuggestedPerfumes(currentPerfume, [currentPerfume.id]);
+  const baseExcludeIds = [currentPerfume.id, currentPerfume.code, ...cart.map(c => c.productId || c.id || c.code)];
+  const suggestions = getSuggestedPerfumes(currentPerfume, baseExcludeIds);
 
   if (suggestions.length === 0) {
     track.innerHTML = '<p style="font-size: 0.8rem; color: #86868b; padding: 10px;">No hay más sugerencias en este momento.</p>';
@@ -818,7 +867,7 @@ function renderDirectUpsellSuggestions() {
   }
 
   track.innerHTML = suggestions.map(p => {
-    const isAdded = directOrderItems.some(i => i.productId === p.id);
+    const isAdded = directOrderItems.some(i => i.productId === p.id || i.code === p.code);
     const imgSrc = p.image || `images/kode/kode_${p.code}.webp`;
     return `
       <div class="upsell-card ${isAdded ? 'is-added' : ''}" data-suggested-id="${p.id}">
@@ -851,14 +900,14 @@ function renderDirectUpsellPricing() {
   let total = 0;
   let savings = 0;
   const count = directOrderItems.length;
+  const hasPromo343 = directOrderItems.some(item => item.code === '343');
 
   directOrderItems.forEach((item, index) => {
     const isFirst = index === 0;
-    const isPromo343 = item.code === '343';
     if (isFirst) {
-      const p = item.extraShot ? (isPromo343 ? 20 : 25) : 20;
+      const p = item.extraShot ? (hasPromo343 ? 20 : 25) : 20;
       total += p;
-      if (isPromo343 && item.extraShot) savings += 5;
+      if (hasPromo343 && item.extraShot) savings += 5;
     } else {
       const p = item.extraShot ? 20 : 15;
       total += p;
@@ -867,10 +916,10 @@ function renderDirectUpsellPricing() {
   });
 
   if (container) {
-    if (count > 1) {
+    if (count > 1 || savings > 0) {
       container.innerHTML = `
         <div class="upsell-total-wrap">
-          <span class="upsell-total-label">Total a pagar (${count} perfumes)</span>
+          <span class="upsell-total-label">Total a pagar${count > 1 ? ` (${count} perfumes)` : ''}</span>
           <span class="upsell-total-val">$${total.toFixed(2)}</span>
         </div>
         ${savings > 0 ? `
@@ -908,7 +957,7 @@ window.toggleSuggestedInDirectOrder = function(productId, event) {
     event.stopPropagation();
     event.preventDefault();
   }
-  const index = directOrderItems.findIndex(i => i.productId === productId);
+  const index = directOrderItems.findIndex(i => i.productId === productId || i.code === productId);
   if (index > -1) {
     // Si ya estaba en la orden, quitarlo al presionar de nuevo
     directOrderItems.splice(index, 1);
@@ -943,7 +992,7 @@ window.addSuggestedToDirectOrder = window.toggleSuggestedInDirectOrder;
 window.onSuggestedCardClick = function(productId, event) {
   if (wasDraggingUpsellCarousel) return;
   if (currentPerfume) {
-    const currentInCart = cart.find(ci => ci.productId === currentPerfume.id && ci.extraShot === isExtraShot);
+    const currentInCart = cart.find(ci => (ci.productId === currentPerfume.id || ci.code === currentPerfume.code) && ci.extraShot === isExtraShot);
     if (!currentInCart) {
       const newUid = 'c_' + Date.now().toString(36) + '_' + Math.random().toString(36).substring(2, 7);
       cart.push({
@@ -957,10 +1006,28 @@ window.onSuggestedCardClick = function(productId, event) {
         extraShot: isExtraShot,
         quantity: 1
       });
-      saveCart();
-      updateCartUI();
     }
   }
+
+  // Guardar en la bolsa cualquier perfume que se haya sumado a la orden directa
+  directOrderItems.forEach(item => {
+    const inCart = cart.find(ci => (ci.productId === item.productId || ci.code === item.code) && ci.extraShot === item.extraShot);
+    if (!inCart) {
+      cart.push({
+        cartItemId: item.cartItemId || ('c_' + Date.now().toString(36) + '_' + Math.random().toString(36).substring(2, 7)),
+        productId: item.productId,
+        code: item.code,
+        name: item.name,
+        reference: item.reference,
+        brand: item.brand,
+        image: item.image,
+        extraShot: item.extraShot,
+        quantity: 1
+      });
+    }
+  });
+
+  saveCart();
   window.location.href = 'producto.html?id=' + encodeURIComponent(productId);
 };
 
@@ -981,19 +1048,41 @@ window.orderCurrentViaWhatsApp = function(event) {
   if (event) event.preventDefault();
   if (!currentPerfume) return;
 
-  // Iniciar ÚNICAMENTE con el perfume que la persona seleccionó para pedir
-  const newUid = 'c_' + Date.now().toString(36) + '_' + Math.random().toString(36).substring(2, 7);
-  directOrderItems = [{
-    cartItemId: newUid,
-    productId: currentPerfume.id,
-    code: currentPerfume.code,
-    name: currentPerfume.name,
-    reference: currentPerfume.reference,
-    brand: currentPerfume.brand,
-    image: currentPerfume.image,
-    extraShot: isExtraShot,
-    quantity: 1
-  }];
+  // Cargar todos los perfumes que ya han sido agregados a la bolsa
+  directOrderItems = [];
+  cart.forEach(item => {
+    const qty = item.quantity || 1;
+    for (let i = 0; i < qty; i++) {
+      directOrderItems.push({
+        cartItemId: item.cartItemId || ('c_' + Date.now().toString(36) + '_' + Math.random().toString(36).substring(2, 7)),
+        productId: item.productId || item.id,
+        code: item.code,
+        name: item.name,
+        reference: item.reference,
+        brand: item.brand,
+        image: item.image,
+        extraShot: !!item.extraShot,
+        quantity: 1
+      });
+    }
+  });
+
+  // Si el perfume actual que se está viendo no está aún en la orden, agregarlo
+  const currentInOrder = directOrderItems.some(ci => (ci.productId === currentPerfume.id || ci.code === currentPerfume.code) && ci.extraShot === isExtraShot);
+  if (!currentInOrder) {
+    const newUid = 'c_' + Date.now().toString(36) + '_' + Math.random().toString(36).substring(2, 7);
+    directOrderItems.push({
+      cartItemId: newUid,
+      productId: currentPerfume.id,
+      code: currentPerfume.code,
+      name: currentPerfume.name,
+      reference: currentPerfume.reference,
+      brand: currentPerfume.brand,
+      image: currentPerfume.image,
+      extraShot: isExtraShot,
+      quantity: 1
+    });
+  }
 
   renderDirectUpsellModal();
 
@@ -1014,17 +1103,17 @@ window.submitDirectOrderViaWhatsApp = function() {
   let total = 0;
   let savings = 0;
   let itemsListText = '';
+  const hasPromo343 = directOrderItems.some(item => item.code === '343');
 
   directOrderItems.forEach((item, index) => {
     const isFirst = index === 0;
-    const isPromo343 = item.code === '343';
     let unitPrice = 0;
     let discountNotice = '';
 
     if (isFirst) {
-      unitPrice = item.extraShot ? (isPromo343 ? 20 : 25) : 20;
-      discountNotice = ' (1ra unidad)';
-      if (isPromo343 && item.extraShot) savings += 5;
+      unitPrice = item.extraShot ? (hasPromo343 ? 20 : 25) : 20;
+      discountNotice = (hasPromo343 && item.extraShot) ? ' (¡Extra Shot Gratis - Oferta 343!)' : ' (1ra unidad)';
+      if (hasPromo343 && item.extraShot) savings += 5;
     } else {
       unitPrice = item.extraShot ? 20 : 15;
       discountNotice = ' (¡$5.00 de descuento aplicado!)';
