@@ -508,7 +508,7 @@
       archetype: 'Esencia Magnética • El Carisma Auténtico',
       element: 'Aura Radiante ✨',
       personality: 'Tienes una presencia vibrante y segura que atrae a las personas por tu autenticidad y buen gusto innato. Tu energía deja una huella indeleble dondequiera que vayas.',
-      matchWhy: `Buscabas una fragancia con carácter y estela memorable. ${matchedPerfume.name} combina una composición equilibrada de acordes nobles con una fijación excepcional pensada para acompañarte todo el día.`
+      matchWhy: `Buscabas una fragancia con carácter y estela memorable. Kódigo ${matchedPerfume.code} combina una composición equilibrada de acordes nobles con una fijación excepcional pensada para acompañarte todo el día.`
     };
 
     // Tracking de Test Completado
@@ -518,7 +518,8 @@
       if (window.KodeTracker && typeof window.KodeTracker.trackEvent === 'function') {
         window.KodeTracker.trackEvent('quiz_complete', {
           code: matchedPerfume.code,
-          name: matchedPerfume.name,
+          name: `Kódigo ${matchedPerfume.code}`,
+          inspiration: inspiration,
           archetype: info.archetype,
           gender: quizAnswers.gender,
           vibe: quizAnswers.vibe,
@@ -558,11 +559,10 @@
           <span class="result-card-eyebrow">TU PERFUME IDEAL KÖDE</span>
           
           <div class="result-product-hero">
-            <img src="${imgSrc}" alt="${matchedPerfume.name}" class="result-product-img" onerror="this.src='images/kode_cover.png'">
+            <img src="${imgSrc}" alt="Kódigo ${matchedPerfume.code}" class="result-product-img" onerror="this.src='images/kode_cover.png'">
             <div class="result-product-info">
-              <span class="result-product-code">KÓDIGO ${matchedPerfume.code}</span>
-              <h4 class="result-product-name">${matchedPerfume.name}</h4>
-              <p class="result-product-inspire">Inspirada en <strong>${inspiration}</strong>${brandPart}</p>
+              <h4 class="result-product-name">Kódigo ${matchedPerfume.code}</h4>
+              <p class="result-product-inspire">Inspirado en <strong>${inspiration}</strong>${brandPart}</p>
               
               <div class="result-accords-row">
                 ${chordsList}
