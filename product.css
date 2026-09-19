@@ -1497,11 +1497,17 @@ html, body {
   transform: scale(0.96);
 }
 
-.btn-upsell-add.added {
-  background: #e8f5e9;
-  color: #2e7d32;
-  border: 1px solid rgba(46, 125, 50, 0.2);
-  cursor: default;
+.btn-upsell-add.added,
+.btn-upsell-add.active {
+  background: #000000;
+  color: #ffffff;
+  border: 1px solid #000000;
+  cursor: pointer;
+}
+
+.upsell-card.is-added {
+  border-color: #000000;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
 }
 
 /* Footer del modal */

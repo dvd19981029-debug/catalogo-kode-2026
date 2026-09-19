@@ -805,74 +805,12 @@ function setupCarouselDrag(track) {
   });
 }
 
-// Renderizar la lista de perfumes seleccionados en la orden rápida
-function renderDirectUpsellSelectedList() {
-  const container = document.getElementById('upsell-selected-list');
-  const countBadge = document.getElementById('upsell-items-count-badge');
-  if (!container) return;
-
-  const count = directOrderItems.length;
-  if (countBadge) {
-    countBadge.textContent = count === 1 ? '1 perfume' : `${count} perfumes`;
-  }
-
-  container.innerHTML = directOrderItems.map((item, index) => {
-    const isFirst = index === 0;
-    const isPromo343 = item.code === '343';
-    let unitPrice = 0;
-    let discountTag = '';
-
-    if (isFirst) {
-      unitPrice = item.extraShot ? (isPromo343 ? 20 : 25) : 20;
-    } else {
-      unitPrice = item.extraShot ? 20 : 15;
-      discountTag = `<span class="upsell-row-discount-tag">-$5.00 AHORRO</span>`;
-    }
-
-    const imgSrc = item.image || `images/kode/kode_${item.code}.webp`;
-
-    return `
-      <div class="upsell-order-row" data-cart-item-id="${item.cartItemId}">
-        <div class="upsell-row-left">
-          <img src="${imgSrc}" alt="${item.name}" class="upsell-row-thumb" onerror="this.src='images/kode_cover.png'">
-          <div class="upsell-row-info">
-            <span class="upsell-row-code">KÓDIGO ${item.code}</span>
-            <span class="upsell-row-name">${item.name}</span>
-            <div class="cart-conc-pills" style="margin-top: 4px;" role="group" aria-label="Concentración">
-              <button type="button" 
-                      class="cart-conc-pill ${!item.extraShot ? 'active' : ''}" 
-                      onclick="setDirectOrderItemConcentration('${item.cartItemId}', false)">
-                Normal
-              </button>
-              <button type="button" 
-                      class="cart-conc-pill ${item.extraShot ? 'active' : ''}" 
-                      onclick="setDirectOrderItemConcentration('${item.cartItemId}', true)">
-                Extra Shot
-              </button>
-            </div>
-          </div>
-        </div>
-        <div class="upsell-row-right">
-          <div class="upsell-row-price-wrap">
-            <span class="upsell-row-price">$${unitPrice.toFixed(2)}</span>
-            ${discountTag}
-          </div>
-          ${directOrderItems.length > 1 ? `
-            <button type="button" class="upsell-row-remove" onclick="removeDirectOrderItem('${item.cartItemId}')" aria-label="Quitar de la orden">✕</button>
-          ` : ''}
-        </div>
-      </div>
-    `;
-  }).join('');
-}
-
-// Renderizar sugerencias en el carrusel
+// Renderizar sugerencias en el carrusel deslizable horizontalmente
 function renderDirectUpsellSuggestions() {
   const track = document.getElementById('upsell-carousel-track');
   if (!track || !currentPerfume) return;
 
-  const currentOrderProductIds = directOrderItems.map(i => i.productId);
-  const suggestions = getSuggestedPerfumes(currentPerfume, currentOrderProductIds);
+  const suggestions = getSuggestedPerfumes(currentPerfume, [currentPerfume.id]);
 
   if (suggestions.length === 0) {
     track.innerHTML = '<p style="font-size: 0.8rem; color: #86868b; padding: 10px;">No hay más sugerencias en este momento.</p>';
@@ -880,9 +818,10 @@ function renderDirectUpsellSuggestions() {
   }
 
   track.innerHTML = suggestions.map(p => {
+    const isAdded = directOrderItems.some(i => i.productId === p.id);
     const imgSrc = p.image || `images/kode/kode_${p.code}.webp`;
     return `
-      <div class="upsell-card" data-suggested-id="${p.id}">
+      <div class="upsell-card ${isAdded ? 'is-added' : ''}" data-suggested-id="${p.id}">
         <div class="upsell-card-clickable" onclick="onSuggestedCardClick('${p.id}', event)">
           <img src="${imgSrc}" alt="${p.name}" class="upsell-card-img" onerror="this.src='images/kode_cover.png'">
           <span class="upsell-card-code">KÓDIGO ${p.code}</span>
@@ -892,8 +831,10 @@ function renderDirectUpsellSuggestions() {
             <span class="upsell-card-price-old">$20.00</span>
           </div>
         </div>
-        <button type="button" class="btn-upsell-add" onclick="addSuggestedToDirectOrder('${p.id}', event)">
-          + Agregar
+        <button type="button" 
+                class="btn-upsell-add ${isAdded ? 'added active' : ''}" 
+                onclick="toggleSuggestedInDirectOrder('${p.id}', event)">
+          ${isAdded ? '✓ Agregado' : '+ Agregar'}
         </button>
       </div>
     `;
@@ -926,86 +867,100 @@ function renderDirectUpsellPricing() {
   });
 
   if (container) {
-    container.innerHTML = `
-      <div class="upsell-total-wrap">
-        <span class="upsell-total-label">Total a pagar (${count === 1 ? '1 perfume' : `${count} perfumes`})</span>
-        <span class="upsell-total-val">$${total.toFixed(2)}</span>
-      </div>
-      ${savings > 0 ? `
-        <span class="upsell-savings-badge">¡Ahorras $${savings.toFixed(2)} en esta orden!</span>
-      ` : ''}
-    `;
+    if (count > 1) {
+      container.innerHTML = `
+        <div class="upsell-total-wrap">
+          <span class="upsell-total-label">Total a pagar (${count} perfumes)</span>
+          <span class="upsell-total-val">$${total.toFixed(2)}</span>
+        </div>
+        ${savings > 0 ? `
+          <span class="upsell-savings-badge">¡Ahorras $${savings.toFixed(2)} en esta orden!</span>
+        ` : ''}
+      `;
+    } else {
+      container.innerHTML = `
+        <div class="upsell-total-wrap">
+          <span class="upsell-total-label">Total a pagar</span>
+          <span class="upsell-total-val">$${total.toFixed(2)}</span>
+        </div>
+      `;
+    }
   }
 
   if (btnText) {
-    btnText.textContent = `Pedir ${count === 1 ? '1 perfume' : `${count} perfumes`} por WhatsApp — $${total.toFixed(2)}`;
+    if (count > 1) {
+      btnText.textContent = `Pedir ${count} perfumes por WhatsApp — $${total.toFixed(2)}`;
+    } else {
+      btnText.textContent = `Pedir por WhatsApp — $${total.toFixed(2)}`;
+    }
   }
 }
 
 // Renderizar modal completo
 function renderDirectUpsellModal() {
-  renderDirectUpsellSelectedList();
   renderDirectUpsellPricing();
   renderDirectUpsellSuggestions();
 }
 
-// Cambiar concentración de un item en la orden directa
-window.setDirectOrderItemConcentration = function(cartItemId, extra) {
-  const item = directOrderItems.find(i => i.cartItemId === cartItemId);
-  if (item) {
-    item.extraShot = extra;
-    cart = [...directOrderItems];
-    saveCart();
-    renderDirectUpsellSelectedList();
-    renderDirectUpsellPricing();
+// Alternar perfume sugerido en la orden directa (solo si el cliente quiere)
+window.toggleSuggestedInDirectOrder = function(productId, event) {
+  if (event) {
+    event.stopPropagation();
+    event.preventDefault();
   }
-};
+  const index = directOrderItems.findIndex(i => i.productId === productId);
+  if (index > -1) {
+    // Si ya estaba en la orden, quitarlo al presionar de nuevo
+    directOrderItems.splice(index, 1);
+  } else {
+    // Si no estaba, sumarlo con precio de oferta a $15.00
+    const cat = (typeof window !== 'undefined' && Array.isArray(window.CATALOG_DATA) && window.CATALOG_DATA.length > 0)
+      ? window.CATALOG_DATA
+      : globalCatalog;
+    const product = cat.find(p => p.id === productId || p.code === productId);
+    if (!product) return;
 
-// Quitar un item de la orden directa
-window.removeDirectOrderItem = function(cartItemId) {
-  directOrderItems = directOrderItems.filter(i => i.cartItemId !== cartItemId);
-  cart = [...directOrderItems];
-  saveCart();
-  renderDirectUpsellSelectedList();
+    const newUid = 'c_' + Date.now().toString(36) + '_' + Math.random().toString(36).substring(2, 7);
+    directOrderItems.push({
+      cartItemId: newUid,
+      productId: product.id,
+      code: product.code,
+      name: product.name,
+      reference: product.reference,
+      brand: product.brand,
+      image: product.image,
+      extraShot: false,
+      quantity: 1
+    });
+  }
+
   renderDirectUpsellPricing();
   renderDirectUpsellSuggestions();
 };
-
-// Agregar un perfume sugerido a la orden directa
-window.addSuggestedToDirectOrder = function(productId, event) {
-  if (event) event.stopPropagation();
-  const cat = (typeof window !== 'undefined' && Array.isArray(window.CATALOG_DATA) && window.CATALOG_DATA.length > 0)
-    ? window.CATALOG_DATA
-    : globalCatalog;
-  const product = cat.find(p => p.id === productId || p.code === productId);
-  if (!product) return;
-
-  const newUid = 'c_' + Date.now().toString(36) + '_' + Math.random().toString(36).substring(2, 7);
-  directOrderItems.push({
-    cartItemId: newUid,
-    productId: product.id,
-    code: product.code,
-    name: product.name,
-    reference: product.reference,
-    brand: product.brand,
-    image: product.image,
-    extraShot: false,
-    quantity: 1
-  });
-
-  cart = [...directOrderItems];
-  saveCart();
-
-  renderDirectUpsellSelectedList();
-  renderDirectUpsellPricing();
-  renderDirectUpsellSuggestions();
-};
+window.addSuggestedToDirectOrder = window.toggleSuggestedInDirectOrder;
 
 // Clic en la tarjeta de sugerencia: guardar perfume actual en la bolsa y navegar
 window.onSuggestedCardClick = function(productId, event) {
   if (wasDraggingUpsellCarousel) return;
-  cart = [...directOrderItems];
-  saveCart();
+  if (currentPerfume) {
+    const currentInCart = cart.find(ci => ci.productId === currentPerfume.id && ci.extraShot === isExtraShot);
+    if (!currentInCart) {
+      const newUid = 'c_' + Date.now().toString(36) + '_' + Math.random().toString(36).substring(2, 7);
+      cart.push({
+        cartItemId: newUid,
+        productId: currentPerfume.id,
+        code: currentPerfume.code,
+        name: currentPerfume.name,
+        reference: currentPerfume.reference,
+        brand: currentPerfume.brand,
+        image: currentPerfume.image,
+        extraShot: isExtraShot,
+        quantity: 1
+      });
+      saveCart();
+      updateCartUI();
+    }
+  }
   window.location.href = 'producto.html?id=' + encodeURIComponent(productId);
 };
 
@@ -1026,28 +981,19 @@ window.orderCurrentViaWhatsApp = function(event) {
   if (event) event.preventDefault();
   if (!currentPerfume) return;
 
-  // Cargar perfumes ya existentes en cart
-  directOrderItems = [...cart];
-  const currentItemInOrder = directOrderItems.find(ci => ci.productId === currentPerfume.id && ci.extraShot === isExtraShot);
-
-  if (!currentItemInOrder) {
-    const newUid = 'c_' + Date.now().toString(36) + '_' + Math.random().toString(36).substring(2, 7);
-    directOrderItems.push({
-      cartItemId: newUid,
-      productId: currentPerfume.id,
-      code: currentPerfume.code,
-      name: currentPerfume.name,
-      reference: currentPerfume.reference,
-      brand: currentPerfume.brand,
-      image: currentPerfume.image,
-      extraShot: isExtraShot,
-      quantity: 1
-    });
-  }
-
-  // Sincronizar en la bolsa
-  cart = [...directOrderItems];
-  saveCart();
+  // Iniciar ÚNICAMENTE con el perfume que la persona seleccionó para pedir
+  const newUid = 'c_' + Date.now().toString(36) + '_' + Math.random().toString(36).substring(2, 7);
+  directOrderItems = [{
+    cartItemId: newUid,
+    productId: currentPerfume.id,
+    code: currentPerfume.code,
+    name: currentPerfume.name,
+    reference: currentPerfume.reference,
+    brand: currentPerfume.brand,
+    image: currentPerfume.image,
+    extraShot: isExtraShot,
+    quantity: 1
+  }];
 
   renderDirectUpsellModal();
 
