@@ -283,6 +283,11 @@ async function loadAndRenderProduct() {
     topBadgeHtml = `<div class="top-seller-badge badge-top-3"><span class="badge-rank">Top 3</span><span class="badge-desc"> Más Vendido</span></div>`;
   }
 
+  // Badge de género (Hombre / Mujer / Unisex)
+  const genderKey = (found.gender || 'hombre').toLowerCase();
+  const genderLabel = genderKey === 'mujer' ? 'Mujer' : (genderKey === 'unisex' ? 'Unisex' : 'Hombre');
+  const genderBadgeHtml = `<span class="fragrance-gender-badge gender-badge-${genderKey}">${genderLabel}</span>`;
+
   // Banner promocional para Kódigo 343
   const promoBannerHtml = isPromo343 ? `
     <div class="product-promo-banner-343">
@@ -380,6 +385,7 @@ async function loadAndRenderProduct() {
       <div class="product-hero-top">
         <div class="detail-stage-box">
           ${topBadgeHtml}
+          ${genderBadgeHtml}
           <picture>
             <source srcset="images/kode/kode_${found.code}.webp" type="image/webp">
             <img 

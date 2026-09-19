@@ -153,6 +153,48 @@ html, body {
   border-radius: 10px;
 }
 
+.detail-stage-box .top-seller-badge .badge-desc {
+  display: none !important;
+}
+
+.detail-stage-box .fragrance-gender-badge {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  z-index: 2;
+  padding: 2px 6px;
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-radius: 100px;
+  white-space: nowrap;
+  user-select: none;
+  pointer-events: none;
+  line-height: 1.2;
+}
+
+.gender-badge-hombre {
+  background: rgba(241, 245, 249, 0.95);
+  color: #0f172a;
+  border: 1px solid rgba(15, 23, 42, 0.16);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.gender-badge-mujer {
+  background: rgba(253, 242, 248, 0.95);
+  color: #9d174d;
+  border: 1px solid rgba(157, 23, 77, 0.20);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.gender-badge-unisex {
+  background: rgba(245, 243, 255, 0.95);
+  color: #5b21b6;
+  border: 1px solid rgba(91, 33, 182, 0.20);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
 .detail-bottle-img {
   width: 100%;
   max-width: 155px;

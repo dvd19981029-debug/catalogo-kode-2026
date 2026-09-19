@@ -204,7 +204,6 @@ function setupGenderTabs() {
           window.scrollTo({ top: Math.max(0, targetTop), behavior: 'smooth' });
         }
       }
-      if (searchWrap) searchWrap.style.display = 'none';
 
       const eyebrow = document.getElementById('hero-eyebrow');
       if (eyebrow) eyebrow.textContent = 'GUÍA DE PERFUMERÍA';
@@ -357,6 +356,20 @@ function setupEventListeners() {
   if (searchInput) {
     searchInput.addEventListener('input', (e) => {
       currentSearch = e.target.value.toLowerCase().trim();
+      const catalogWrap = document.getElementById('catalog-showcase-wrap');
+      const maceracionWrap = document.getElementById('maceracion-blog');
+      if (currentSearch) {
+        if (maceracionWrap && maceracionWrap.style.display !== 'none') {
+          maceracionWrap.style.display = 'none';
+          if (catalogWrap) catalogWrap.style.display = 'block';
+        }
+      } else {
+        const activeTab = document.querySelector('.gender-tab.active');
+        if (activeTab && activeTab.getAttribute('data-gender') === 'maceracion') {
+          if (maceracionWrap) maceracionWrap.style.display = 'block';
+          if (catalogWrap) catalogWrap.style.display = 'none';
+        }
+      }
       renderCatalog();
     });
   }
@@ -572,28 +585,56 @@ function renderCatalog() {
   const resultsCounter = document.getElementById('results-count');
   if (!grid) return;
 
-  const sourcePool = catalogPools[currentGender] && catalogPools[currentGender].length > 0
-    ? catalogPools[currentGender]
-    : CATALOG.filter(item => item.gender === currentGender);
+  const activeGenderKey = (currentGender === 'maceracion' ? 'hombre' : currentGender) || 'hombre';
+  const sourcePool = catalogPools[activeGenderKey] && catalogPools[activeGenderKey].length > 0
+    ? catalogPools[activeGenderKey]
+    : CATALOG.filter(item => item.gender === activeGenderKey);
 
-  const filtered = sourcePool.filter(item => {
-    const matchesBrand = currentBrand === 'todas' || item.brand === currentBrand;
-    if (!matchesBrand) return false;
+  let filtered = [];
+  if (!currentSearch) {
+    filtered = sourcePool.filter(item => {
+      return currentBrand === 'todas' || item.brand === currentBrand;
+    });
 
-    if (!currentSearch) return true;
-
+    if (resultsCounter) {
+      resultsCounter.textContent = `${filtered.length} de ${sourcePool.length} fragancias`;
+    }
+  } else {
     const term = normalizeText(currentSearch);
-    const inCode = normalizeText(item.code).includes(term);
-    const inName = normalizeText(item.name).includes(term);
-    const inRef = normalizeText(item.reference).includes(term);
-    const inBrand = normalizeText(item.brand).includes(term);
-    const inFamily = normalizeText(item.olfactoryFamily || '').includes(term);
+    function itemMatches(item) {
+      const matchesBrand = currentBrand === 'todas' || item.brand === currentBrand;
+      if (!matchesBrand) return false;
+      const inCode = normalizeText(item.code).includes(term);
+      const inName = normalizeText(item.name).includes(term);
+      const inRef = normalizeText(item.reference).includes(term);
+      const inBrand = normalizeText(item.brand).includes(term);
+      const inFamily = normalizeText(item.olfactoryFamily || '').includes(term);
+      return inCode || inName || inRef || inBrand || inFamily;
+    }
 
-    return inCode || inName || inRef || inBrand || inFamily;
-  });
+    // 1. Resultados de la categoría activa primero
+    const categoryMatches = sourcePool.filter(itemMatches);
 
-  if (resultsCounter) {
-    resultsCounter.textContent = `${filtered.length} de ${sourcePool.length} fragancias`;
+    // 2. Resultados de las demás categorías después
+    const allGenders = ['hombre', 'mujer', 'unisex'];
+    const otherGenders = allGenders.filter(g => g !== activeGenderKey);
+    const otherMatches = [];
+    otherGenders.forEach(g => {
+      const pool = catalogPools[g] && catalogPools[g].length > 0
+        ? catalogPools[g]
+        : CATALOG.filter(item => item.gender === g);
+      pool.forEach(item => {
+        if (itemMatches(item)) {
+          otherMatches.push(item);
+        }
+      });
+    });
+
+    filtered = [...categoryMatches, ...otherMatches];
+
+    if (resultsCounter) {
+      resultsCounter.textContent = `${filtered.length} fragancia${filtered.length === 1 ? '' : 's'} encontrada${filtered.length === 1 ? '' : 's'}`;
+    }
   }
 
   if (filtered.length === 0) {
@@ -618,6 +659,10 @@ function renderCatalog() {
 
     const webpSrc = `images/kode/kode_${item.code}.webp`;
     const fallbackSrc = `images/kode/kode_${item.code}.jpg`;
+
+    const genderKey = (item.gender || 'hombre').toLowerCase();
+    const genderLabel = genderKey === 'mujer' ? 'Mujer' : (genderKey === 'unisex' ? 'Unisex' : 'Hombre');
+    const genderBadgeHtml = `<span class="fragrance-gender-badge gender-badge-${genderKey}">${genderLabel}</span>`;
 
     let badgeHtml = '';
     if (item.topBadge) {
@@ -645,6 +690,7 @@ function renderCatalog() {
         <a href="producto.html?k=${item.code}" class="product-card-link" onclick="saveCatalogScrollState('${item.code}')" aria-label="Ver detalles de Kódigo ${item.code}">
           <div class="product-stage">
             ${badgeHtml}
+            ${genderBadgeHtml}
             <picture>
               <source srcset="${webpSrc}" type="image/webp">
               <img 
