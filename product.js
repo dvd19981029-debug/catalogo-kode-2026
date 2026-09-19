@@ -322,7 +322,7 @@ async function loadAndRenderProduct() {
   // 4. Renderizar Pirámide Olfativa (Salida, Corazón, Fondo)
   const pyramid = found.pyramid || { top: [], heart: [], base: [] };
 
-  function renderTier(tierTitle, stageDesc, notes) {
+  function renderTier(tierTitle, notes) {
     if (!notes || notes.length === 0) return '';
     const items = notes.map(n => `
       <div class="note-item">
@@ -337,7 +337,6 @@ async function loadAndRenderProduct() {
       <div class="pyramid-tier">
         <div class="tier-label-wrap">
           <span class="tier-title">${tierTitle}</span>
-          <span class="tier-stage-desc">${stageDesc}</span>
         </div>
         <div class="notes-items-wrap">
           ${items}
@@ -348,9 +347,9 @@ async function loadAndRenderProduct() {
 
   const pyramidHtml = `
     <div class="pyramid-block">
-      ${renderTier('Salida', 'Primeros 15 min', pyramid.top)}
-      ${renderTier('Corazón', '2 a 4 horas', pyramid.heart)}
-      ${renderTier('Fondo', 'Fijación duradera', pyramid.base)}
+      ${renderTier('Salida', pyramid.top)}
+      ${renderTier('Corazón', pyramid.heart)}
+      ${renderTier('Fondo', pyramid.base)}
     </div>
   `;
 
