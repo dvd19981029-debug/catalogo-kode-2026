@@ -8,10 +8,26 @@ let isExtraShot = true; // Por defecto seleccionada con extra shot siempre
 let cart = [];
 let globalCatalog = [];
 
-// Desactivar restauración automática nativa
+// Desactivar restauración automática nativa y asegurar inicio en top al recargar
 if ('scrollRestoration' in history) {
   history.scrollRestoration = 'manual';
 }
+
+function resetProductScrollOnReload() {
+  try {
+    const navEntries = performance.getEntriesByType('navigation');
+    const isReload = (navEntries && navEntries.length > 0 && navEntries[0].type === 'reload') ||
+                     (window.performance && window.performance.navigation && window.performance.navigation.type === 1);
+    if (isReload) {
+      window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    }
+  } catch (e) {}
+}
+resetProductScrollOnReload();
+
+window.addEventListener('pageshow', () => {
+  resetProductScrollOnReload();
+});
 
 // Bloqueo total de zoom en móviles (iOS y Android) y atajos de escritorio
 function blockZoomGestures() {
@@ -55,10 +71,12 @@ document.addEventListener('click', (e) => {
 
 // Inicialización al cargar la página
 document.addEventListener('DOMContentLoaded', async () => {
+  resetProductScrollOnReload();
   loadCart();
   setupCartDialogEvents();
   setupDirectUpsellDialogEvents();
   await loadAndRenderProduct();
+  resetProductScrollOnReload();
 });
 
 // Animación de confetti que nace directamente de la caja de promoción en el producto 343

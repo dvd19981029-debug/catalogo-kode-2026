@@ -46,15 +46,59 @@ function blockZoomGestures() {
 }
 blockZoomGestures();
 
+// Detección precisa de recarga (reload) vs retroceso (back navigation)
+function getNavigationType() {
+  try {
+    const navEntries = performance.getEntriesByType('navigation');
+    if (navEntries && navEntries.length > 0) {
+      return navEntries[0].type; // 'navigate', 'reload', 'back_forward', 'prerender'
+    }
+    if (window.performance && window.performance.navigation) {
+      const type = window.performance.navigation.type;
+      if (type === 1) return 'reload';
+      if (type === 2) return 'back_forward';
+      return 'navigate';
+    }
+  } catch (e) {}
+  return 'navigate';
+}
+
+function isPageReload() {
+  return getNavigationType() === 'reload';
+}
+
+function isBackNavigation(event) {
+  if (event && event.persisted) return true;
+  const navType = getNavigationType();
+  if (navType === 'back_forward') return true;
+  try {
+    if (sessionStorage.getItem('kode_nav_to_product') === 'true') return true;
+    if (document.referrer && document.referrer.includes('producto.html')) return true;
+  } catch (e) {}
+  return false;
+}
+
+// Al recargar la página: SIEMPRE volver al inicio absoluto y descartar posiciones guardadas
+if (isPageReload()) {
+  try {
+    sessionStorage.removeItem('kode_catalog_scroll_y');
+    sessionStorage.removeItem('kode_catalog_last_k');
+    sessionStorage.removeItem('kode_nav_to_product');
+  } catch (e) {}
+  window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+}
+
 // Guardar y restaurar posición exacta de lectura
 window.saveCatalogScrollState = function(code) {
   try {
     sessionStorage.setItem('kode_catalog_scroll_y', String(window.scrollY));
     if (code) sessionStorage.setItem('kode_catalog_last_k', String(code));
+    sessionStorage.setItem('kode_nav_to_product', 'true');
   } catch (e) {}
 };
 
 function restoreCatalogScroll() {
+  if (isPageReload()) return;
   try {
     const savedScroll = sessionStorage.getItem('kode_catalog_scroll_y');
     const savedCode = sessionStorage.getItem('kode_catalog_last_k');
@@ -63,6 +107,7 @@ function restoreCatalogScroll() {
     const y = savedScroll ? parseInt(savedScroll, 10) : null;
 
     const tryRestore = () => {
+      if (isPageReload()) return;
       if (y !== null && !isNaN(y) && y > 0) {
         window.scrollTo({ top: y, behavior: 'instant' });
       } else if (savedCode) {
@@ -78,11 +123,23 @@ function restoreCatalogScroll() {
     setTimeout(tryRestore, 50);
     setTimeout(tryRestore, 150);
     setTimeout(tryRestore, 300);
+
+    setTimeout(() => {
+      try {
+        sessionStorage.removeItem('kode_nav_to_product');
+      } catch (e) {}
+    }, 600);
   } catch (e) {}
 }
 
-window.addEventListener('pageshow', () => {
-  restoreCatalogScroll();
+window.addEventListener('pageshow', (event) => {
+  if (isPageReload()) {
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    return;
+  }
+  if (isBackNavigation(event)) {
+    restoreCatalogScroll();
+  }
 });
 
 let scrollDebounce = null;
@@ -104,7 +161,13 @@ document.addEventListener('DOMContentLoaded', async () => {
   loadCart();
   setupEventListeners();
   renderCatalog();
-  restoreCatalogScroll();
+  if (isPageReload()) {
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+  } else if (isBackNavigation()) {
+    restoreCatalogScroll();
+  } else {
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+  }
   setupDialogDismiss();
   setupScrollAwareFilterBar();
   initHero3DShowcase();
