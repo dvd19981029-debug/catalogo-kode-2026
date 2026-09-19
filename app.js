@@ -993,12 +993,17 @@ function renderCart() {
   const container = document.getElementById('cart-items');
   const breakdownContainer = document.getElementById('pricing-breakdown');
   const totalAmountElem = document.getElementById('cart-total-amount');
+  const savingsElem = document.getElementById('cart-total-savings');
   if (!container) return;
 
   if (cart.length === 0) {
     container.innerHTML = '<p class="dialog-empty">Tu bolsa está vacía.</p>';
     if (breakdownContainer) breakdownContainer.innerHTML = '';
     if (totalAmountElem) totalAmountElem.textContent = '$0.00';
+    if (savingsElem) {
+      savingsElem.textContent = '';
+      savingsElem.style.display = 'none';
+    }
     return;
   }
 
@@ -1081,6 +1086,19 @@ function renderCart() {
   if (totalAmountElem) {
     totalAmountElem.textContent = `$${pricing.total.toFixed(2)}`;
   }
+
+  if (savingsElem) {
+    const baseSingleTotal = (pricing.extraCount * 25) + (pricing.normalCount * 20);
+    const savings = Math.max(0, baseSingleTotal - pricing.total);
+    if (pricing.totalCount > 1 && savings > 0) {
+      savingsElem.textContent = `Ahorras $${savings.toFixed(2)} llevando varios`;
+      savingsElem.style.display = 'block';
+    } else {
+      savingsElem.textContent = '';
+      savingsElem.style.display = 'none';
+    }
+  }
+
   updateAllCardPrices();
 }
 

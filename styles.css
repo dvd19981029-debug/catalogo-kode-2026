@@ -1704,10 +1704,12 @@ body {
   color: #1d1d1f;
 }
 
-.total-taxes {
+.total-savings {
   display: block;
-  font-size: 0.75rem;
-  color: var(--text-dim);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #15803d;
+  margin-top: 2px;
 }
 
 .total-number {
