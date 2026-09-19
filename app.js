@@ -133,8 +133,11 @@ function initializeCatalogOrder() {
     if (savedPools) {
       const parsed = JSON.parse(savedPools);
       if (parsed && parsed.hombre && parsed.hombre.length > 0) {
-        Object.assign(catalogPools, parsed);
-        return;
+        const savedTotal = (parsed.hombre?.length || 0) + (parsed.mujer?.length || 0) + (parsed.unisex?.length || 0);
+        if (savedTotal === CATALOG.length) {
+          Object.assign(catalogPools, parsed);
+          return;
+        }
       }
     }
   } catch (e) {}
