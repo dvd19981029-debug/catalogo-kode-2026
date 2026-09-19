@@ -937,134 +937,167 @@ body {
   }
 }
 
-/* Tarjeta Delgada Explicativa: Extra Shot vs Normal */
+/* Tarjeta Explicativa de Alto Impacto: Extra Shot vs Normal */
 .concentration-strip {
   grid-column: 1 / -1;
-  background: #fbfbfd;
-  border: 1px solid rgba(0, 0, 0, 0.07);
-  border-radius: var(--radius-md);
-  padding: 12px 20px;
-  margin: 6px 0 10px 0;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+  background: linear-gradient(135deg, #0e0e11 0%, #18181c 100%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 16px 22px;
+  margin: 10px 0 16px 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.14), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.concentration-strip::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), #d4af37, rgba(255, 255, 255, 0.8), transparent);
 }
 
 .cs-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
+  gap: 22px;
 }
 
-.cs-header {
+.cs-title-wrap {
   display: flex;
-  align-items: center;
-  gap: 8px;
+  flex-direction: column;
+  gap: 3px;
   flex-shrink: 0;
+}
+
+.cs-eyebrow {
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #a1a1a6;
 }
 
 .cs-title {
-  font-size: 0.88rem;
+  font-size: 1.15rem;
   font-weight: 800;
-  color: #1d1d1f;
-  letter-spacing: -0.01em;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+  margin: 0;
   white-space: nowrap;
 }
 
-.cs-grid {
-  display: flex;
-  align-items: center;
-  gap: 20px;
+.cs-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
   flex: 1;
-  justify-content: flex-end;
 }
 
-.cs-item {
+.cs-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 10px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.cs-card-header {
   display: flex;
   align-items: center;
-  gap: 8px;
+  justify-content: flex-start;
 }
 
-.cs-tag {
+.cs-pill {
   font-size: 0.72rem;
-  font-weight: 700;
-  padding: 3px 9px;
+  font-weight: 800;
+  padding: 3px 10px;
   border-radius: 999px;
   white-space: nowrap;
-  flex-shrink: 0;
-  line-height: 1.2;
+  letter-spacing: 0.01em;
 }
 
-.cs-tag-normal {
-  background: #f0f0f2;
-  color: #1d1d1f;
-  border: 1px solid rgba(0, 0, 0, 0.08);
+.cs-pill-normal {
+  background: rgba(255, 255, 255, 0.12);
+  color: #e5e5ea;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.cs-tag-extra {
-  background: #1d1d1f;
-  color: #ffffff;
+.cs-pill-extra {
+  background: #ffffff;
+  color: #000000;
+  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.25);
 }
 
-.cs-text {
-  font-size: 0.8rem;
-  color: #555558;
+.cs-card-desc {
+  font-size: 0.78rem;
+  color: #d1d1d6;
   line-height: 1.35;
+  margin: 0;
 }
 
 @media (max-width: 820px) {
   .concentration-strip {
-    padding: 10px 14px;
-    margin: 4px 0 8px 0;
+    padding: 14px 14px;
+    margin: 8px 0 12px 0;
   }
   .cs-inner {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
+    align-items: stretch;
+    gap: 10px;
+  }
+  .cs-title-wrap {
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
   }
   .cs-title {
-    font-size: 0.82rem;
+    font-size: 1rem;
   }
-  .cs-grid {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 6px;
-    width: 100%;
+  .cs-cards-grid {
+    gap: 8px;
   }
-  .cs-item {
-    align-items: baseline;
-    gap: 6px;
+  .cs-card {
+    padding: 8px 10px;
+    gap: 4px;
   }
-  .cs-tag {
+  .cs-pill {
     font-size: 0.68rem;
-    padding: 2px 7px;
+    padding: 2px 8px;
   }
-  .cs-text {
-    font-size: 0.74rem;
+  .cs-card-desc {
+    font-size: 0.72rem;
+    line-height: 1.3;
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 500px) {
   .concentration-strip {
-    padding: 8px 12px;
-    margin: 2px 0 6px 0;
-    border-radius: 12px;
+    padding: 12px 12px;
+    border-radius: 14px;
   }
-  .cs-inner {
-    gap: 6px;
+  .cs-cards-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
   }
-  .cs-grid {
-    gap: 5px;
+  .cs-card {
+    padding: 8px 8px;
   }
-  .cs-title {
-    font-size: 0.78rem;
-  }
-  .cs-tag {
+  .cs-pill {
     font-size: 0.65rem;
-    padding: 1.5px 6px;
+    padding: 2px 7px;
   }
-  .cs-text {
-    font-size: 0.71rem;
-    line-height: 1.3;
+  .cs-card-desc {
+    font-size: 0.7rem;
   }
 }
 

@@ -818,17 +818,22 @@ function renderCatalog() {
     const explainerCardHtml = `
       <aside class="concentration-strip" aria-label="Extra Shot vs Normal">
         <div class="cs-inner">
-          <div class="cs-header">
-            <span class="cs-title">Extra Shot vs Normal</span>
+          <div class="cs-title-wrap">
+            <span class="cs-eyebrow">Guía de Concentración</span>
+            <h3 class="cs-title">Extra Shot vs Normal</h3>
           </div>
-          <div class="cs-grid">
-            <div class="cs-item">
-              <span class="cs-tag cs-tag-normal">Normal (30%)</span>
-              <span class="cs-text">Formulación clásica con proyección equilibrada para uso diario.</span>
+          <div class="cs-cards-grid">
+            <div class="cs-card cs-card-normal">
+              <div class="cs-card-header">
+                <span class="cs-pill cs-pill-normal">Normal (30%)</span>
+              </div>
+              <p class="cs-card-desc">Formulación clásica de alta calidad. Proyección equilibrada para uso diario (6 a 8 horas de duración).</p>
             </div>
-            <div class="cs-item">
-              <span class="cs-tag cs-tag-extra">Extra Shot (45%)</span>
-              <span class="cs-text">Máxima concentración para mayor fijación, intensidad y estela.</span>
+            <div class="cs-card cs-card-extra">
+              <div class="cs-card-header">
+                <span class="cs-pill cs-pill-extra">Extra Shot (45%)</span>
+              </div>
+              <p class="cs-card-desc">45% de extracto puro. Mayor fijación, máxima estela y potencia intensa para todo el día.</p>
             </div>
           </div>
         </div>
