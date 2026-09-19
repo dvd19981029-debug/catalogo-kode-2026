@@ -565,7 +565,10 @@
   };
 
   // Reiniciar Cuestionario
-  window.resetQuiz = function() {
+  window.resetQuiz = function(e) {
+    if (e && typeof e.stopPropagation === 'function') {
+      e.stopPropagation();
+    }
     quizCurrentStep = 1;
     quizAnswers = { gender: null, vibe: null, occasion: null, notes: null };
     renderQuizStep();
@@ -810,7 +813,7 @@
             <a href="producto.html?k=${matchedPerfume.code}&from=quiz" class="apple-checkout-btn result-cta-btn" onclick="onQuizCtaClick('${matchedPerfume.code}')">
               Ver Perfume y Ordenar →
             </a>
-            <button type="button" class="result-repeat-btn" onclick="resetQuiz()">
+            <button type="button" class="result-repeat-btn" onclick="resetQuiz(event)">
               🔄 Repetir Test
             </button>
           </div>
@@ -837,6 +840,8 @@
     const dialog = document.getElementById('perfume-quiz-dialog');
     if (dialog) {
       dialog.addEventListener('click', (e) => {
+        // Ignorar clics en el contenido interno de la tarjeta del diálogo
+        if (e.target !== dialog) return;
         const rect = dialog.getBoundingClientRect();
         const isInDialog = (
           rect.top <= e.clientY &&
