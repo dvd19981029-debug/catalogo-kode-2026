@@ -462,15 +462,14 @@ async function loadAndRenderProduct() {
         </div>
 
         <div class="detail-actions-row">
-          <button type="button" class="btn-add-cart-large ${cart.some(ci => ci.cartItemId === `${found.id}_${isExtraShot ? 'extra' : 'normal'}`) ? 'in-cart' : ''}" id="btn-add-to-cart" onclick="addProductToCart()">
+          <button type="button" class="btn-add-cart-large ${cart.some(ci => (ci.productId === found.id || ci.id === found.id) && ci.extraShot === isExtraShot) ? 'in-cart' : ''}" id="btn-add-to-cart" onclick="addProductToCart()">
             <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
               <line x1="3" y1="6" x2="21" y2="6"></line>
               <path d="M16 10a4 4 0 0 1-8 0"></path>
             </svg>
             <span id="btn-add-text">${(() => {
-              const ci = cart.find(c => c.cartItemId === `${found.id}_${isExtraShot ? 'extra' : 'normal'}`);
-              const q = ci ? ci.quantity : 0;
+              const q = cart.filter(ci => (ci.productId === found.id || ci.id === found.id) && ci.extraShot === isExtraShot).length;
               return q > 0 ? (q === 1 ? '✓ Ya agregada (1)' : `✓ Ya agregadas (${q})`) : 'Agregar al Carrito';
             })()}</span>
           </button>
@@ -571,9 +570,7 @@ function updateProductBuyButton() {
   const btnText = document.getElementById('btn-add-text');
   if (!btn || !btnText || !currentPerfume) return;
 
-  const cartItemId = `${currentPerfume.id}_${isExtraShot ? 'extra' : 'normal'}`;
-  const cartItem = cart.find(ci => ci.cartItemId === cartItemId);
-  const qty = cartItem ? cartItem.quantity : 0;
+  const qty = cart.filter(ci => (ci.productId === currentPerfume.id || ci.id === currentPerfume.id) && ci.extraShot === isExtraShot).length;
 
   if (qty > 0) {
     btnText.textContent = qty === 1 ? '✓ Ya agregada (1)' : `✓ Ya agregadas (${qty})`;
@@ -588,24 +585,18 @@ function updateProductBuyButton() {
 window.addProductToCart = function() {
   if (!currentPerfume) return;
 
-  const cartItemId = `${currentPerfume.id}_${isExtraShot ? 'extra' : 'normal'}`;
-  const existingIndex = cart.findIndex(ci => ci.cartItemId === cartItemId);
-
-  if (existingIndex > -1) {
-    cart[existingIndex].quantity += 1;
-  } else {
-    cart.push({
-      cartItemId: cartItemId,
-      productId: currentPerfume.id,
-      code: currentPerfume.code,
-      name: currentPerfume.name,
-      reference: currentPerfume.reference,
-      brand: currentPerfume.brand,
-      image: currentPerfume.image,
-      extraShot: isExtraShot,
-      quantity: 1
-    });
-  }
+  const newUid = 'c_' + Date.now().toString(36) + '_' + Math.random().toString(36).substring(2, 7);
+  cart.push({
+    cartItemId: newUid,
+    productId: currentPerfume.id,
+    code: currentPerfume.code,
+    name: currentPerfume.name,
+    reference: currentPerfume.reference,
+    brand: currentPerfume.brand,
+    image: currentPerfume.image,
+    extraShot: isExtraShot,
+    quantity: 1
+  });
 
   saveCart();
   updateProductBuyButton();
@@ -779,7 +770,20 @@ function loadCart() {
   try {
     const saved = localStorage.getItem('kode_cart_2026');
     if (saved) {
-      cart = JSON.parse(saved);
+      const parsed = JSON.parse(saved);
+      if (Array.isArray(parsed)) {
+        cart = [];
+        parsed.forEach(item => {
+          const qty = item.quantity || 1;
+          for (let i = 0; i < qty; i++) {
+            cart.push({
+              ...item,
+              cartItemId: (qty === 1 && item.cartItemId) ? item.cartItemId : ('c_' + Date.now().toString(36) + '_' + Math.random().toString(36).substring(2, 7)),
+              quantity: 1
+            });
+          }
+        });
+      }
     }
   } catch (e) {
     cart = [];
@@ -896,9 +900,18 @@ function renderCart() {
         <div class="cart-row-info">
           <div class="cart-row-code">KÓDIGO ${item.code}</div>
           <h4 class="cart-row-name">${item.name}</h4>
-          <span class="cart-row-badge ${item.extraShot ? 'badge-gold' : 'badge-norm'}">
-            ${item.extraShot ? 'Extra Shot (45%)' : 'Normal (30%)'}
-          </span>
+          <div class="cart-conc-toggle">
+            <button type="button" 
+                    class="cart-conc-btn ${!item.extraShot ? 'active' : ''}" 
+                    onclick="setCartItemConcentration('${item.cartItemId}', false)">
+              Normal (30%)
+            </button>
+            <button type="button" 
+                    class="cart-conc-btn ${item.extraShot ? 'active' : ''}" 
+                    onclick="setCartItemConcentration('${item.cartItemId}', true)">
+              Extra Shot (45%)
+            </button>
+          </div>
         </div>
         <div class="cart-row-stepper">
           <button type="button" class="stepper-btn" onclick="changeCartQty('${item.cartItemId}', -1)" aria-label="Disminuir">−</button>
@@ -984,11 +997,26 @@ window.changeCartQty = function(cartItemId, delta) {
   const index = cart.findIndex(ci => ci.cartItemId === cartItemId);
   if (index === -1) return;
 
-  cart[index].quantity += delta;
-  if (cart[index].quantity <= 0) {
+  if (delta < 0) {
     cart.splice(index, 1);
+  } else if (delta > 0) {
+    const src = cart[index];
+    const newUid = 'c_' + Date.now().toString(36) + '_' + Math.random().toString(36).substring(2, 7);
+    cart.push({
+      ...src,
+      cartItemId: newUid,
+      quantity: 1
+    });
   }
 
+  saveCart();
+  renderCart();
+};
+
+window.setCartItemConcentration = function(cartItemId, isExtra) {
+  const item = cart.find(ci => ci.cartItemId === cartItemId);
+  if (!item) return;
+  item.extraShot = !!isExtra;
   saveCart();
   renderCart();
 };

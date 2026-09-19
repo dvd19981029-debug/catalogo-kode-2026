@@ -302,7 +302,20 @@ function loadCart() {
   try {
     const saved = localStorage.getItem('kode_cart_2026');
     if (saved) {
-      cart = JSON.parse(saved);
+      const parsed = JSON.parse(saved);
+      if (Array.isArray(parsed)) {
+        cart = [];
+        parsed.forEach(item => {
+          const qty = item.quantity || 1;
+          for (let i = 0; i < qty; i++) {
+            cart.push({
+              ...item,
+              cartItemId: (qty === 1 && item.cartItemId) ? item.cartItemId : ('c_' + Date.now().toString(36) + '_' + Math.random().toString(36).substring(2, 7)),
+              quantity: 1
+            });
+          }
+        });
+      }
     }
   } catch (e) {
     cart = [];
@@ -340,9 +353,7 @@ function updateCardBuyButton(productId) {
   if (!btn) return;
 
   const isExtra = selectedConcentrations[productId] !== undefined ? selectedConcentrations[productId] : true;
-  const cartItemId = `${productId}_${isExtra ? 'extra' : 'normal'}`;
-  const cartItem = cart.find(ci => ci.cartItemId === cartItemId);
-  const qty = cartItem ? cartItem.quantity : 0;
+  const qty = cart.filter(ci => (ci.productId === productId || ci.id === productId) && ci.extraShot === isExtra).length;
 
   if (qty > 0) {
     btn.textContent = qty === 1 ? '✓ Ya agregada (1)' : `✓ Ya agregadas (${qty})`;
@@ -686,9 +697,7 @@ function renderCatalog() {
     const priceInfo = getCardPriceDisplay(item.id, isExtra);
     const mainPrice = priceInfo.mainHtml;
     const subPrice = priceInfo.subPrice;
-    const cartItemId = `${item.id}_${isExtra ? 'extra' : 'normal'}`;
-    const cartItem = cart.find(ci => ci.cartItemId === cartItemId);
-    const inCartQty = cartItem ? cartItem.quantity : 0;
+    const inCartQty = cart.filter(ci => (ci.productId === item.id || ci.id === item.id) && ci.extraShot === isExtra).length;
     const btnText = inCartQty > 0 ? (inCartQty === 1 ? '✓ Ya agregada (1)' : `✓ Ya agregadas (${inCartQty})`) : 'Agregar';
     const btnClass = inCartQty > 0 ? 'apple-buy-btn in-cart' : 'apple-buy-btn';
 
@@ -831,24 +840,19 @@ window.addToCart = function(productId) {
   if (!item) return;
 
   const isExtraShot = selectedConcentrations[productId] !== undefined ? selectedConcentrations[productId] : true;
-  const cartItemId = `${productId}_${isExtraShot ? 'extra' : 'normal'}`;
-  const existingIndex = cart.findIndex(ci => ci.cartItemId === cartItemId);
+  const newUid = 'c_' + Date.now().toString(36) + '_' + Math.random().toString(36).substring(2, 7);
 
-  if (existingIndex > -1) {
-    cart[existingIndex].quantity += 1;
-  } else {
-    cart.push({
-      cartItemId: cartItemId,
-      productId: item.id,
-      code: item.code,
-      name: item.name,
-      reference: item.reference,
-      brand: item.brand,
-      image: item.image,
-      extraShot: isExtraShot,
-      quantity: 1
-    });
-  }
+  cart.push({
+    cartItemId: newUid,
+    productId: item.id,
+    code: item.code,
+    name: item.name,
+    reference: item.reference,
+    brand: item.brand,
+    image: item.image,
+    extraShot: isExtraShot,
+    quantity: 1
+  });
 
   saveCart();
 
@@ -1052,9 +1056,18 @@ function renderCart() {
         <div class="cart-row-info">
           <div class="cart-row-code">KÓDIGO ${item.code}</div>
           <h4 class="cart-row-name">${item.name}</h4>
-          <span class="cart-row-badge ${item.extraShot ? 'badge-gold' : 'badge-norm'}">
-            ${item.extraShot ? 'Extra Shot (45%)' : 'Normal (30%)'}
-          </span>
+          <div class="cart-conc-toggle">
+            <button type="button" 
+                    class="cart-conc-btn ${!item.extraShot ? 'active' : ''}" 
+                    onclick="setCartItemConcentration('${item.cartItemId}', false)">
+              Normal (30%)
+            </button>
+            <button type="button" 
+                    class="cart-conc-btn ${item.extraShot ? 'active' : ''}" 
+                    onclick="setCartItemConcentration('${item.cartItemId}', true)">
+              Extra Shot (45%)
+            </button>
+          </div>
         </div>
         <div class="cart-row-stepper">
           <button type="button" class="stepper-btn" onclick="changeCartQty('${item.cartItemId}', -1)" aria-label="Disminuir">−</button>
@@ -1141,11 +1154,26 @@ window.changeCartQty = function(cartItemId, delta) {
   const index = cart.findIndex(ci => ci.cartItemId === cartItemId);
   if (index === -1) return;
 
-  cart[index].quantity += delta;
-  if (cart[index].quantity <= 0) {
+  if (delta < 0) {
     cart.splice(index, 1);
+  } else if (delta > 0) {
+    const src = cart[index];
+    const newUid = 'c_' + Date.now().toString(36) + '_' + Math.random().toString(36).substring(2, 7);
+    cart.push({
+      ...src,
+      cartItemId: newUid,
+      quantity: 1
+    });
   }
 
+  saveCart();
+  renderCart();
+};
+
+window.setCartItemConcentration = function(cartItemId, isExtra) {
+  const item = cart.find(ci => ci.cartItemId === cartItemId);
+  if (!item) return;
+  item.extraShot = !!isExtra;
   saveCart();
   renderCart();
 };
