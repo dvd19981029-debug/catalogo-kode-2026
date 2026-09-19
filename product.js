@@ -8,6 +8,14 @@ let isExtraShot = true; // Por defecto seleccionada con extra shot siempre
 let cart = [];
 let globalCatalog = [];
 
+// Detectar si el usuario llega desde el Test de Perfume Ideal
+try {
+  const urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.get('from') === 'quiz') {
+    sessionStorage.setItem('kode_from_quiz', 'true');
+  }
+} catch (e) {}
+
 // Desactivar restauración automática nativa y asegurar inicio en top al recargar
 if ('scrollRestoration' in history) {
   history.scrollRestoration = 'manual';
@@ -1170,7 +1178,16 @@ window.submitDirectOrderViaWhatsApp = function() {
         reference: '',
         municipality: '',
         department: '',
-        paymentMethod: 'Por coordinar'
+        paymentMethod: 'Por coordinar',
+        fromQuiz: (function() {
+          try {
+            return sessionStorage.getItem('kode_from_quiz') === 'true' ||
+                   sessionStorage.getItem('kode_quiz_completed') === 'true' ||
+                   new URLSearchParams(window.location.search).get('from') === 'quiz';
+          } catch (e) {
+            return false;
+          }
+        })()
       });
     }
   } catch (e) {}
@@ -1756,7 +1773,16 @@ function sendOrderViaWhatsApp() {
         reference: reference || '',
         municipality: municipality || '',
         department: department || '',
-        paymentMethod: selectedPaymentMethod || 'No seleccionado'
+        paymentMethod: selectedPaymentMethod || 'No seleccionado',
+        fromQuiz: (function() {
+          try {
+            return sessionStorage.getItem('kode_from_quiz') === 'true' ||
+                   sessionStorage.getItem('kode_quiz_completed') === 'true' ||
+                   new URLSearchParams(window.location.search).get('from') === 'quiz';
+          } catch (e) {
+            return false;
+          }
+        })()
       });
     }
   } catch (e) {}

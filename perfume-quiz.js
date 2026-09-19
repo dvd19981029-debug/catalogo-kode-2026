@@ -299,6 +299,12 @@
     const dialog = document.getElementById('perfume-quiz-dialog');
     if (!dialog) return;
 
+    try {
+      if (window.KodeTracker && typeof window.KodeTracker.trackEvent === 'function') {
+        window.KodeTracker.trackEvent('quiz_touch', {});
+      }
+    } catch (e) {}
+
     quizCurrentStep = 1;
     quizAnswers = { gender: null, vibe: null, occasion: null, notes: null };
     renderQuizStep();
@@ -505,6 +511,23 @@
       matchWhy: `Buscabas una fragancia con carácter y estela memorable. ${matchedPerfume.name} combina una composición equilibrada de acordes nobles con una fijación excepcional pensada para acompañarte todo el día.`
     };
 
+    // Tracking de Test Completado
+    try {
+      sessionStorage.setItem('kode_quiz_completed', 'true');
+      sessionStorage.setItem('kode_quiz_perfume', matchedPerfume.code);
+      if (window.KodeTracker && typeof window.KodeTracker.trackEvent === 'function') {
+        window.KodeTracker.trackEvent('quiz_complete', {
+          code: matchedPerfume.code,
+          name: matchedPerfume.name,
+          archetype: info.archetype,
+          gender: quizAnswers.gender,
+          vibe: quizAnswers.vibe,
+          occasion: quizAnswers.occasion,
+          notes: quizAnswers.notes
+        });
+      }
+    } catch (e) {}
+
     const imgSrc = matchedPerfume.image || `images/kode/kode_${matchedPerfume.code}.webp`;
     const brandPart = matchedPerfume.brand ? ` (${matchedPerfume.brand})` : '';
     const inspiration = matchedPerfume.reference || matchedPerfume.name;
@@ -558,7 +581,7 @@
 
           <!-- Botones de Acción -->
           <div class="result-actions-row">
-            <a href="producto.html?k=${matchedPerfume.code}" class="apple-checkout-btn result-cta-btn">
+            <a href="producto.html?k=${matchedPerfume.code}&from=quiz" class="apple-checkout-btn result-cta-btn" onclick="onQuizCtaClick('${matchedPerfume.code}')">
               Ver Perfume y Ordenar →
             </a>
             <button type="button" class="result-repeat-btn" onclick="resetQuiz()">
@@ -572,6 +595,16 @@
     // Desplazar suavemente arriba
     container.scrollTop = 0;
   }
+
+  // Clic en CTA de resultado del test
+  window.onQuizCtaClick = function(code) {
+    try {
+      sessionStorage.setItem('kode_from_quiz', 'true');
+      if (window.KodeTracker && typeof window.KodeTracker.trackEvent === 'function') {
+        window.KodeTracker.trackEvent('quiz_cta_click', { code: code });
+      }
+    } catch (e) {}
+  };
 
   // Inicializar eventos de clic fuera del diálogo
   function setupQuizDialogEvents() {

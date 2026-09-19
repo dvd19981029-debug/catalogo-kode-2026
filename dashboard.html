@@ -651,6 +651,34 @@
         <div class="kpi-value" id="kpi-abandoned-count" style="color: #dc2626;">0</div>
         <div class="kpi-sub" id="kpi-abandoned-sub">Tasa de abandono: 0.0%</div>
       </div>
+
+      <!-- Métricas del Test de Perfume Ideal -->
+      <div class="kpi-card">
+        <div class="kpi-header">
+          <span class="kpi-label">Tocan el Test</span>
+          <span class="kpi-icon">✨</span>
+        </div>
+        <div class="kpi-value" id="kpi-quiz-touches">0</div>
+        <div class="kpi-sub" id="kpi-quiz-touches-sub">0 toques en total</div>
+      </div>
+
+      <div class="kpi-card">
+        <div class="kpi-header">
+          <span class="kpi-label">Completan el Test</span>
+          <span class="kpi-icon">🎯</span>
+        </div>
+        <div class="kpi-value" id="kpi-quiz-completes">0</div>
+        <div class="kpi-sub" id="kpi-quiz-completes-sub">0% de finalización</div>
+      </div>
+
+      <div class="kpi-card highlight">
+        <div class="kpi-header">
+          <span class="kpi-label">Compras desde el Test</span>
+          <span class="kpi-icon">🛍️</span>
+        </div>
+        <div class="kpi-value" id="kpi-quiz-orders">0</div>
+        <div class="kpi-sub" id="kpi-quiz-orders-sub">$0.00 en ventas</div>
+      </div>
     </section>
 
     <!-- Grilla de Paneles -->
@@ -904,6 +932,14 @@
       const geoCounts = {};
       const searchCounts = {};
 
+      // Métricas del Test de Perfume Ideal
+      let quizTouchesCount = 0;
+      const quizTouchSessions = new Set();
+      let quizCompletesCount = 0;
+      const quizCompleteSessions = new Set();
+      let quizOrdersCount = 0;
+      let quizSalesTotal = 0;
+
       events.forEach(ev => {
         const sid = ev.sessionId || 'anon_' + (ev.device || 'pc');
         if (!sessionsMap[sid]) {
@@ -956,8 +992,19 @@
         const geoKey = (ev.city && ev.city !== 'Desconocido' ? `${ev.city}, ` : '') + (ev.country || 'El Salvador');
         geoCounts[geoKey] = (geoCounts[geoKey] || 0) + 1;
 
+        // Eventos del Test de Perfume Ideal
+        if (ev.type === 'quiz_touch' || ev.type === 'quiz_open') {
+          quizTouchesCount++;
+          if (ev.sessionId) quizTouchSessions.add(ev.sessionId);
+        }
+
+        if (ev.type === 'quiz_complete') {
+          quizCompletesCount++;
+          if (ev.sessionId) quizCompleteSessions.add(ev.sessionId);
+        }
+
         if (ev.type === 'page_view') pageviews++;
-        if (['tab_click', 'search', 'add_to_cart', 'open_cart', 'product_view'].includes(ev.type)) totalInteractions++;
+        if (['tab_click', 'search', 'add_to_cart', 'open_cart', 'product_view', 'quiz_touch', 'quiz_open', 'quiz_complete', 'quiz_cta_click'].includes(ev.type)) totalInteractions++;
 
         if (ev.type === 'search' && ev.details.query) {
           const q = ev.details.query.toLowerCase().trim();
@@ -968,6 +1015,19 @@
           s.hasCheckout = true;
           s.checkoutEvent = ev;
           whatsappOrders.push(ev);
+        }
+      });
+
+      // Identificar pedidos que provienen del Test (por parámetro directo en checkout o correlación de sesión)
+      whatsappOrders.forEach(ord => {
+        const s = sessionsMap[ord.sessionId || ''];
+        const fromDetails = ord.details && (ord.details.fromQuiz === true || ord.details.fromQuiz === 'true');
+        const fromSession = s && s.events.some(e => e.type === 'quiz_complete' || e.type === 'quiz_cta_click');
+        const isQuiz = fromDetails || fromSession;
+        ord.isQuizOrder = isQuiz;
+        if (isQuiz) {
+          quizOrdersCount++;
+          quizSalesTotal += (parseFloat(ord.details.total) || 0);
         }
       });
 
@@ -1012,7 +1072,7 @@
       const abandonedCount = abandonedSessions.length;
       const abandonmentRate = totalCartsCreated > 0 ? ((abandonedCount / totalCartsCreated) * 100).toFixed(1) : '0.0';
 
-      // Actualizar KPIs
+      // Actualizar KPIs Principales
       document.getElementById('kpi-whatsapp-count').textContent = totalOrders;
       document.getElementById('kpi-whatsapp-sales').textContent = `$${totalSales.toFixed(2)}`;
       document.getElementById('kpi-whatsapp-avg').textContent = `Promedio por orden: $${avgOrder.toFixed(2)}`;
@@ -1023,6 +1083,20 @@
       document.getElementById('kpi-avg-time').textContent = avgTimeFormatted;
       document.getElementById('kpi-abandoned-count').textContent = abandonedCount;
       document.getElementById('kpi-abandoned-sub').textContent = `Tasa de abandono: ${abandonmentRate}%`;
+
+      // Actualizar KPIs del Test de Perfume Ideal
+      const quizTouchUsers = quizTouchSessions.size;
+      const quizCompleteUsers = quizCompleteSessions.size;
+      const quizCompRate = quizTouchUsers > 0 ? ((quizCompleteUsers / quizTouchUsers) * 100).toFixed(1) : '0.0';
+
+      document.getElementById('kpi-quiz-touches').textContent = quizTouchUsers;
+      document.getElementById('kpi-quiz-touches-sub').textContent = `${quizTouchesCount} ${quizTouchesCount === 1 ? 'toque' : 'toques en total'}`;
+
+      document.getElementById('kpi-quiz-completes').textContent = quizCompleteUsers;
+      document.getElementById('kpi-quiz-completes-sub').textContent = `${quizCompRate}% de finalización`;
+
+      document.getElementById('kpi-quiz-orders').textContent = quizOrdersCount;
+      document.getElementById('kpi-quiz-orders-sub').textContent = `$${quizSalesTotal.toFixed(2)} en ventas`;
 
       document.getElementById('orders-count-badge').textContent = `${totalOrders} pedidos`;
       document.getElementById('abandoned-count-badge').textContent = `${abandonedCount} carritos`;
@@ -1153,6 +1227,7 @@
             <td>
               <span class="badge badge-device">${escapeHtml(ord.device)}</span><br>
               <span style="font-size: 0.74rem; color: var(--text-dim);">${escapeHtml(ord.referrer)}</span>
+              ${ord.isQuizOrder ? `<br><span class="badge badge-gold" style="margin-top: 4px; display: inline-block;">✨ Vía Test</span>` : ''}
             </td>
           </tr>
         `;

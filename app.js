@@ -1531,7 +1531,15 @@ function sendOrderViaWhatsApp() {
         reference: reference || '',
         municipality: municipality || '',
         department: department || '',
-        paymentMethod: selectedPaymentMethod || 'No seleccionado'
+        paymentMethod: selectedPaymentMethod || 'No seleccionado',
+        fromQuiz: (function() {
+          try {
+            return sessionStorage.getItem('kode_from_quiz') === 'true' ||
+                   sessionStorage.getItem('kode_quiz_completed') === 'true';
+          } catch (e) {
+            return false;
+          }
+        })()
       });
     }
   } catch (e) {}
