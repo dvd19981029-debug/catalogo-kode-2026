@@ -934,7 +934,137 @@ body {
   }
   .apple-grid {
     grid-template-columns: repeat(5, 1fr);
-    gap: 22px;
+  }
+}
+
+/* Tarjeta Delgada Explicativa: Extra Shot vs Normal */
+.concentration-strip {
+  grid-column: 1 / -1;
+  background: #fbfbfd;
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  border-radius: var(--radius-md);
+  padding: 12px 20px;
+  margin: 6px 0 10px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+}
+
+.cs-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.cs-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.cs-title {
+  font-size: 0.88rem;
+  font-weight: 800;
+  color: #1d1d1f;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+
+.cs-grid {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.cs-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cs-tag {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 9px;
+  border-radius: 999px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  line-height: 1.2;
+}
+
+.cs-tag-normal {
+  background: #f0f0f2;
+  color: #1d1d1f;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.cs-tag-extra {
+  background: #1d1d1f;
+  color: #ffffff;
+}
+
+.cs-text {
+  font-size: 0.8rem;
+  color: #555558;
+  line-height: 1.35;
+}
+
+@media (max-width: 820px) {
+  .concentration-strip {
+    padding: 10px 14px;
+    margin: 4px 0 8px 0;
+  }
+  .cs-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .cs-title {
+    font-size: 0.82rem;
+  }
+  .cs-grid {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    width: 100%;
+  }
+  .cs-item {
+    align-items: baseline;
+    gap: 6px;
+  }
+  .cs-tag {
+    font-size: 0.68rem;
+    padding: 2px 7px;
+  }
+  .cs-text {
+    font-size: 0.74rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .concentration-strip {
+    padding: 8px 12px;
+    margin: 2px 0 6px 0;
+    border-radius: 12px;
+  }
+  .cs-inner {
+    gap: 6px;
+  }
+  .cs-grid {
+    gap: 5px;
+  }
+  .cs-title {
+    font-size: 0.78rem;
+  }
+  .cs-tag {
+    font-size: 0.65rem;
+    padding: 1.5px 6px;
+  }
+  .cs-text {
+    font-size: 0.71rem;
+    line-height: 1.3;
   }
 }
 

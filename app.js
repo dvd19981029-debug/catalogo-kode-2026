@@ -624,6 +624,24 @@ function updateAllCardPrices() {
   });
 }
 
+// Obtener número de columnas del grid según el viewport
+function getCatalogGridColumns() {
+  const w = window.innerWidth;
+  if (w <= 820) return 2;
+  if (w <= 1140) return 3;
+  if (w >= 1680) return 5;
+  return 4;
+}
+
+let lastCatalogGridCols = getCatalogGridColumns();
+window.addEventListener('resize', () => {
+  const currentCols = getCatalogGridColumns();
+  if (currentCols !== lastCatalogGridCols) {
+    lastCatalogGridCols = currentCols;
+    renderCatalog();
+  }
+}, { passive: true });
+
 // Renderizar catálogo
 function renderCatalog() {
   const grid = document.getElementById('catalog-grid');
@@ -691,7 +709,7 @@ function renderCatalog() {
 
   if (emptyState) emptyState.style.display = 'none';
 
-  grid.innerHTML = filtered.map(item => {
+  const cardHtmls = filtered.map(item => {
     const isPromo343 = item.code === '343';
     const isExtra = selectedConcentrations[item.id] !== undefined ? selectedConcentrations[item.id] : true;
     const priceInfo = getCardPriceDisplay(item.id, isExtra);
@@ -790,7 +808,36 @@ function renderCatalog() {
         </div>
       </article>
     `;
-  }).join('');
+  });
+
+  // Tarjeta explicativa delgada después de la 4ta línea de perfumes
+  const gridCols = getCatalogGridColumns();
+  const insertIndex = gridCols * 4; // Exactamente después de 4 filas completas
+
+  if (cardHtmls.length >= insertIndex) {
+    const explainerCardHtml = `
+      <aside class="concentration-strip" aria-label="Extra Shot vs Normal">
+        <div class="cs-inner">
+          <div class="cs-header">
+            <span class="cs-title">Extra Shot vs Normal</span>
+          </div>
+          <div class="cs-grid">
+            <div class="cs-item">
+              <span class="cs-tag cs-tag-normal">Normal (30%)</span>
+              <span class="cs-text">Formulación clásica con proyección equilibrada para uso diario.</span>
+            </div>
+            <div class="cs-item">
+              <span class="cs-tag cs-tag-extra">Extra Shot (45%)</span>
+              <span class="cs-text">Máxima concentración para mayor fijación, intensidad y estela.</span>
+            </div>
+          </div>
+        </div>
+      </aside>
+    `;
+    cardHtmls.splice(insertIndex, 0, explainerCardHtml);
+  }
+
+  grid.innerHTML = cardHtmls.join('');
 }
 
 // Cambiar concentración en la tarjeta (Segmented Control)
