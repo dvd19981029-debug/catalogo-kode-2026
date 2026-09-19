@@ -812,7 +812,7 @@
           structuredQuery: {
             from: [{ collectionId: 'analytics_events' }],
             orderBy: [{ field: { fieldPath: 'timestamp' }, direction: 'DESCENDING' }],
-            limit: 500
+            limit: 10000
           }
         };
 
@@ -871,11 +871,14 @@
 
     function getFilteredEvents() {
       const now = new Date();
+      const svTodayStr = now.toLocaleDateString('es-SV', { timeZone: 'America/El_Salvador' });
+
       return rawEvents.filter(ev => {
         if (currentTimeFilter === 'all') return true;
         const diffMs = now - ev.timestamp;
         if (currentTimeFilter === 'today') {
-          return ev.timestamp.toDateString() === now.toDateString();
+          const evSvStr = ev.timestamp.toLocaleDateString('es-SV', { timeZone: 'America/El_Salvador' });
+          return evSvStr === svTodayStr;
         }
         if (currentTimeFilter === '7d') {
           return diffMs <= 7 * 24 * 60 * 60 * 1000;

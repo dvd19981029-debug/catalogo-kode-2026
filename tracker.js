@@ -256,13 +256,16 @@
     } catch (e) {}
   }
 
-  // Heartbeats periódicos (15s, 30s, 60s, 120s, 180s, 300s, 600s...)
+  // Heartbeats de respaldo únicamente a los 30s y 120s para evitar saturación de la base de datos
+  const heartbeatCheckpoints = [30, 120];
+  let currentCheckpointIndex = 0;
   const heartbeatInterval = setInterval(() => {
     const elapsed = Math.round((Date.now() - pageStartTime) / 1000);
-    if ([15, 30, 45, 60, 90, 120, 180, 240, 300, 420, 600, 900].includes(elapsed) || (elapsed > 0 && elapsed % 60 === 0)) {
+    if (currentCheckpointIndex < heartbeatCheckpoints.length && elapsed >= heartbeatCheckpoints[currentCheckpointIndex]) {
       reportTimeSpent(false);
+      currentCheckpointIndex++;
     }
-    if (elapsed >= 1800) {
+    if (currentCheckpointIndex >= heartbeatCheckpoints.length) {
       clearInterval(heartbeatInterval);
     }
   }, 5000);
