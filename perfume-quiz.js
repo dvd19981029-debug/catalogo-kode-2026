@@ -67,6 +67,102 @@
       personality: 'Enfocado, implacable y con gran presencia. No necesitas alzar la voz para hacerte notar: tu porte y determinación hablan por ti.',
       matchWhy: 'Buscabas proyección bestial a precio justo. Su apertura de limón y piña con corazón de abedul ahumado y fondo de pachulí llena cualquier lugar con autoridad.'
     },
+    '109': {
+      archetype: 'Vértigo Metropolitano • El Urbano Implacable',
+      element: 'Hierba Fresca & Metal 🏙️',
+      personality: 'Moderno, cosmopolita y lleno de seguridad. Te mueves con agilidad en el asfalto, dominas tus proyectos y tienes esa frescura urbana magnética que no necesita esfuerzo.',
+      matchWhy: 'Buscabas una fragancia limpia, versátil y con carácter contemporáneo. Sus hojas verdes y jengibre con gardenia y sándalo proyectan una energía ejecutiva fresca que dura todo el día.'
+    },
+    '285': {
+      archetype: 'Paraíso Prohibido • La Tentación Tropical',
+      element: 'Coco & Brasa Marina 🥥',
+      personality: 'Sensual, libre y desinhibido. Tienes un magnetismo exótico y carismático que evoca un verano interminable. La gente se siente atraída por tu vibra cálida y atrevida.',
+      matchWhy: 'Buscabas seducción y frescura adictiva. El coco cremoso con bergamota chispeante y haba tonka tostada es un imán tropical irresistible que arranca suspiros de inmediato.'
+    },
+    '690': {
+      archetype: 'Cielo Dorado • El Encanto Majestuoso',
+      element: 'Cítrico Acaramelado 🍊',
+      personality: 'Expansivo, optimista y de presencia luminosa. Tu calidez humana y buen humor conquistan al instante, dejando una sensación reconfortante y de puro lujo a tu alrededor.',
+      matchWhy: 'Buscabas dulzura equilibrada y frescura vibrante. La mandarina jugosa con caramelo fino, haba tonka y maderas suaves ofrece una estela exquisita que todos adoran.'
+    },
+    '142': {
+      archetype: 'Roca Volcánica • La Fuerza Oceánica',
+      element: 'Olas Negras & Incienso 🌋',
+      personality: 'Imponente, sereno y con una profundidad admirable. Combinas la calma de las aguas profundas con la fuerza indomable de las rocas volcánicas bajo la marea.',
+      matchWhy: 'Buscabas elegancia, frescura y porte distinguido. El choque del romero aromático y notas marinas con incienso ahumado y pachulí crea una firma majestuosa de gran duración.'
+    },
+    '217': {
+      archetype: 'Dios Victorioso • La Pasión Legendaria',
+      element: 'Fuego & Menta Viva ⚡',
+      personality: 'Apasionado, audaz y dueño de tu propio destino. No temes ser el centro de atención: irradias una seguridad arrolladora que inspira y conquista a dondequiera que vas.',
+      matchWhy: 'Buscabas potencia, seducción y presencia festiva. La menta fresca combinada con manzana verde crocante, haba tonka y vainilla de Madagascar crea una explosión de cumplidos.'
+    },
+    '179': {
+      archetype: 'Noche Bohemia • El Lujo Especiado',
+      element: 'Ron Añejo & Cuero Noble 🥃',
+      personality: 'Misterioso, culto y con una seducción madura e implacable. Aprecias las buenas historias, los ambientes exclusivos y el magnetismo que surge de la templanza y el buen porte.',
+      matchWhy: 'Buscabas calidez, sofisticación y distinción nocturna. El acorde de ron añejo con especias ardientes, cuero curtido y benjuí viste tu piel con una elegancia aristocrática sublime.'
+    },
+    '2': {
+      archetype: 'Seducción Romana • La Intensidad Nocturna',
+      element: 'Vainilla Ahumada & Noche 🏛️',
+      personality: 'Intenso, magnético y vanguardista. Sabes cuándo dar el paso audaz y tienes un encanto nocturno que atrapa miradas en la penumbra.',
+      matchWhy: 'Buscabas sensualidad, fijación extrema y distinción contemporánea. La vainilla de Bourbon profunda con lavanda aromática y vetiver ahumado es una verdadera arma de seducción.'
+    },
+    '256': {
+      archetype: 'Pureza Zen • La Armonía Cristalina',
+      element: 'Agua de Manantial & Yuzu 🌿',
+      personality: 'Reflexivo, impecable y de una elegancia natural envidiable. Transmites paz, pulcritud y un gusto exquisito por la sencillez de las cosas auténticas.',
+      matchWhy: 'Buscabas frescura limpia y porte distinguido para el día a día. El yuzu japonés con flor de loto, nuez moscada y maderas nobles es la definición de distinción limpia.'
+    },
+    '697': {
+      archetype: 'Visión de Éxito • La Determinación Moderna',
+      element: 'Salvia Eléctrica & Cedro 💎',
+      personality: 'Enfocado en tus metas, perseverante y con una mentalidad ganadora. Proyectas la imagen de alguien que sabe adónde va y construye su propio camino con firmeza.',
+      matchWhy: 'Buscabas una firma todoterreno ultra versátil con duración de más de 12 horas. La manzana verde con salvia aromática, geranio y haba tonka es la fórmula moderna definitiva.'
+    },
+    '287': {
+      archetype: 'Comandante de Medianoche • La Autoridad Seductora',
+      element: 'Cardamomo & Vainilla Negra ⚓',
+      personality: 'Líder natural con porte caballeroso y mirada penetrante. Inspiras respeto y confianza instantánea, complementado con una calidez seductora que hipnotiza.',
+      matchWhy: 'Buscabas una fragancia con estela de líder para citas y noches especiales. El cardamomo especiado con corazón de iris noble y fondo de vainilla oriental es un deleite absoluto.'
+    },
+    '292': {
+      archetype: 'Sol de Capri • La Vitalidad Mediterránea',
+      element: 'Brisa Marina & Cítrico Vivo ☀️',
+      personality: 'Alegre, jovial y con una sonrisa que desarma. Amas los días soleados, la libertad al aire libre y las conversaciones espontáneas llenas de buena vibra.',
+      matchWhy: 'Buscabas frescura cítrica vigorizante para el calor y el uso diario. La toronja jugosa con bergamota, pimienta de Sichuan y musgo de roble evoca las costas italianas.'
+    },
+    '100': {
+      archetype: 'Lingote de Fuego • El Triunfo Supremo',
+      element: 'Manzana Confitada & Oro 🏆',
+      personality: 'Ambicioso, brillante y seguro de su valor. Te gusta lo mejor de la vida y tu energía arrolladora no pasa inadvertida ante nadie.',
+      matchWhy: 'Buscabas máxima dulzura, duración y cumplidos. La manzana confitada con flor de osmanto, haba tonka y corteza de vainilla negra crea una estela que se siente a metros.'
+    },
+    '223': {
+      archetype: 'Llama Legendaria • El Mito Inconfundible',
+      element: 'Fuego & Cuero Vintage 🔥',
+      personality: 'Auténtico, rebelde y con una personalidad única e irrepetible. No te pareces a nadie: dejas una huella profunda y memorable allá donde vas.',
+      matchWhy: 'Buscabas un perfume con carácter fuerte e identidad inolvidable. Las hojas de violeta con cuero ahumado, nuez moscada y madera de cedro son la firma de los espíritus legendarios.'
+    },
+    '251': {
+      archetype: 'Victoria Olímpica • El Espíritu Campeón',
+      element: 'Laurel & Marea Victoriosa 🥇',
+      personality: 'Enérgico, competitivo y enfocado en la victoria. Encaras cada desafío con entusiasmo y tu vitalidad contagia a quienes te acompañan.',
+      matchWhy: 'Buscabas frescura marina energizante para el día a día. El pomelo chispeante con acorde marino, hojas de laurel y ámbar gris es la bomba de adrenalina y cumplidos más celebrada.'
+    },
+    '166': {
+      archetype: 'Caballero Contemporáneo • El Éxito Cotidiano',
+      element: 'Manzana & Madera Noble 💼',
+      personality: 'Equilibrado, confiable y con una caballerosidad clásica que nunca pasa de moda. Sabes liderar con el ejemplo y tu porte impecable genera respeto inmediato.',
+      matchWhy: 'Buscabas un aroma versátil para el trabajo y reuniones. La manzana verde crujiente con canela cálida, geranio y madera de olivo es el traje a la medida de la perfumería masculina.'
+    },
+    '136': {
+      archetype: 'Dinamismo Chic • La Frescura de Alta Gama',
+      element: 'Mandarina & Brisa Cristalina 🏎️',
+      personality: 'Activo, sofisticado y con una frescura elegante e impecable. Te apasiona el movimiento, los retos y vivir cada día con estilo y distinción.',
+      matchWhy: 'Buscabas frescura deportiva con la elegancia máxima de alta perfumería. La naranja y mandarina con notas marinas, pimienta negra, neroli y cedro blanco crean un rastro ultra refinado.'
+    },
     // MUJER
     '534': {
       archetype: 'Néctar Radiante • El Aura de la Reina Feliz',
@@ -110,6 +206,66 @@
       personality: 'Delicada, luminosa y con un encanto sutil que enamora sin esfuerzo. Tu vibra es pacífica, fresca y femenina, como una mañana perfecta de primavera.',
       matchWhy: 'Buscabas frescura romántica y elegancia discreta. El membrillo jugoso y la toronja con jacinto y almizcle blanco dejan una sensación limpia y celestial en tu piel.'
     },
+    '452': {
+      archetype: 'Opulencia Barroca • La Dama Legendaria',
+      element: 'Rosa Ámbar & Especias 👑',
+      personality: 'Majestuosa, culta y con una distinción imponente. Tu estilo trasciende las modas: posees esa sofisticación profunda que solo tienen las verdaderas damas de mundo.',
+      matchWhy: 'Buscabas un perfume con carácter soberbio y estela opulenta. La rosa búlgara con cilantro, melocotón, clavo de olor, ámbar y sándalo viste tu presencia de realeza.'
+    },
+    '446': {
+      archetype: 'Icono Inmortal • El Mito Absoluto',
+      element: 'Polvo de Oro & Ylang Imperial 💎',
+      personality: 'Única, eterna y con un magnetismo misterioso que cautiva generaciones. Tu sola presencia irradia alta costura y un aura legendaria que nadie puede igualar.',
+      matchWhy: 'Buscabas la máxima elegancia clásica de la historia. Los aldehídos luminosos con ylang-ylang, iris de Florencia, jazmín y sándalo son el símbolo definitivo de la sofisticación femenina.'
+    },
+    '563': {
+      archetype: 'Romance Eterno • El Jardín Encantado',
+      element: 'Rosas de Grasse & Lirio 💐',
+      personality: 'Romántica, soñadora y con una dulzura luminosa que enamora. Tienes un corazón apasionado y ves la belleza en los detalles más delicados de la vida.',
+      matchWhy: 'Buscabas un bouquet floral radiante y femenino. Las rosas centifolia de Grasse con lirio de los valles, peonía y maderas tiernas te envuelven en un romance primaveral eterno.'
+    },
+    '428': {
+      archetype: 'Aristocracia Moderna • La Rebelde Chic',
+      element: 'Jazmín Sambac & Vainilla Bourbon 🎀',
+      personality: 'Vanguardista, segura de sí misma y con un estilo propio arrollador. Combinas la alta costura con un toque atrevido y urbano que marca tendencia por donde caminas.',
+      matchWhy: 'Buscabas feminidad moderna y sensualidad duradera. El jazmín sambac bañado en vainilla Bourbon suntuosa con grosellas negras y maderas nobles es elegancia con actitud.'
+    },
+    '549': {
+      archetype: 'Brisa de Capri • El Resplandor Mediterráneo',
+      element: 'Limón Siciliano & Manzana Crujiente 🍋',
+      personality: 'Fresca, libre y llena de vitalidad. Tu energía es como un rayo de sol sobre el mar: despiertas sonrisas y transmites bienestar con tu frescura inagotable.',
+      matchWhy: 'Buscabas un aroma fresco, limpio y alegre para el día a día. El limón siciliano con manzana verde Granny Smith, bambú y cedro blanco es una caricia revitalizante inconfundible.'
+    },
+    '429': {
+      archetype: 'Diamante Radiante • La Luz Cristalina',
+      element: 'Flor de Loto & Granada 🌸',
+      personality: 'Delicada, luminosa y con un encanto dulce y cristalino. La gente adora estar cerca de ti por tu ternura, tu elegancia natural y tu trato amable y sincero.',
+      matchWhy: 'Buscabas frescura floral delicada para todo momento. La granada jugosa con yuzu chispeante, peonía, flor de loto y ámbar vegetal te envuelve en un aura limpia y sumamente chic.'
+    },
+    '448': {
+      archetype: 'Nube Mágica • La Fantasía Pastel',
+      element: 'Crema de Coco & Praliné ☁️',
+      personality: 'Creativa, soñadora y con un aura acogedora y dulce. Transmites optimismo, ternura y esa magia juvenil que hace que el mundo a tu alrededor se sienta más cálido.',
+      matchWhy: 'Buscabas una dulzura esponjosa, adictiva y moderna. La crema de coco con praliné gourmet, lavanda dulce y orquídea de vainilla es un abrazo delicioso que todos elogian.'
+    },
+    '417': {
+      archetype: 'Chic Neoyorquino • La Manzana Verde',
+      element: 'Manzana Crujiente & Pepino 🍏',
+      personality: 'Dinámica, cosmopolita y llena de chispa. Te apasiona la emoción de las grandes ciudades, los días activos y expresar tu individualidad sin filtros.',
+      matchWhy: 'Buscabas frescura chispeante, frutal y limpia. La manzana verde fresca con pepino crujiente, toronja, magnolia y maderas blancas es un impulso de energía y alegría contagiosa.'
+    },
+    '567': {
+      archetype: 'Diosa del Triunfo • La Fuerza Femenina',
+      element: 'Vainilla Salada & Jazmín Solar 🏛️',
+      personality: 'Segura, magnética y con un porte de reina invencible. Tienes una personalidad cautivadora que mezcla la fuerza con la sensualidad más refinada.',
+      matchWhy: 'Buscabas estela potente, cumplidos y presencia en eventos. El contraste único de la vainilla salada con jazmín acuático, mandarina verde y ámbar gris te hace inolvidable.'
+    },
+    '574': {
+      archetype: 'Deseo Prohibido • La Tentación Magnética',
+      element: 'Palomitas de Maíz & Ylang Exótico 🍿',
+      personality: 'Atrevida, seductora y apasionadamente coqueta. Sabes cómo despertar curiosidad y jugar con el encanto sensual de las miradas cómplices.',
+      matchWhy: 'Buscabas sensualidad gourmand adictiva para salidas y citas. La explosión de palomitas de maíz calientes con flor de ylang-ylang, vainilla caliente y sándalo es puro magnetismo.'
+    },
     // UNISEX
     '658': {
       archetype: 'Alquimia Estelar • El Aura Millonaria',
@@ -140,6 +296,30 @@
       element: 'Tabaco Dulce 🎩',
       personality: 'Gusto exquisito, conversación fascinante y una presencia suntuosa. Te apasiona la calidez de las buenas charlas y los placeres refinados de la vida.',
       matchWhy: 'Buscabas calidez, sensualidad y distinción para el frío o la noche. La hoja de tabaco rubio con haba tonka, vainilla cremosa y frutos secos es un abrazo de puro lujo.'
+    },
+    '674': {
+      archetype: 'Desierto Salvaje • La Piel de Leyenda',
+      element: 'Cuero Negro & Cardamomo 🏜️',
+      personality: 'Libre, indómito y con una seguridad de acero. Tienes un espíritu aventurero y un magnetismo sobrio que impone respeto y admiración sin pronunciar palabra.',
+      matchWhy: 'Buscabas distinción, estela imponente y un aroma de autor fuera de lo común. El cuero negro táctil con cardamomo especiado, jazmín sambac y pachulí es el epítome del lujo contemporáneo.'
+    },
+    '669': {
+      archetype: 'Corte Aristocrática • El Carisma Noble',
+      element: 'Manzana Especiada & Vainilla de Autor 👑',
+      personality: 'Sofisticado, elocuente y con un encanto caballeroso irresistible. Tu presencia llena cualquier reunión con distinción, calidez y un gusto refinado superior.',
+      matchWhy: 'Buscabas un perfume nicho distinguido con cumplidos garantizados. La manzana crujiente con lavanda, vainilla cremosa, cardamomo y maderas nobles es una obra de arte olfativa.'
+    },
+    '664': {
+      archetype: 'Riviera Mediterránea • El Escape Soñado',
+      element: 'Ciprés Marino & Pino Costero 🌲',
+      personality: 'Elegante, relajado y con un porte aristocrático veraniego. Sabes disfrutar de la buena vida y transmites una calma distinguida que atrae a las mentes selectas.',
+      matchWhy: 'Buscabas frescura marina de alta gama con cuerpo amaderado. La madera flotante con enebro, ciprés, alga marina, mirto y cítricos nobles evoca un crucero privado por el Mediterráneo.'
+    },
+    '670': {
+      archetype: 'Cereza Prohibida • La Obsesión Licorosa',
+      element: 'Cereza Negra & Almendra Amarga 🍒',
+      personality: 'Fascinante, tentador y con un aura de misterio dulce. Tienes un gusto sibarita por lo exquisito y disfrutas de las sensaciones intensas que desafían lo convencional.',
+      matchWhy: 'Buscabas una fragancia suntuosa, dulce y sumamente adictiva. La cereza negra licorosa con almendra amarga, licor de grosellas, rosa turca y haba tonka es un manjar olfativo sin igual.'
     }
   };
 
@@ -646,7 +826,21 @@
     container.scrollTop = 0;
   }
 
-  // Algoritmo de Coincidencia Ponderada por Mejores Ventas (Top Sellers)
+  // Generador dinámico de respaldo si algún perfume no tiene ficha estática en ARCHETYPES_DB
+  function generateDynamicArchetype(perfume, answers) {
+    const family = perfume.olfactoryFamily || 'Aromática Noble';
+    const mainAccord = (perfume.accords && perfume.accords[0] && perfume.accords[0].name) || 'Acordes Nobles';
+    const accordTitle = mainAccord.charAt(0).toUpperCase() + mainAccord.slice(1);
+
+    return {
+      archetype: `Aura Distinguida • El Magnetismo de ${accordTitle}`,
+      element: `${accordTitle} & Ámbar ✨`,
+      personality: 'Proyectas un halo de seguridad, buen gusto y elegancia natural. Tu estilo atrae cumplidos genuinos porque refleja autenticidad y una presencia memorable que no necesita excesos para destacar.',
+      matchWhy: `Buscabas una fragancia de alta fijación con notas que se adapten a tu estilo. Kódigo ${perfume.code} destaca por su familia ${family} con acordes de ${mainAccord}, garantizando una estela cautivadora y duradera.`
+    };
+  }
+
+  // Algoritmo de Coincidencia Ponderada por Mejores Ventas (Pool Amplio: Top 30)
   function calculateBestMatch(answers) {
     const catalog = (typeof window !== 'undefined' && Array.isArray(window.CATALOG_DATA) && window.CATALOG_DATA.length > 0)
       ? window.CATALOG_DATA
@@ -666,62 +860,95 @@
 
     if (candidates.length === 0) candidates = [...catalog];
 
-    // 2. Puntaje ponderado dando máxima preferencia a las que más vendemos
-    const scored = candidates.map(perfume => {
+    // 2. Limitar a las fragancias más vendidas de esa categoría (Top 30 con rotación probada)
+    candidates.sort((a, b) => (b.sales || 0) - (a.sales || 0));
+    const minSalesThreshold = answers.gender === 'hombre' ? 35 : (answers.gender === 'mujer' ? 15 : 12);
+    let pool = candidates.filter(p => (p.sales || 0) >= minSalesThreshold).slice(0, 30);
+    if (pool.length === 0) pool = candidates.slice(0, 30);
+
+    // 3. Puntaje ponderado que combina popularidad con afinidad olfativa real (acordes, notas, familia)
+    const scored = pool.map((perfume, index) => {
       let score = 0;
-      const sales = perfume.sales || 0;
 
-      // Base: Puntuación de ventas masivas (las que más tenemos y más pide la gente)
-      score += Math.min(60, sales * 0.12);
+      // Base de ventas escalonada dentro del Top 30 (privilegia a los top sellers pero permite variedad justa)
+      if (index < 3) score += 24;
+      else if (index < 8) score += 18;
+      else if (index < 15) score += 14;
+      else if (index < 22) score += 10;
+      else score += 6;
 
-      // Ponderación por vibra
+      const accords = (perfume.accords || []).map(a => (a.name || '').toLowerCase());
+      const accordsText = accords.join(' ');
+      const desc = (perfume.description || '').toLowerCase();
+      const family = (perfume.olfactoryFamily || '').toLowerCase();
+      const pyr = perfume.pyramid || {};
+      const notesList = [...(pyr.top || []), ...(pyr.heart || []), ...(pyr.base || [])].map(n => (n.name || '').toLowerCase()).join(' ');
+      const fullText = [perfume.name, perfume.reference, desc, family, accordsText, notesList].filter(Boolean).join(' ').toLowerCase();
+
+      function hasAccord(regex) {
+        return accords.some(a => regex.test(a));
+      }
+
+      // Ponderación por Vibra (hasta 40 pts)
       if (answers.vibe === 'power') {
-        if (['343', '149', '192', '453', '677'].includes(perfume.code)) score += 40;
-        if (perfume.olfactoryFamily && /amaderad|especiad|ámbar/i.test(perfume.olfactoryFamily)) score += 20;
+        if (hasAccord(/cuero|amaderado|cálido especiado/)) score += 22;
+        if (/oud|cuero|especias|intenso|potente|rey|fuego|autoridad|elixir|noble|imperial|salvaje/.test(fullText)) score += 18;
       } else if (answers.vibe === 'seduction') {
-        if (['343', '286', '495', '658', '350', '681'].includes(perfume.code)) score += 40;
-        if (perfume.olfactoryFamily && /oriental|ámbar|vainill|dulce/i.test(perfume.olfactoryFamily)) score += 20;
+        if (hasAccord(/avainillado|cálido especiado|ámbar|dulce/)) score += 22;
+        if (/seductor|adictivo|sensual|cacao|café|miel|noche|misterio|tentación|nardo|almendra|licor/.test(fullText)) score += 18;
       } else if (answers.vibe === 'fresh') {
-        if (['141', '140', '161', '344', '443', '689'].includes(perfume.code)) score += 40;
-        if (perfume.olfactoryFamily && /acuátic|cítric|fresc|aromátic/i.test(perfume.olfactoryFamily)) score += 20;
+        if (hasAccord(/marino|acuático|cítrico|fresco especiado|aromático/)) score += 22;
+        if (/energía|brisa|limpio|vital|chispeante|mar|agua|frescura|ozon|mineral/.test(fullText)) score += 18;
       } else if (answers.vibe === 'elegance') {
-        if (['161', '453', '520', '679', '149'].includes(perfume.code)) score += 40;
-        if (perfume.olfactoryFamily && /amaderad|floral|chipre/i.test(perfume.olfactoryFamily)) score += 20;
+        if (hasAccord(/floral|amaderado|aromático|almizclado|chipre/)) score += 22;
+        if (/sofisticad|elegante|lujo|atemporal|clase|porte|refinado|parisino|couture|sándalo|iris|cedro/.test(fullText)) score += 18;
       } else if (answers.vibe === 'sweet') {
-        if (['534', '431', '286', '658', '350', '681'].includes(perfume.code)) score += 40;
-        if (perfume.olfactoryFamily && /gourmand|frutal|vainill/i.test(perfume.olfactoryFamily)) score += 20;
+        if (hasAccord(/dulce|avainillado|afrutado/)) score += 22;
+        if (/gourmand|azúcar|bombón|praliné|miel|delicioso|postre|caramelo|frutos rojos/.test(fullText)) score += 18;
       }
 
-      // Ponderación por ocasión
-      if (answers.occasion === 'night') {
-        if (['343', '286', '495', '658', '677', '192'].includes(perfume.code)) score += 30;
-      } else if (answers.occasion === 'daily') {
-        if (['161', '344', '141', '140', '453', '431', '443'].includes(perfume.code)) score += 30;
+      // Ponderación por Ocasión (hasta 30 pts)
+      if (answers.occasion === 'daily') {
+        if (hasAccord(/cítrico|acuático|marino|fresco especiado|aromático/)) score += 20;
+        if (/oficina|diario|trabajo|versátil|limpio|fresco|primavera/.test(fullText)) score += 10;
+        if (hasAccord(/cuero|tabaco/) || /oud/.test(fullText)) score -= 14;
+      } else if (answers.occasion === 'night') {
+        if (hasAccord(/cálido especiado|ámbar|avainillado|cuero/)) score += 20;
+        if (/noche|nocturno|fiesta|conquista|cita|intenso|elixir|misterio/.test(fullText)) score += 10;
       } else if (answers.occasion === 'signature') {
-        if (['161', '344', '165', '453', '534', '679'].includes(perfume.code)) score += 30;
+        if (hasAccord(/aromático|amaderado|fresco especiado|cítrico/)) score += 18;
+        score += 12;
       } else if (answers.occasion === 'events') {
-        if (['343', '149', '389', '495', '658', '689'].includes(perfume.code)) score += 30;
+        if (hasAccord(/ámbar|amaderado|cálido especiado|dulce|floral blanco/)) score += 20;
+        if (/gala|evento|fiesta|vip|celebración|brillar|estela|nardo|glamour/.test(fullText)) score += 10;
       }
 
-      // Ponderación por notas
+      // Ponderación por Familia y Notas Olfativas (hasta 45 pts)
       if (answers.notes === 'woody_spicy') {
-        if (['343', '161', '192', '677', '679', '165'].includes(perfume.code)) score += 35;
+        if (hasAccord(/amaderado/)) score += 25;
+        if (hasAccord(/cálido especiado|especiado/)) score += 15;
+        if (/cedro|sándalo|oud|pachulí|vetiver|canela|cardamomo/.test(fullText)) score += 10;
       } else if (answers.notes === 'citrus_aquatic') {
-        if (['141', '140', '161', '344', '443', '689'].includes(perfume.code)) score += 35;
+        if (hasAccord(/cítrico/)) score += 25;
+        if (hasAccord(/marino|acuático/)) score += 20;
+        if (/bergamota|limón|pomelo|mandarina|mar|agua|loto/.test(fullText)) score += 10;
       } else if (answers.notes === 'vanilla_gourmand') {
-        if (['286', '350', '534', '495', '681', '658'].includes(perfume.code)) score += 35;
+        if (hasAccord(/avainillado/)) score += 25;
+        if (hasAccord(/dulce/)) score += 15;
+        if (/vainilla|tonka|caramelo|praliné|miel|cacao|café/.test(fullText)) score += 10;
       } else if (answers.notes === 'floral_fruity') {
-        if (['534', '431', '389', '443', '520', '453'].includes(perfume.code)) score += 35;
+        if (hasAccord(/floral|floral blanco/)) score += 25;
+        if (hasAccord(/afrutado|frutal/)) score += 15;
+        if (/rosa|jazmín|nardo|frutos rojos|pera|durazno|frambuesa|cereza/.test(fullText)) score += 10;
       } else if (answers.notes === 'surprise') {
-        // En surprise, dar máximo empuje a los absolutos Top 1 y Top 2
-        if (['343', '161', '534', '453', '658'].includes(perfume.code)) score += 50;
+        score += Math.max(0, 36 - index * 2);
       }
 
       return { perfume, score };
     });
 
     scored.sort((a, b) => b.score - a.score);
-    return scored[0] ? scored[0].perfume : candidates[0];
+    return scored[0] ? scored[0].perfume : pool[0];
   }
 
   // Renderizar la Pantalla de Resultados ("Zodiaco Olfativo")
@@ -733,12 +960,7 @@
     if (!matchedPerfume) return;
 
     // Obtener o generar arquetipo y lectura
-    const info = ARCHETYPES_DB[matchedPerfume.code] || {
-      archetype: 'Esencia Magnética • El Carisma Auténtico',
-      element: 'Aura Radiante ✨',
-      personality: 'Tienes una presencia vibrante y segura que atrae a las personas por tu autenticidad y buen gusto innato. Tu energía deja una huella indeleble dondequiera que vayas.',
-      matchWhy: `Buscabas una fragancia con carácter y estela memorable. Kódigo ${matchedPerfume.code} combina una composición equilibrada de acordes nobles con una fijación excepcional pensada para acompañarte todo el día.`
-    };
+    const info = ARCHETYPES_DB[matchedPerfume.code] || generateDynamicArchetype(matchedPerfume, quizAnswers);
 
     // Tracking de Test Completado
     try {
