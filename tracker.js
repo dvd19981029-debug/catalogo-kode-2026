@@ -242,16 +242,37 @@
     initListeners();
   }
 
-  // 10. Medición de Engagement (Tiempo activo en página)
-  let sessionSeconds = 0;
+  // 10. Medición Precisa de Tiempo en Página y Sesión
+  const pageStartTime = Date.now();
+  let maxSecondsReported = 0;
+
+  function reportTimeSpent(isExit = false) {
+    try {
+      const elapsed = Math.round((Date.now() - pageStartTime) / 1000);
+      if (elapsed >= 5 && elapsed > maxSecondsReported) {
+        maxSecondsReported = elapsed;
+        sendToFirestore(isExit ? 'session_exit' : 'engagement_heartbeat', { seconds: elapsed });
+      }
+    } catch (e) {}
+  }
+
+  // Heartbeats periódicos (15s, 30s, 60s, 120s, 180s, 300s, 600s...)
   const heartbeatInterval = setInterval(() => {
-    sessionSeconds += 15;
-    if ([15, 45, 90, 180, 300].includes(sessionSeconds)) {
-      sendToFirestore('engagement_heartbeat', { seconds: sessionSeconds });
+    const elapsed = Math.round((Date.now() - pageStartTime) / 1000);
+    if ([15, 30, 45, 60, 90, 120, 180, 240, 300, 420, 600, 900].includes(elapsed) || (elapsed > 0 && elapsed % 60 === 0)) {
+      reportTimeSpent(false);
     }
-    if (sessionSeconds >= 600) {
+    if (elapsed >= 1800) {
       clearInterval(heartbeatInterval);
     }
-  }, 15000);
+  }, 5000);
+
+  // Al salir o cambiar de pestaña en iPhone/Android/PC
+  window.addEventListener('pagehide', () => reportTimeSpent(true));
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'hidden') {
+      reportTimeSpent(true);
+    }
+  });
 
 })();

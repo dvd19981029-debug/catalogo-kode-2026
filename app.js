@@ -1259,16 +1259,27 @@ function sendOrderViaWhatsApp() {
   const encodedMessage = encodeURIComponent(message);
   const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
 
-  // Rastreo de conversión clave: Carrito enviado a WhatsApp
+  // Rastreo de conversión clave: Carrito enviado a WhatsApp con datos completos
   try {
     if (window.KodeTracker && typeof window.KodeTracker.trackEvent === 'function') {
       window.KodeTracker.trackEvent('whatsapp_checkout', {
         total: pricing.total,
         itemsCount: cart.reduce((acc, i) => acc + (i.quantity || 1), 0),
-        items: cart.map(i => ({ code: i.code, name: i.name, extraShot: !!i.extraShot, qty: i.quantity || 1 })),
+        items: cart.map(i => ({
+          code: i.code,
+          name: i.name,
+          brand: i.brand || '',
+          extraShot: !!i.extraShot,
+          qty: i.quantity || 1,
+          inspiration: i.reference || i.name
+        })),
+        customerName: customerName || 'Sin especificar',
+        phone: phone || '',
+        address: address || '',
+        reference: reference || '',
         municipality: municipality || '',
         department: department || '',
-        paymentMethod: selectedPaymentMethod || ''
+        paymentMethod: selectedPaymentMethod || 'No seleccionado'
       });
     }
   } catch (e) {}

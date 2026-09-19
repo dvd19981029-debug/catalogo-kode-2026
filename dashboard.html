@@ -461,6 +461,35 @@
       border: 1px solid rgba(217, 119, 6, 0.3);
     }
 
+    .badge-abandoned {
+      background: rgba(239, 68, 68, 0.15);
+      color: #f87171;
+      border: 1px solid rgba(239, 68, 68, 0.3);
+    }
+
+    .badge-pay-transfer {
+      background: rgba(59, 130, 246, 0.15);
+      color: #60a5fa;
+      border: 1px solid rgba(59, 130, 246, 0.3);
+    }
+
+    .badge-pay-cash {
+      background: rgba(16, 185, 129, 0.15);
+      color: #34d399;
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+
+    .badge-pay-card {
+      background: rgba(168, 85, 247, 0.15);
+      color: #c084fc;
+      border: 1px solid rgba(168, 85, 247, 0.3);
+    }
+
+    .badge-pay-default {
+      background: #27272a;
+      color: var(--text-sub);
+    }
+
     .order-total-price {
       font-weight: 800;
       color: var(--green);
@@ -592,6 +621,24 @@
         <div class="kpi-value" id="kpi-interactions">0</div>
         <div class="kpi-sub" id="kpi-interactions-sub">Búsquedas, tabs y bolsas</div>
       </div>
+
+      <div class="kpi-card">
+        <div class="kpi-header">
+          <span class="kpi-label">Tiempo Promedio</span>
+          <span class="kpi-icon">⏱️</span>
+        </div>
+        <div class="kpi-value" id="kpi-avg-time">0m 00s</div>
+        <div class="kpi-sub">Duración media de sesión</div>
+      </div>
+
+      <div class="kpi-card">
+        <div class="kpi-header">
+          <span class="kpi-label">Carritos Abandonados</span>
+          <span class="kpi-icon">🛒</span>
+        </div>
+        <div class="kpi-value" id="kpi-abandoned-count" style="color: #f87171;">0</div>
+        <div class="kpi-sub" id="kpi-abandoned-sub">Tasa de abandono: 0.0%</div>
+      </div>
     </section>
 
     <!-- Grilla de Paneles -->
@@ -637,11 +684,11 @@
       </div>
     </section>
 
-    <!-- Feed en Vivo de Pedidos a WhatsApp -->
+    <!-- Feed en Vivo de Pedidos a WhatsApp con Información Completa -->
     <section class="orders-section">
       <div class="orders-header">
         <h2 class="orders-title">
-          <span>🛒 Pedidos Enviados a WhatsApp</span>
+          <span>💬 Pedidos Enviados a WhatsApp</span>
           <span class="badge badge-gold" id="orders-count-badge">0 pedidos</span>
         </h2>
       </div>
@@ -651,15 +698,46 @@
           <thead>
             <tr>
               <th>Fecha y Hora</th>
-              <th>Dispositivo / Origen</th>
-              <th>Ubicación</th>
+              <th>Cliente y Contacto</th>
+              <th>Datos de Entrega</th>
+              <th>Método de Pago</th>
               <th>Productos Solicitados</th>
               <th>Total ($)</th>
+              <th>Dispositivo / Origen</th>
             </tr>
           </thead>
           <tbody id="orders-tbody">
             <tr>
-              <td colspan="5" class="empty-msg">No hay pedidos registrados en este período.</td>
+              <td colspan="7" class="empty-msg">No hay pedidos registrados en este período.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Sección de Carritos Abandonados -->
+    <section class="orders-section">
+      <div class="orders-header">
+        <h2 class="orders-title">
+          <span>🛒 Carritos Abandonados (Sin enviar a WhatsApp)</span>
+          <span class="badge badge-abandoned" id="abandoned-count-badge">0 carritos</span>
+        </h2>
+      </div>
+
+      <div class="orders-table-wrap">
+        <table class="orders-table">
+          <thead>
+            <tr>
+              <th>Última Actividad</th>
+              <th>Dispositivo / Origen</th>
+              <th>Ubicación</th>
+              <th>Fragancias en la Bolsa</th>
+              <th>Tiempo en Sitio</th>
+            </tr>
+          </thead>
+          <tbody id="abandoned-tbody">
+            <tr>
+              <td colspan="5" class="empty-msg">No hay carritos abandonados registrados en este período.</td>
             </tr>
           </tbody>
         </table>
@@ -801,8 +879,8 @@
     function renderDashboard() {
       const events = getFilteredEvents();
 
-      // Métricas KPI
-      const sessionsSet = new Set();
+      // Métricas KPI y agrupaciones
+      const sessionsMap = {};
       let pageviews = 0;
       let whatsappOrders = [];
       let totalInteractions = 0;
@@ -812,7 +890,44 @@
       const searchCounts = {};
 
       events.forEach(ev => {
-        if (ev.sessionId) sessionsSet.add(ev.sessionId);
+        const sid = ev.sessionId || 'anon_' + (ev.device || 'pc');
+        if (!sessionsMap[sid]) {
+          sessionsMap[sid] = {
+            sessionId: sid,
+            events: [],
+            hasCheckout: false,
+            checkoutEvent: null,
+            cartItems: [],
+            firstTime: ev.timestamp,
+            lastTime: ev.timestamp,
+            device: ev.device || 'PC / Desktop',
+            referrer: ev.referrer || 'Directo',
+            city: ev.city || 'Desconocido',
+            country: ev.country || 'El Salvador',
+            maxReportedSeconds: 0
+          };
+        }
+
+        const s = sessionsMap[sid];
+        s.events.push(ev);
+        if (ev.timestamp < s.firstTime) s.firstTime = ev.timestamp;
+        if (ev.timestamp > s.lastTime) s.lastTime = ev.timestamp;
+
+        if (['engagement_heartbeat', 'session_heartbeat', 'session_exit'].includes(ev.type)) {
+          if (ev.details && ev.details.seconds) {
+            s.maxReportedSeconds = Math.max(s.maxReportedSeconds, parseInt(ev.details.seconds, 10) || 0);
+          }
+        }
+
+        if (ev.type === 'add_to_cart' && ev.details) {
+          s.cartItems.push({
+            code: ev.details.code,
+            name: ev.details.name,
+            brand: ev.details.brand || '',
+            extraShot: !!ev.details.extraShot,
+            timestamp: ev.timestamp
+          });
+        }
 
         // Dispositivos
         const devKey = ev.device || 'PC / Desktop';
@@ -835,15 +950,52 @@
         }
 
         if (ev.type === 'whatsapp_checkout') {
+          s.hasCheckout = true;
+          s.checkoutEvent = ev;
           whatsappOrders.push(ev);
         }
       });
 
-      const totalSessions = sessionsSet.size || (pageviews > 0 ? pageviews : 0);
+      const totalSessions = Object.keys(sessionsMap).length || (pageviews > 0 ? pageviews : 0);
       const totalOrders = whatsappOrders.length;
       const totalSales = whatsappOrders.reduce((sum, o) => sum + (parseFloat(o.details.total) || 0), 0);
       const avgOrder = totalOrders > 0 ? totalSales / totalOrders : 0;
       const convRate = totalSessions > 0 ? ((totalOrders / totalSessions) * 100).toFixed(1) : '0.0';
+
+      // Cálculo de Tiempo Promedio en Página
+      let totalDurationSec = 0;
+      let sessionCountForDuration = 0;
+      Object.values(sessionsMap).forEach(s => {
+        let sec = s.maxReportedSeconds;
+        if (sec <= 0) {
+          const diff = Math.round((s.lastTime - s.firstTime) / 1000);
+          sec = diff > 0 ? diff : 20;
+        }
+        sec = Math.min(3600, Math.max(5, sec));
+        totalDurationSec += sec;
+        sessionCountForDuration++;
+      });
+
+      const avgDurationSec = sessionCountForDuration > 0 ? Math.round(totalDurationSec / sessionCountForDuration) : 0;
+      const avgMinutes = Math.floor(avgDurationSec / 60);
+      const avgRemainingSec = avgDurationSec % 60;
+      const avgTimeFormatted = `${avgMinutes}m ${avgRemainingSec < 10 ? '0' : ''}${avgRemainingSec}s`;
+
+      // Cálculo de Carritos Abandonados
+      const abandonedSessions = [];
+      let totalCartsCreated = 0;
+      Object.values(sessionsMap).forEach(s => {
+        const hasCartActivity = s.cartItems.length > 0;
+        if (hasCartActivity || s.hasCheckout) {
+          totalCartsCreated++;
+        }
+        if (hasCartActivity && !s.hasCheckout) {
+          abandonedSessions.push(s);
+        }
+      });
+
+      const abandonedCount = abandonedSessions.length;
+      const abandonmentRate = totalCartsCreated > 0 ? ((abandonedCount / totalCartsCreated) * 100).toFixed(1) : '0.0';
 
       // Actualizar KPIs
       document.getElementById('kpi-whatsapp-count').textContent = totalOrders;
@@ -853,7 +1005,12 @@
       document.getElementById('kpi-pageviews').textContent = `${pageviews} vistas de catálogo`;
       document.getElementById('kpi-conversion').textContent = `${convRate}%`;
       document.getElementById('kpi-interactions').textContent = totalInteractions;
+      document.getElementById('kpi-avg-time').textContent = avgTimeFormatted;
+      document.getElementById('kpi-abandoned-count').textContent = abandonedCount;
+      document.getElementById('kpi-abandoned-sub').textContent = `Tasa de abandono: ${abandonmentRate}%`;
+
       document.getElementById('orders-count-badge').textContent = `${totalOrders} pedidos`;
+      document.getElementById('abandoned-count-badge').textContent = `${abandonedCount} carritos`;
 
       // Renderizar Paneles
       renderBarsList('devices-list', deviceCounts, 'fill-blue');
@@ -861,8 +1018,9 @@
       renderBarsList('geo-list', geoCounts, 'fill-green');
       renderSearchesList('searches-list', searchCounts);
 
-      // Renderizar Tabla de Pedidos
+      // Renderizar Tablas
       renderOrdersTable(whatsappOrders);
+      renderAbandonedTable(abandonedSessions);
     }
 
     // Helper para barras porcentuales
@@ -910,32 +1068,136 @@
       }).join('');
     }
 
-    // Helper para tabla de pedidos
+    // Helper para tabla de pedidos con información completa del cliente
     function renderOrdersTable(orders) {
       const tbody = document.getElementById('orders-tbody');
       if (orders.length === 0) {
-        tbody.innerHTML = '<tr><td colspan="5" class="empty-msg">No hay pedidos a WhatsApp en este período.</td></tr>';
+        tbody.innerHTML = '<tr><td colspan="7" class="empty-msg">No hay pedidos a WhatsApp en este período.</td></tr>';
         return;
       }
 
       tbody.innerHTML = orders.map(ord => {
         const d = ord.timestamp;
         const timeStr = d.toLocaleDateString('es-SV', { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' });
-        const items = ord.details.items || [];
-        const itemsList = items.map(i => `• ${escapeHtml(i.code)} - ${escapeHtml(i.name)} [${i.extraShot ? 'Extra Shot' : 'Normal'}] x${i.qty}`).join('<br>');
-        const locationStr = ord.details.municipality || ord.city || ord.country || 'No especificada';
-        const total = parseFloat(ord.details.total || 0).toFixed(2);
+        const det = ord.details || {};
+
+        // 1. Cliente y Contacto
+        const custName = det.customerName || 'Sin especificar';
+        const phone = det.phone || '';
+        const phoneClean = phone.replace(/[^0-9]/g, '');
+        const phoneHtml = phone ? `
+          <div style="margin-top: 4px;">
+            <a href="https://wa.me/${phoneClean.startsWith('503') ? phoneClean : '503' + phoneClean}" target="_blank" style="color: var(--green); text-decoration: none; font-size: 0.8rem; font-weight: 600; display: inline-flex; align-items: center; gap: 4px;">
+              📲 ${escapeHtml(phone)}
+            </a>
+          </div>
+        ` : '<span style="font-size: 0.74rem; color: var(--text-dim);">Sin teléfono</span>';
+
+        // 2. Datos de Entrega
+        const address = det.address || '';
+        const ref = det.reference || '';
+        const muni = det.municipality || ord.city || '';
+        const dept = det.department || ord.country || '';
+        const locationPart = [muni, dept].filter(Boolean).join(', ');
+
+        const deliveryHtml = (address || ref || locationPart) ? `
+          <div style="font-size: 0.82rem; color: var(--text-main); font-weight: 500;">${escapeHtml(address || 'Dirección por confirmar')}</div>
+          ${ref ? `<div style="font-size: 0.74rem; color: var(--text-dim); margin-top: 2px;">📍 Ref: ${escapeHtml(ref)}</div>` : ''}
+          ${locationPart ? `<div style="font-size: 0.74rem; color: var(--gold-light); font-weight: 600; margin-top: 2px;">🏙️ ${escapeHtml(locationPart)}</div>` : ''}
+        ` : '<span style="font-size: 0.76rem; color: var(--text-dim);">A coordinar por WhatsApp</span>';
+
+        // 3. Método de Pago
+        const payMethod = (det.paymentMethod || 'No especificado').trim();
+        let payBadgeClass = 'badge-pay-default';
+        if (/transferencia/i.test(payMethod)) payBadgeClass = 'badge-pay-transfer';
+        else if (/efectivo/i.test(payMethod)) payBadgeClass = 'badge-pay-cash';
+        else if (/tarjeta/i.test(payMethod)) payBadgeClass = 'badge-pay-card';
+
+        // 4. Productos Solicitados
+        const items = det.items || [];
+        const itemsList = items.length > 0 ? items.map(i => {
+          const conc = i.extraShot ? '<span style="color: var(--gold-light); font-weight: 600;">Extra Shot 45%</span>' : 'Normal 30%';
+          const codeStr = i.code ? `[${escapeHtml(i.code)}] ` : '';
+          return `• <strong>${codeStr}${escapeHtml(i.name)}</strong> (${conc}) <strong>x${i.qty || 1}</strong>`;
+        }).join('<br>') : 'Fragancias varias';
+
+        // 5. Total
+        const total = parseFloat(det.total || 0).toFixed(2);
 
         return `
           <tr>
             <td><strong>${timeStr}</strong></td>
             <td>
+              <strong style="color: #fff; font-size: 0.88rem;">${escapeHtml(custName)}</strong>
+              ${phoneHtml}
+            </td>
+            <td>${deliveryHtml}</td>
+            <td><span class="badge ${payBadgeClass}">${escapeHtml(payMethod)}</span></td>
+            <td style="font-size: 0.8rem; line-height: 1.45;">${itemsList}</td>
+            <td class="order-total-price">$${total}</td>
+            <td>
               <span class="badge badge-device">${escapeHtml(ord.device)}</span><br>
               <span style="font-size: 0.74rem; color: var(--text-dim);">${escapeHtml(ord.referrer)}</span>
             </td>
+          </tr>
+        `;
+      }).join('');
+    }
+
+    // Helper para tabla de carritos abandonados
+    function renderAbandonedTable(abandonedList) {
+      const tbody = document.getElementById('abandoned-tbody');
+      if (!tbody) return;
+      if (abandonedList.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="5" class="empty-msg">No hay carritos abandonados registrados en este período.</td></tr>';
+        return;
+      }
+
+      // Ordenar por última interacción más reciente
+      abandonedList.sort((a, b) => b.lastTime - a.lastTime);
+
+      tbody.innerHTML = abandonedList.map(s => {
+        const timeStr = s.lastTime.toLocaleDateString('es-SV', { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' });
+        const locationStr = (s.city && s.city !== 'Desconocido' ? `${s.city}, ` : '') + (s.country || 'El Salvador');
+        
+        // Deduplicar o listar items que agregaron
+        const uniqueItemsMap = {};
+        s.cartItems.forEach(i => {
+          const key = `${i.code}_${i.extraShot}`;
+          if (!uniqueItemsMap[key]) {
+            uniqueItemsMap[key] = { code: i.code, name: i.name, extraShot: i.extraShot, count: 0 };
+          }
+          uniqueItemsMap[key].count++;
+        });
+
+        const itemsList = Object.values(uniqueItemsMap).map(i => {
+          const conc = i.extraShot ? '<span style="color: var(--gold-light); font-weight: 600;">Extra Shot 45%</span>' : 'Normal 30%';
+          const codeStr = i.code ? `[${escapeHtml(i.code)}] ` : '';
+          return `• <strong>${codeStr}${escapeHtml(i.name)}</strong> (${conc})${i.count > 1 ? ` x${i.count}` : ''}`;
+        }).join('<br>') || 'Fragancia agregada';
+
+        // Tiempo en sitio
+        let sec = s.maxReportedSeconds;
+        if (sec <= 0) {
+          sec = Math.max(10, Math.round((s.lastTime - s.firstTime) / 1000));
+        }
+        const min = Math.floor(sec / 60);
+        const remSec = sec % 60;
+        const timeSpentStr = min > 0 ? `${min}m ${remSec}s` : `${sec}s`;
+
+        return `
+          <tr>
+            <td><strong>${timeStr}</strong></td>
+            <td>
+              <span class="badge badge-device">${escapeHtml(s.device)}</span><br>
+              <span style="font-size: 0.74rem; color: var(--text-dim);">${escapeHtml(s.referrer)}</span>
+            </td>
             <td>${escapeHtml(locationStr)}</td>
-            <td style="font-size: 0.8rem; line-height: 1.4;">${itemsList || 'Productos varios'}</td>
-            <td class="order-total-price">$${total}</td>
+            <td style="font-size: 0.8rem; line-height: 1.45;">${itemsList}</td>
+            <td>
+              <span class="badge badge-abandoned">No enviado</span><br>
+              <span style="font-size: 0.74rem; color: var(--text-dim);">Estuvo ${timeSpentStr}</span>
+            </td>
           </tr>
         `;
       }).join('');

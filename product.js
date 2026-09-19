@@ -612,6 +612,18 @@ window.addProductToCart = function() {
   updateProductBuyButton();
   if (window.updateDetailPriceDisplay) window.updateDetailPriceDisplay();
 
+  // Rastreo seguro de adición a la bolsa
+  try {
+    if (window.KodeTracker && typeof window.KodeTracker.trackEvent === 'function') {
+      window.KodeTracker.trackEvent('add_to_cart', {
+        code: currentPerfume.code,
+        name: currentPerfume.name,
+        brand: currentPerfume.brand || '',
+        extraShot: isExtraShot
+      });
+    }
+  } catch (e) {}
+
   // Feedback háptico en el botón
   const btn = document.getElementById('btn-add-to-cart');
   if (btn) {
@@ -720,6 +732,32 @@ window.orderCurrentViaWhatsApp = function(event) {
     `Por favor confírmenme disponibilidad para coordinar la entrega con C807. ¡Muchas gracias!`;
 
   const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
+
+  // Rastreo de conversión directa
+  try {
+    if (window.KodeTracker && typeof window.KodeTracker.trackEvent === 'function') {
+      window.KodeTracker.trackEvent('whatsapp_checkout', {
+        total: price === '$20.00' ? 20 : (isExtraShot && !isPromo343 ? 25 : 20),
+        itemsCount: 1,
+        items: [{
+          code: currentPerfume.code,
+          name: currentPerfume.name,
+          brand: currentPerfume.brand || '',
+          extraShot: isExtraShot,
+          qty: 1,
+          inspiration: currentPerfume.reference || currentPerfume.name
+        }],
+        customerName: 'Compra directa 1-clic',
+        phone: '',
+        address: '',
+        reference: '',
+        municipality: '',
+        department: '',
+        paymentMethod: 'Por coordinar'
+      });
+    }
+  } catch (e) {}
+
   window.open(url, '_blank');
 };
 
@@ -1147,6 +1185,32 @@ function sendOrderViaWhatsApp() {
   }
 
   const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+
+  // Rastreo de conversión clave: Carrito enviado a WhatsApp con datos completos
+  try {
+    if (window.KodeTracker && typeof window.KodeTracker.trackEvent === 'function') {
+      window.KodeTracker.trackEvent('whatsapp_checkout', {
+        total: pricing.total,
+        itemsCount: cart.reduce((acc, i) => acc + (i.quantity || 1), 0),
+        items: cart.map(i => ({
+          code: i.code,
+          name: i.name,
+          brand: i.brand || '',
+          extraShot: !!i.extraShot,
+          qty: i.quantity || 1,
+          inspiration: i.reference || i.name
+        })),
+        customerName: customerName || 'Sin especificar',
+        phone: phone || '',
+        address: address || '',
+        reference: reference || '',
+        municipality: municipality || '',
+        department: department || '',
+        paymentMethod: selectedPaymentMethod || 'No seleccionado'
+      });
+    }
+  } catch (e) {}
+
   window.open(waUrl, '_blank');
 }
 
