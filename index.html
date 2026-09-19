@@ -33,7 +33,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260919_conc_strip_v2">
+  <link rel="stylesheet" href="styles.css?v=20260919_quiz_v1">
   <style>
     .ticker-bar {
       background-color: #000000;
@@ -197,20 +197,27 @@
 
         <!-- Cinta de Precios Apple-Style -->
         <div class="pricing-pill-banner">
-          <div class="pill-item">
-            <span class="pill-label">1er Perfume</span>
-            <span class="pill-value">$20</span>
+          <div class="pricing-pill-rows">
+            <div class="pill-item">
+              <span class="pill-label">1er Perfume</span>
+              <span class="pill-value">$20</span>
+            </div>
+            <div class="pill-divider"></div>
+            <div class="pill-item">
+              <span class="pill-label">Adicionales en la misma orden</span>
+              <span class="pill-value"><s class="pill-old-price">$20</s> <span class="pill-green-price">$15</span> <span class="pill-sub">c/u</span></span>
+            </div>
+            <div class="pill-divider"></div>
+            <div class="pill-item pill-highlight">
+              <span class="pill-label">Extra Shot (45% concentración)</span>
+              <span class="pill-value">+$5 <span class="pill-sub">c/u</span></span>
+            </div>
           </div>
-          <div class="pill-divider"></div>
-          <div class="pill-item">
-            <span class="pill-label">Adicionales en la misma orden</span>
-            <span class="pill-value"><s class="pill-old-price">$20</s> <span class="pill-green-price">$15</span> <span class="pill-sub">c/u</span></span>
-          </div>
-          <div class="pill-divider"></div>
-          <div class="pill-item pill-highlight">
-            <span class="pill-label">Extra Shot (45% concentración)</span>
-            <span class="pill-value">+$5 <span class="pill-sub">c/u</span></span>
-          </div>
+          <button type="button" class="pill-quiz-btn" id="btn-perfume-quiz" onclick="openPerfumeQuiz()">
+            <span class="quiz-btn-sparkle">✨</span>
+            <span class="quiz-btn-label">Test para saber tu perfume ideal</span>
+            <span class="quiz-btn-arrow">→</span>
+          </button>
         </div>
       </div>
 
@@ -493,8 +500,18 @@
     </div>
   </dialog>
 
+  <!-- Modal Dialog: Test para saber tu perfume ideal -->
+  <dialog id="perfume-quiz-dialog" class="apple-dialog perfume-quiz-dialog" closedby="any" aria-label="Test para saber tu perfume ideal">
+    <div class="dialog-card quiz-dialog-card">
+      <div id="perfume-quiz-content" class="perfume-quiz-content">
+        <!-- Renderizado dinámico desde perfume-quiz.js -->
+      </div>
+    </div>
+  </dialog>
+
   <script src="catalog-data.js?v=20260919_fragrantica_v1"></script>
   <script src="tracker.js?v=20260918_v2" defer></script>
+  <script src="perfume-quiz.js?v=20260919_v1"></script>
   <script src="app.js?v=20260919_reload_scroll_v1"></script>
 </body>
 </html>
