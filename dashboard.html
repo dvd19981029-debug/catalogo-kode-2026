@@ -918,6 +918,100 @@
       });
     }
 
+    // Helpers para deduplicación y agrupación de pedidos por cliente
+    function isGenericCustomerName(name) {
+      if (!name) return true;
+      const n = name.trim().toLowerCase();
+      return n.includes('compra directa') || n.includes('sin especificar') || n.length < 3;
+    }
+
+    function cleanPhoneNumber(phone) {
+      if (!phone) return '';
+      return String(phone).replace(/[^0-9]/g, '');
+    }
+
+    function normalizeCustomerName(name) {
+      if (!name) return '';
+      return String(name).trim().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    }
+
+    function groupOrdersByCustomer(rawOrders) {
+      const sorted = [...rawOrders].sort((a, b) => (a.timestamp || 0) - (b.timestamp || 0));
+      const groups = [];
+
+      sorted.forEach(ord => {
+        const det = ord.details || {};
+        const phone = cleanPhoneNumber(det.phone);
+        const name = normalizeCustomerName(det.customerName);
+        const isGen = isGenericCustomerName(det.customerName);
+        const sid = ord.sessionId;
+
+        let matched = null;
+        for (const g of groups) {
+          // Coincidencia 1: Mismo número de teléfono (no vacío)
+          if (phone && g.phones.has(phone)) {
+            matched = g;
+            break;
+          }
+          // Coincidencia 2: Misma sesión de navegador
+          if (sid && g.sessions.has(sid)) {
+            matched = g;
+            break;
+          }
+          // Coincidencia 3: Mismo nombre real de cliente (en ventana de 24 horas)
+          if (!isGen && name && g.names.has(name)) {
+            const timeDiff = Math.abs((ord.timestamp || 0) - (g.latestTimestamp || 0));
+            if (timeDiff <= 24 * 60 * 60 * 1000) {
+              matched = g;
+              break;
+            }
+          }
+        }
+
+        if (matched) {
+          matched.attempts.push(ord);
+          if (phone) matched.phones.add(phone);
+          if (sid) matched.sessions.add(sid);
+          if (!isGen && name) matched.names.add(name);
+          if ((ord.timestamp || 0) >= (matched.latestTimestamp || 0)) {
+            matched.latestTimestamp = ord.timestamp;
+            matched.latestOrder = ord;
+          }
+          // Enriquecer datos con el intento más completo
+          if (!matched.bestCustomerName || isGenericCustomerName(matched.bestCustomerName)) {
+            if (!isGen) matched.bestCustomerName = det.customerName;
+          }
+          if (!matched.bestPhone && det.phone) {
+            matched.bestPhone = det.phone;
+          }
+          if (!matched.bestAddress && (det.address || det.reference)) {
+            matched.bestAddress = det.address;
+            matched.bestReference = det.reference;
+            matched.bestMunicipality = det.municipality;
+            matched.bestDepartment = det.department;
+          }
+        } else {
+          groups.push({
+            phones: new Set(phone ? [phone] : []),
+            sessions: new Set(sid ? [sid] : []),
+            names: new Set(!isGen && name ? [name] : []),
+            latestTimestamp: ord.timestamp,
+            latestOrder: ord,
+            bestCustomerName: det.customerName || 'Sin especificar',
+            bestPhone: det.phone || '',
+            bestAddress: det.address || '',
+            bestReference: det.reference || '',
+            bestMunicipality: det.municipality || '',
+            bestDepartment: det.department || '',
+            attempts: [ord]
+          });
+        }
+      });
+
+      groups.sort((a, b) => (b.latestTimestamp || 0) - (a.latestTimestamp || 0));
+      return groups;
+    }
+
     // 4. Renderizado del Dashboard
     function renderDashboard() {
       const events = getFilteredEvents();
@@ -1018,22 +1112,28 @@
         }
       });
 
+      // Agrupar pedidos duplicados por el mismo cliente para consolidar pruebas en la misma persona
+      const groupedOrders = groupOrdersByCustomer(whatsappOrders);
+
       // Identificar pedidos que provienen del Test (por parámetro directo en checkout o correlación de sesión)
-      whatsappOrders.forEach(ord => {
-        const s = sessionsMap[ord.sessionId || ''];
-        const fromDetails = ord.details && (ord.details.fromQuiz === true || ord.details.fromQuiz === 'true');
-        const fromSession = s && s.events.some(e => e.type === 'quiz_complete' || e.type === 'quiz_cta_click');
-        const isQuiz = fromDetails || fromSession;
-        ord.isQuizOrder = isQuiz;
+      groupedOrders.forEach(group => {
+        const isQuiz = group.attempts.some(ord => {
+          const s = sessionsMap[ord.sessionId || ''];
+          const fromDetails = ord.details && (ord.details.fromQuiz === true || ord.details.fromQuiz === 'true');
+          const fromSession = s && s.events.some(e => e.type === 'quiz_complete' || e.type === 'quiz_cta_click');
+          return fromDetails || fromSession;
+        });
+        group.isQuizOrder = isQuiz;
         if (isQuiz) {
           quizOrdersCount++;
-          quizSalesTotal += (parseFloat(ord.details.total) || 0);
+          quizSalesTotal += (parseFloat(group.latestOrder.details?.total) || 0);
         }
       });
 
       const totalSessions = Object.keys(sessionsMap).length || (pageviews > 0 ? pageviews : 0);
-      const totalOrders = whatsappOrders.length;
-      const totalSales = whatsappOrders.reduce((sum, o) => sum + (parseFloat(o.details.total) || 0), 0);
+      const totalOrders = groupedOrders.length;
+      const totalAttempts = whatsappOrders.length;
+      const totalSales = groupedOrders.reduce((sum, g) => sum + (parseFloat(g.latestOrder.details?.total) || 0), 0);
       const avgOrder = totalOrders > 0 ? totalSales / totalOrders : 0;
       const convRate = totalSessions > 0 ? ((totalOrders / totalSessions) * 100).toFixed(1) : '0.0';
 
@@ -1074,6 +1174,9 @@
 
       // Actualizar KPIs Principales
       document.getElementById('kpi-whatsapp-count').textContent = totalOrders;
+      document.getElementById('kpi-whatsapp-sub').textContent = totalAttempts > totalOrders
+        ? `${totalOrders} pedidos únicos (${totalAttempts} envíos totales)`
+        : 'Carritos enviados a WhatsApp';
       document.getElementById('kpi-whatsapp-sales').textContent = `$${totalSales.toFixed(2)}`;
       document.getElementById('kpi-whatsapp-avg').textContent = `Promedio por orden: $${avgOrder.toFixed(2)}`;
       document.getElementById('kpi-visitors').textContent = totalSessions;
@@ -1098,7 +1201,9 @@
       document.getElementById('kpi-quiz-orders').textContent = quizOrdersCount;
       document.getElementById('kpi-quiz-orders-sub').textContent = `$${quizSalesTotal.toFixed(2)} en ventas`;
 
-      document.getElementById('orders-count-badge').textContent = `${totalOrders} pedidos`;
+      document.getElementById('orders-count-badge').textContent = totalAttempts > totalOrders
+        ? `${totalOrders} pedidos (${totalAttempts} envíos)`
+        : `${totalOrders} pedidos`;
       document.getElementById('abandoned-count-badge').textContent = `${abandonedCount} carritos`;
 
       // Renderizar Paneles
@@ -1108,7 +1213,7 @@
       renderSearchesList('searches-list', searchCounts);
 
       // Renderizar Tablas
-      renderOrdersTable(whatsappOrders);
+      renderOrdersTable(groupedOrders);
       renderAbandonedTable(abandonedSessions);
     }
 
@@ -1157,22 +1262,38 @@
       }).join('');
     }
 
-    // Helper para tabla de pedidos con información completa del cliente
-    function renderOrdersTable(orders) {
+    // Helper para tabla de pedidos con información completa del cliente agrupada por persona
+    function renderOrdersTable(groups) {
       const tbody = document.getElementById('orders-tbody');
-      if (orders.length === 0) {
+      if (groups.length === 0) {
         tbody.innerHTML = '<tr><td colspan="7" class="empty-msg">No hay pedidos a WhatsApp en este período.</td></tr>';
         return;
       }
 
-      tbody.innerHTML = orders.map(ord => {
-        const d = ord.timestamp;
+      tbody.innerHTML = groups.map(item => {
+        // Compatibilidad por si se pasa un grupo o un pedido directo
+        const group = item.attempts ? item : {
+          latestOrder: item,
+          latestTimestamp: item.timestamp,
+          attempts: [item],
+          bestCustomerName: item.details?.customerName,
+          bestPhone: item.details?.phone,
+          bestAddress: item.details?.address,
+          bestReference: item.details?.reference,
+          bestMunicipality: item.details?.municipality,
+          bestDepartment: item.details?.department,
+          isQuizOrder: item.isQuizOrder
+        };
+
+        const ord = group.latestOrder;
+        const d = group.latestTimestamp || ord.timestamp;
         const timeStr = d.toLocaleDateString('es-SV', { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' });
         const det = ord.details || {};
+        const attemptsCount = group.attempts ? group.attempts.length : 1;
 
         // 1. Cliente y Contacto
-        const custName = det.customerName || 'Sin especificar';
-        const phone = det.phone || '';
+        const custName = group.bestCustomerName || det.customerName || 'Sin especificar';
+        const phone = group.bestPhone || det.phone || '';
         const phoneClean = phone.replace(/[^0-9]/g, '');
         const phoneHtml = phone ? `
           <div style="margin-top: 4px;">
@@ -1183,10 +1304,10 @@
         ` : '<span style="font-size: 0.74rem; color: var(--text-dim);">Sin teléfono</span>';
 
         // 2. Datos de Entrega
-        const address = det.address || '';
-        const ref = det.reference || '';
-        const muni = det.municipality || ord.city || '';
-        const dept = det.department || ord.country || '';
+        const address = group.bestAddress || det.address || '';
+        const ref = group.bestReference || det.reference || '';
+        const muni = group.bestMunicipality || det.municipality || ord.city || '';
+        const dept = group.bestDepartment || det.department || ord.country || '';
         const locationPart = [muni, dept].filter(Boolean).join(', ');
 
         const deliveryHtml = (address || ref || locationPart) ? `
@@ -1204,18 +1325,65 @@
 
         // 4. Productos Solicitados
         const items = det.items || [];
-        const itemsList = items.length > 0 ? items.map(i => {
+        let itemsList = items.length > 0 ? items.map(i => {
           const conc = i.extraShot ? '<span style="color: var(--gold-light); font-weight: 600;">Extra Shot 45%</span>' : 'Normal 30%';
           const codeStr = i.code ? `[${escapeHtml(i.code)}] ` : '';
           return `• <strong>${codeStr}${escapeHtml(i.name)}</strong> (${conc}) <strong>x${i.qty || 1}</strong>`;
         }).join('<br>') : 'Fragancias varias';
 
+        // Si el cliente hizo múltiples pruebas/intentos, agruparlos dentro de la misma persona
+        if (attemptsCount > 1) {
+          const areAllIdentical = group.attempts.every(att => {
+            const attItems = att.details?.items || [];
+            if (attItems.length !== items.length) return false;
+            return JSON.stringify(attItems.map(i => ({ c: i.code, e: !!i.extraShot, q: i.qty || 1 }))) ===
+                   JSON.stringify(items.map(i => ({ c: i.code, e: !!i.extraShot, q: i.qty || 1 })));
+          });
+
+          if (areAllIdentical) {
+            itemsList += `<div style="font-size: 0.72rem; color: var(--text-dim); margin-top: 4px; font-style: italic;">(Mismo pedido reenviado ${attemptsCount} veces)</div>`;
+          } else {
+            const prevAttemptsHtml = group.attempts
+              .filter(att => att !== ord)
+              .map((att, idx) => {
+                const attTime = att.timestamp ? att.timestamp.toLocaleTimeString('es-SV', { hour: '2-digit', minute: '2-digit' }) : '';
+                const attItems = att.details?.items || [];
+                const attNames = attItems.map(i => i.name).join(', ') || 'Sin items';
+                const attTot = parseFloat(att.details?.total || 0).toFixed(2);
+                return `<div style="padding: 2px 0;">Intento ${idx + 1} (${attTime}): ${escapeHtml(attNames)} - <strong>$${attTot}</strong></div>`;
+              }).join('');
+
+            itemsList += `
+              <details style="margin-top: 6px; font-size: 0.72rem; cursor: pointer;">
+                <summary style="color: var(--gold-light); font-weight: 600; outline: none;">
+                  Ver pruebas anteriores (${attemptsCount - 1})
+                </summary>
+                <div style="background: #fbfbfd; border: 1px solid var(--border-color); border-radius: 6px; padding: 6px 8px; margin-top: 4px; line-height: 1.35;">
+                  ${prevAttemptsHtml}
+                </div>
+              </details>
+            `;
+          }
+        }
+
         // 5. Total
         const total = parseFloat(det.total || 0).toFixed(2);
 
+        // Badge de intentos si > 1
+        const attemptsBadge = attemptsCount > 1 ? `
+          <div style="margin-top: 4px;">
+            <span class="badge badge-gold" title="El cliente realizó ${attemptsCount} intentos para probar">
+              🔁 ${attemptsCount} intentos
+            </span>
+          </div>
+        ` : '';
+
         return `
           <tr>
-            <td><strong>${timeStr}</strong></td>
+            <td>
+              <strong>${timeStr}</strong>
+              ${attemptsBadge}
+            </td>
             <td>
               <strong style="color: var(--text-main); font-size: 0.88rem;">${escapeHtml(custName)}</strong>
               ${phoneHtml}
@@ -1227,7 +1395,7 @@
             <td>
               <span class="badge badge-device">${escapeHtml(ord.device)}</span><br>
               <span style="font-size: 0.74rem; color: var(--text-dim);">${escapeHtml(ord.referrer)}</span>
-              ${ord.isQuizOrder ? `<br><span class="badge badge-gold" style="margin-top: 4px; display: inline-block;">✨ Vía Test</span>` : ''}
+              ${group.isQuizOrder ? `<br><span class="badge badge-gold" style="margin-top: 4px; display: inline-block;">✨ Vía Test</span>` : ''}
             </td>
           </tr>
         `;
