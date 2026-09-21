@@ -460,15 +460,6 @@ const OVERRIDES = {
     baseNotes: ['Ámbar gris', 'Ámbar negro', 'Sal'],
     description: 'El aroma del triunfo elevado a su máxima potencia. Una colisión ardiente entre la frescura salina del laurel y el azahar con notas licorosas embriagadoras sobre un lecho dorado de ámbar gris.'
   },
-  '748': {
-    name: 'Born in Roma Purple Melancholia',
-    family: 'Amaderada Especiada',
-    accords: ['amaderado', 'cálido especiado', 'aromático', 'avainillado', 'mineral'],
-    topNotes: ['Pimienta rosa', 'Bergamota'],
-    heartNotes: ['Lavanda', 'Salvia aromática'],
-    baseNotes: ['Vainilla Bourbon', 'Vetiver ahumado', 'Maderas minerales'],
-    description: 'Inspirada en Valentino Born in Roma. Una oda a la alta costura romana con contrastes fascinantes entre notas minerales frescas, acordes aromáticos de salvia y la intensidad envolvente de la vainilla Bourbon.'
-  },
   '732': {
     name: 'MYSLF EDP',
     family: 'Floral Amaderada',
