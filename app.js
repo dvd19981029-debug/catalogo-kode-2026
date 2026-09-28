@@ -638,7 +638,6 @@ function normalizeText(text) {
 function getCardPriceDisplay(productId, isExtra) {
   const totalInCart = cart.reduce((sum, item) => sum + (item.quantity || 0), 0);
   const hasItems = totalInCart > 0;
-  const isPromo343 = productId === 'kode-343' || productId === '343';
 
   if (hasItems) {
     if (isExtra) {
@@ -654,12 +653,7 @@ function getCardPriceDisplay(productId, isExtra) {
     }
   }
 
-  if (isPromo343) {
-    return {
-      mainHtml: isExtra ? '<span class="price-original-strike">$25.00</span><span class="price-deal-val">$20.00</span>' : '$20.00',
-      subPrice: 'o $15 adicional c/u'
-    };
-  } else if (isExtra) {
+  if (isExtra) {
     return {
       mainHtml: '$25.00',
       subPrice: 'o $20 adicional c/u'
@@ -773,7 +767,6 @@ function renderCatalog() {
   if (emptyState) emptyState.style.display = 'none';
 
   const cardHtmls = filtered.map(item => {
-    const isPromo343 = item.code === '343';
     const isExtra = selectedConcentrations[item.id] !== undefined ? selectedConcentrations[item.id] : true;
     const priceInfo = getCardPriceDisplay(item.id, isExtra);
     const mainPrice = priceInfo.mainHtml;
@@ -794,11 +787,7 @@ function renderCatalog() {
       let badgeClass = 'badge-top-1';
       let rankText = 'Top 1';
       let descText = ' Más Vendido';
-      if (item.code === '343') {
-        badgeClass = 'badge-special-offer';
-        rankText = 'Oferta especial';
-        descText = '';
-      } else if (item.topBadge.includes('Top 2')) {
+      if (item.topBadge.includes('Top 2')) {
         badgeClass = 'badge-top-2';
         rankText = 'Top 2';
       } else if (item.topBadge.includes('Top 3')) {
@@ -808,7 +797,7 @@ function renderCatalog() {
       badgeHtml = `<div class="top-seller-badge ${badgeClass}"><span class="badge-rank">${rankText}</span>${descText ? `<span class="badge-desc">${descText}</span>` : ''}</div>`;
     }
 
-    const cardClass = isPromo343 ? 'product-card promo-card-gold' : 'product-card';
+    const cardClass = 'product-card';
 
     return `
       <article class="${cardClass}" data-id="${item.id}">
@@ -854,7 +843,7 @@ function renderCatalog() {
                 onclick="setCardConcentration('${item.id}', true)"
               >
                 <span class="seg-btn-label">Extra Shot (45%)</span>
-                <span class="segment-badge-green">${isPromo343 ? 'GRATIS' : '+$5 MEJOR'}</span>
+                <span class="segment-badge-green">+$5 MEJOR</span>
               </button>
             </div>
           </div>
@@ -1105,12 +1094,9 @@ function calculateOrderPricing() {
   // Ordenar para cobrar primero la más cara (Extra Shot primero)
   bottles.sort((a, b) => (b.extraShot ? 1 : 0) - (a.extraShot ? 1 : 0));
 
-  const hasPromo343 = bottles.some(b => b.code === '343');
-
   let total = 0;
   const firstBottleExtra = bottles[0].extraShot;
-  // Promoción 343: si la orden incluye 343, Extra Shot queda siempre a $20 (no hay cobro de $25)
-  const firstBottlePrice = firstBottleExtra ? (hasPromo343 ? 20 : 25) : 20;
+  const firstBottlePrice = firstBottleExtra ? 25 : 20;
   total += firstBottlePrice;
 
   let additionalExtraCount = 0;
@@ -1137,8 +1123,7 @@ function calculateOrderPricing() {
     firstBottlePrice,
     firstBottleExtra,
     additionalExtraCount,
-    additionalNormalCount,
-    hasPromo343
+    additionalNormalCount
   };
 }
 
@@ -1162,9 +1147,7 @@ function updateCartTotalsAndPricing() {
 
   if (breakdownContainer) {
     let rowsHtml = '';
-    const firstLabel = (pricing.hasPromo343 && pricing.firstBottleExtra)
-      ? '1ra unidad (Extra Shot - Oferta Kódigo 343):'
-      : `1ra unidad (${pricing.firstBottleExtra ? 'Extra Shot 45%' : 'Normal 30%'}):`;
+    const firstLabel = `1ra unidad (${pricing.firstBottleExtra ? 'Extra Shot 45%' : 'Normal 30%'}):`;
     rowsHtml += `
       <div class="breakdown-line">
         <span>${firstLabel}</span>
@@ -1188,15 +1171,6 @@ function updateCartTotalsAndPricing() {
         <div class="breakdown-line">
           <span>${pricing.additionalNormalCount} adicional(es) Normal ($15.00 c/u):</span>
           <strong>$${sub.toFixed(2)}</strong>
-        </div>
-      `;
-    }
-
-    if (pricing.hasPromo343 && pricing.extraCount > 0) {
-      rowsHtml += `
-        <div class="breakdown-line promo-gold-line">
-          <span>✨ Oferta Kódigo 343: Extra Shot Gratis ($20 c/u en todas)</span>
-          <strong>Ahorras $5.00</strong>
         </div>
       `;
     }
@@ -1462,9 +1436,6 @@ function sendOrderViaWhatsApp() {
   message += `*Productos:*\n${itemsText}`;
 
   let breakdownText = '';
-  if (pricing.hasPromo343 && pricing.extraCount > 0) {
-    breakdownText += `• *Oferta Especial Kódigo 343:* Extra Shot Gratis a $20 c/u en todas\n`;
-  }
   breakdownText += `• 1ra unidad (${pricing.firstBottleExtra ? 'Extra Shot' : 'Normal'}): $${pricing.firstBottlePrice.toFixed(2)}\n`;
   if (pricing.additionalExtraCount > 0) {
     breakdownText += `• ${pricing.additionalExtraCount} adicional(es) Extra Shot: $${(pricing.additionalExtraCount * 20).toFixed(2)} ($20 c/u)\n`;

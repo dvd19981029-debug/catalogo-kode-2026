@@ -87,109 +87,10 @@ document.addEventListener('DOMContentLoaded', async () => {
   resetProductScrollOnReload();
 });
 
-// Animación de confetti que nace directamente de la caja de promoción en el producto 343
-function launchConfetti() {
-  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    return;
-  }
-
-  const promoBanner = document.querySelector('.product-promo-banner-343');
-  const rect = promoBanner ? promoBanner.getBoundingClientRect() : null;
-
-  const canvas = document.createElement('canvas');
-  canvas.id = 'promo-confetti-canvas';
-  canvas.style.position = 'fixed';
-  canvas.style.top = '0';
-  canvas.style.left = '0';
-  canvas.style.width = '100vw';
-  canvas.style.height = '100vh';
-  canvas.style.pointerEvents = 'none';
-  canvas.style.zIndex = '999999';
-  document.body.appendChild(canvas);
-
-  const ctx = canvas.getContext('2d');
-  let width = (canvas.width = window.innerWidth);
-  let height = (canvas.height = window.innerHeight);
-
-  const onResize = () => {
-    width = canvas.width = window.innerWidth;
-    height = canvas.height = window.innerHeight;
-  };
-  window.addEventListener('resize', onResize);
-
-  const colors = ['#ffd700', '#d4af37', '#f59e0b', '#10b981', '#ffffff', '#eab308', '#38bdf8', '#ec4899'];
-  const pieces = [];
-  const count = Math.min(110, Math.max(65, Math.floor(width / 4)));
-
-  // Punto de origen: exactamente de la caja que explica la promoción dentro del producto
-  const originCenterX = rect ? rect.left + rect.width * 0.5 : width * 0.5;
-  const originBaseY = rect ? rect.top + Math.min(45, rect.height * 0.3) : height * 0.4;
-  const originSpreadX = rect ? rect.width * 0.7 : 220;
-
-  for (let i = 0; i < count; i++) {
-    const offsetX = (Math.random() - 0.5) * originSpreadX;
-    const angleRatio = offsetX / (originSpreadX * 0.5 || 1);
-    const vx = angleRatio * (Math.random() * 7 + 4) + (Math.random() - 0.5) * 5;
-    const vy = -(Math.random() * 12 + 6); // Impulso hacia arriba saliendo de la promoción
-
-    pieces.push({
-      x: originCenterX + offsetX,
-      y: originBaseY + (Math.random() - 0.5) * 15,
-      w: Math.random() * 8 + 6,
-      h: Math.random() * 6 + 4,
-      color: colors[Math.floor(Math.random() * colors.length)],
-      vx: vx,
-      vy: vy,
-      gravity: 0.28,
-      rotation: Math.random() * 360,
-      vRotation: (Math.random() - 0.5) * 10,
-      opacity: 1
-    });
-  }
-
-  const startTime = Date.now();
-  const duration = 3200;
-
-  function frame() {
-    const elapsed = Date.now() - startTime;
-    if (elapsed > duration) {
-      window.removeEventListener('resize', onResize);
-      if (canvas.parentNode) canvas.parentNode.removeChild(canvas);
-      return;
-    }
-
-    ctx.clearRect(0, 0, width, height);
-
-    const fadeStart = duration * 0.65;
-    const globalAlpha = elapsed > fadeStart ? 1 - (elapsed - fadeStart) / (duration - fadeStart) : 1;
-
-    for (const p of pieces) {
-      p.x += p.vx;
-      p.y += p.vy;
-      p.vy += p.gravity;
-      p.vx *= 0.985;
-      p.rotation += p.vRotation;
-
-      ctx.save();
-      ctx.globalAlpha = Math.max(0, globalAlpha * p.opacity);
-      ctx.translate(p.x, p.y);
-      ctx.rotate((p.rotation * Math.PI) / 180);
-      ctx.fillStyle = p.color;
-      ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h);
-      ctx.restore();
-    }
-
-    requestAnimationFrame(frame);
-  }
-
-  requestAnimationFrame(frame);
-}
-
 // Precios dinámicos en página de detalle según estado del carrito (Oferta si ya lleva al menos 1)
 function getDetailPriceDisplay(extra) {
   const totalInCart = cart.reduce((sum, item) => sum + (item.quantity || 0), 0);
   const hasItems = totalInCart > 0;
-  const isPromo343 = currentPerfume && currentPerfume.code === '343';
 
   if (hasItems) {
     if (extra) {
@@ -215,17 +116,7 @@ function getDetailPriceDisplay(extra) {
     }
   }
 
-  if (isPromo343) {
-    return {
-      mainHtml: extra ? '<span class="detail-price-strike">$25.00</span><span class="detail-price-deal">$20.00</span>' : '$20.00',
-      subPrice: 'o $15.00 adicional c/u',
-      badgeNotice: extra ? '🎉 45% Extra Shot GRATIS ($20.00)' : '30% Formulación clásica ($20.00)',
-      badgeColor: extra ? '#15803d' : '#6e6e73',
-      badgeBorder: extra ? 'rgba(21, 128, 61, 0.25)' : 'rgba(0, 0, 0, 0.08)',
-      badgeBg: extra ? '#f0fdf4' : '#f5f5f7',
-      hint: extra ? '¡Extra Shot GRATIS por ser el más vendido!' : 'Mismo precio: ¡Aprovecha el Extra Shot gratis!'
-    };
-  } else if (extra) {
+  if (extra) {
     return {
       mainHtml: '$25.00',
       subPrice: 'o $20.00 adicional c/u',
@@ -299,13 +190,10 @@ async function loadAndRenderProduct() {
   document.title = `KöDE — Kódigo ${found.code}`;
 
   // Determinar si es Top 1, Top 2 o Top 3
-  const isPromo343 = found.code === '343';
   const sortedBySales = [...catalog].sort((a, b) => (b.sales || 0) - (a.sales || 0));
   const rankIndex = sortedBySales.findIndex(p => p.code === found.code);
   let topBadgeHtml = '';
-  if (isPromo343) {
-    topBadgeHtml = `<div class="top-seller-badge badge-special-offer"><span class="badge-rank">Oferta Especial</span><span class="badge-desc"> Más Vendido</span></div>`;
-  } else if (rankIndex === 0) {
+  if (rankIndex === 0) {
     topBadgeHtml = `<div class="top-seller-badge badge-top-1"><span class="badge-rank">Top 1</span><span class="badge-desc"> Más Vendido</span></div>`;
   } else if (rankIndex === 1) {
     topBadgeHtml = `<div class="top-seller-badge badge-top-2"><span class="badge-rank">Top 2</span><span class="badge-desc"> Más Vendido</span></div>`;
@@ -318,25 +206,7 @@ async function loadAndRenderProduct() {
   const genderLabel = genderKey === 'mujer' ? 'Mujer' : (genderKey === 'unisex' ? 'Unisex' : 'Hombre');
   const genderBadgeHtml = `<span class="fragrance-gender-badge gender-badge-${genderKey}">${genderLabel}</span>`;
 
-  // Banner promocional para Kódigo 343
-  const promoBannerHtml = isPromo343 ? `
-    <div class="product-promo-banner-343">
-      <div class="promo-banner-header">
-        <span class="promo-banner-tag">⭐ Oferta Especial</span>
-        <span class="promo-banner-reason">Por ser el perfume más vendido</span>
-      </div>
-      <h2 class="promo-banner-title">EXTRA SHOT (45%) TOTALMENTE GRATIS</h2>
-      <p class="promo-banner-text">
-        Por ser nuestro perfume #1 más vendido, en este <strong>Kódigo 343</strong> la concentración <strong>Extra Shot (45%)</strong> queda siempre a <strong>$20.00</strong> (a precio de Normal, te ahorras los +$5).
-      </p>
-      <div class="promo-banner-bonus">
-        <svg class="promo-bonus-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-          <polyline points="20 6 9 17 4 12"></polyline>
-        </svg>
-        <span><strong>Promoción en tu orden:</strong> Si llevas este perfume y agregas otros con Extra Shot, <strong>¡todas las fragancias con Extra Shot te quedan a $20.00 c/u!</strong></span>
-      </div>
-    </div>
-  ` : '';
+  const promoBannerHtml = '';
 
   // 3. Renderizar Acordes Olfativos
   const accords = found.accords || [];
@@ -470,7 +340,7 @@ async function loadAndRenderProduct() {
             >
               <div class="seg-title-row">
                 <span class="seg-title">Extra Shot (45%)</span>
-                <span class="detail-badge-green">${isPromo343 ? 'GRATIS' : '+$5'}</span>
+                <span class="detail-badge-green">+$5</span>
               </div>
               <span class="seg-desc">Máxima fijación y estela</span>
             </button>
@@ -543,9 +413,6 @@ async function loadAndRenderProduct() {
     </section>
   `;
 
-  if (isPromo343) {
-    setTimeout(launchConfetti, 220);
-  }
   updateDirectBuyButton();
 }
 
@@ -644,11 +511,10 @@ function updateDirectBuyButton() {
   const totalCount = previewItems.length;
   if (totalCount > 1) {
     let total = 0;
-    const hasPromo343 = previewItems.some(b => b.code === '343');
     previewItems.forEach((item, index) => {
       const isFirst = index === 0;
       if (isFirst) {
-        total += item.extraShot ? (hasPromo343 ? 20 : 25) : 20;
+        total += item.extraShot ? 25 : 20;
       } else {
         total += item.extraShot ? 20 : 15;
       }
@@ -908,14 +774,12 @@ function renderDirectUpsellPricing() {
   let total = 0;
   let savings = 0;
   const count = directOrderItems.length;
-  const hasPromo343 = directOrderItems.some(item => item.code === '343');
 
   directOrderItems.forEach((item, index) => {
     const isFirst = index === 0;
     if (isFirst) {
-      const p = item.extraShot ? (hasPromo343 ? 20 : 25) : 20;
+      const p = item.extraShot ? 25 : 20;
       total += p;
-      if (hasPromo343 && item.extraShot) savings += 5;
     } else {
       const p = item.extraShot ? 20 : 15;
       total += p;
@@ -1111,7 +975,6 @@ window.submitDirectOrderViaWhatsApp = function() {
   let total = 0;
   let savings = 0;
   let itemsListText = '';
-  const hasPromo343 = directOrderItems.some(item => item.code === '343');
 
   directOrderItems.forEach((item, index) => {
     const isFirst = index === 0;
@@ -1119,9 +982,8 @@ window.submitDirectOrderViaWhatsApp = function() {
     let discountNotice = '';
 
     if (isFirst) {
-      unitPrice = item.extraShot ? (hasPromo343 ? 20 : 25) : 20;
-      discountNotice = (hasPromo343 && item.extraShot) ? ' (¡Extra Shot Gratis - Oferta 343!)' : ' (1ra unidad)';
-      if (hasPromo343 && item.extraShot) savings += 5;
+      unitPrice = item.extraShot ? 25 : 20;
+      discountNotice = ' (1ra unidad)';
     } else {
       unitPrice = item.extraShot ? 20 : 15;
       discountNotice = ' (¡$5.00 de descuento aplicado!)';
@@ -1298,12 +1160,9 @@ function calculateOrderPricing() {
     };
   }
 
-  const hasPromo343 = bottles.some(b => b.code === '343');
-
   let total = 0;
   const firstBottleExtra = bottles[0].extraShot;
-  // Promoción 343: si la orden incluye 343, Extra Shot queda siempre a $20 (no hay cobro de $25)
-  const firstBottlePrice = firstBottleExtra ? (hasPromo343 ? 20 : 25) : 20;
+  const firstBottlePrice = firstBottleExtra ? 25 : 20;
   total += firstBottlePrice;
 
   let additionalExtraCount = 0;
@@ -1330,8 +1189,7 @@ function calculateOrderPricing() {
     firstBottlePrice,
     firstBottleExtra,
     additionalExtraCount,
-    additionalNormalCount,
-    hasPromo343
+    additionalNormalCount
   };
 }
 
@@ -1356,9 +1214,7 @@ function updateCartTotalsAndPricing() {
 
   if (breakdownContainer) {
     let rowsHtml = '';
-    const firstLabel = (pricing.hasPromo343 && pricing.firstBottleExtra)
-      ? '1ra unidad (Extra Shot - Oferta Kódigo 343):'
-      : `1ra unidad (${pricing.firstBottleExtra ? 'Extra Shot 45%' : 'Normal 30%'}):`;
+    const firstLabel = `1ra unidad (${pricing.firstBottleExtra ? 'Extra Shot 45%' : 'Normal 30%'}):`;
     rowsHtml += `
       <div class="breakdown-line">
         <span>${firstLabel}</span>
@@ -1382,15 +1238,6 @@ function updateCartTotalsAndPricing() {
         <div class="breakdown-line">
           <span>${pricing.additionalNormalCount} adicional(es) Normal ($15.00 c/u):</span>
           <strong>$${sub.toFixed(2)}</strong>
-        </div>
-      `;
-    }
-
-    if (pricing.hasPromo343 && pricing.extraCount > 0) {
-      rowsHtml += `
-        <div class="breakdown-line promo-gold-line">
-          <span>✨ Oferta Kódigo 343: Extra Shot Gratis ($20 c/u en todas)</span>
-          <strong>Ahorras $5.00</strong>
         </div>
       `;
     }
@@ -1705,9 +1552,6 @@ function sendOrderViaWhatsApp() {
   message += `*Productos:*\n${itemsText}`;
 
   let breakdownText = '';
-  if (pricing.hasPromo343 && pricing.extraCount > 0) {
-    breakdownText += `• *Oferta Especial Kódigo 343:* Extra Shot Gratis a $20 c/u en todas\n`;
-  }
   breakdownText += `• 1ra unidad (${pricing.firstBottleExtra ? 'Extra Shot' : 'Normal'}): $${pricing.firstBottlePrice.toFixed(2)}\n`;
   if (pricing.additionalExtraCount > 0) {
     breakdownText += `• ${pricing.additionalExtraCount} adicional(es) Extra Shot: $${(pricing.additionalExtraCount * 20).toFixed(2)} ($20 c/u)\n`;
