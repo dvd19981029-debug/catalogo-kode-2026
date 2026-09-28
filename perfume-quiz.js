@@ -218,18 +218,6 @@
       personality: 'Única, eterna y con un magnetismo misterioso que cautiva generaciones. Tu sola presencia irradia alta costura y un aura legendaria que nadie puede igualar.',
       matchWhy: 'Buscabas la máxima elegancia clásica de la historia. Los aldehídos luminosos con ylang-ylang, iris de Florencia, jazmín y sándalo son el símbolo definitivo de la sofisticación femenina.'
     },
-    '563': {
-      archetype: 'Romance Eterno • El Jardín Encantado',
-      element: 'Rosas de Grasse & Lirio 💐',
-      personality: 'Romántica, soñadora y con una dulzura luminosa que enamora. Tienes un corazón apasionado y ves la belleza en los detalles más delicados de la vida.',
-      matchWhy: 'Buscabas un bouquet floral radiante y femenino. Las rosas centifolia de Grasse con lirio de los valles, peonía y maderas tiernas te envuelven en un romance primaveral eterno.'
-    },
-    '428': {
-      archetype: 'Aristocracia Moderna • La Rebelde Chic',
-      element: 'Jazmín Sambac & Vainilla Bourbon 🎀',
-      personality: 'Vanguardista, segura de sí misma y con un estilo propio arrollador. Combinas la alta costura con un toque atrevido y urbano que marca tendencia por donde caminas.',
-      matchWhy: 'Buscabas feminidad moderna y sensualidad duradera. El jazmín sambac bañado en vainilla Bourbon suntuosa con grosellas negras y maderas nobles es elegancia con actitud.'
-    },
     '549': {
       archetype: 'Brisa de Capri • El Resplandor Mediterráneo',
       element: 'Limón Siciliano & Manzana Crujiente 🍋',
