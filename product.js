@@ -77,12 +77,77 @@ document.addEventListener('click', (e) => {
   }
 });
 
+// Control de existencias / perfumes agotados (Set de códigos)
+const FIRESTORE_STOCK_QUERY_URL = 'https://firestore.googleapis.com/v1/projects/kode-scents/databases/(default)/documents:runQuery?key=AIzaSyARNtXYuz9SiCUBjpfe-Z-vIXe7_aHpmyE';
+let outOfStockCodes = new Set();
+try {
+  const cachedStock = localStorage.getItem('kode_out_of_stock_codes');
+  if (cachedStock) {
+    const parsed = JSON.parse(cachedStock);
+    if (Array.isArray(parsed)) outOfStockCodes = new Set(parsed.map(String));
+  }
+} catch (e) {}
+
+async function syncInventoryOutOfStock() {
+  try {
+    const res = await fetch(FIRESTORE_STOCK_QUERY_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        structuredQuery: {
+          from: [{ collectionId: 'analytics_events' }],
+          where: {
+            fieldFilter: {
+              field: { fieldPath: 'eventType' },
+              op: 'EQUAL',
+              value: { stringValue: 'stock_update' }
+            }
+          },
+          limit: 25
+        }
+      })
+    });
+    if (!res.ok) return;
+    const data = await res.json();
+    if (!Array.isArray(data)) return;
+
+    const validDocs = data
+      .filter(d => d.document && d.document.fields && d.document.fields.codes)
+      .map(d => {
+        const f = d.document.fields;
+        const ts = f.timestamp ? f.timestamp.timestampValue : d.document.createTime;
+        let codes = [];
+        try {
+          codes = JSON.parse(f.codes.stringValue || '[]');
+        } catch (e) {}
+        return { ts, codes };
+      })
+      .sort((a, b) => new Date(b.ts) - new Date(a.ts));
+
+    if (validDocs.length > 0) {
+      const latestCodes = validDocs[0].codes || [];
+      const newSet = new Set(latestCodes.map(String));
+      const hasChanged = newSet.size !== outOfStockCodes.size || [...newSet].some(c => !outOfStockCodes.has(c));
+      outOfStockCodes = newSet;
+      try {
+        localStorage.setItem('kode_out_of_stock_codes', JSON.stringify(latestCodes));
+      } catch (e) {}
+      if (hasChanged && currentPerfume) {
+        loadAndRenderProduct();
+      }
+    }
+  } catch (err) {
+    console.warn('Error sincronizando stock:', err);
+  }
+}
+
 // Inicialización al cargar la página
 document.addEventListener('DOMContentLoaded', async () => {
   resetProductScrollOnReload();
   loadCart();
   setupCartDialogEvents();
   setupDirectUpsellDialogEvents();
+  syncInventoryOutOfStock();
   await loadAndRenderProduct();
   resetProductScrollOnReload();
 });
@@ -276,10 +341,29 @@ async function loadAndRenderProduct() {
   const initBadgeNotice = priceInfo.badgeNotice;
   const initHint = priceInfo.hint;
 
+  const isOutOfStock = outOfStockCodes.has(String(found.code)) || outOfStockCodes.has(String(found.id));
+  const outOfStockBannerHtml = isOutOfStock
+    ? `<div class="product-out-of-stock-banner"><span style="font-size: 1.25rem;">⚠️</span><span>Esta fragancia se encuentra actualmente <strong>Agotada</strong> y no está disponible para compra.</span></div>`
+    : '';
+  const outOfStockBadgeHtml = isOutOfStock
+    ? `<div class="badge-out-of-stock-detail">Agotado</div>`
+    : '';
+
+  const addBtnClass = isOutOfStock ? 'btn-add-cart-large btn-out-of-stock' : (cart.some(ci => (ci.productId === found.id || ci.id === found.id) && ci.extraShot === isExtraShot) ? 'btn-add-cart-large in-cart' : 'btn-add-cart-large');
+  const addBtnDisabled = isOutOfStock ? 'disabled aria-disabled="true"' : 'onclick="addProductToCart()"';
+  const addBtnText = isOutOfStock ? 'Agotado temporalmente' : (() => {
+    const q = cart.filter(ci => (ci.productId === found.id || ci.id === found.id) && ci.extraShot === isExtraShot).length;
+    return q > 0 ? (q === 1 ? '✓ Ya agregada (1)' : `✓ Ya agregadas (${q})`) : 'Agregar al Carrito';
+  })();
+
+  const waBtnClass = isOutOfStock ? 'btn-whatsapp-direct btn-whatsapp-out-of-stock' : 'btn-whatsapp-direct';
+  const waBtnOnClick = isOutOfStock ? 'onclick="event.preventDefault()"' : 'onclick="orderCurrentViaWhatsApp(event)"';
+  const waBtnText = isOutOfStock ? 'Agotado por el momento' : 'Pedir ya por WhatsApp';
+
   // 5. Renderizar vista completa
   root.innerHTML = `
     <!-- Tarjeta Principal del Producto -->
-    <section class="product-hero-card">
+    <section class="product-hero-card ${isOutOfStock ? 'is-out-of-stock' : ''}">
       <!-- Fila Superior: Botella a la izquierda y Acordes Olfativos al costado -->
       <div class="product-hero-top">
         <div class="detail-stage-box">
@@ -307,12 +391,14 @@ async function loadAndRenderProduct() {
       <!-- Nombre del Perfume (Kódigo), Inspiración y Botones de Compra -->
       <div class="detail-buy-section">
         <div class="detail-info-box">
+          ${outOfStockBadgeHtml}
           <h1 class="detail-title">Kódigo ${found.code}</h1>
           <p class="detail-inspiration">
             Inspirado en <strong>${found.reference}</strong> <span class="detail-brand">(${found.brand})</span>
           </p>
         </div>
 
+        ${outOfStockBannerHtml}
         ${promoBannerHtml}
 
         <div class="detail-concentration-section">
@@ -362,23 +448,20 @@ async function loadAndRenderProduct() {
         </div>
 
         <div class="detail-actions-row">
-          <button type="button" class="btn-add-cart-large ${cart.some(ci => (ci.productId === found.id || ci.id === found.id) && ci.extraShot === isExtraShot) ? 'in-cart' : ''}" id="btn-add-to-cart" onclick="addProductToCart()">
+          <button type="button" class="${addBtnClass}" id="btn-add-to-cart" ${addBtnDisabled}>
             <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
               <line x1="3" y1="6" x2="21" y2="6"></line>
               <path d="M16 10a4 4 0 0 1-8 0"></path>
             </svg>
-            <span id="btn-add-text">${(() => {
-              const q = cart.filter(ci => (ci.productId === found.id || ci.id === found.id) && ci.extraShot === isExtraShot).length;
-              return q > 0 ? (q === 1 ? '✓ Ya agregada (1)' : `✓ Ya agregadas (${q})`) : 'Agregar al Carrito';
-            })()}</span>
+            <span id="btn-add-text">${addBtnText}</span>
           </button>
 
-          <a href="#" class="btn-whatsapp-direct" id="btn-whatsapp-direct" onclick="orderCurrentViaWhatsApp(event)">
+          <a href="#" class="${waBtnClass}" id="btn-whatsapp-direct" ${waBtnOnClick}>
             <svg viewBox="0 0 24 24" fill="currentColor">
               <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
             </svg>
-            <span>Pedir ya por WhatsApp</span>
+            <span>${waBtnText}</span>
           </a>
         </div>
       </div>
@@ -468,6 +551,19 @@ function updateProductBuyButton() {
   const btnText = document.getElementById('btn-add-text');
   if (!btn || !btnText || !currentPerfume) return;
 
+  const isOutOfStock = outOfStockCodes.has(String(currentPerfume.code)) || outOfStockCodes.has(String(currentPerfume.id));
+  if (isOutOfStock) {
+    btnText.textContent = 'Agotado temporalmente';
+    btn.classList.add('btn-out-of-stock');
+    btn.classList.remove('in-cart');
+    btn.disabled = true;
+    updateDirectBuyButton();
+    return;
+  }
+
+  btn.disabled = false;
+  btn.classList.remove('btn-out-of-stock');
+
   const qty = cart.filter(ci => (ci.productId === currentPerfume.id || ci.id === currentPerfume.id) && ci.extraShot === isExtraShot).length;
 
   if (qty > 0) {
@@ -486,6 +582,17 @@ function updateDirectBuyButton() {
   if (!btn || !currentPerfume) return;
   const span = btn.querySelector('span');
   if (!span) return;
+
+  const isOutOfStock = outOfStockCodes.has(String(currentPerfume.code)) || outOfStockCodes.has(String(currentPerfume.id));
+  if (isOutOfStock) {
+    span.textContent = 'Agotado por el momento';
+    btn.classList.add('btn-whatsapp-out-of-stock');
+    btn.setAttribute('aria-disabled', 'true');
+    return;
+  }
+
+  btn.classList.remove('btn-whatsapp-out-of-stock');
+  btn.removeAttribute('aria-disabled');
 
   const previewItems = [];
   cart.forEach(item => {
@@ -528,6 +635,7 @@ function updateDirectBuyButton() {
 // Agregar a la bolsa
 window.addProductToCart = function() {
   if (!currentPerfume) return;
+  if (outOfStockCodes.has(String(currentPerfume.code)) || outOfStockCodes.has(String(currentPerfume.id))) return;
 
   const newUid = 'c_' + Date.now().toString(36) + '_' + Math.random().toString(36).substring(2, 7);
   cart.push({
@@ -919,6 +1027,7 @@ window.closeDirectUpsellModal = function() {
 window.orderCurrentViaWhatsApp = function(event) {
   if (event) event.preventDefault();
   if (!currentPerfume) return;
+  if (outOfStockCodes.has(String(currentPerfume.code)) || outOfStockCodes.has(String(currentPerfume.id))) return;
 
   // Cargar todos los perfumes que ya han sido agregados a la bolsa
   directOrderItems = [];

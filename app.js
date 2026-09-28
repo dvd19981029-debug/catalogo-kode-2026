@@ -12,6 +12,70 @@ let cart = [];
 // Estado por perfume para la selección de concentración en la tarjeta (true = extra shot)
 const selectedConcentrations = {};
 
+// Control de existencias / perfumes agotados (Set de códigos)
+const FIRESTORE_STOCK_QUERY_URL = 'https://firestore.googleapis.com/v1/projects/kode-scents/databases/(default)/documents:runQuery?key=AIzaSyARNtXYuz9SiCUBjpfe-Z-vIXe7_aHpmyE';
+let outOfStockCodes = new Set();
+try {
+  const cachedStock = localStorage.getItem('kode_out_of_stock_codes');
+  if (cachedStock) {
+    const parsed = JSON.parse(cachedStock);
+    if (Array.isArray(parsed)) outOfStockCodes = new Set(parsed.map(String));
+  }
+} catch (e) {}
+
+async function syncInventoryOutOfStock() {
+  try {
+    const res = await fetch(FIRESTORE_STOCK_QUERY_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        structuredQuery: {
+          from: [{ collectionId: 'analytics_events' }],
+          where: {
+            fieldFilter: {
+              field: { fieldPath: 'eventType' },
+              op: 'EQUAL',
+              value: { stringValue: 'stock_update' }
+            }
+          },
+          limit: 25
+        }
+      })
+    });
+    if (!res.ok) return;
+    const data = await res.json();
+    if (!Array.isArray(data)) return;
+
+    const validDocs = data
+      .filter(d => d.document && d.document.fields && d.document.fields.codes)
+      .map(d => {
+        const f = d.document.fields;
+        const ts = f.timestamp ? f.timestamp.timestampValue : d.document.createTime;
+        let codes = [];
+        try {
+          codes = JSON.parse(f.codes.stringValue || '[]');
+        } catch (e) {}
+        return { ts, codes };
+      })
+      .sort((a, b) => new Date(b.ts) - new Date(a.ts));
+
+    if (validDocs.length > 0) {
+      const latestCodes = validDocs[0].codes || [];
+      const newSet = new Set(latestCodes.map(String));
+      const hasChanged = newSet.size !== outOfStockCodes.size || [...newSet].some(c => !outOfStockCodes.has(c));
+      outOfStockCodes = newSet;
+      try {
+        localStorage.setItem('kode_out_of_stock_codes', JSON.stringify(latestCodes));
+      } catch (e) {}
+      if (hasChanged) {
+        renderCatalog();
+      }
+    }
+  } catch (err) {
+    console.warn('Error sincronizando stock:', err);
+  }
+}
+
 // Desactivar restauración automática nativa para control exacto
 if ('scrollRestoration' in history) {
   history.scrollRestoration = 'manual';
@@ -156,6 +220,7 @@ window.addEventListener('scroll', () => {
 // Inicialización
 document.addEventListener('DOMContentLoaded', async () => {
   await loadCatalogData();
+  syncInventoryOutOfStock();
   setupGenderTabs();
   populateBrandSelect();
   loadCart();
@@ -415,9 +480,21 @@ function updateCardBuyButton(productId) {
   const btn = card.querySelector('.apple-buy-btn');
   if (!btn) return;
 
+  const item = CATALOG.find(p => p.id === productId);
+  const isOutOfStock = outOfStockCodes.has(String(productId)) || (item && outOfStockCodes.has(String(item.code)));
+  if (isOutOfStock) {
+    btn.textContent = 'Agotado';
+    btn.classList.add('btn-out-of-stock');
+    btn.classList.remove('in-cart');
+    btn.disabled = true;
+    return;
+  }
+
   const isExtra = selectedConcentrations[productId] !== undefined ? selectedConcentrations[productId] : true;
   const qty = cart.filter(ci => (ci.productId === productId || ci.id === productId) && ci.extraShot === isExtra).length;
 
+  btn.disabled = false;
+  btn.classList.remove('btn-out-of-stock');
   if (qty > 0) {
     btn.textContent = qty === 1 ? '✓ Ya agregada (1)' : `✓ Ya agregadas (${qty})`;
     btn.classList.add('in-cart');
@@ -767,13 +844,22 @@ function renderCatalog() {
   if (emptyState) emptyState.style.display = 'none';
 
   const cardHtmls = filtered.map(item => {
+    const isOutOfStock = outOfStockCodes.has(String(item.code)) || outOfStockCodes.has(String(item.id));
     const isExtra = selectedConcentrations[item.id] !== undefined ? selectedConcentrations[item.id] : true;
     const priceInfo = getCardPriceDisplay(item.id, isExtra);
     const mainPrice = priceInfo.mainHtml;
     const subPrice = priceInfo.subPrice;
     const inCartQty = cart.filter(ci => (ci.productId === item.id || ci.id === item.id) && ci.extraShot === isExtra).length;
-    const btnText = inCartQty > 0 ? (inCartQty === 1 ? '✓ Ya agregada (1)' : `✓ Ya agregadas (${inCartQty})`) : 'Agregar';
-    const btnClass = inCartQty > 0 ? 'apple-buy-btn in-cart' : 'apple-buy-btn';
+    
+    let btnText = inCartQty > 0 ? (inCartQty === 1 ? '✓ Ya agregada (1)' : `✓ Ya agregadas (${inCartQty})`) : 'Agregar';
+    let btnClass = inCartQty > 0 ? 'apple-buy-btn in-cart' : 'apple-buy-btn';
+    let btnDisabledAttr = '';
+
+    if (isOutOfStock) {
+      btnText = 'Agotado';
+      btnClass = 'apple-buy-btn btn-out-of-stock';
+      btnDisabledAttr = 'disabled aria-disabled="true"';
+    }
 
     const webpSrc = `images/kode/kode_${item.code}.webp`;
     const fallbackSrc = `images/kode/kode_${item.code}.jpg`;
@@ -797,12 +883,14 @@ function renderCatalog() {
       badgeHtml = `<div class="top-seller-badge ${badgeClass}"><span class="badge-rank">${rankText}</span>${descText ? `<span class="badge-desc">${descText}</span>` : ''}</div>`;
     }
 
-    const cardClass = 'product-card';
+    const outOfStockBadgeHtml = isOutOfStock ? `<div class="badge-out-of-stock">Agotado</div>` : '';
+    const cardClass = isOutOfStock ? 'product-card is-out-of-stock' : 'product-card';
 
     return `
       <article class="${cardClass}" data-id="${item.id}">
         <a href="producto.html?k=${item.code}" class="product-card-link" onclick="saveCatalogScrollState('${item.code}')" aria-label="Ver detalles de Kódigo ${item.code}">
           <div class="product-stage">
+            ${outOfStockBadgeHtml}
             ${badgeHtml}
             ${genderBadgeHtml}
             <picture>
@@ -853,7 +941,7 @@ function renderCatalog() {
               <span class="price-hero" id="price-val-${item.id}">${mainPrice}</span>
               <span class="price-footnote" id="price-sub-${item.id}">${subPrice}</span>
             </div>
-            <button type="button" class="${btnClass}" onclick="addToCart('${item.id}')">
+            <button type="button" class="${btnClass}" onclick="${isOutOfStock ? '' : `addToCart('${item.id}')`}" ${btnDisabledAttr}>
               ${btnText}
             </button>
           </div>
@@ -942,6 +1030,9 @@ window.setCardConcentration = function(productId, isExtra) {
 window.addToCart = function(productId) {
   const item = CATALOG.find(p => p.id === productId);
   if (!item) return;
+  if (outOfStockCodes.has(String(item.code)) || outOfStockCodes.has(String(item.id))) {
+    return;
+  }
 
   const isExtraShot = selectedConcentrations[productId] !== undefined ? selectedConcentrations[productId] : true;
   const newUid = 'c_' + Date.now().toString(36) + '_' + Math.random().toString(36).substring(2, 7);

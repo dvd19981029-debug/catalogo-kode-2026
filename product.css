@@ -573,6 +573,51 @@ html, body {
   flex-shrink: 0;
 }
 
+/* Estado Agotado en Detalle */
+.product-hero-card.is-out-of-stock .detail-bottle-img {
+  filter: grayscale(0.85);
+  opacity: 0.72;
+}
+
+.product-out-of-stock-banner {
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  color: #334155;
+  border-radius: 12px;
+  padding: 12px 16px;
+  margin: 12px 0 16px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.badge-out-of-stock-detail {
+  background: #475569;
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 5px 12px;
+  border-radius: 9999px;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+.btn-add-cart-large.btn-out-of-stock,
+.btn-whatsapp-direct.btn-whatsapp-out-of-stock {
+  background: #e2e8f0 !important;
+  color: #64748b !important;
+  border: 1px solid #cbd5e1 !important;
+  cursor: not-allowed !important;
+  pointer-events: none !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
 /* ==========================================================================
    SECCIÓN INFERIOR: PIRÁMIDE OLFATIVA, DESCRIPCIÓN SENSORIAL Y GARANTÍAS
    ========================================================================== */

@@ -1224,6 +1224,56 @@ body {
   box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.6), 0 16px 36px rgba(212, 175, 55, 0.28) !important;
 }
 
+/* Tarjeta y elementos de perfumes Agotados */
+.product-card.is-out-of-stock {
+  filter: grayscale(0.85);
+  opacity: 0.72;
+}
+
+.product-card.is-out-of-stock:hover {
+  filter: grayscale(0.5);
+  opacity: 0.88;
+}
+
+.product-card.is-out-of-stock .product-stage::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.15);
+  pointer-events: none;
+}
+
+.badge-out-of-stock {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #334155;
+  color: #f8fafc;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  z-index: 4;
+}
+
+.apple-buy-btn.btn-out-of-stock {
+  background: #e2e8f0 !important;
+  color: #64748b !important;
+  border-color: #cbd5e1 !important;
+  cursor: not-allowed !important;
+  pointer-events: none !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+.apple-buy-btn.btn-out-of-stock:hover {
+  background: #e2e8f0 !important;
+  color: #64748b !important;
+}
+
 .product-card-link {
   display: block;
   text-decoration: none;

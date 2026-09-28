@@ -581,6 +581,10 @@
           <span id="refresh-icon">🔄</span> Actualizar
         </button>
 
+        <a href="#inventory-section" class="action-btn" style="text-decoration: none;" title="Gestionar perfumes agotados">
+          📦 Stock (<span id="nav-stock-badge">0</span>)
+        </a>
+
         <button type="button" class="action-btn" onclick="logoutDashboard()" title="Cerrar sesión">
           🔒 Salir
         </button>
@@ -783,8 +787,67 @@
         </table>
       </div>
     </section>
+
+    <!-- ================= 5. CONTROL DE EXISTENCIAS / PERFUMES AGOTADOS ================= -->
+    <section class="orders-section" id="inventory-section">
+      <div class="orders-header">
+        <div>
+          <h2 class="orders-title">
+            <span>📦 Control de Existencias (Marcar Perfumes Agotados)</span>
+            <span class="badge badge-abandoned" id="stock-count-badge">0 agotados</span>
+          </h2>
+          <p style="font-size: 0.82rem; color: var(--text-dim); margin: 4px 0 0;">
+            Los perfumes marcados como agotados se mostrarán en gris en el catálogo y página de producto, con etiqueta "Agotado" y no se podrán comprar.
+          </p>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <span id="stock-save-status" style="font-size: 0.82rem; font-weight: 700; color: #15803d; display: none;">✓ Guardado en vivo</span>
+        </div>
+      </div>
+
+      <!-- Barra de búsqueda y filtros rápidos -->
+      <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 16px; align-items: center; justify-content: space-between;">
+        <div style="position: relative; flex: 1; min-width: 260px; max-width: 480px;">
+          <input 
+            type="text" 
+            id="inv-search-input" 
+            placeholder="🔍 Buscar por kódigo, inspiración o marca (ej. 343, Sauvage, Dior...)" 
+            oninput="handleInventorySearch(this.value)"
+            style="width: 100%; box-sizing: border-box; padding: 10px 14px; border: 1px solid var(--border-color); border-radius: var(--radius-sm); font-size: 0.85rem; font-family: inherit; background: var(--bg-card); color: var(--text-main);"
+          >
+        </div>
+
+        <div class="time-filter" style="margin: 0;">
+          <button type="button" class="time-btn active" id="btn-inv-all" onclick="setInventoryFilter('all')">Todos</button>
+          <button type="button" class="time-btn" id="btn-inv-instock" onclick="setInventoryFilter('instock')">Disponibles</button>
+          <button type="button" class="time-btn" id="btn-inv-outofstock" onclick="setInventoryFilter('outofstock')">Agotados (<span id="inv-out-count">0</span>)</button>
+        </div>
+      </div>
+
+      <!-- Tabla de perfumes para activar/desactivar stock -->
+      <div class="orders-table-wrap" style="max-height: 560px; overflow-y: auto;">
+        <table class="orders-table">
+          <thead>
+            <tr>
+              <th style="width: 120px;">Kódigo</th>
+              <th>Fragancia & Inspiración</th>
+              <th style="width: 110px;">Género</th>
+              <th style="width: 130px; text-align: center;">Estado Actual</th>
+              <th style="width: 190px; text-align: right;">Acción</th>
+            </tr>
+          </thead>
+          <tbody id="inventory-tbody">
+            <tr>
+              <td colspan="5" class="empty-msg">Cargando catálogo...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
   </main>
 
+  <script src="catalog-data.js?v=20260928_catalog_v2"></script>
   <script>
     // PIN de Administrador (por defecto: 2026)
     const ADMIN_PIN = '2026';
@@ -800,6 +863,7 @@
         document.getElementById('pin-screen').style.display = 'none';
         document.getElementById('dashboard-view').style.display = 'block';
         fetchAnalyticsData();
+        fetchInventoryStock();
         startAutoRefresh();
       } else {
         document.getElementById('pin-screen').style.display = 'flex';
@@ -833,6 +897,7 @@
       const refreshIcon = document.getElementById('refresh-icon');
       if (isManual && refreshIcon) {
         refreshIcon.innerHTML = '<span class="loading-spinner"></span>';
+        fetchInventoryStock();
       }
 
       try {
@@ -857,6 +922,8 @@
           data.forEach(item => {
             if (item.document && item.document.fields) {
               const f = item.document.fields;
+              const evType = f.eventType ? f.eventType.stringValue : '';
+              if (!evType || evType === 'stock_update') return;
               let details = {};
               try {
                 if (f.details && f.details.stringValue) {
@@ -1475,6 +1542,225 @@
       autoRefreshTimer = setInterval(() => {
         fetchAnalyticsData(false);
       }, 30000);
+    }
+
+    // ==========================================================================
+    // 6. GESTIÓN DE EXISTENCIAS / PERFUMES AGOTADOS
+    // ==========================================================================
+    let currentOutOfStockCodes = new Set();
+    let inventoryFilter = 'all'; // 'all' | 'instock' | 'outofstock'
+    let inventorySearchQuery = '';
+
+    // Cargar caché local inmediato si existe
+    try {
+      const cached = localStorage.getItem('kode_out_of_stock_codes');
+      if (cached) {
+        const arr = JSON.parse(cached);
+        if (Array.isArray(arr)) currentOutOfStockCodes = new Set(arr.map(String));
+      }
+    } catch (e) {}
+
+    async function fetchInventoryStock() {
+      renderInventoryTable();
+      try {
+        const res = await fetch(FIRESTORE_QUERY_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            structuredQuery: {
+              from: [{ collectionId: 'analytics_events' }],
+              where: {
+                fieldFilter: {
+                  field: { fieldPath: 'eventType' },
+                  op: 'EQUAL',
+                  value: { stringValue: 'stock_update' }
+                }
+              },
+              limit: 25
+            }
+          })
+        });
+
+        if (!res.ok) return;
+        const data = await res.json();
+        if (Array.isArray(data)) {
+          const valid = data
+            .filter(d => d.document && d.document.fields && d.document.fields.codes)
+            .map(d => {
+              const f = d.document.fields;
+              const ts = f.timestamp ? f.timestamp.timestampValue : d.document.createTime;
+              let codes = [];
+              try {
+                codes = JSON.parse(f.codes.stringValue || '[]');
+              } catch(e) {}
+              return { ts, codes };
+            })
+            .sort((a, b) => new Date(b.ts) - new Date(a.ts));
+
+          if (valid.length > 0) {
+            currentOutOfStockCodes = new Set(valid[0].codes.map(String));
+            try {
+              localStorage.setItem('kode_out_of_stock_codes', JSON.stringify([...currentOutOfStockCodes]));
+            } catch(e) {}
+            renderInventoryTable();
+          }
+        }
+      } catch (err) {
+        console.warn('Error al consultar stock en Firestore:', err);
+      }
+    }
+
+    function handleInventorySearch(val) {
+      inventorySearchQuery = (val || '').toLowerCase().trim();
+      renderInventoryTable();
+    }
+
+    function setInventoryFilter(filter) {
+      inventoryFilter = filter;
+      const allBtn = document.getElementById('btn-inv-all');
+      const inBtn = document.getElementById('btn-inv-instock');
+      const outBtn = document.getElementById('btn-inv-outofstock');
+      if (allBtn) allBtn.classList.toggle('active', filter === 'all');
+      if (inBtn) inBtn.classList.toggle('active', filter === 'instock');
+      if (outBtn) outBtn.classList.toggle('active', filter === 'outofstock');
+      renderInventoryTable();
+    }
+
+    async function toggleProductStock(code) {
+      code = String(code);
+      if (currentOutOfStockCodes.has(code)) {
+        currentOutOfStockCodes.delete(code);
+      } else {
+        currentOutOfStockCodes.add(code);
+      }
+
+      const codesArr = [...currentOutOfStockCodes];
+      try {
+        localStorage.setItem('kode_out_of_stock_codes', JSON.stringify(codesArr));
+      } catch(e) {}
+
+      renderInventoryTable();
+
+      const statusEl = document.getElementById('stock-save-status');
+      if (statusEl) {
+        statusEl.textContent = '⏳ Guardando...';
+        statusEl.style.display = 'inline-block';
+        statusEl.style.color = '#d97706';
+      }
+
+      try {
+        const postUrl = 'https://firestore.googleapis.com/v1/projects/kode-scents/databases/(default)/documents/analytics_events?key=AIzaSyARNtXYuz9SiCUBjpfe-Z-vIXe7_aHpmyE';
+        const res = await fetch(postUrl, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            fields: {
+              eventType: { stringValue: 'stock_update' },
+              codes: { stringValue: JSON.stringify(codesArr) },
+              timestamp: { timestampValue: new Date().toISOString() }
+            }
+          })
+        });
+
+        if (statusEl) {
+          if (res.ok) {
+            statusEl.textContent = '✓ Guardado en vivo';
+            statusEl.style.color = '#15803d';
+            setTimeout(() => { statusEl.style.display = 'none'; }, 2500);
+          } else {
+            statusEl.textContent = '⚠️ Error al guardar';
+            statusEl.style.color = '#dc2626';
+          }
+        }
+      } catch(err) {
+        console.error('Error guardando stock:', err);
+        if (statusEl) {
+          statusEl.textContent = '⚠️ Error de red';
+          statusEl.style.color = '#dc2626';
+        }
+      }
+    }
+
+    function renderInventoryTable() {
+      const tbody = document.getElementById('inventory-tbody');
+      const badgeCount = document.getElementById('stock-count-badge');
+      const navBadge = document.getElementById('nav-stock-badge');
+      const outCountSpan = document.getElementById('inv-out-count');
+
+      const outCount = currentOutOfStockCodes.size;
+      if (badgeCount) badgeCount.textContent = `${outCount} agotado${outCount === 1 ? '' : 's'}`;
+      if (navBadge) navBadge.textContent = String(outCount);
+      if (outCountSpan) outCountSpan.textContent = String(outCount);
+
+      if (!tbody) return;
+
+      const catalog = Array.isArray(window.CATALOG_DATA) ? window.CATALOG_DATA : [];
+      if (catalog.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="5" class="empty-msg">Cargando catálogo...</td></tr>`;
+        return;
+      }
+
+      let filtered = catalog.filter(item => {
+        const isOut = currentOutOfStockCodes.has(String(item.code)) || currentOutOfStockCodes.has(String(item.id));
+        if (inventoryFilter === 'instock' && isOut) return false;
+        if (inventoryFilter === 'outofstock' && !isOut) return false;
+
+        if (inventorySearchQuery) {
+          const matchCode = String(item.code).toLowerCase().includes(inventorySearchQuery);
+          const matchName = String(item.name || '').toLowerCase().includes(inventorySearchQuery);
+          const matchRef = String(item.reference || '').toLowerCase().includes(inventorySearchQuery);
+          const matchBrand = String(item.brand || '').toLowerCase().includes(inventorySearchQuery);
+          return matchCode || matchName || matchRef || matchBrand;
+        }
+        return true;
+      });
+
+      if (filtered.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="5" class="empty-msg">No se encontraron perfumes con los filtros seleccionados.</td></tr>`;
+        return;
+      }
+
+      tbody.innerHTML = filtered.map(item => {
+        const codeStr = String(item.code);
+        const isOut = currentOutOfStockCodes.has(codeStr) || currentOutOfStockCodes.has(String(item.id));
+        const genderKey = (item.gender || 'hombre').toLowerCase();
+        const genderLabel = genderKey === 'mujer' ? 'Mujer' : (genderKey === 'unisex' ? 'Unisex' : 'Hombre');
+        const genderBadgeClass = genderKey === 'mujer' ? 'badge-pay-card' : (genderKey === 'unisex' ? 'badge-device' : 'badge-pay-transfer');
+
+        const statusBadge = isOut 
+          ? `<span class="badge badge-abandoned" style="font-size: 0.78rem; padding: 4px 10px;">✕ Agotado</span>` 
+          : `<span class="badge badge-pay-cash" style="font-size: 0.78rem; padding: 4px 10px;">✓ En Stock</span>`;
+
+        const actionBtn = isOut
+          ? `<button type="button" class="action-btn" style="background: #f0fdf4; border-color: #86efac; color: #166534; font-weight: 700; width: 100%; justify-content: center;" onclick="toggleProductStock('${codeStr}')">✓ Habilitar</button>`
+          : `<button type="button" class="action-btn" style="background: #fef2f2; border-color: #fecaca; color: #dc2626; font-weight: 600; width: 100%; justify-content: center;" onclick="toggleProductStock('${codeStr}')">✕ Marcar Agotado</button>`;
+
+        const rowStyle = isOut ? 'style="background: #fafafa; opacity: 0.85;"' : '';
+
+        return `
+          <tr ${rowStyle}>
+            <td style="font-weight: 800; font-size: 0.95rem;">
+              <div style="display: flex; align-items: center; gap: 10px;">
+                <img src="images/kode/kode_${item.code}.jpg" onerror="this.onerror=null;this.src='images/kode_cover.png';" alt="${item.code}" width="38" height="38" style="border-radius: 8px; object-fit: cover; border: 1px solid var(--border-color); flex-shrink: 0; background: #fff;">
+                <span>#${item.code}</span>
+              </div>
+            </td>
+            <td>
+              <div style="font-weight: 700; color: var(--text-main); font-size: 0.92rem;">${escapeHtml(item.name || item.reference)}</div>
+              <div style="font-size: 0.78rem; color: var(--text-dim); margin-top: 2px;">Insp: <strong>${escapeHtml(item.reference)}</strong> (${escapeHtml(item.brand)})</div>
+            </td>
+            <td>
+              <span class="badge ${genderBadgeClass}">${genderLabel}</span>
+            </td>
+            <td style="text-align: center;">
+              ${statusBadge}
+            </td>
+            <td style="text-align: right;">
+              ${actionBtn}
+            </td>
+          </tr>
+        `;
+      }).join('');
     }
 
     // Inicializar al cargar

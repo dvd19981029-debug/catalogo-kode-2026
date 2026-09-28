@@ -848,6 +848,18 @@
 
     if (candidates.length === 0) candidates = [...catalog];
 
+    // Excluir fragancias agotadas de las recomendaciones del test
+    try {
+      const cachedStock = JSON.parse(localStorage.getItem('kode_out_of_stock_codes') || '[]');
+      if (Array.isArray(cachedStock) && cachedStock.length > 0) {
+        const outSet = new Set(cachedStock.map(String));
+        const available = candidates.filter(p => !outSet.has(String(p.code)) && !outSet.has(String(p.id)));
+        if (available.length > 0) {
+          candidates = available;
+        }
+      }
+    } catch (e) {}
+
     // 2. Limitar a las fragancias más vendidas de esa categoría (Top 30 con rotación probada)
     candidates.sort((a, b) => (b.sales || 0) - (a.sales || 0));
     const minSalesThreshold = answers.gender === 'hombre' ? 35 : (answers.gender === 'mujer' ? 15 : 12);
