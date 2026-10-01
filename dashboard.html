@@ -922,8 +922,7 @@
           data.forEach(item => {
             if (item.document && item.document.fields) {
               const f = item.document.fields;
-              const evType = f.eventType ? f.eventType.stringValue : '';
-              if (!evType || evType === 'stock_update') return;
+              if ((f.eventType && f.eventType.stringValue === 'stock_update') || (f.type && f.type.stringValue === 'stock_update')) return;
               let details = {};
               try {
                 if (f.details && f.details.stringValue) {
