@@ -892,7 +892,7 @@
       checkAuth();
     }
 
-    // 2. Consulta de Datos en Firestore
+    // 2. Consulta de Datos en Firestore (Paralela y Robusta para Garantizar Datos Reales)
     async function fetchAnalyticsData(isManual = false) {
       const refreshIcon = document.getElementById('refresh-icon');
       if (isManual && refreshIcon) {
@@ -901,50 +901,104 @@
       }
 
       try {
-        const queryPayload = {
-          structuredQuery: {
-            from: [{ collectionId: 'analytics_events' }],
-            orderBy: [{ field: { fieldPath: 'timestamp' }, direction: 'DESCENDING' }],
-            limit: 10000
-          }
-        };
+        // Consultar pedidos y eventos clave directamente para que NUNCA se trunquen por el límite de documentos
+        const [ordersRes, quizTouchesRes, quizClicksRes, quizCompletesRes, generalRes] = await Promise.all([
+          fetch(FIRESTORE_QUERY_URL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              structuredQuery: {
+                from: [{ collectionId: 'analytics_events' }],
+                where: { fieldFilter: { field: { fieldPath: 'type' }, op: 'EQUAL', value: { stringValue: 'whatsapp_checkout' } } },
+                limit: 5000
+              }
+            })
+          }).then(r => r.json()).catch(() => []),
+          fetch(FIRESTORE_QUERY_URL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              structuredQuery: {
+                from: [{ collectionId: 'analytics_events' }],
+                where: { fieldFilter: { field: { fieldPath: 'type' }, op: 'EQUAL', value: { stringValue: 'quiz_touch' } } },
+                limit: 5000
+              }
+            })
+          }).then(r => r.json()).catch(() => []),
+          fetch(FIRESTORE_QUERY_URL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              structuredQuery: {
+                from: [{ collectionId: 'analytics_events' }],
+                where: { fieldFilter: { field: { fieldPath: 'type' }, op: 'EQUAL', value: { stringValue: 'quiz_cta_click' } } },
+                limit: 5000
+              }
+            })
+          }).then(r => r.json()).catch(() => []),
+          fetch(FIRESTORE_QUERY_URL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              structuredQuery: {
+                from: [{ collectionId: 'analytics_events' }],
+                where: { fieldFilter: { field: { fieldPath: 'type' }, op: 'EQUAL', value: { stringValue: 'quiz_complete' } } },
+                limit: 5000
+              }
+            })
+          }).then(r => r.json()).catch(() => []),
+          fetch(FIRESTORE_QUERY_URL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              structuredQuery: {
+                from: [{ collectionId: 'analytics_events' }],
+                orderBy: [{ field: { fieldPath: 'timestamp' }, direction: 'DESCENDING' }],
+                limit: 10000
+              }
+            })
+          }).then(r => r.json()).catch(() => [])
+        ]);
 
-        const res = await fetch(FIRESTORE_QUERY_URL, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(queryPayload)
+        const docMap = new Map();
+        [ordersRes, quizTouchesRes, quizClicksRes, quizCompletesRes, generalRes].forEach(resList => {
+          if (Array.isArray(resList)) {
+            resList.forEach(item => {
+              if (item.document && item.document.name) {
+                docMap.set(item.document.name, item);
+              }
+            });
+          }
         });
 
-        const data = await res.json();
         rawEvents = [];
+        docMap.forEach(item => {
+          if (item.document && item.document.fields) {
+            const f = item.document.fields;
+            if ((f.eventType && f.eventType.stringValue === 'stock_update') || (f.type && f.type.stringValue === 'stock_update')) return;
+            let details = {};
+            try {
+              if (f.details && f.details.stringValue) {
+                details = JSON.parse(f.details.stringValue);
+              }
+            } catch (e) {}
 
-        if (Array.isArray(data)) {
-          data.forEach(item => {
-            if (item.document && item.document.fields) {
-              const f = item.document.fields;
-              if ((f.eventType && f.eventType.stringValue === 'stock_update') || (f.type && f.type.stringValue === 'stock_update')) return;
-              let details = {};
-              try {
-                if (f.details && f.details.stringValue) {
-                  details = JSON.parse(f.details.stringValue);
-                }
-              } catch (e) {}
+            rawEvents.push({
+              type: f.type ? f.type.stringValue : 'unknown',
+              sessionId: f.sessionId ? f.sessionId.stringValue : '',
+              device: f.device ? f.device.stringValue : 'PC / Desktop',
+              browser: f.browser ? f.browser.stringValue : 'Web',
+              country: f.country ? f.country.stringValue : 'El Salvador',
+              city: f.city ? f.city.stringValue : 'San Salvador',
+              referrer: f.referrer ? f.referrer.stringValue : 'Directo',
+              utmSource: f.utmSource ? f.utmSource.stringValue : '',
+              timestamp: f.timestamp && f.timestamp.timestampValue ? new Date(f.timestamp.timestampValue) : new Date(),
+              details: details
+            });
+          }
+        });
 
-              rawEvents.push({
-                type: f.type ? f.type.stringValue : 'unknown',
-                sessionId: f.sessionId ? f.sessionId.stringValue : '',
-                device: f.device ? f.device.stringValue : 'PC / Desktop',
-                browser: f.browser ? f.browser.stringValue : 'Web',
-                country: f.country ? f.country.stringValue : 'El Salvador',
-                city: f.city ? f.city.stringValue : 'San Salvador',
-                referrer: f.referrer ? f.referrer.stringValue : 'Directo',
-                utmSource: f.utmSource ? f.utmSource.stringValue : '',
-                timestamp: f.timestamp && f.timestamp.timestampValue ? new Date(f.timestamp.timestampValue) : new Date(),
-                details: details
-              });
-            }
-          });
-        }
+        rawEvents.sort((a, b) => (b.timestamp || 0) - (a.timestamp || 0));
 
         renderDashboard();
       } catch (err) {
@@ -957,7 +1011,7 @@
     // 3. Filtro por Tiempo
     function setTimeFilter(filter) {
       currentTimeFilter = filter;
-      document.querySelectorAll('.time-btn').forEach(btn => {
+      document.querySelectorAll('.dash-controls .time-btn').forEach(btn => {
         btn.classList.toggle('active', btn.dataset.filter === filter);
       });
       renderDashboard();
@@ -1011,25 +1065,22 @@
         const name = normalizeCustomerName(det.customerName);
         const isGen = isGenericCustomerName(det.customerName);
         const sid = ord.sessionId;
+        const itemsKey = (det.items || []).map(i => i.code).sort().join(',');
+        const total = det.total;
 
         let matched = null;
         for (const g of groups) {
-          // Coincidencia 1: Mismo número de teléfono (no vacío)
-          if (phone && g.phones.has(phone)) {
-            matched = g;
-            break;
-          }
-          // Coincidencia 2: Misma sesión de navegador
-          if (sid && g.sessions.has(sid)) {
-            matched = g;
-            break;
-          }
-          // Coincidencia 3: Mismo nombre real de cliente (en ventana de 24 horas)
-          if (!isGen && name && g.names.has(name)) {
+          const samePhone = phone && g.phones.has(phone);
+          const sameSession = sid && g.sessions.has(sid);
+          if (samePhone || sameSession) {
             const timeDiff = Math.abs((ord.timestamp || 0) - (g.latestTimestamp || 0));
-            if (timeDiff <= 24 * 60 * 60 * 1000) {
-              matched = g;
-              break;
+            // Solo agrupar si es una prueba / reintento inmediato (dentro de 10 minutos con mismos items o total)
+            if (timeDiff <= 10 * 60 * 1000) {
+              const gItemsKey = (g.latestOrder.details?.items || []).map(i => i.code).sort().join(',');
+              if (!itemsKey || itemsKey === gItemsKey || total === g.latestOrder.details?.total) {
+                matched = g;
+                break;
+              }
             }
           }
         }
