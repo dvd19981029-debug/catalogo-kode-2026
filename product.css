@@ -120,6 +120,11 @@ html, body {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
 }
 
+.product-hero-card.is-premium {
+  border: 1.5px solid rgba(212, 175, 55, 0.42);
+  box-shadow: 0 4px 24px rgba(212, 175, 55, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
 /* Fila Superior: Botella y Acordes lado a lado */
 .product-hero-top {
   display: grid;
@@ -141,6 +146,24 @@ html, body {
   justify-content: center;
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.02);
   overflow: hidden;
+}
+
+.detail-stage-box .stage-badges-left {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3px;
+  pointer-events: none;
+}
+
+.detail-stage-box .stage-badges-left .top-seller-badge {
+  position: static;
+  top: auto;
+  left: auto;
 }
 
 .detail-stage-box .top-seller-badge {

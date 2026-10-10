@@ -1,3 +1,19 @@
+window.AROMANIAK_POS_CODES = new Set([
+  '344', '343', '161', '140', '141', '192', '149', '534', '690', '217', 
+  '256', '679', '2', '165', '689', '453', '292', '549', '166', '251', 
+  '431', '389', '324', '102', '100', '452', '445', '443', '130', '286', 
+  '287', '520', '360', '632', '709', '446', '152', '417', '670', '345', 
+  '617', '719', '118', '351', '267', '413', '323', '607', '651', '721', 
+  '489', '425', '208', '663', '128'
+]);
+
+window.isAromaniakPos = function(itemOrCode) {
+  if (!itemOrCode) return false;
+  const raw = typeof itemOrCode === 'object' ? String(itemOrCode.code || itemOrCode.id || '') : String(itemOrCode);
+  const code = raw.replace(/^kode-/, '').trim();
+  return window.AROMANIAK_POS_CODES.has(code);
+};
+
 window.CATALOG_DATA = [
   {
     "id": "kode-343",

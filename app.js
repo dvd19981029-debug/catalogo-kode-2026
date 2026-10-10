@@ -254,10 +254,29 @@ function shuffleArray(arr) {
   return array;
 }
 
+const AROMANIAK_POS_CODES = new Set([
+  '344', '343', '161', '140', '141', '192', '149', '534', '690', '217', 
+  '256', '679', '2', '165', '689', '453', '292', '549', '166', '251', 
+  '431', '389', '324', '102', '100', '452', '445', '443', '130', '286', 
+  '287', '520', '360', '632', '709', '446', '152', '417', '670', '345', 
+  '617', '719', '118', '351', '267', '413', '323', '607', '651', '721', 
+  '489', '425', '208', '663', '128'
+]);
+
+function isAromaniakPos(itemOrCode) {
+  if (!itemOrCode) return false;
+  if (typeof window !== 'undefined' && typeof window.isAromaniakPos === 'function') {
+    return window.isAromaniakPos(itemOrCode);
+  }
+  const raw = typeof itemOrCode === 'object' ? String(itemOrCode.code || itemOrCode.id || '') : String(itemOrCode);
+  const code = raw.replace(/^kode-/, '').trim();
+  return AROMANIAK_POS_CODES.has(code);
+}
+
 function initializeCatalogOrder() {
   // Mantener el mismo orden durante la sesión para que al volver esté en el mismo lugar
   try {
-    const savedPools = sessionStorage.getItem('kode_catalog_pools');
+    const savedPools = sessionStorage.getItem('kode_catalog_pools_aromaniak_v1');
     if (savedPools) {
       const parsed = JSON.parse(savedPools);
       if (parsed && parsed.hombre && parsed.hombre.length > 0) {
@@ -274,25 +293,30 @@ function initializeCatalogOrder() {
   genders.forEach(g => {
     const pool = CATALOG.filter(item => item.gender === g).map(item => ({ ...item }));
 
-    // 1. Ordenar por ventas estrictamente descendente
-    pool.sort((a, b) => (b.sales || 0) - (a.sales || 0));
+    // Separar estrictamente los que están en el POS de Aromaniak de los que no
+    const aromaniakItems = pool.filter(item => isAromaniakPos(item));
+    const otherItems = pool.filter(item => !isAromaniakPos(item));
 
-    // 2. Los primeros 6 siempre son los más vendidos
-    const top6 = pool.slice(0, 6);
+    // 1. Ordenar los de Aromaniak por ventas descendente
+    aromaniakItems.sort((a, b) => (b.sales || 0) - (a.sales || 0));
 
-    // 3. Los primeros 3 reciben su badge de top más vendido
-    if (top6[0]) top6[0].topBadge = 'Top 1 Más Vendido';
-    if (top6[1]) top6[1].topBadge = 'Top 2 Más Vendido';
-    if (top6[2]) top6[2].topBadge = 'Top 3 Más Vendido';
+    // 2. Los primeros 3 de Aromaniak reciben su badge de top más vendido
+    if (aromaniakItems[0]) aromaniakItems[0].topBadge = 'Top 1 Más Vendido';
+    if (aromaniakItems[1]) aromaniakItems[1].topBadge = 'Top 2 Más Vendido';
+    if (aromaniakItems[2]) aromaniakItems[2].topBadge = 'Top 3 Más Vendido';
 
-    // 4. De la posición 7 en adelante (índice 6..N), orden aleatorio
-    const rest = shuffleArray(pool.slice(6));
+    // 3. Primeros 6 de Aromaniak son cabecera fija de más vendidos, resto de Aromaniak barajado
+    const top6Aromaniak = aromaniakItems.slice(0, 6);
+    const restAromaniak = shuffleArray(aromaniakItems.slice(6));
 
-    catalogPools[g] = [...top6, ...rest];
+    // 4. Los que NO son de Aromaniak van después de todos los de Aromaniak
+    const restOthers = shuffleArray(otherItems);
+
+    catalogPools[g] = [...top6Aromaniak, ...restAromaniak, ...restOthers];
   });
 
   try {
-    sessionStorage.setItem('kode_catalog_pools', JSON.stringify(catalogPools));
+    sessionStorage.setItem('kode_catalog_pools_aromaniak_v1', JSON.stringify(catalogPools));
   } catch (e) {}
 }
 
@@ -883,15 +907,27 @@ function renderCatalog() {
       badgeHtml = `<div class="top-seller-badge ${badgeClass}"><span class="badge-rank">${rankText}</span>${descText ? `<span class="badge-desc">${descText}</span>` : ''}</div>`;
     }
 
+    const isPremium = isAromaniakPos(item);
+    const premiumBadgeHtml = isPremium ? `<span class="badge-premium">PREMIUM</span>` : '';
     const outOfStockBadgeHtml = isOutOfStock ? `<div class="badge-out-of-stock">Agotado</div>` : '';
-    const cardClass = isOutOfStock ? 'product-card is-out-of-stock' : 'product-card';
+    const cardClass = [
+      'product-card',
+      isPremium ? 'is-premium' : '',
+      isOutOfStock ? 'is-out-of-stock' : ''
+    ].filter(Boolean).join(' ');
+
+    const stageBadgesLeftHtml = (premiumBadgeHtml || badgeHtml) ? `
+            <div class="stage-badges-left">
+              ${premiumBadgeHtml}
+              ${badgeHtml}
+            </div>` : '';
 
     return `
       <article class="${cardClass}" data-id="${item.id}">
         <a href="producto.html?k=${item.code}" class="product-card-link" onclick="saveCatalogScrollState('${item.code}')" aria-label="Ver detalles de Kódigo ${item.code}">
           <div class="product-stage">
+            ${stageBadgesLeftHtml}
             ${outOfStockBadgeHtml}
-            ${badgeHtml}
             ${genderBadgeHtml}
             <picture>
               <source srcset="${webpSrc}" type="image/webp">

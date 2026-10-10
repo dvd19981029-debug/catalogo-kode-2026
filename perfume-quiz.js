@@ -828,7 +828,7 @@
     };
   }
 
-  // Algoritmo de Coincidencia Ponderada por Mejores Ventas (Pool Amplio: Top 30)
+  // Algoritmo de Coincidencia Ponderada por Mejores Ventas (Limitado al POS de Aromaniak)
   function calculateBestMatch(answers) {
     const catalog = (typeof window !== 'undefined' && Array.isArray(window.CATALOG_DATA) && window.CATALOG_DATA.length > 0)
       ? window.CATALOG_DATA
@@ -836,19 +836,35 @@
 
     if (!Array.isArray(catalog) || catalog.length === 0) return null;
 
-    // 1. Filtrar por género seleccionado estrictamente
+    // Helper para verificar pertenencia al listado del POS de Aromaniak
+    const checkAromaniak = typeof window !== 'undefined' && typeof window.isAromaniakPos === 'function'
+      ? window.isAromaniakPos
+      : function(p) {
+          const codes = new Set([
+            '344', '343', '161', '140', '141', '192', '149', '534', '690', '217', 
+            '256', '679', '2', '165', '689', '453', '292', '549', '166', '251', 
+            '431', '389', '324', '102', '100', '452', '445', '443', '130', '286', 
+            '287', '520', '360', '632', '709', '446', '152', '417', '670', '345', 
+            '617', '719', '118', '351', '267', '413', '323', '607', '651', '721', 
+            '489', '425', '208', '663', '128'
+          ]);
+          const code = String(p.code || p.id || '').replace(/^kode-/, '').trim();
+          return codes.has(code);
+        };
+
+    // 1. Filtrar por género seleccionado y estrictamente por el POS de Aromaniak
     let candidates = [];
     if (answers.gender === 'hombre') {
-      candidates = catalog.filter(p => p.gender === 'hombre');
+      candidates = catalog.filter(p => p.gender === 'hombre' && checkAromaniak(p));
     } else if (answers.gender === 'mujer') {
-      candidates = catalog.filter(p => p.gender === 'mujer');
+      candidates = catalog.filter(p => p.gender === 'mujer' && checkAromaniak(p));
     } else if (answers.gender === 'unisex') {
-      candidates = catalog.filter(p => p.gender === 'unisex');
+      candidates = catalog.filter(p => p.gender === 'unisex' && checkAromaniak(p));
     }
 
-    if (candidates.length === 0) candidates = [...catalog];
+    if (candidates.length === 0) candidates = catalog.filter(p => checkAromaniak(p));
 
-    // Excluir fragancias agotadas de las recomendaciones del test
+    // Excluir fragancias agotadas de las recomendaciones del test si hay disponibles en stock
     try {
       const cachedStock = JSON.parse(localStorage.getItem('kode_out_of_stock_codes') || '[]');
       if (Array.isArray(cachedStock) && cachedStock.length > 0) {
@@ -860,11 +876,10 @@
       }
     } catch (e) {}
 
-    // 2. Limitar a las fragancias más vendidas de esa categoría (Top 30 con rotación probada)
+    // 2. Limitar a las fragancias más vendidas de esa categoría dentro de Aromaniak
     candidates.sort((a, b) => (b.sales || 0) - (a.sales || 0));
-    const minSalesThreshold = answers.gender === 'hombre' ? 35 : (answers.gender === 'mujer' ? 15 : 12);
-    let pool = candidates.filter(p => (p.sales || 0) >= minSalesThreshold).slice(0, 30);
-    if (pool.length === 0) pool = candidates.slice(0, 30);
+    let pool = candidates.slice(0, 30);
+    if (pool.length === 0) pool = candidates;
 
     // 3. Puntaje ponderado que combina popularidad con afinidad olfativa real (acordes, notas, familia)
     const scored = pool.map((perfume, index) => {
@@ -1006,8 +1021,11 @@
         </div>
 
         <!-- Tarjeta del Perfume Ideal Recomendado -->
-        <div class="result-product-card">
-          <span class="result-card-eyebrow">TU PERFUME IDEAL KÖDE</span>
+        <div class="result-product-card is-premium">
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
+            <span class="result-card-eyebrow" style="margin-bottom: 0;">TU PERFUME IDEAL KÖDE</span>
+            <span class="badge-premium">PREMIUM</span>
+          </div>
           
           <div class="result-product-hero">
             <img src="${imgSrc}" alt="Kódigo ${matchedPerfume.code}" class="result-product-img" onerror="this.src='images/kode_cover.png'">

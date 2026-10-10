@@ -254,16 +254,24 @@ async function loadAndRenderProduct() {
   currentPerfume = found;
   document.title = `KöDE — Kódigo ${found.code}`;
 
-  // Determinar si es Top 1, Top 2 o Top 3
-  const sortedBySales = [...catalog].sort((a, b) => (b.sales || 0) - (a.sales || 0));
-  const rankIndex = sortedBySales.findIndex(p => p.code === found.code);
+  // Determinar si es un perfume del POS de Aromaniak (Premium)
+  const isPremium = typeof window.isAromaniakPos === 'function' ? window.isAromaniakPos(found) : false;
+  const premiumBadgeHtml = isPremium ? `<span class="badge-premium">PREMIUM</span>` : '';
+
+  // Determinar si es Top 1, Top 2 o Top 3 dentro de su categoría Aromaniak
   let topBadgeHtml = '';
-  if (rankIndex === 0) {
-    topBadgeHtml = `<div class="top-seller-badge badge-top-1"><span class="badge-rank">Top 1</span><span class="badge-desc"> Más Vendido</span></div>`;
-  } else if (rankIndex === 1) {
-    topBadgeHtml = `<div class="top-seller-badge badge-top-2"><span class="badge-rank">Top 2</span><span class="badge-desc"> Más Vendido</span></div>`;
-  } else if (rankIndex === 2) {
-    topBadgeHtml = `<div class="top-seller-badge badge-top-3"><span class="badge-rank">Top 3</span><span class="badge-desc"> Más Vendido</span></div>`;
+  if (isPremium) {
+    const aromaniakInGender = [...catalog]
+      .filter(p => p.gender === found.gender && (typeof window.isAromaniakPos === 'function' ? window.isAromaniakPos(p) : false))
+      .sort((a, b) => (b.sales || 0) - (a.sales || 0));
+    const rankIndex = aromaniakInGender.findIndex(p => p.code === found.code);
+    if (rankIndex === 0) {
+      topBadgeHtml = `<div class="top-seller-badge badge-top-1"><span class="badge-rank">Top 1</span><span class="badge-desc"> Más Vendido</span></div>`;
+    } else if (rankIndex === 1) {
+      topBadgeHtml = `<div class="top-seller-badge badge-top-2"><span class="badge-rank">Top 2</span><span class="badge-desc"> Más Vendido</span></div>`;
+    } else if (rankIndex === 2) {
+      topBadgeHtml = `<div class="top-seller-badge badge-top-3"><span class="badge-rank">Top 3</span><span class="badge-desc"> Más Vendido</span></div>`;
+    }
   }
 
   // Badge de género (Hombre / Mujer / Unisex)
@@ -363,11 +371,14 @@ async function loadAndRenderProduct() {
   // 5. Renderizar vista completa
   root.innerHTML = `
     <!-- Tarjeta Principal del Producto -->
-    <section class="product-hero-card ${isOutOfStock ? 'is-out-of-stock' : ''}">
+    <section class="product-hero-card ${isPremium ? 'is-premium' : ''} ${isOutOfStock ? 'is-out-of-stock' : ''}">
       <!-- Fila Superior: Botella a la izquierda y Acordes Olfativos al costado -->
       <div class="product-hero-top">
         <div class="detail-stage-box">
-          ${topBadgeHtml}
+          <div class="stage-badges-left">
+            ${premiumBadgeHtml}
+            ${topBadgeHtml}
+          </div>
           ${genderBadgeHtml}
           <picture>
             <source srcset="images/kode/kode_${found.code}.webp" type="image/webp">

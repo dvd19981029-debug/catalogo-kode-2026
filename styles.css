@@ -1224,6 +1224,23 @@ body {
   box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.6), 0 16px 36px rgba(212, 175, 55, 0.28) !important;
 }
 
+/* Tarjeta Premium para perfumes disponibles en tienda física Aromaniak */
+.product-card.is-premium {
+  border: 1.5px solid rgba(212, 175, 55, 0.42);
+  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.08), 0 1px 4px rgba(0, 0, 0, 0.03);
+}
+
+.product-card.is-premium:hover {
+  transform: translateY(-4px);
+  border-color: rgba(212, 175, 55, 0.85);
+  box-shadow: 0 16px 36px rgba(212, 175, 55, 0.16), 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.result-product-card.is-premium {
+  border: 1.5px solid rgba(212, 175, 55, 0.42);
+  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.09);
+}
+
 /* Tarjeta y elementos de perfumes Agotados */
 .product-card.is-out-of-stock {
   filter: grayscale(0.85);
@@ -1302,6 +1319,47 @@ body {
   justify-content: center;
   overflow: hidden;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Contenedor de Badges a la Izquierda del Stage */
+.stage-badges-left {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  pointer-events: none;
+}
+
+.stage-badges-left .top-seller-badge {
+  position: static;
+  top: auto;
+  left: auto;
+}
+
+/* Badge PREMIUM para perfumes del POS Aromaniak */
+.badge-premium {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: #000000;
+  color: #ffd700;
+  border: 1px solid rgba(255, 215, 0, 0.50);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.22);
+  padding: 3px 9px;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 100px;
+  white-space: nowrap;
+  user-select: none;
+  pointer-events: none;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 /* Badge de Top Más Vendido */
@@ -1403,6 +1461,16 @@ body {
 }
 
 @media (max-width: 640px) {
+  .stage-badges-left {
+    top: 6px;
+    left: 6px;
+    gap: 3px;
+  }
+  .badge-premium {
+    padding: 2px 6px;
+    font-size: 0.58rem;
+    letter-spacing: 0.05em;
+  }
   .top-seller-badge {
     top: 6px;
     left: 6px;
