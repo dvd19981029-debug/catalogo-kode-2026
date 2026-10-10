@@ -265,12 +265,15 @@ const AROMANIAK_POS_CODES = new Set([
 
 function isAromaniakPos(itemOrCode) {
   if (!itemOrCode) return false;
-  if (typeof window !== 'undefined' && typeof window.isAromaniakPos === 'function') {
-    return window.isAromaniakPos(itemOrCode);
-  }
   const raw = typeof itemOrCode === 'object' ? String(itemOrCode.code || itemOrCode.id || '') : String(itemOrCode);
   const code = raw.replace(/^kode-/, '').trim();
+  if (typeof window !== 'undefined' && window.AROMANIAK_POS_CODES instanceof Set) {
+    return window.AROMANIAK_POS_CODES.has(code);
+  }
   return AROMANIAK_POS_CODES.has(code);
+}
+if (typeof window !== 'undefined') {
+  window.isAromaniakPos = isAromaniakPos;
 }
 
 function initializeCatalogOrder() {
