@@ -120,11 +120,6 @@ html, body {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
 }
 
-.product-hero-card.is-premium {
-  border: 1.5px solid rgba(212, 175, 55, 0.42);
-  box-shadow: 0 4px 24px rgba(212, 175, 55, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04);
-}
-
 /* Fila Superior: Botella y Acordes lado a lado */
 .product-hero-top {
   display: grid;

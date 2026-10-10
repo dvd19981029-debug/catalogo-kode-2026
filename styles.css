@@ -1224,23 +1224,6 @@ body {
   box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.6), 0 16px 36px rgba(212, 175, 55, 0.28) !important;
 }
 
-/* Tarjeta Premium para perfumes disponibles en tienda física Aromaniak */
-.product-card.is-premium {
-  border: 1.5px solid rgba(212, 175, 55, 0.42);
-  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.08), 0 1px 4px rgba(0, 0, 0, 0.03);
-}
-
-.product-card.is-premium:hover {
-  transform: translateY(-4px);
-  border-color: rgba(212, 175, 55, 0.85);
-  box-shadow: 0 16px 36px rgba(212, 175, 55, 0.16), 0 4px 12px rgba(0, 0, 0, 0.05);
-}
-
-.result-product-card.is-premium {
-  border: 1.5px solid rgba(212, 175, 55, 0.42);
-  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.09);
-}
-
 /* Tarjeta y elementos de perfumes Agotados */
 .product-card.is-out-of-stock {
   filter: grayscale(0.85);
@@ -1344,22 +1327,23 @@ body {
 .badge-premium {
   display: inline-flex;
   align-items: center;
-  gap: 4px;
-  background: #000000;
-  color: #ffd700;
-  border: 1px solid rgba(255, 215, 0, 0.50);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.22);
-  padding: 3px 9px;
-  font-size: 0.65rem;
+  justify-content: center;
+  background: linear-gradient(180deg, #1c1c1e 0%, #08080a 100%);
+  color: #eeddb7;
+  border: 1px solid rgba(220, 185, 95, 0.45);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 245, 215, 0.18);
+  padding: 3.5px 9px;
+  font-size: 0.60rem;
   font-weight: 800;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.13em;
   text-transform: uppercase;
-  border-radius: 100px;
+  border-radius: 999px;
   white-space: nowrap;
   user-select: none;
   pointer-events: none;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
 }
 
 /* Badge de Top Más Vendido */
@@ -1467,9 +1451,9 @@ body {
     gap: 3px;
   }
   .badge-premium {
-    padding: 2px 6px;
-    font-size: 0.58rem;
-    letter-spacing: 0.05em;
+    padding: 2.5px 7px;
+    font-size: 0.54rem;
+    letter-spacing: 0.10em;
   }
   .top-seller-badge {
     top: 6px;
