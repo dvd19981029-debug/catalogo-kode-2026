@@ -21102,5 +21102,247 @@
         }
       ]
     }
+  },
+  {
+    "id": "kode-730",
+    "code": "730",
+    "name": "Yara Tous",
+    "reference": "Yara Tous",
+    "brand": "Lattafa",
+    "description": "Inspirada en Yara Tous de Lattafa. Pertenece a la prestigiosa familia olfativa Floral Frutal. Abre con un despliegue radiante de mango, coco y fruta de la pasión, revela un corazón fascinante de jazmín, flor de azahar y heliotropo, y perdura sobre un fondo suntuoso de vainilla, cachemira y almizcle. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_730.jpg",
+    "olfactoryFamily": "Floral Frutal",
+    "gender": "mujer",
+    "sales": 15,
+    "accords": [
+      {
+        "name": "tropical",
+        "percentage": 100,
+        "bg": "#f59e0b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "afrutado",
+        "percentage": 85,
+        "bg": "#f97316",
+        "text": "#ffffff"
+      },
+      {
+        "name": "dulce",
+        "percentage": 75,
+        "bg": "#ec4899",
+        "text": "#ffffff"
+      },
+      {
+        "name": "avainillado",
+        "percentage": 65,
+        "bg": "#9333ea",
+        "text": "#ffffff"
+      },
+      {
+        "name": "coco",
+        "percentage": 55,
+        "bg": "#14b8a6",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Mango",
+          "image": "notes/melocoton.jpg"
+        },
+        {
+          "name": "Coco",
+          "image": "notes/coco.jpg"
+        },
+        {
+          "name": "Fruta de la pasión",
+          "image": "notes/maracuya.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Jazmín",
+          "image": "notes/jazmin.jpg"
+        },
+        {
+          "name": "Flor de azahar",
+          "image": "notes/flor-azahar.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Vainilla",
+          "image": "notes/vainilla.jpg"
+        },
+        {
+          "name": "Cachemira",
+          "image": "notes/cachemira.jpg"
+        },
+        {
+          "name": "Almizcle",
+          "image": "notes/almizcle.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-731",
+    "code": "731",
+    "name": "Green Tea",
+    "reference": "Green Tea",
+    "brand": "Elizabeth Arden",
+    "description": "Inspirada en Green Tea de Elizabeth Arden. Pertenece a la prestigiosa familia olfativa Cítrica Aromática. Abre con un despliegue revitalizante de limón, bergamota y menta, revela un corazón fascinante de té verde, jazmín y clavel, y perdura sobre un fondo suntuoso de musgo de roble, almizcle y ámbar blanco. Formulada con esencias de alta concentración para ofrecer una estela refrescante y una fijación superior.",
+    "image": "images/kode/kode_731.jpg",
+    "olfactoryFamily": "Cítrica Aromática",
+    "gender": "mujer",
+    "sales": 12,
+    "accords": [
+      {
+        "name": "cítrico",
+        "percentage": 100,
+        "bg": "#eab308",
+        "text": "#ffffff"
+      },
+      {
+        "name": "aromático",
+        "percentage": 85,
+        "bg": "#10b981",
+        "text": "#ffffff"
+      },
+      {
+        "name": "verde",
+        "percentage": 78,
+        "bg": "#22c55e",
+        "text": "#ffffff"
+      },
+      {
+        "name": "fresco especiado",
+        "percentage": 65,
+        "bg": "#06b6d4",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Limón",
+          "image": "notes/limon.jpg"
+        },
+        {
+          "name": "Bergamota",
+          "image": "notes/bergamota.jpg"
+        },
+        {
+          "name": "Menta",
+          "image": "notes/menta.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Té verde",
+          "image": "notes/notas-verdes.jpg"
+        },
+        {
+          "name": "Jazmín",
+          "image": "notes/jazmin.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Musgo de roble",
+          "image": "notes/musgo-roble.jpg"
+        },
+        {
+          "name": "Almizcle",
+          "image": "notes/almizcle.jpg"
+        },
+        {
+          "name": "Ámbar",
+          "image": "notes/ambar.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-734",
+    "code": "734",
+    "name": "Princess",
+    "reference": "Princess",
+    "brand": "Vera Wang",
+    "description": "Inspirada en Princess de Vera Wang. Pertenece a la prestigiosa familia olfativa Ámbar Floral. Abre con un despliegue radiante de manzana crujiente, mandarina y nenúfar, revela un corazón fascinante de chocolate negro, flor de tiaré y guayaba, y perdura sobre un fondo suntuoso de vainilla, ámbar y maderas preciosas. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "image": "images/kode/kode_734.jpg",
+    "olfactoryFamily": "Ámbar Floral",
+    "gender": "mujer",
+    "sales": 14,
+    "accords": [
+      {
+        "name": "dulce",
+        "percentage": 100,
+        "bg": "#ec4899",
+        "text": "#ffffff"
+      },
+      {
+        "name": "chocolate",
+        "percentage": 85,
+        "bg": "#78350f",
+        "text": "#ffffff"
+      },
+      {
+        "name": "avainillado",
+        "percentage": 75,
+        "bg": "#9333ea",
+        "text": "#ffffff"
+      },
+      {
+        "name": "afrutado",
+        "percentage": 68,
+        "bg": "#f97316",
+        "text": "#ffffff"
+      },
+      {
+        "name": "floral",
+        "percentage": 58,
+        "bg": "#a855f7",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Manzana",
+          "image": "notes/manzana.jpg"
+        },
+        {
+          "name": "Mandarina",
+          "image": "notes/mandarina.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Chocolate negro",
+          "image": "notes/chocolate.jpg"
+        },
+        {
+          "name": "Flor de tiaré",
+          "image": "notes/flor-azahar.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Vainilla",
+          "image": "notes/vainilla.jpg"
+        },
+        {
+          "name": "Ámbar",
+          "image": "notes/ambar.jpg"
+        },
+        {
+          "name": "Maderas",
+          "image": "notes/maderas.jpg"
+        }
+      ]
+    }
   }
 ]

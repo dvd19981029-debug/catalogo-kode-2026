@@ -259,8 +259,8 @@ const AROMANIAK_POS_CODES = new Set([
   '256', '679', '2', '165', '689', '453', '292', '549', '166', '251', 
   '431', '389', '324', '102', '100', '452', '445', '443', '130', '286', 
   '287', '520', '360', '632', '709', '446', '152', '417', '670', '345', 
-  '617', '719', '118', '351', '267', '413', '323', '607', '651', '721', 
-  '489', '425', '208', '663', '128'
+  '617', '719', '118', '351', '267', '413', '323', '607', '651', '730', 
+  '731', '734', '489', '425', '208', '663', '128'
 ]);
 
 function isAromaniakPos(itemOrCode) {
@@ -276,7 +276,7 @@ function isAromaniakPos(itemOrCode) {
 function initializeCatalogOrder() {
   // Mantener el mismo orden durante la sesión para que al volver esté en el mismo lugar
   try {
-    const savedPools = sessionStorage.getItem('kode_catalog_pools_aromaniak_v1');
+    const savedPools = sessionStorage.getItem('kode_catalog_pools_aromaniak_v2');
     if (savedPools) {
       const parsed = JSON.parse(savedPools);
       if (parsed && parsed.hombre && parsed.hombre.length > 0) {
@@ -316,7 +316,7 @@ function initializeCatalogOrder() {
   });
 
   try {
-    sessionStorage.setItem('kode_catalog_pools_aromaniak_v1', JSON.stringify(catalogPools));
+    sessionStorage.setItem('kode_catalog_pools_aromaniak_v2', JSON.stringify(catalogPools));
   } catch (e) {}
 }
 
