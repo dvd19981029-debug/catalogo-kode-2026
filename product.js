@@ -256,7 +256,7 @@ async function loadAndRenderProduct() {
 
   // Determinar si es un perfume del POS de Aromaniak (Premium)
   const isPremium = typeof window.isAromaniakPos === 'function' ? window.isAromaniakPos(found) : false;
-  const premiumBadgeHtml = isPremium ? `<span class="badge-premium">PREMIUM</span>` : '';
+  const premiumBadgeHtml = '';
 
   // Determinar si es Top 1, Top 2 o Top 3 dentro de su categoría Aromaniak
   let topBadgeHtml = '';

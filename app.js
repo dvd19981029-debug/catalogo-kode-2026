@@ -909,7 +909,7 @@ function renderCatalog() {
     }
 
     const isPremium = isAromaniakPos(item);
-    const premiumBadgeHtml = isPremium ? `<span class="badge-premium">PREMIUM</span>` : '';
+    const premiumBadgeHtml = '';
     const outOfStockBadgeHtml = isOutOfStock ? `<div class="badge-out-of-stock">Agotado</div>` : '';
     const cardClass = [
       'product-card',

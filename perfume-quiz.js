@@ -1021,10 +1021,9 @@
         </div>
 
         <!-- Tarjeta del Perfume Ideal Recomendado -->
-        <div class="result-product-card is-premium">
-          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
+        <div class="result-product-card">
+          <div style="margin-bottom: 8px;">
             <span class="result-card-eyebrow" style="margin-bottom: 0;">TU PERFUME IDEAL KÖDE</span>
-            <span class="badge-premium">PREMIUM</span>
           </div>
           
           <div class="result-product-hero">
