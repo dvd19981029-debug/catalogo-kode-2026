@@ -278,13 +278,14 @@ if (typeof window !== 'undefined') {
 
 function initializeCatalogOrder() {
   // Mantener el mismo orden durante la sesión para que al volver esté en el mismo lugar
+  const expectedTotal = CATALOG.filter(item => isAromaniakPos(item)).length;
   try {
-    const savedPools = sessionStorage.getItem('kode_catalog_pools_aromaniak_v2');
+    const savedPools = sessionStorage.getItem('kode_catalog_pools_aromaniak_only_v1');
     if (savedPools) {
       const parsed = JSON.parse(savedPools);
       if (parsed && parsed.hombre && parsed.hombre.length > 0) {
         const savedTotal = (parsed.hombre?.length || 0) + (parsed.mujer?.length || 0) + (parsed.unisex?.length || 0);
-        if (savedTotal === CATALOG.length) {
+        if (savedTotal === expectedTotal) {
           Object.assign(catalogPools, parsed);
           return;
         }
@@ -294,11 +295,8 @@ function initializeCatalogOrder() {
 
   const genders = ['hombre', 'mujer', 'unisex'];
   genders.forEach(g => {
-    const pool = CATALOG.filter(item => item.gender === g).map(item => ({ ...item }));
-
-    // Separar estrictamente los que están en el POS de Aromaniak de los que no
-    const aromaniakItems = pool.filter(item => isAromaniakPos(item));
-    const otherItems = pool.filter(item => !isAromaniakPos(item));
+    // Filtrar estrictamente solo las que están en el POS de Aromaniak
+    const aromaniakItems = CATALOG.filter(item => item.gender === g && isAromaniakPos(item)).map(item => ({ ...item }));
 
     // 1. Ordenar los de Aromaniak por ventas descendente
     aromaniakItems.sort((a, b) => (b.sales || 0) - (a.sales || 0));
@@ -312,14 +310,12 @@ function initializeCatalogOrder() {
     const top6Aromaniak = aromaniakItems.slice(0, 6);
     const restAromaniak = shuffleArray(aromaniakItems.slice(6));
 
-    // 4. Los que NO son de Aromaniak van después de todos los de Aromaniak
-    const restOthers = shuffleArray(otherItems);
-
-    catalogPools[g] = [...top6Aromaniak, ...restAromaniak, ...restOthers];
+    // Mostrar únicamente las que están en el POS de Aromaniak
+    catalogPools[g] = [...top6Aromaniak, ...restAromaniak];
   });
 
   try {
-    sessionStorage.setItem('kode_catalog_pools_aromaniak_v2', JSON.stringify(catalogPools));
+    sessionStorage.setItem('kode_catalog_pools_aromaniak_only_v1', JSON.stringify(catalogPools));
   } catch (e) {}
 }
 
@@ -423,7 +419,9 @@ function populateBrandSelect() {
   const select = document.getElementById('brand-select');
   if (!select) return;
 
-  const pool = CATALOG.filter(item => item.gender === currentGender);
+  const pool = (catalogPools[currentGender] && catalogPools[currentGender].length > 0)
+    ? catalogPools[currentGender]
+    : CATALOG.filter(item => item.gender === currentGender && isAromaniakPos(item));
 
   const brands = [...new Set(pool.map(item => item.brand).filter(Boolean))].sort();
 
@@ -813,7 +811,7 @@ function renderCatalog() {
   const activeGenderKey = (currentGender === 'maceracion' ? 'hombre' : currentGender) || 'hombre';
   const sourcePool = catalogPools[activeGenderKey] && catalogPools[activeGenderKey].length > 0
     ? catalogPools[activeGenderKey]
-    : CATALOG.filter(item => item.gender === activeGenderKey);
+    : CATALOG.filter(item => item.gender === activeGenderKey && isAromaniakPos(item));
 
   let filtered = [];
   if (!currentSearch) {
@@ -847,7 +845,7 @@ function renderCatalog() {
     otherGenders.forEach(g => {
       const pool = catalogPools[g] && catalogPools[g].length > 0
         ? catalogPools[g]
-        : CATALOG.filter(item => item.gender === g);
+        : CATALOG.filter(item => item.gender === g && isAromaniakPos(item));
       pool.forEach(item => {
         if (itemMatches(item)) {
           otherMatches.push(item);
