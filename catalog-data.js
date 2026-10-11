@@ -790,22 +790,22 @@ window.CATALOG_DATA = [
     "name": "Baccarat Rouge",
     "reference": "Baccarat Rouge",
     "brand": "Maison Francis Kurkdjian",
-    "description": "Inspirada en Baccarat Rouge de Maison Francis Kurkdjian. Pertenece a la prestigiosa familia olfativa AMADERADO fresco especiado. Abre con un despliegue radiante de jazmín, azafrán, revela un corazón fascinante de amberwood, y perdura sobre un fondo suntuoso de fir resin, cedro. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "description": "Inspirada en Baccarat Rouge 540 de Maison Francis Kurkdjian. Pertenece a la prestigiosa familia olfativa Ámbar Floral. Abre con un resplandor etéreo y aristocrático de azafrán dorado y jazmín aéreo, evoluciona hacia una firma radiante de amberwood mineral y ámbar gris cálido, y sella su presencia sobre una base amaderada inconfundible de cedro recién cortado y resina de abeto. Formulada con esencias de alta concentración para ofrecer una estela hipnótica y una fijación legendaria.",
     "image": "images/kode/kode_658.jpg",
-    "olfactoryFamily": "AMADERADO fresco especiado",
+    "olfactoryFamily": "Ámbar Floral",
     "gender": "unisex",
     "sales": 115,
     "accords": [
       {
-        "name": "amaderado",
+        "name": "ámbar",
         "percentage": 100,
-        "bg": "#4a154b",
+        "bg": "#86198f",
         "text": "#ffffff"
       },
       {
-        "name": "fresco especiado",
-        "percentage": 84,
-        "bg": "#4f46e5",
+        "name": "amaderado",
+        "percentage": 85,
+        "bg": "#4a154b",
         "text": "#ffffff"
       },
       {
@@ -815,38 +815,42 @@ window.CATALOG_DATA = [
         "text": "#ffffff"
       },
       {
-        "name": "aromático",
+        "name": "fresco especiado",
         "percentage": 58,
-        "bg": "#4338ca",
+        "bg": "#4f46e5",
         "text": "#ffffff"
       },
       {
-        "name": "floral blanco",
-        "percentage": 48,
-        "bg": "#c026d3",
+        "name": "metálico",
+        "percentage": 45,
+        "bg": "#334155",
         "text": "#ffffff"
       }
     ],
     "pyramid": {
       "top": [
         {
-          "name": "Jazmín",
-          "image": "notes/jazmin.jpg"
-        },
-        {
           "name": "Azafrán",
           "image": "notes/azafran.jpg"
+        },
+        {
+          "name": "Jazmín",
+          "image": "notes/jazmin.jpg"
         }
       ],
       "heart": [
         {
           "name": "Amberwood",
           "image": "notes/ambar.jpg"
+        },
+        {
+          "name": "Ámbar gris",
+          "image": "notes/ambar.jpg"
         }
       ],
       "base": [
         {
-          "name": "Fir Resin",
+          "name": "Resina de abeto",
           "image": "notes/maderas.jpg"
         },
         {
@@ -1320,22 +1324,22 @@ window.CATALOG_DATA = [
     "name": "212 Men",
     "reference": "212 Men",
     "brand": "Carolina Herrera",
-    "description": "Inspirada en 212 Men de Carolina Herrera. Pertenece a la prestigiosa familia olfativa Amaderada Aromática. Abre con un despliegue radiante de pomelo, romero, cardamomo, revela un corazón fascinante de ylang-ylang, tuberosa, y perdura sobre un fondo suntuoso de gamuza, cedro de virginia, cuero, vetiver. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "description": "Inspirada en 212 Men de Carolina Herrera. Pertenece a la prestigiosa familia olfativa Almizcle Amaderado Floral. Abre con una frescura urbana e innovadora de notas verdes, toronja jugosa, bergamota y lavanda, evoluciona hacia un corazón magnético de jengibre especiado, gardenia y violeta, y reposa sobre una base suntuosa y seductora de sándalo cremoso, almizcle, incienso y madera de gaiac. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
     "image": "images/kode/kode_109.jpg",
-    "olfactoryFamily": "Amaderada Aromática",
+    "olfactoryFamily": "Almizcle Amaderado Floral",
     "gender": "hombre",
     "sales": 90,
     "accords": [
       {
-        "name": "floral blanco",
+        "name": "cítrico",
         "percentage": 100,
-        "bg": "#c026d3",
+        "bg": "#6366f1",
         "text": "#ffffff"
       },
       {
-        "name": "cítrico",
+        "name": "verde",
         "percentage": 84,
-        "bg": "#6366f1",
+        "bg": "#059669",
         "text": "#ffffff"
       },
       {
@@ -1345,59 +1349,75 @@ window.CATALOG_DATA = [
         "text": "#ffffff"
       },
       {
-        "name": "aromático",
+        "name": "fresco especiado",
         "percentage": 58,
-        "bg": "#4338ca",
+        "bg": "#4f46e5",
         "text": "#ffffff"
       },
       {
-        "name": "cuero",
+        "name": "aromático",
         "percentage": 48,
-        "bg": "#3b0764",
+        "bg": "#4338ca",
         "text": "#ffffff"
       }
     ],
     "pyramid": {
       "top": [
         {
+          "name": "Notas verdes",
+          "image": "notes/notas-verdes.jpg"
+        },
+        {
           "name": "Pomelo",
           "image": "notes/pomelo.jpg"
         },
         {
-          "name": "Romero",
-          "image": "notes/romero.jpg"
+          "name": "Bergamota",
+          "image": "notes/bergamota.jpg"
         },
         {
-          "name": "Cardamomo",
-          "image": "notes/cardamomo.jpg"
+          "name": "Lavanda",
+          "image": "notes/lavanda.jpg"
         }
       ],
       "heart": [
         {
-          "name": "Ylang-Ylang",
-          "image": "notes/ylang-ylang.jpg"
+          "name": "Jengibre",
+          "image": "notes/jengibre.jpg"
         },
         {
-          "name": "Tuberosa",
-          "image": "notes/rosa.jpg"
+          "name": "Gardenia",
+          "image": "notes/gardenia.jpg"
+        },
+        {
+          "name": "Violeta",
+          "image": "notes/violeta.jpg"
+        },
+        {
+          "name": "Salvia",
+          "image": "notes/salvia.jpg"
         }
       ],
       "base": [
         {
-          "name": "Gamuza",
-          "image": "notes/cuero.jpg"
+          "name": "Almizcle",
+          "image": "notes/almizcle.jpg"
         },
         {
-          "name": "Cedro de Virginia",
-          "image": "notes/cedro.jpg"
+          "name": "Sándalo",
+          "image": "notes/sandalo.jpg"
         },
         {
-          "name": "Cuero",
-          "image": "notes/cuero.jpg"
+          "name": "Incienso",
+          "image": "notes/incienso.jpg"
         },
         {
           "name": "Vetiver",
           "image": "notes/vetiver.jpg"
+        },
+        {
+          "name": "Madera de gaiac",
+          "image": "notes/guayaco.jpg"
         }
       ]
     }
@@ -1576,16 +1596,16 @@ window.CATALOG_DATA = [
     "name": "Aqua Di Gio Profumo",
     "reference": "Aqua Di Gio Profumo",
     "brand": "Giorgio Armani",
-    "description": "Inspirada en Aqua Di Gio Profumo de Giorgio Armani. Pertenece a la prestigiosa familia olfativa Cítrica Acuática. Abre con un despliegue radiante de lima, limón, bergamota, jazmín, naranja, revela un corazón fascinante de notas marinas, jazmín, calone, melocotón, fresia, y perdura sobre un fondo suntuoso de almizcle blanco, cedro, musgo de roble, pachulí, ámbar. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "description": "Inspirada en Acqua Di Gio Profumo de Giorgio Armani. Pertenece a la prestigiosa familia olfativa Aromática Acuática. Abre con la intensidad oceánica de notas marinas profundas y bergamota vibrante, revela un corazón elegante de romero, salvia y geranio silvestre, y reposa sobre una base mística y suntuosa de incienso volcánico y pachulí oscuro. Formulada con esencias de alta concentración para ofrecer una estela distinguida y una fijación de élite.",
     "image": "images/kode/kode_142.jpg",
-    "olfactoryFamily": "Cítrica Acuática",
+    "olfactoryFamily": "Aromática Acuática",
     "gender": "hombre",
     "sales": 86,
     "accords": [
       {
-        "name": "cítrico",
+        "name": "marino",
         "percentage": 100,
-        "bg": "#6366f1",
+        "bg": "#0284c7",
         "text": "#ffffff"
       },
       {
@@ -1595,83 +1615,57 @@ window.CATALOG_DATA = [
         "text": "#ffffff"
       },
       {
-        "name": "marino",
-        "percentage": 70,
-        "bg": "#0284c7",
+        "name": "ahumado",
+        "percentage": 72,
+        "bg": "#334155",
         "text": "#ffffff"
       },
       {
         "name": "fresco especiado",
-        "percentage": 58,
+        "percentage": 60,
         "bg": "#4f46e5",
+        "text": "#ffffff"
+      },
+      {
+        "name": "balsámico",
+        "percentage": 50,
+        "bg": "#6b21a8",
         "text": "#ffffff"
       }
     ],
     "pyramid": {
       "top": [
         {
-          "name": "Lima",
-          "image": "notes/lima.jpg"
-        },
-        {
-          "name": "Limón",
-          "image": "notes/limon.jpg"
-        },
-        {
-          "name": "Bergamota",
-          "image": "notes/bergamota.jpg"
-        },
-        {
-          "name": "Jazmín",
-          "image": "notes/jazmin.jpg"
-        },
-        {
-          "name": "Naranja",
-          "image": "notes/naranja.jpg"
-        }
-      ],
-      "heart": [
-        {
           "name": "Notas marinas",
           "image": "notes/notas-marinas.jpg"
         },
         {
-          "name": "Jazmín",
-          "image": "notes/jazmin.jpg"
+          "name": "Bergamota",
+          "image": "notes/bergamota.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Romero",
+          "image": "notes/romero.jpg"
         },
         {
-          "name": "Calone",
-          "image": "notes/notas-marinas.jpg"
+          "name": "Salvia",
+          "image": "notes/salvia.jpg"
         },
         {
-          "name": "Melocotón",
-          "image": "notes/melocoton.jpg"
-        },
-        {
-          "name": "Fresia",
-          "image": "notes/jazmin.jpg"
+          "name": "Geranio",
+          "image": "notes/geranio.jpg"
         }
       ],
       "base": [
         {
-          "name": "Almizcle blanco",
-          "image": "notes/almizcle.jpg"
-        },
-        {
-          "name": "Cedro",
-          "image": "notes/cedro.jpg"
-        },
-        {
-          "name": "Musgo de roble",
-          "image": "notes/musgo-roble.jpg"
+          "name": "Incienso",
+          "image": "notes/incienso.jpg"
         },
         {
           "name": "Pachulí",
           "image": "notes/pachuli.jpg"
-        },
-        {
-          "name": "Ámbar",
-          "image": "notes/ambar.jpg"
         }
       ]
     }
@@ -1778,108 +1772,90 @@ window.CATALOG_DATA = [
     "name": "Bulgari Man In Black",
     "reference": "Bulgari Man In Black",
     "brand": "Bvlgari",
-    "description": "Inspirada en Bulgari Man In Black de Bvlgari. Pertenece a la prestigiosa familia olfativa Amaderada Floral. Abre con un despliegue radiante de té, aldehídos, bergamota, lavanda, flor de azahar, revela un corazón fascinante de pimienta, iris, madera de gaiac, palo de rosa, coriandro, y perdura sobre un fondo suntuoso de almizcle, cedro, musgo de roble, vetiver, ámbar. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "description": "Inspirada en Bulgari Man In Black de Bvlgari. Pertenece a la prestigiosa familia olfativa Ámbar Especiada. Abre con un despliegue audaz y ardiente de especias oscuras, ron añejo y tabaco rubio, revela un corazón fascinante de cuero negro, iris noble y tuberosa, y culmina sobre un fondo suntuoso y magnético de haba tonka, benjuí y madera de gaiac. Formulada con esencias de alta concentración para ofrecer una estela imponente y una fijación duradera.",
     "image": "images/kode/kode_179.jpg",
-    "olfactoryFamily": "Amaderada Floral",
+    "olfactoryFamily": "Ámbar Especiada",
     "gender": "hombre",
     "sales": 81,
     "accords": [
       {
-        "name": "amaderado",
+        "name": "cálido especiado",
         "percentage": 100,
+        "bg": "#701a75",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cuero",
+        "percentage": 85,
+        "bg": "#3b0764",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 72,
         "bg": "#4a154b",
         "text": "#ffffff"
       },
       {
-        "name": "fresco especiado",
-        "percentage": 84,
-        "bg": "#4f46e5",
+        "name": "tabaco",
+        "percentage": 60,
+        "bg": "#78350f",
         "text": "#ffffff"
       },
       {
-        "name": "aromático",
-        "percentage": 70,
-        "bg": "#4338ca",
+        "name": "ron",
+        "percentage": 50,
+        "bg": "#b45309",
         "text": "#ffffff"
       },
       {
-        "name": "cítrico",
-        "percentage": 58,
-        "bg": "#6366f1",
-        "text": "#ffffff"
-      },
-      {
-        "name": "verde",
-        "percentage": 48,
-        "bg": "#059669",
+        "name": "avainillado",
+        "percentage": 42,
+        "bg": "#9333ea",
         "text": "#ffffff"
       }
     ],
     "pyramid": {
       "top": [
         {
-          "name": "Té",
-          "image": "notes/notas-verdes.jpg"
+          "name": "Especias",
+          "image": "notes/pimienta-negra.jpg"
         },
         {
-          "name": "Aldehídos",
-          "image": "notes/aldehidos.jpg"
+          "name": "Ron",
+          "image": "notes/canela.jpg"
         },
         {
-          "name": "Bergamota",
-          "image": "notes/bergamota.jpg"
-        },
-        {
-          "name": "Lavanda",
-          "image": "notes/lavanda.jpg"
-        },
-        {
-          "name": "Flor de azahar",
-          "image": "notes/flor-azahar.jpg"
+          "name": "Tabaco",
+          "image": "notes/tabaco.jpg"
         }
       ],
       "heart": [
         {
-          "name": "Pimienta",
-          "image": "notes/pimienta-negra.jpg"
+          "name": "Cuero",
+          "image": "notes/cuero.jpg"
         },
         {
           "name": "Iris",
           "image": "notes/iris.jpg"
         },
         {
-          "name": "Madera de gaiac",
-          "image": "notes/guayaco.jpg"
-        },
-        {
-          "name": "Palo de rosa",
+          "name": "Tuberosa",
           "image": "notes/rosa.jpg"
-        },
-        {
-          "name": "Coriandro",
-          "image": "notes/maderas.jpg"
         }
       ],
       "base": [
         {
-          "name": "Almizcle",
-          "image": "notes/almizcle.jpg"
+          "name": "Haba tonka",
+          "image": "notes/haba-tonka.jpg"
         },
         {
-          "name": "Cedro",
-          "image": "notes/cedro.jpg"
+          "name": "Benjuí",
+          "image": "notes/benjui.jpg"
         },
         {
-          "name": "Musgo de roble",
-          "image": "notes/musgo-roble.jpg"
-        },
-        {
-          "name": "Vetiver",
-          "image": "notes/vetiver.jpg"
-        },
-        {
-          "name": "Ámbar",
-          "image": "notes/ambar.jpg"
+          "name": "Madera de gaiac",
+          "image": "notes/guayaco.jpg"
         }
       ]
     }
@@ -3082,9 +3058,9 @@ window.CATALOG_DATA = [
     "name": "Good Girl",
     "reference": "Good Girl",
     "brand": "Carolina Herrera",
-    "description": "Inspirada en Good Girl de Carolina Herrera. Pertenece a la prestigiosa familia olfativa FLORAL BLANCO cálido especiado. Abre con un despliegue radiante de almendra, café, revela un corazón fascinante de jazmín sambac, tuberosa, y perdura sobre un fondo suntuoso de haba tonka, cacao. Formulada con esencias de alta concentración para ofrecer una estela envolvente y una fijación superior.",
+    "description": "Inspirada en Good Girl de Carolina Herrera. Pertenece a la prestigiosa familia olfativa Ámbar Floral. Abre con el contraste sensual y audaz de almendra crujiente, café tostado y toques cítricos, despliega un corazón voluptuoso de tuberosa, jazmín sambac y flor de azahar, y reposa sobre una base irresistible de haba tonka, cacao tostado, vainilla y sándalo. Formulada con esencias de alta concentración para ofrecer una estela cautivadora y una fijación superior.",
     "image": "images/kode/kode_495.jpg",
-    "olfactoryFamily": "FLORAL BLANCO cálido especiado",
+    "olfactoryFamily": "Ámbar Floral",
     "gender": "mujer",
     "sales": 51,
     "accords": [
@@ -3101,20 +3077,20 @@ window.CATALOG_DATA = [
         "text": "#ffffff"
       },
       {
-        "name": "rosas",
-        "percentage": 70,
-        "bg": "#be123c",
-        "text": "#ffffff"
-      },
-      {
         "name": "dulce",
-        "percentage": 58,
+        "percentage": 72,
         "bg": "#d946ef",
         "text": "#ffffff"
       },
       {
+        "name": "avainillado",
+        "percentage": 60,
+        "bg": "#9333ea",
+        "text": "#ffffff"
+      },
+      {
         "name": "cacao",
-        "percentage": 48,
+        "percentage": 50,
         "bg": "#3b0764",
         "text": "#ffffff"
       }
@@ -3128,16 +3104,28 @@ window.CATALOG_DATA = [
         {
           "name": "Café",
           "image": "notes/cafe.jpg"
+        },
+        {
+          "name": "Bergamota",
+          "image": "notes/bergamota.jpg"
+        },
+        {
+          "name": "Limón",
+          "image": "notes/limon.jpg"
         }
       ],
       "heart": [
+        {
+          "name": "Tuberosa",
+          "image": "notes/rosa.jpg"
+        },
         {
           "name": "Jazmín Sambac",
           "image": "notes/jazmin.jpg"
         },
         {
-          "name": "Tuberosa",
-          "image": "notes/rosa.jpg"
+          "name": "Flor de azahar",
+          "image": "notes/flor-azahar.jpg"
         }
       ],
       "base": [
@@ -3148,6 +3136,18 @@ window.CATALOG_DATA = [
         {
           "name": "Cacao",
           "image": "notes/cacao.jpg"
+        },
+        {
+          "name": "Vainilla",
+          "image": "notes/vainilla.jpg"
+        },
+        {
+          "name": "Sándalo",
+          "image": "notes/sandalo.jpg"
+        },
+        {
+          "name": "Ámbar",
+          "image": "notes/ambar.jpg"
         }
       ]
     }
