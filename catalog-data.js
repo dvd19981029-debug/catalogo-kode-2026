@@ -7496,85 +7496,117 @@ window.CATALOG_DATA = [
   {
     "id": "kode-413",
     "code": "413",
-    "name": "Acqua di Gioia",
-    "reference": "Acqua di Gioia",
+    "name": "Acqua di Giò",
+    "reference": "Acqua di Giò",
     "brand": "Giorgio Armani",
-    "description": "Inspirada en Acqua di Gioia de Giorgio Armani. La brisa marina revitalizante por excelencia, cargada de sales minerales, cítricos madurados al sol y un fondo limpio de almizcle y cedro.",
+    "description": "Inspirada en Acqua di Giò de Giorgio Armani. Frescura mediterránea luminosa, floral y femenina. Una salida chispeante de peonía húmeda, durazno aterciopelado, piña y limón de Amalfi da paso a un bouquet cristalino de fresia, lirio, jazmín y jacinto, reposando sobre una estela limpia y envolvente de almizcle blanco, sándalo y cedro.",
     "image": "images/kode/kode_413.jpg",
-    "olfactoryFamily": "Aromática Acuática",
+    "olfactoryFamily": "Floral Frutal",
     "gender": "mujer",
     "sales": 9,
     "accords": [
       {
-        "name": "marino",
+        "name": "floral",
         "percentage": 100,
-        "bg": "#0284c7",
+        "bg": "#c026d3",
         "text": "#ffffff"
       },
       {
-        "name": "cítrico",
+        "name": "fresco",
         "percentage": 90,
         "bg": "#6366f1",
         "text": "#ffffff"
       },
       {
-        "name": "aromático",
+        "name": "floral blanco",
         "percentage": 80,
-        "bg": "#4338ca",
+        "bg": "#818cf8",
         "text": "#ffffff"
       },
       {
-        "name": "fresco",
+        "name": "verde",
         "percentage": 70,
-        "bg": "#4f46e5",
+        "bg": "#059669",
+        "text": "#ffffff"
+      },
+      {
+        "name": "dulce",
+        "percentage": 60,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      },
+      {
+        "name": "afrutado",
+        "percentage": 50,
+        "bg": "#db2777",
         "text": "#ffffff"
       }
     ],
     "pyramid": {
       "top": [
         {
-          "name": "Lima",
-          "image": "notes/lima.jpg"
+          "name": "Peonía",
+          "image": "notes/peonia.jpg"
+        },
+        {
+          "name": "Vodka de durazno",
+          "image": "notes/melocoton.jpg"
+        },
+        {
+          "name": "Piña",
+          "image": "notes/pina.jpg"
         },
         {
           "name": "Limón",
           "image": "notes/limon.jpg"
         },
         {
-          "name": "Bergamota",
-          "image": "notes/bergamota.jpg"
-        },
-        {
-          "name": "Jazmín",
-          "image": "notes/jazmin.jpg"
+          "name": "Violeta",
+          "image": "notes/violeta.jpg"
         }
       ],
       "heart": [
         {
-          "name": "Notas marinas",
-          "image": "notes/notas-marinas.jpg"
+          "name": "Lirio",
+          "image": "notes/flor-azahar.jpg"
         },
         {
-          "name": "Romero",
-          "image": "notes/romero.jpg"
+          "name": "Fresia",
+          "image": "notes/jazmin.jpg"
         },
         {
-          "name": "Ciclamen",
+          "name": "Jazmín",
+          "image": "notes/jazmin.jpg"
+        },
+        {
+          "name": "Jacinto",
           "image": "notes/violeta.jpg"
+        },
+        {
+          "name": "Ylang-ylang",
+          "image": "notes/ylang-ylang.jpg"
+        },
+        {
+          "name": "Rosa",
+          "image": "notes/rosa.jpg"
         }
       ],
       "base": [
         {
-          "name": "Cedro",
-          "image": "notes/cedro.jpg"
-        },
-        {
-          "name": "Almizcle blanco",
+          "name": "Almizcle",
           "image": "notes/almizcle.jpg"
         },
         {
-          "name": "Musgo de roble",
-          "image": "notes/musgo-roble.jpg"
+          "name": "Sándalo",
+          "image": "notes/sandalo.jpg"
+        },
+        {
+          "name": "Ámbar",
+          "image": "notes/ambar.jpg"
+        },
+        {
+          "name": "Cedro",
+          "image": "notes/cedro.jpg"
         }
       ]
     }

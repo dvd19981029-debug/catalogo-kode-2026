@@ -284,7 +284,7 @@ function initializeCatalogOrder() {
   // Mantener el mismo orden durante la sesión para que al volver esté en el mismo lugar
   const expectedTotal = CATALOG.filter(item => isAromaniakPos(item)).length;
   try {
-    const savedPools = sessionStorage.getItem('kode_catalog_pools_aromaniak_only_v3');
+    const savedPools = sessionStorage.getItem('kode_catalog_pools_aromaniak_only_v4');
     if (savedPools) {
       const parsed = JSON.parse(savedPools);
       if (parsed && parsed.hombre && parsed.hombre.length > 0) {
@@ -319,7 +319,7 @@ function initializeCatalogOrder() {
   });
 
   try {
-    sessionStorage.setItem('kode_catalog_pools_aromaniak_only_v3', JSON.stringify(catalogPools));
+    sessionStorage.setItem('kode_catalog_pools_aromaniak_only_v4', JSON.stringify(catalogPools));
   } catch (e) {}
 }
 
