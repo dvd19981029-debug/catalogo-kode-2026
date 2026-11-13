@@ -69,12 +69,47 @@ async function syncInventoryOutOfStock() {
         localStorage.setItem('kode_out_of_stock_codes_v2', JSON.stringify(latestCodes));
       } catch (e) {}
       if (hasChanged) {
-        renderCatalog();
+        applyOutOfStockStateInPlace();
       }
     }
   } catch (err) {
     console.warn('Error sincronizando stock:', err);
   }
+}
+
+function applyOutOfStockStateInPlace() {
+  document.querySelectorAll('.product-card[data-id]').forEach(card => {
+    const productId = card.getAttribute('data-id');
+    if (!productId) return;
+    const item = CATALOG.find(p => p.id === productId);
+    const isOutOfStock = outOfStockCodes.has(String(productId)) || (item && outOfStockCodes.has(String(item.code)));
+    card.classList.toggle('is-out-of-stock', isOutOfStock);
+
+    const stage = card.querySelector('.product-stage');
+    if (stage) {
+      const existingBadge = stage.querySelector('.badge-out-of-stock');
+      if (isOutOfStock && !existingBadge) {
+        const badge = document.createElement('div');
+        badge.className = 'badge-out-of-stock';
+        badge.textContent = 'Agotado';
+        stage.insertBefore(badge, stage.querySelector('picture'));
+      } else if (!isOutOfStock && existingBadge) {
+        existingBadge.remove();
+      }
+    }
+
+    const btn = card.querySelector('.apple-buy-btn');
+    if (btn) {
+      if (isOutOfStock) {
+        btn.setAttribute('onclick', '');
+        btn.setAttribute('aria-disabled', 'true');
+      } else {
+        btn.setAttribute('onclick', `addToCart('${productId}')`);
+        btn.removeAttribute('aria-disabled');
+      }
+    }
+    updateCardBuyButton(productId);
+  });
 }
 
 // Desactivar restauración automática nativa para control exacto
@@ -181,6 +216,7 @@ function restoreCatalogScroll() {
           el.scrollIntoView({ block: 'nearest', inline: 'nearest', behavior: 'instant' });
         }
       }
+      prioritizeViewportCatalogImages();
     };
 
     tryRestore();
@@ -221,12 +257,10 @@ window.addEventListener('scroll', () => {
 // Inicialización
 document.addEventListener('DOMContentLoaded', async () => {
   await loadCatalogData();
-  syncInventoryOutOfStock();
-  setupGenderTabs();
-  populateBrandSelect();
   loadCart();
+  syncInventoryOutOfStock();
   setupEventListeners();
-  renderCatalog();
+  setupGenderTabs();
   if (isPageReload()) {
     window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
   } else if (isBackNavigation()) {
@@ -864,6 +898,7 @@ function renderCatalog() {
   }
 
   if (filtered.length === 0) {
+    cleanupCatalogImageLoader();
     grid.innerHTML = '';
     if (emptyState) emptyState.style.display = 'block';
     return;
@@ -871,7 +906,9 @@ function renderCatalog() {
 
   if (emptyState) emptyState.style.display = 'none';
 
-  const cardHtmls = filtered.map(item => {
+  const loadProfile = getCatalogLoadingProfile();
+
+  const cardHtmls = filtered.map((item, idx) => {
     const isOutOfStock = outOfStockCodes.has(String(item.code)) || outOfStockCodes.has(String(item.id));
     const isExtra = selectedConcentrations[item.id] !== undefined ? selectedConcentrations[item.id] : true;
     const priceInfo = getCardPriceDisplay(item.id, isExtra);
@@ -926,6 +963,34 @@ function renderCatalog() {
               ${badgeHtml}
             </div>` : '';
 
+    const isEager = idx < loadProfile.initialEager;
+    const priorityAttr = idx < 2 ? ' fetchpriority="high"' : '';
+    const pictureHtml = isEager ? `
+            <picture>
+              <source srcset="${webpSrc}" type="image/webp">
+              <img 
+                src="${fallbackSrc}" 
+                alt="Kódigo ${item.code} - ${item.reference}" 
+                class="product-bottle-img is-loaded"${priorityAttr}
+                decoding="async"
+                width="350"
+                height="350"
+                onerror="this.onerror=null;if(this.previousElementSibling)this.previousElementSibling.remove();this.src='images/kode_cover.png'"
+              >
+            </picture>` : `
+            <picture>
+              <source srcset="${CATALOG_TRANSPARENT_PIXEL}" data-srcset="${webpSrc}" type="image/webp">
+              <img 
+                src="${CATALOG_TRANSPARENT_PIXEL}" 
+                data-src="${fallbackSrc}" 
+                alt="Kódigo ${item.code} - ${item.reference}" 
+                class="product-bottle-img is-pending" 
+                decoding="async"
+                width="350"
+                height="350"
+              >
+            </picture>`;
+
     return `
       <article class="${cardClass}" data-id="${item.id}">
         <a href="producto.html?k=${item.code}" class="product-card-link" onclick="saveCatalogScrollState('${item.code}')" aria-label="Ver detalles de Kódigo ${item.code}">
@@ -933,19 +998,7 @@ function renderCatalog() {
             ${stageBadgesLeftHtml}
             ${outOfStockBadgeHtml}
             ${genderBadgeHtml}
-            <picture>
-              <source srcset="${webpSrc}" type="image/webp">
-              <img 
-                src="${fallbackSrc}" 
-                alt="Kódigo ${item.code} - ${item.reference}" 
-                class="product-bottle-img" 
-                loading="lazy"
-                decoding="async"
-                width="350"
-                height="350"
-                onerror="this.onerror=null;this.src='images/kode_cover.png'"
-              >
-            </picture>
+            ${pictureHtml}
           </div>
         </a>
         <div class="product-details">
@@ -1023,6 +1076,271 @@ function renderCatalog() {
   }
 
   grid.innerHTML = cardHtmls.join('');
+  setupCatalogImageLoader(grid, loadProfile);
+}
+
+// ==========================================================================
+// CARGADOR PROGRESIVO ANTICIPADO DE IMÁGENES DEL CATÁLOGO
+// Equilibra fluidez sin pop-ups al arrastrar y ahorro de datos en móviles lentos
+// ==========================================================================
+const CATALOG_TRANSPARENT_PIXEL = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
+let catalogLoaderGen = 0;
+let catalogImgObserver = null;
+let catalogWarmTimer = null;
+let catalogScrollPumpHandler = null;
+let catalogPriorityBooster = null;
+
+function getCatalogLoadingProfile() {
+  const conn = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+  const saveData = Boolean(conn && conn.saveData);
+  const eff = (conn && conn.effectiveType) ? String(conn.effectiveType).toLowerCase() : '';
+  const lowMem = typeof navigator.deviceMemory === 'number' && navigator.deviceMemory <= 2;
+  const lowCpu = typeof navigator.hardwareConcurrency === 'number' && navigator.hardwareConcurrency <= 4;
+
+  if (saveData || eff === 'slow-2g' || eff === '2g') {
+    return {
+      initialEager: 10,
+      warmAhead: 10,
+      rootMargin: '1200px 0px 1800px 0px',
+      concurrency: 3
+    };
+  }
+  if (eff === '3g' || lowMem || lowCpu) {
+    return {
+      initialEager: 16,
+      warmAhead: 16,
+      rootMargin: '1600px 0px 2400px 0px',
+      concurrency: 4
+    };
+  }
+  return {
+    initialEager: 20,
+    warmAhead: 20,
+    rootMargin: '2000px 0px 3000px 0px',
+    concurrency: 6
+  };
+}
+
+function cleanupCatalogImageLoader() {
+  catalogLoaderGen++;
+  if (catalogImgObserver) {
+    catalogImgObserver.disconnect();
+    catalogImgObserver = null;
+  }
+  if (catalogWarmTimer) {
+    clearTimeout(catalogWarmTimer);
+    catalogWarmTimer = null;
+  }
+  if (catalogScrollPumpHandler) {
+    window.removeEventListener('scroll', catalogScrollPumpHandler);
+    catalogScrollPumpHandler = null;
+  }
+  catalogPriorityBooster = null;
+}
+
+function prioritizeViewportCatalogImages() {
+  if (typeof catalogPriorityBooster === 'function') {
+    catalogPriorityBooster();
+  }
+}
+
+function setupCatalogImageLoader(grid, profile) {
+  cleanupCatalogImageLoader();
+  const gen = catalogLoaderGen;
+  const pendingImgs = Array.from(grid.querySelectorAll('img.product-bottle-img.is-pending'));
+  if (pendingImgs.length === 0) return;
+
+  const queued = new Set();
+  const warmSet = new Set();
+  let inFlight = 0;
+  let pumpScheduled = false;
+
+  function getDistanceScore(img) {
+    const rect = img.getBoundingClientRect();
+    const vh = window.innerHeight || 800;
+    if (rect.bottom >= -250 && rect.top <= vh + 500) {
+      return Math.max(0, rect.top + 250);
+    }
+    if (rect.top > vh + 500) {
+      return 1200 + (rect.top - vh);
+    }
+    return 6000 + Math.abs(rect.bottom);
+  }
+
+  function activateImage(img) {
+    if (!img || img.dataset.loadingState === 'loading' || img.dataset.loadingState === 'done') {
+      pumpQueue();
+      return;
+    }
+    img.dataset.loadingState = 'loading';
+    inFlight++;
+
+    const picture = img.parentElement;
+    const source = picture ? picture.querySelector('source[data-srcset]') : null;
+    const webpSrc = source ? source.getAttribute('data-srcset') : '';
+    const fallbackSrc = img.getAttribute('data-src') || '';
+
+    let settled = false;
+    const settle = (ok) => {
+      if (settled) return;
+      settled = true;
+      clearTimeout(safetyTimer);
+      img.onload = null;
+      img.onerror = null;
+
+      const finishReveal = () => {
+        img.dataset.loadingState = 'done';
+        img.classList.remove('is-pending');
+        img.classList.add('is-loaded');
+        if (gen === catalogLoaderGen) {
+          inFlight = Math.max(0, inFlight - 1);
+          schedulePump();
+        }
+      };
+
+      if (ok && typeof img.decode === 'function') {
+        img.decode().catch(() => {}).finally(finishReveal);
+      } else {
+        finishReveal();
+      }
+    };
+
+    const safetyTimer = setTimeout(() => settle(false), 5000);
+
+    img.onload = () => settle(true);
+    img.onerror = () => {
+      if (source && source.parentNode) {
+        source.remove();
+        if (fallbackSrc && img.getAttribute('src') !== fallbackSrc) {
+          img.setAttribute('src', fallbackSrc);
+          return;
+        }
+      }
+      img.onerror = null;
+      img.setAttribute('src', 'images/kode_cover.png');
+      settle(false);
+    };
+
+    if (source && webpSrc) {
+      source.setAttribute('srcset', webpSrc);
+      source.removeAttribute('data-srcset');
+    }
+    if (fallbackSrc) {
+      img.setAttribute('src', fallbackSrc);
+      img.removeAttribute('data-src');
+    } else {
+      settle(false);
+      return;
+    }
+
+    if (img.complete && img.naturalWidth > 1) {
+      settle(true);
+    }
+  }
+
+  function pumpQueue() {
+    pumpScheduled = false;
+    if (gen !== catalogLoaderGen) return;
+
+    for (const img of queued) {
+      if (!img.isConnected || img.dataset.loadingState === 'loading' || img.dataset.loadingState === 'done') {
+        queued.delete(img);
+      }
+    }
+
+    while (inFlight < profile.concurrency && queued.size > 0) {
+      let bestImg = null;
+      let bestScore = Infinity;
+      for (const candidate of queued) {
+        const score = getDistanceScore(candidate);
+        if (score < bestScore) {
+          bestScore = score;
+          bestImg = candidate;
+        }
+      }
+      if (!bestImg) break;
+      queued.delete(bestImg);
+      warmSet.delete(bestImg);
+      if (catalogImgObserver) {
+        catalogImgObserver.unobserve(bestImg);
+      }
+      activateImage(bestImg);
+    }
+  }
+
+  function schedulePump() {
+    if (pumpScheduled || gen !== catalogLoaderGen) return;
+    pumpScheduled = true;
+    requestAnimationFrame(pumpQueue);
+  }
+
+  if (typeof IntersectionObserver !== 'undefined') {
+    catalogImgObserver = new IntersectionObserver((entries) => {
+      if (gen !== catalogLoaderGen) return;
+      let added = false;
+      for (let i = 0; i < entries.length; i++) {
+        const entry = entries[i];
+        const img = entry.target;
+        const state = img.dataset.loadingState;
+        if (state === 'loading' || state === 'done') continue;
+        if (entry.isIntersecting) {
+          queued.add(img);
+          added = true;
+        } else if (!warmSet.has(img) || window.scrollY > 1800) {
+          queued.delete(img);
+        }
+      }
+      if (added) schedulePump();
+    }, {
+      rootMargin: profile.rootMargin,
+      threshold: 0
+    });
+
+    pendingImgs.forEach(img => catalogImgObserver.observe(img));
+  } else {
+    pendingImgs.forEach(img => queued.add(img));
+    schedulePump();
+  }
+
+  // Pre-calentar siguiente bloque apenas arranca la carga inicial para tener colchón amplio al arrastrar
+  catalogWarmTimer = setTimeout(() => {
+    if (gen !== catalogLoaderGen) return;
+    const slice = pendingImgs.slice(0, profile.warmAhead);
+    slice.forEach(img => {
+      if (!img.dataset.loadingState) {
+        warmSet.add(img);
+        queued.add(img);
+      }
+    });
+    schedulePump();
+  }, 140);
+
+  // Re-priorizar por cercanía real mientras el usuario arrastra
+  let lastScrollPump = 0;
+  catalogScrollPumpHandler = () => {
+    const now = performance.now();
+    if (now - lastScrollPump < 110) return;
+    lastScrollPump = now;
+    if (queued.size > 0) schedulePump();
+  };
+  window.addEventListener('scroll', catalogScrollPumpHandler, { passive: true });
+
+  // Impulso inmediato para navegación "Atrás" hacia una posición guardada profunda
+  catalogPriorityBooster = () => {
+    if (gen !== catalogLoaderGen) return;
+    const vh = window.innerHeight || 800;
+    let boosted = false;
+    for (let i = 0; i < pendingImgs.length; i++) {
+      const img = pendingImgs[i];
+      if (img.dataset.loadingState) continue;
+      const rect = img.getBoundingClientRect();
+      if (rect.bottom >= -500 && rect.top <= vh + 1400) {
+        queued.add(img);
+        boosted = true;
+      }
+    }
+    if (boosted) pumpQueue();
+  };
 }
 
 // Cambiar concentración en la tarjeta (Segmented Control)
@@ -1665,37 +1983,69 @@ function initHero3DShowcase() {
   const frames = new Array(TOTAL_FRAMES);
   let loadedCount = 0;
   let lastDrawnIndex = -1;
+  let onHeroFrameLoaded = null;
 
-  function loadFrame(idx, isPriority = false) {
+  function loadFrame(idx, onDone) {
+    if (frames[idx]) {
+      if (onDone) onDone();
+      return;
+    }
     const img = new Image();
+    img.decoding = 'async';
     const pad = String(idx).padStart(2, '0');
-    img.src = `images/turntable/frame_${pad}.webp`;
-    img.onerror = () => {
-      img.src = `images/turntable/frame_${pad}.jpg`;
+    const finish = () => {
+      if (onDone) onDone();
     };
     img.onload = () => {
       loadedCount++;
       if (idx === 4 && lastDrawnIndex === -1) {
         ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
         lastDrawnIndex = 4;
+      } else if (onHeroFrameLoaded) {
+        onHeroFrameLoaded();
       }
+      finish();
     };
+    img.onerror = () => {
+      if (!img.dataset.jpgFallback) {
+        img.dataset.jpgFallback = '1';
+        img.src = `images/turntable/frame_${pad}.jpg`;
+        return;
+      }
+      finish();
+    };
+    img.src = `images/turntable/frame_${pad}.webp`;
     frames[idx] = img;
   }
 
   // 1. Cargar el fotograma frontal inicial (frame 04) de inmediato para pintura instantánea
-  loadFrame(4, true);
+  loadFrame(4);
 
-  // 2. Cargar los fotogramas restantes sin competir con el render inicial del catálogo
-  const scheduleRemaining = typeof window.requestIdleCallback === 'function'
-    ? window.requestIdleCallback
-    : (cb) => setTimeout(cb, 40);
-
-  scheduleRemaining(() => {
+  // 2. Cargar los fotogramas restantes en lotes suaves (máx. 3 simultáneos) para no competir con las imágenes del catálogo
+  let turntableBatchStarted = false;
+  function startRemainingTurntableFrames() {
+    if (turntableBatchStarted) return;
+    turntableBatchStarted = true;
+    const queue = [];
     for (let i = 0; i < TOTAL_FRAMES; i++) {
-      if (i !== 4) loadFrame(i);
+      if (i !== 4) queue.push(i);
     }
-  });
+    let active = 0;
+    const MAX_TURNTABLE_CONCURRENCY = 3;
+    function nextFrame() {
+      while (active < MAX_TURNTABLE_CONCURRENCY && queue.length > 0) {
+        const idx = queue.shift();
+        active++;
+        loadFrame(idx, () => {
+          active--;
+          nextFrame();
+        });
+      }
+    }
+    nextFrame();
+  }
+
+  setTimeout(startRemainingTurntableFrames, 420);
 
   // Click en flechas para deslizar suavemente y activar la animación
   if (indicator) {
@@ -1712,31 +2062,59 @@ function initHero3DShowcase() {
   let currentMouseX = 0;
   let currentMouseY = 0;
 
+  // Distancia de scroll compacta y calibrada para completar el recorrido y salida
+  const ANIM_SCROLL_DISTANCE = window.innerWidth < 768 ? 260 : 300;
+  const HERO_ACTIVE_SCROLL_LIMIT = ANIM_SCROLL_DISTANCE + 90;
+  const parsedDebugScroll = new URLSearchParams(window.location.search).get('testScroll');
+  const staticDebugScroll = parsedDebugScroll !== null ? parseFloat(parsedDebugScroll) : null;
+  let rafRunning = false;
+
+  function requestHeroFrame() {
+    if (!rafRunning) {
+      rafRunning = true;
+      requestAnimationFrame(update3DFrame);
+    }
+  }
+  onHeroFrameLoaded = () => {
+    if ((window.pageYOffset || document.documentElement.scrollTop || 0) <= HERO_ACTIVE_SCROLL_LIMIT) {
+      requestHeroFrame();
+    }
+  };
+
   // Micro-parallax interactivo con el cursor
   window.addEventListener('mousemove', (e) => {
-    if (window.pageYOffset > 550) return;
+    if ((window.pageYOffset || document.documentElement.scrollTop || 0) > HERO_ACTIVE_SCROLL_LIMIT) return;
     const { innerWidth, innerHeight } = window;
     targetMouseX = ((e.clientX / innerWidth) - 0.5) * 2;
     targetMouseY = ((e.clientY / innerHeight) - 0.5) * 2;
+    requestHeroFrame();
   }, { passive: true });
 
   window.addEventListener('mouseleave', () => {
     targetMouseX = 0;
     targetMouseY = 0;
+    if ((window.pageYOffset || document.documentElement.scrollTop || 0) <= HERO_ACTIVE_SCROLL_LIMIT) {
+      requestHeroFrame();
+    }
   });
 
-  // Distancia de scroll compacta y calibrada para completar el recorrido y salida
-  const ANIM_SCROLL_DISTANCE = window.innerWidth < 768 ? 260 : 300;
+  window.addEventListener('scroll', () => {
+    const sy = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if (sy <= HERO_ACTIVE_SCROLL_LIMIT) {
+      startRemainingTurntableFrames();
+      requestHeroFrame();
+    } else if (wrapper.style.visibility !== 'hidden') {
+      requestHeroFrame();
+    }
+  }, { passive: true });
 
-  // Bucle de renderizado a 60/120fps con requestAnimationFrame
+  // Renderizado bajo demanda: se pausa por completo al bajar al catálogo para liberar CPU/GPU en teléfonos lentos
   function update3DFrame() {
+    rafRunning = false;
     currentMouseX += (targetMouseX - currentMouseX) * 0.08;
     currentMouseY += (targetMouseY - currentMouseY) * 0.08;
 
-    const urlParams = new URLSearchParams(window.location.search);
-    const debugScroll = urlParams.get('testScroll');
-    const scrollY = debugScroll !== null ? parseFloat(debugScroll) : (window.pageYOffset || document.documentElement.scrollTop || 0);
-
+    const scrollY = staticDebugScroll !== null ? staticDebugScroll : (window.pageYOffset || document.documentElement.scrollTop || 0);
     const rawProgress = Math.min(Math.max(scrollY / ANIM_SCROLL_DISTANCE, 0), 1);
 
     // 1. Flechitas indicadoras: se desvanecen suavemente en los primeros 35px
@@ -1772,9 +2150,9 @@ function initHero3DShowcase() {
       const exitEase = exitProgress * exitProgress * (3 - 2 * exitProgress);
       opacity = Math.max(0, 1 - Math.pow(exitProgress, 1.15));
       scale = 1 - (exitEase * 0.10);
-      exitUpSlide = exitEase * 150; // Deslizándose hacia arriba para salir
-      exitSpinY = exitEase * 55;    // Gira más aún durante la salida
-      exitSpinZ = exitEase * -8;    // Leve inclinación dinámica al salir
+      exitUpSlide = exitEase * 150;
+      exitSpinY = exitEase * 55;
+      exitSpinZ = exitEase * -8;
     }
 
     const transY = -exitUpSlide;
@@ -1794,9 +2172,12 @@ function initHero3DShowcase() {
       wrapper.style.pointerEvents = 'auto';
     }
 
-    requestAnimationFrame(update3DFrame);
+    const mouseSettled = Math.abs(targetMouseX - currentMouseX) < 0.002 && Math.abs(targetMouseY - currentMouseY) < 0.002;
+    if (scrollY <= HERO_ACTIVE_SCROLL_LIMIT && !mouseSettled) {
+      requestHeroFrame();
+    }
   }
 
-  requestAnimationFrame(update3DFrame);
+  requestHeroFrame();
 }
 
