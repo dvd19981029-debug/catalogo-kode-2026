@@ -81,7 +81,8 @@ document.addEventListener('click', (e) => {
 const FIRESTORE_STOCK_QUERY_URL = 'https://firestore.googleapis.com/v1/projects/kode-scents/databases/(default)/documents:runQuery?key=AIzaSyARNtXYuz9SiCUBjpfe-Z-vIXe7_aHpmyE';
 let outOfStockCodes = new Set();
 try {
-  const cachedStock = localStorage.getItem('kode_out_of_stock_codes');
+  localStorage.removeItem('kode_out_of_stock_codes');
+  const cachedStock = localStorage.getItem('kode_out_of_stock_codes_v2');
   if (cachedStock) {
     const parsed = JSON.parse(cachedStock);
     if (Array.isArray(parsed)) outOfStockCodes = new Set(parsed.map(String));
@@ -103,7 +104,7 @@ async function syncInventoryOutOfStock() {
               value: { stringValue: 'stock_update' }
             }
           },
-          limit: 25
+          limit: 200
         }
       })
     });
@@ -127,10 +128,10 @@ async function syncInventoryOutOfStock() {
     if (validDocs.length > 0) {
       const latestCodes = validDocs[0].codes || [];
       const newSet = new Set(latestCodes.map(String));
-      const hasChanged = newSet.size !== outOfStockCodes.size || [...newSet].some(c => !outOfStockCodes.has(c));
+      const hasChanged = newSet.size !== outOfStockCodes.size || [...newSet].some(c => !outOfStockCodes.has(c)) || [...outOfStockCodes].some(c => !newSet.has(c));
       outOfStockCodes = newSet;
       try {
-        localStorage.setItem('kode_out_of_stock_codes', JSON.stringify(latestCodes));
+        localStorage.setItem('kode_out_of_stock_codes_v2', JSON.stringify(latestCodes));
       } catch (e) {}
       if (hasChanged && currentPerfume) {
         loadAndRenderProduct();

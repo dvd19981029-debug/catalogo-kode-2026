@@ -870,7 +870,7 @@
 
     // Excluir fragancias agotadas de las recomendaciones del test si hay disponibles en stock
     try {
-      const cachedStock = JSON.parse(localStorage.getItem('kode_out_of_stock_codes') || '[]');
+      const cachedStock = JSON.parse(localStorage.getItem('kode_out_of_stock_codes_v2') || '[]');
       if (Array.isArray(cachedStock) && cachedStock.length > 0) {
         const outSet = new Set(cachedStock.map(String));
         const available = candidates.filter(p => !outSet.has(String(p.code)) && !outSet.has(String(p.id)));

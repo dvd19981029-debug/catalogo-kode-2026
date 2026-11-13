@@ -847,7 +847,7 @@
     </section>
   </main>
 
-  <script src="catalog-data.js?v=20260928_catalog_v2"></script>
+  <script src="catalog-data.js?v=20261113_aromaniak_sync_v3"></script>
   <script>
     // PIN de Administrador (por defecto: 2026)
     const ADMIN_PIN = '2026';
@@ -1603,7 +1603,8 @@
 
     // Cargar caché local inmediato si existe
     try {
-      const cached = localStorage.getItem('kode_out_of_stock_codes');
+      localStorage.removeItem('kode_out_of_stock_codes');
+      const cached = localStorage.getItem('kode_out_of_stock_codes_v2');
       if (cached) {
         const arr = JSON.parse(cached);
         if (Array.isArray(arr)) currentOutOfStockCodes = new Set(arr.map(String));
@@ -1626,7 +1627,7 @@
                   value: { stringValue: 'stock_update' }
                 }
               },
-              limit: 25
+              limit: 200
             }
           })
         });
@@ -1650,7 +1651,7 @@
           if (valid.length > 0) {
             currentOutOfStockCodes = new Set(valid[0].codes.map(String));
             try {
-              localStorage.setItem('kode_out_of_stock_codes', JSON.stringify([...currentOutOfStockCodes]));
+              localStorage.setItem('kode_out_of_stock_codes_v2', JSON.stringify([...currentOutOfStockCodes]));
             } catch(e) {}
             renderInventoryTable();
           }
@@ -1686,7 +1687,7 @@
 
       const codesArr = [...currentOutOfStockCodes];
       try {
-        localStorage.setItem('kode_out_of_stock_codes', JSON.stringify(codesArr));
+        localStorage.setItem('kode_out_of_stock_codes_v2', JSON.stringify(codesArr));
       } catch(e) {}
 
       renderInventoryTable();
