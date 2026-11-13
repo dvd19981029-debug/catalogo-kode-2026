@@ -856,17 +856,17 @@
           return codes.has(code);
         };
 
-    // 1. Filtrar por género seleccionado y estrictamente por el POS de Aromaniak
+    // 1. Filtrar por género seleccionado en todo el catálogo KÖDE
     let candidates = [];
     if (answers.gender === 'hombre') {
-      candidates = catalog.filter(p => p.gender === 'hombre' && checkAromaniak(p));
+      candidates = catalog.filter(p => p.gender === 'hombre');
     } else if (answers.gender === 'mujer') {
-      candidates = catalog.filter(p => p.gender === 'mujer' && checkAromaniak(p));
+      candidates = catalog.filter(p => p.gender === 'mujer');
     } else if (answers.gender === 'unisex') {
-      candidates = catalog.filter(p => p.gender === 'unisex' && checkAromaniak(p));
+      candidates = catalog.filter(p => p.gender === 'unisex');
     }
 
-    if (candidates.length === 0) candidates = catalog.filter(p => checkAromaniak(p));
+    if (candidates.length === 0) candidates = [...catalog];
 
     // Excluir fragancias agotadas de las recomendaciones del test si hay disponibles en stock
     try {

@@ -283,9 +283,9 @@ if (typeof window !== 'undefined') {
 
 function initializeCatalogOrder() {
   // Mantener el mismo orden durante la sesión para que al volver esté en el mismo lugar
-  const expectedTotal = CATALOG.filter(item => isAromaniakPos(item)).length;
+  const expectedTotal = CATALOG.length;
   try {
-    const savedPools = sessionStorage.getItem('kode_catalog_pools_aromaniak_only_v5');
+    const savedPools = sessionStorage.getItem('kode_catalog_pools_all_v6');
     if (savedPools) {
       const parsed = JSON.parse(savedPools);
       if (parsed && parsed.hombre && parsed.hombre.length > 0) {
@@ -300,27 +300,25 @@ function initializeCatalogOrder() {
 
   const genders = ['hombre', 'mujer', 'unisex'];
   genders.forEach(g => {
-    // Filtrar estrictamente solo las que están en el POS de Aromaniak
-    const aromaniakItems = CATALOG.filter(item => item.gender === g && isAromaniakPos(item)).map(item => ({ ...item }));
+    const pool = CATALOG.filter(item => item.gender === g).map(item => ({ ...item }));
 
-    // 1. Ordenar los de Aromaniak por ventas descendente
-    aromaniakItems.sort((a, b) => (b.sales || 0) - (a.sales || 0));
+    // 1. Ordenar por ventas descendente
+    pool.sort((a, b) => (b.sales || 0) - (a.sales || 0));
 
-    // 2. Los primeros 3 de Aromaniak reciben su badge de top más vendido
-    if (aromaniakItems[0]) aromaniakItems[0].topBadge = 'Top 1 Más Vendido';
-    if (aromaniakItems[1]) aromaniakItems[1].topBadge = 'Top 2 Más Vendido';
-    if (aromaniakItems[2]) aromaniakItems[2].topBadge = 'Top 3 Más Vendido';
+    // 2. Los primeros 3 reciben su badge de top más vendido
+    if (pool[0]) pool[0].topBadge = 'Top 1 Más Vendido';
+    if (pool[1]) pool[1].topBadge = 'Top 2 Más Vendido';
+    if (pool[2]) pool[2].topBadge = 'Top 3 Más Vendido';
 
-    // 3. Primeros 6 de Aromaniak son cabecera fija de más vendidos, resto de Aromaniak barajado
-    const top6Aromaniak = aromaniakItems.slice(0, 6);
-    const restAromaniak = shuffleArray(aromaniakItems.slice(6));
+    // 3. Primeros 6 son cabecera fija de más vendidos, resto barajado
+    const top6 = pool.slice(0, 6);
+    const rest = shuffleArray(pool.slice(6));
 
-    // Mostrar únicamente las que están en el POS de Aromaniak
-    catalogPools[g] = [...top6Aromaniak, ...restAromaniak];
+    catalogPools[g] = [...top6, ...rest];
   });
 
   try {
-    sessionStorage.setItem('kode_catalog_pools_aromaniak_only_v5', JSON.stringify(catalogPools));
+    sessionStorage.setItem('kode_catalog_pools_all_v6', JSON.stringify(catalogPools));
   } catch (e) {}
 }
 
@@ -426,7 +424,7 @@ function populateBrandSelect() {
 
   const pool = (catalogPools[currentGender] && catalogPools[currentGender].length > 0)
     ? catalogPools[currentGender]
-    : CATALOG.filter(item => item.gender === currentGender && isAromaniakPos(item));
+    : CATALOG.filter(item => item.gender === currentGender);
 
   const brands = [...new Set(pool.map(item => item.brand).filter(Boolean))].sort();
 
@@ -816,7 +814,7 @@ function renderCatalog() {
   const activeGenderKey = (currentGender === 'maceracion' ? 'hombre' : currentGender) || 'hombre';
   const sourcePool = catalogPools[activeGenderKey] && catalogPools[activeGenderKey].length > 0
     ? catalogPools[activeGenderKey]
-    : CATALOG.filter(item => item.gender === activeGenderKey && isAromaniakPos(item));
+    : CATALOG.filter(item => item.gender === activeGenderKey);
 
   let filtered = [];
   if (!currentSearch) {
@@ -850,7 +848,7 @@ function renderCatalog() {
     otherGenders.forEach(g => {
       const pool = catalogPools[g] && catalogPools[g].length > 0
         ? catalogPools[g]
-        : CATALOG.filter(item => item.gender === g && isAromaniakPos(item));
+        : CATALOG.filter(item => item.gender === g);
       pool.forEach(item => {
         if (itemMatches(item)) {
           otherMatches.push(item);

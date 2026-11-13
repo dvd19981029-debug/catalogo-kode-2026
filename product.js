@@ -239,7 +239,9 @@ async function loadAndRenderProduct() {
 
   // 2. Extraer código o ID de la URL
   const params = new URLSearchParams(window.location.search);
-  const codeParam = (params.get('k') || params.get('code') || params.get('id') || '').trim();
+  const rawCodeParam = (params.get('k') || params.get('code') || params.get('id') || '').trim();
+  const legacyCodeAlias = { '730': '653', '731': '743', '734': '890' };
+  const codeParam = legacyCodeAlias[rawCodeParam.replace(/^kode-/, '')] || rawCodeParam;
 
   // Buscar por código o por ID
   let found = null;
@@ -255,24 +257,21 @@ async function loadAndRenderProduct() {
   currentPerfume = found;
   document.title = `KöDE — Kódigo ${found.code}`;
 
-  // Determinar si es un perfume del POS de Aromaniak (Premium)
   const isPremium = typeof window.isAromaniakPos === 'function' ? window.isAromaniakPos(found) : false;
   const premiumBadgeHtml = '';
 
-  // Determinar si es Top 1, Top 2 o Top 3 dentro de su categoría Aromaniak
+  // Determinar si es Top 1, Top 2 o Top 3 dentro de su categoría de género
   let topBadgeHtml = '';
-  if (isPremium) {
-    const aromaniakInGender = [...catalog]
-      .filter(p => p.gender === found.gender && (typeof window.isAromaniakPos === 'function' ? window.isAromaniakPos(p) : false))
-      .sort((a, b) => (b.sales || 0) - (a.sales || 0));
-    const rankIndex = aromaniakInGender.findIndex(p => p.code === found.code);
-    if (rankIndex === 0) {
-      topBadgeHtml = `<div class="top-seller-badge badge-top-1"><span class="badge-rank">Top 1</span><span class="badge-desc"> Más Vendido</span></div>`;
-    } else if (rankIndex === 1) {
-      topBadgeHtml = `<div class="top-seller-badge badge-top-2"><span class="badge-rank">Top 2</span><span class="badge-desc"> Más Vendido</span></div>`;
-    } else if (rankIndex === 2) {
-      topBadgeHtml = `<div class="top-seller-badge badge-top-3"><span class="badge-rank">Top 3</span><span class="badge-desc"> Más Vendido</span></div>`;
-    }
+  const allInGender = [...catalog]
+    .filter(p => p.gender === found.gender)
+    .sort((a, b) => (b.sales || 0) - (a.sales || 0));
+  const rankIndex = allInGender.findIndex(p => p.code === found.code);
+  if (rankIndex === 0) {
+    topBadgeHtml = `<div class="top-seller-badge badge-top-1"><span class="badge-rank">Top 1</span><span class="badge-desc"> Más Vendido</span></div>`;
+  } else if (rankIndex === 1) {
+    topBadgeHtml = `<div class="top-seller-badge badge-top-2"><span class="badge-rank">Top 2</span><span class="badge-desc"> Más Vendido</span></div>`;
+  } else if (rankIndex === 2) {
+    topBadgeHtml = `<div class="top-seller-badge badge-top-3"><span class="badge-rank">Top 3</span><span class="badge-desc"> Más Vendido</span></div>`;
   }
 
   // Badge de género (Hombre / Mujer / Unisex)
