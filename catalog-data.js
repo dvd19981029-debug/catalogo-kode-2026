@@ -8,7 +8,7 @@ window.AROMANIAK_POS_CODES = new Set([
   '102', '446', '152', '674', '255', '355', '345', '549', '154', '4',
   '213', '1001', '417', '351', '267', '366', '719', '413', '617', '323',
   '607', '695', '311', '115', '489', '386', '494', '445', '663', '305',
-  '128', '709', '717', '212'
+  '128', '709', '717', '212', '749'
 ]);
 
 window.isAromaniakPos = function(itemOrCode) {
@@ -471,6 +471,92 @@ window.CATALOG_DATA = [
         {
           "name": "Cedro",
           "image": "notes/cedro.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kode-749",
+    "code": "749",
+    "name": "Baccarat Rouge 540 Extrait",
+    "reference": "Baccarat Rouge 540 Extrait",
+    "brand": "Maison Francis Kurkdjian",
+    "description": "Inspirada en Baccarat Rouge 540 Extrait de Maison Francis Kurkdjian. La versión más profunda, cremosa y adictiva del ícono parisino. Almendra amarga tostada y azafrán precioso abren paso a un corazón luminoso de jazmín egipcio y cedro, descansando sobre una base intensa de ámbar gris mineral, maderas nobles y almizcle envolvente.",
+    "image": "images/kode/kode_749.jpg",
+    "olfactoryFamily": "Ámbar Floral",
+    "gender": "unisex",
+    "sales": 465,
+    "accords": [
+      {
+        "name": "almendrado",
+        "percentage": 100,
+        "bg": "#a855f7",
+        "text": "#ffffff"
+      },
+      {
+        "name": "ámbar",
+        "percentage": 94,
+        "bg": "#86198f",
+        "text": "#ffffff"
+      },
+      {
+        "name": "amaderado",
+        "percentage": 88,
+        "bg": "#4a154b",
+        "text": "#ffffff"
+      },
+      {
+        "name": "cálido especiado",
+        "percentage": 82,
+        "bg": "#701a75",
+        "text": "#ffffff"
+      },
+      {
+        "name": "animálico",
+        "percentage": 74,
+        "bg": "#581c87",
+        "text": "#ffffff"
+      },
+      {
+        "name": "dulce",
+        "percentage": 68,
+        "bg": "#d946ef",
+        "text": "#ffffff"
+      }
+    ],
+    "pyramid": {
+      "top": [
+        {
+          "name": "Almendra amarga",
+          "image": "notes/almendra.jpg"
+        },
+        {
+          "name": "Azafrán",
+          "image": "notes/azafran.jpg"
+        }
+      ],
+      "heart": [
+        {
+          "name": "Jazmín egipcio",
+          "image": "notes/jazmin.jpg"
+        },
+        {
+          "name": "Cedro",
+          "image": "notes/cedro.jpg"
+        }
+      ],
+      "base": [
+        {
+          "name": "Ámbar gris",
+          "image": "notes/ambar.jpg"
+        },
+        {
+          "name": "Notas amaderadas",
+          "image": "notes/maderas.jpg"
+        },
+        {
+          "name": "Almizcle",
+          "image": "notes/almizcle.jpg"
         }
       ]
     }
